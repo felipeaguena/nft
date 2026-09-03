@@ -138,7 +138,7 @@ export default function CookieConsent() {
       aria-label="Consentimento de Cookies"
       role="dialog"
       aria-modal="false"
-      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 sm:max-w-md w-auto"
+      className="fixed bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:bottom-6 z-50 sm:max-w-md w-auto"
     >
       <div className="bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl p-5 shadow-2xl transition-all duration-300 animate-in fade-in slide-in-from-bottom-5">
         <div className="flex items-start gap-3">

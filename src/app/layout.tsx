@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import Nav from "../components/Nav";
 import CookieConsent from "../components/CookieConsent";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -14,6 +15,14 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "NFT",
   description: "NFT Logistics",
+  icons: {
+    icon: [
+      { url: "/logo/nft-logistics-icone-branco.png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/logo/nft-logistics-icone-branco.png",
+    shortcut: "/logo/nft-logistics-icone-branco.png",
+  },
 };
 
 export default function RootLayout({
@@ -47,6 +56,7 @@ export default function RootLayout({
         <Nav />
         {children}
         <CookieConsent />
+        <WhatsAppButton />
       </body>
     </html>
   );

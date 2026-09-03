@@ -330,7 +330,7 @@ export default function Nav() {
                               <span>{servico.nome}</span>
                               {isServicoHealth && (
                                 <span className="text-[10px] uppercase font-semibold tracking-wider px-1.5 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900/60 dark:text-blue-300">
-                                  Health
+                                  Hospitalar
                                 </span>
                               )}
                             </Link>
@@ -419,8 +419,16 @@ export default function Nav() {
           <button
             type="button"
             onClick={toggleTheme}
-            title={mounted && theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"}
-            aria-label={mounted && theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"}
+            title={
+              mounted && theme === "dark"
+                ? "Ativar modo claro"
+                : "Ativar modo escuro"
+            }
+            aria-label={
+              mounted && theme === "dark"
+                ? "Ativar modo claro"
+                : "Ativar modo escuro"
+            }
             className="p-1.5 rounded-full text-neutral-600 dark:text-neutral-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-neutral-100 dark:hover:bg-neutral-800/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-600 active:scale-90 cursor-pointer flex items-center justify-center"
           >
             {mounted ? (
@@ -481,7 +489,7 @@ export default function Nav() {
                             <span>{servico.nome}</span>
                             {isServicoHealth && (
                               <span className="text-[10px] uppercase font-semibold tracking-wider px-1.5 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900/60 dark:text-blue-300">
-                                Health
+                                Hospitalar
                               </span>
                             )}
                           </Link>
