@@ -1,0 +1,80 @@
+{
+  "pt": {
+    "Inicio": "/pt",
+    "Sobre": "/pt/sobre",
+    "Soluções": {
+      "rota_principal": "/pt/solucoes",
+      "servicos": [
+        { "nome": "Feiras e Eventos", "rota": "/pt/solucoes/feiras-e-eventos" },
+        {
+          "nome": "Regimes Especiais",
+          "rota": "/pt/solucoes/regimes-especiais"
+        },
+        {
+          "nome": "Projetos Customizados",
+          "rota": "/pt/solucoes/projetos-customizados"
+        },
+        {
+          "nome": "Logística para Obras de Arte",
+          "rota": "/pt/solucoes/logistica-obras-arte"
+        },
+        { "nome": "Health", "rota": "/pt/saude" }
+      ]
+    },
+    "Contato": "/pt/contato",
+    "Saúde": "/pt/saude"
+  },
+  "en": {
+    "Home": "/en",
+    "About": "/en/about",
+    "Solutions": {
+      "main_route": "/en/solutions",
+      "services": [
+        {
+          "nome": "Fairs and Events",
+          "rota": "/en/solutions/fairs-and-events"
+        },
+        {
+          "nome": "Special Customs Regimes",
+          "rota": "/en/solutions/special-customs-regimes"
+        },
+        {
+          "nome": "Customized Projects",
+          "rota": "/en/solutions/customized-projects"
+        },
+        {
+          "nome": "Logistics for Artworks",
+          "rota": "/en/solutions/artworks-logistics"
+        },
+        { "nome": "Health", "rota": "/en/health" }
+      ]
+    },
+    "Contact": "/en/contact",
+    "Health": "/en/health"
+  },
+  "cn": {
+    "首页": "/cn",
+    "关于": "/cn/about-cn",
+    "解决方案": {
+      "main_route": "/cn/solutions-cn",
+      "services": [
+        {
+          "nome": "进出口業務",
+          "rota": "/cn/solutions-cn/fairs-and-events-cn"
+        },
+        {
+          "nome": "海关特殊制度",
+          "rota": "/cn/solutions-cn/special-customs-regimes-cn"
+        },
+        {
+          "nome": "客制化项目",
+          "rota": "/cn/solutions-cn/customized-projetcs-cn"
+        },
+        { "nome": "健康", "rota": "/cn/health-cn" },
+        { "nome": "艺术品", "rota": "/cn/solutions-cn/artworks-logistics-cn" }
+      ]
+    },
+    "联系方式": "/cn/contact-cn",
+    "健康": "/cn/health-cn"
+  }
+}

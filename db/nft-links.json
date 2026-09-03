@@ -1,0 +1,53 @@
+{
+  "marcos": {
+    "nome": "NFT Logistics LTDA",
+    "url": "https://nftlogistics.com.br",
+    "telefone": "+55 11 94853-0057",
+    "whatsapp": "https://wa.me/5511948530057",
+    "emailComercial": "marcos@nftlogistics.com.br",
+    "instagram": "https://www.instagram.com/nftlogisticsbrazil/",
+    "linkedin": "https://www.linkedin.com/company/nftlogistics/",
+    "linkedinPessoal": {
+      "nome": "@marcos-krekovski",
+      "url": "https://www.linkedin.com/in/marcoskrekovski/"
+    },
+    "endereco": {
+      "address": "Avenida Dr Gastão Vidigal, 1132, São Paulo - Brazil",
+      "adressLink": "https://maps.app.goo.gl/rh2H7oPykLHH62cQA"
+    }
+  },
+  "vitor": {
+    "nome": "NFT Logistics LTDA",
+    "url": "https://nftlogistics.com.br",
+    "telefone": "+55 11 94853-0048",
+    "whatsapp": "https://wa.me/5511948530048",
+    "emailComercial": "vitor@nftlogistics.com.br",
+    "instagram": "https://www.instagram.com/nftlogisticsbrazil/",
+    "linkedin": "https://www.linkedin.com/company/nftlogistics/",
+    "linkedinPessoal": {
+      "nome": "@vítor-schimmelpfeng",
+      "url": "https://www.linkedin.com/in/v%C3%ADtor-garcia-schimmelpfeng-37330567/"
+    },
+    "endereco": {
+      "address": "Avenida Dr Gastão Vidigal, 1132, São Paulo - Brazil",
+      "adressLink": "https://maps.app.goo.gl/rh2H7oPykLHH62cQA"
+    }
+  },
+  "felipe": {
+    "nome": "NFT Logistics LTDA",
+    "url": "https://nftlogistics.com.br",
+    "telefone": "+55 11 96369-7309",
+    "whatsapp": "https://wa.me/5511963697309",
+    "emailComercial": "felipe@nftlogistics.com.br",
+    "instagram": "https://www.instagram.com/nftlogisticsbrazil/",
+    "linkedin": "https://www.linkedin.com/company/nftlogistics/",
+    "linkedinPessoal": {
+      "nome": "@felipealvesaguena",
+      "url": "https://www.linkedin.com/in/felipealvesaguena/"
+    },
+    "endereco": {
+      "address": "Avenida Dr Gastão Vidigal, 1132, São Paulo - Brazil",
+      "adressLink": "https://maps.app.goo.gl/rh2H7oPykLHH62cQA"
+    }
+  }
+}
