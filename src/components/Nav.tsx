@@ -119,11 +119,16 @@ function checkIsHealth(key: string, href: string): boolean {
 
 export default function Nav() {
   const router = useRouter();
-  const [lang, setLang] = useState<LanguageCode>("en");
+  const pathname = usePathname();
+  const getInitialLang = (): LanguageCode => {
+    if (pathname?.startsWith("/pt")) return "pt";
+    if (pathname?.startsWith("/cn")) return "cn";
+    return "en";
+  };
+  const [lang, setLang] = useState<LanguageCode>(getInitialLang);
   const [isOpen, setIsOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [mounted, setMounted] = useState(false);
-  const pathname = usePathname();
 
   // Sincroniza tema com documento / localStorage
   useEffect(() => {
@@ -208,7 +213,7 @@ export default function Nav() {
   const menuItems = Object.entries(currentNavData);
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-neutral-300/80 dark:bg-neutral-950/50 backdrop-blur-md border-b border-neutral-200/50 dark:border-neutral-800/50 shadow-xs px-4 sm:px-6 lg:px-8 transition-colors duration-200">
+    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-neutral-100/90 dark:bg-neutral-950/50 backdrop-blur-md border-b border-neutral-200/50 dark:border-neutral-800/50 shadow-xs px-4 sm:px-6 lg:px-8 transition-colors duration-200">
       <div className="flex items-center justify-between w-full py-2">
         {/* Lado Esquerdo: Hamburger (Mobile) + Logo + Menu Desktop */}
         <div className="flex items-center gap-2 sm:gap-6 lg:gap-8">
@@ -413,7 +418,7 @@ export default function Nav() {
             })}
           </div>
 
-          <div className="h-4 w-px bg-neutral-300 dark:bg-neutral-700" />
+          <div className="h-4 w-px bg-neutral-500 dark:bg-neutral-600" />
 
           {/* Botão de Troca de Tema (Lucide Icons) */}
           <button
@@ -433,12 +438,12 @@ export default function Nav() {
           >
             {mounted ? (
               theme === "dark" ? (
-                <Sun className="w-5 h-5 text-amber-400 transition-transform duration-300 hover:rotate-45" />
+                <Sun className="w-6 h-6 text-amber-400 transition-transform duration-300 hover:rotate-45" />
               ) : (
-                <Moon className="w-5 h-5 text-neutral-700 dark:text-neutral-200 transition-transform duration-300 hover:-rotate-12" />
+                <Moon className="w-6 h-6 text-neutral-900 dark:text-neutral-200 transition-transform duration-300 hover:-rotate-12" />
               )
             ) : (
-              <span className="w-5 h-5 block" />
+              <span className="w-6 h-6 block" />
             )}
           </button>
         </div>

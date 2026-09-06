@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 import CookieConsent from "../components/CookieConsent";
 import WhatsAppButton from "../components/WhatsAppButton";
 
@@ -13,8 +14,13 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "NFT",
-  description: "NFT Logistics",
+  metadataBase: new URL("https://www.nftlogistics.com.br"),
+  title: {
+    default: "NFT Logistics | International Logistics Solutions",
+    template: "%s | NFT Logistics",
+  },
+  description:
+    "We help global companies exhibit, import and operate in Brazil without regulatory surprises.",
   icons: {
     icon: [
       { url: "/logo/nft-logistics-icone-branco.png" },
@@ -23,6 +29,30 @@ export const metadata: Metadata = {
     apple: "/logo/nft-logistics-icone-branco.png",
     shortcut: "/logo/nft-logistics-icone-branco.png",
   },
+  openGraph: {
+    title: "NFT Logistics | International Logistics Solutions",
+    description:
+      "We help global companies exhibit, import and operate in Brazil without regulatory surprises.",
+    url: "https://www.nftlogistics.com.br",
+    siteName: "NFT Logistics",
+    images: [
+      {
+        url: "https://www.nftlogistics.com.br/logo/nft-logistics-icone-branco.png",
+        width: 1200,
+        height: 630,
+        alt: "NFT Logistics",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NFT Logistics | International Logistics Solutions",
+    description:
+      "We help global companies exhibit, import and operate in Brazil without regulatory surprises.",
+    images: [
+      "https://www.nftlogistics.com.br/logo/nft-logistics-icone-branco.png",
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -30,6 +60,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'NFT Logistics',
+    url: 'https://www.nftlogistics.com.br',
+    logo: 'https://www.nftlogistics.com.br/logo/nft-logistics-icone-branco.png',
+    description: 'We help global companies exhibit, import and operate in Brazil without regulatory surprises.',
+    sameAs: [
+      'https://www.linkedin.com/company/nft-logistics',
+      'https://www.instagram.com/nftlogistics',
+    ],
+  };
+  
   return (
     <html
       lang="en"
@@ -51,10 +95,15 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <Nav />
-        {children}
+        <div className="flex-1">{children}</div>
+        <Footer />
         <CookieConsent />
         <WhatsAppButton />
       </body>

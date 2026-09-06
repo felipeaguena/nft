@@ -224,7 +224,7 @@ export default function WhatsAppButton({
               </p>
 
               {/* Timestamp e status de leitura */}
-              <div className="mt-2 flex items-center justify-end gap-1 text-[11px] text-neutral-400 dark:text-neutral-500">
+              <div className="mt-2 flex items-center justify-end gap-1 text-[11px] text-neutral-500 dark:text-neutral-300">
                 <span>{content.timeLabel}</span>
                 <svg
                   className="w-3.5 h-3.5 text-emerald-500 inline-block ml-0.5"
@@ -244,7 +244,7 @@ export default function WhatsAppButton({
 
             {/* Ações Rápidas em Chips */}
             <div className="mt-3 flex flex-col gap-2">
-              <span className="text-[10.5px] sm:text-[11px] font-medium uppercase tracking-wider text-neutral-400 dark:text-neutral-500">
+              <span className="text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-300">
                 {content.quickOptionsLabel}
               </span>
 

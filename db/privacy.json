@@ -1,6 +1,518 @@
 {
-  "privacidade": "Privacidade e Proteção de Dados",
-  "titulo_pagina": "Privacy Policy",
-  "link": "/privacy",
-  "cabecalho_pagina": "Política de Privacidade e Proteção de Dados"
+  "pt": {
+    "privacidade": "Privacidade e Proteção de Dados",
+    "titulo_pagina": "Política de Privacidade",
+    "link": "/pt/privacidade",
+    "cabecalho_pagina": "Política de Privacidade e Proteção de Dados",
+    "subtitulo": "Transparência, segurança e conformidade no tratamento dos seus dados pessoais em todas as operações da NFT Logistics.",
+    "badge": "LGPD & Conformidade Global",
+    "data_atualizacao": "Agosto de 2026",
+    "versao": "2.1",
+    "tempo_leitura": "5 min de leitura",
+    "sumario_titulo": "Índice de Conteúdo",
+    "dpo_info": {
+      "titulo": "Encarregado pelo Tratamento de Dados (DPO)",
+      "descricao": "Para exercer seus direitos como titular de dados ou esclarecer dúvidas sobre esta Política, contate nossa equipe especializada:",
+      "email": "comercial@nftlogistics.com.br",
+      "tempo_resposta": "Atendimento em até 15 dias úteis, conforme art. 19 da LGPD",
+      "endereco": "São Paulo, SP - Brasil"
+    },
+    "secoes": [
+      {
+        "id": "introducao",
+        "numero": "01",
+        "titulo": "Introdução e Controlador dos Dados",
+        "icone": "ShieldCheck",
+        "paragrafos": [
+          "A NFT Logistics (\"NFT Logistics\", \"nós\" ou \"nosso\"), especializada em logística internacional, regimes aduaneiros especiais, feiras, eventos e projetos de comércio exterior, está comprometida em salvaguardar a privacidade e proteger os dados pessoais de seus clientes, parceiros comerciais, visitantes e fornecedores.",
+          "Esta Política de Privacidade estabelece como coletamos, usamos, armazenamos, compartilhamos e protegemos seus dados em conformidade com a Lei Geral de Proteção de Dados Pessoais do Brasil (LGPD - Lei nº 13.709/2018), o Marco Civil da Internet (Lei nº 12.965/2014) e as melhores práticas internacionais de governança de dados (incluindo GDPR e PIPL, quando aplicáveis).",
+          "Para os fins desta Política, a NFT Logistics atua prioritariamente como Controladora dos dados pessoais coletados em suas plataformas digitais e processos de prospecção e relacionamento comercial."
+        ]
+      },
+      {
+        "id": "dados-coletados",
+        "numero": "02",
+        "titulo": "Dados Pessoais Coletados",
+        "icone": "Database",
+        "paragrafos": [
+          "Coletamos apenas os dados estritamente necessários para a prestação de serviços logísticos de excelência, cotações comerciais e cumprimento de normas alfandegárias vigentes:"
+        ],
+        "itens": [
+          {
+            "titulo": "Dados de Contato e Identificação Corporativa",
+            "detalhe": "Nome completo, e-mail corporativo ou pessoal, número de telefone/WhatsApp, empresa em que atua e cargo."
+          },
+          {
+            "titulo": "Dados Operacionais e Regulatórios de Comércio Exterior",
+            "detalhe": "Documentos de identificação (CPF, RG ou passaporte) e dados cadastrais de representantes legais necessários para emissão de licenças, cadastros em sistemas aduaneiros (Siscomex, Radar) e desembaraço de mercadorias junto à Receita Federal e órgãos anuentes (Anvisa, MAPA, Vigiagro)."
+          },
+          {
+            "titulo": "Dados de Navegação e Dispositivo",
+            "detalhe": "Endereço IP, geolocalização aproximada, tipo de navegador, sistema operacional, páginas visitadas e duração da visita, coletados mediante o uso de cookies e logs de conexão autorizados."
+          }
+        ]
+      },
+      {
+        "id": "finalidades",
+        "numero": "03",
+        "titulo": "Finalidades e Bases Legais do Tratamento",
+        "icone": "Scale",
+        "paragrafos": [
+          "Todo tratamento de dados pessoais realizado pela NFT Logistics é respaldado por uma das bases legais previstas no art. 7º da LGPD:"
+        ],
+        "itens": [
+          {
+            "titulo": "Execução de Contratos e Diligências Preliminares (Art. 7º, V)",
+            "detalhe": "Elaboração de cotações, gerenciamento de frete internacional (aéreo, marítimo e rodoviário), assessoria em regimes especiais e atendimento às solicitações enviadas através do nosso site."
+          },
+          {
+            "titulo": "Cumprimento de Obrigação Legal ou Regulatória (Art. 7º, II)",
+            "detalhe": "Submissão de declarações alfandegárias, cumprimento de requisitos tributários e fiscais, atendimento a intimações da Receita Federal do Brasil e autoridades de controle sanitário e agropecuário."
+          },
+          {
+            "titulo": "Legítimo Interesse (Art. 7º, IX)",
+            "detalhe": "Aprimoramento contínuo de nossos serviços, segurança de nossas plataformas digitais, prevenção a fraudes e suporte comercial."
+          },
+          {
+            "titulo": "Consentimento (Art. 7º, I)",
+            "detalhe": "Utilização de cookies analíticos não essenciais e comunicações comerciais específicas, os quais você pode revogar a qualquer momento."
+          }
+        ]
+      },
+      {
+        "id": "compartilhamento",
+        "numero": "04",
+        "titulo": "Compartilhamento de Dados com Terceiros",
+        "icone": "Share2",
+        "paragrafos": [
+          "Para viabilizar operações de comércio exterior e transporte internacional de cargas, a NFT Logistics pode compartilhar dados estritamente necessários com as seguintes entidades:",
+          "1. Autoridades Públicas e Regulatórias: Secretaria da Receita Federal do Brasil, órgãos intervenientes (Anvisa, MAPA, Inmetro, IBAMA), autoridades portuárias e aeroportuárias para cumprimento de procedimentos aduaneiros mandatórios.",
+          "2. Parceiros Operacionais e Transportadores: Armadores marítimos, companhias aéreas, transportadoras terrestres, armazéns alfandegados e agentes de carga internacionais envolvidos na rota logística contratada.",
+          "3. Prestadores de Serviços Tecnológicos: Provedores de hospedagem em nuvem, ferramentas de CRM e sistemas de segurança da informação, todos obrigados contratualmente a manter rigorosa confidencialidade.",
+          "A NFT Logistics declara expressamente que NÃO comercializa, aluga ou cede dados pessoais a terceiros para fins publicitários ou comerciais alheios à sua operação."
+        ]
+      },
+      {
+        "id": "transferencia-internacional",
+        "numero": "05",
+        "titulo": "Transferência Internacional de Dados",
+        "icone": "Globe",
+        "paragrafos": [
+          "Tendo em vista a natureza global de nossa atuação e as conexões logísticas entre o Brasil e os principais polos mundiais (incluindo China, Estados Unidos e Europa), a transferência internacional de dados pode ser indispensável para viabilizar reservas de frete, trâmites consulares, desembaraço aduaneiro de origem e destino.",
+          "Nessas hipóteses, as transferências ocorrem em conformidade com o artigo 33 da LGPD, mediante cláusulas contratuais específicas, acordos de processamento de dados (DPA) e exigência dos mesmos níveis de segurança adotados em território nacional."
+        ]
+      },
+      {
+        "id": "seguranca-armazenamento",
+        "numero": "06",
+        "titulo": "Armazenamento e Segurança da Informação",
+        "icone": "Lock",
+        "paragrafos": [
+          "Implementamos salvaguardas técnicas, administrativas e físicas robustas para proteger seus dados pessoais contra acessos não autorizados, perdas, destruição ou alterações indevidas. Essas medidas incluem tráfego com criptografia HTTPS/SSL, firewalls e controle estrito de permissões de acesso.",
+          "Os dados pessoais serão retidos pelo tempo estritamente necessário para cumprir as finalidades para as quais foram coletados, bem como pelos prazos exigidos pela legislação tributária, aduaneira e civil brasileira (como o dever de guarda de documentos fiscais e aduaneiros pelo prazo de 5 anos)."
+        ]
+      },
+      {
+        "id": "direitos-titular",
+        "numero": "07",
+        "titulo": "Seus Direitos como Titular de Dados",
+        "icone": "UserCheck",
+        "paragrafos": [
+          "Nos termos do artigo 18 da LGPD, você possui os seguintes direitos em relação aos seus dados pessoais, que podem ser exercidos gratuitamente a qualquer tempo:"
+        ],
+        "itens": [
+          {
+            "titulo": "Confirmação e Acesso",
+            "detalhe": "Confirmar se realizamos o tratamento de seus dados e solicitar uma cópia das informações sob nossa guarda."
+          },
+          {
+            "titulo": "Correção de Dados",
+            "detalhe": "Solicitar a retificação imediata de dados cadastrais incompletos, inexatos ou desatualizados."
+          },
+          {
+            "titulo": "Anonimização, Bloqueio ou Eliminação",
+            "detalhe": "Requerer a restrição do tratamento para dados desnecessários, excessivos ou tratados em desconformidade com a lei."
+          },
+          {
+            "titulo": "Portabilidade e Revogação do Consentimento",
+            "detalhe": "Solicitar a transferência dos dados a outro fornecedor de serviços ou revogar o consentimento outrora concedido."
+          }
+        ]
+      },
+      {
+        "id": "cookies",
+        "numero": "08",
+        "titulo": "Cookies e Preferências de Navegação",
+        "icone": "Cookie",
+        "paragrafos": [
+          "Utilizamos cookies essenciais para o funcionamento básico e segurança do nosso site, cookies de preferências para memorizar seu idioma e tema de exibição (claro/escuro), e cookies analíticos para entender métricas de navegação.",
+          "Você pode a qualquer momento revisar, aceitar ou recusar cookies não essenciais por meio do nosso aviso flutuante de consentimento ou configurando as opções de privacidade diretamente no seu navegador de internet."
+        ]
+      },
+      {
+        "id": "contato-dpo",
+        "numero": "09",
+        "titulo": "Canal de Contato com o DPO",
+        "icone": "Mail",
+        "paragrafos": [
+          "Para exercer qualquer um dos seus direitos assegurados pela LGPD, relatar um incidente ou esclarecer pontos desta Política, envie sua solicitação para o e-mail comercial@nftlogistics.com.br com o assunto \"Privacidade de Dados\".",
+          "Nossa equipe de compliance avaliará o requerimento e responderá dentro do prazo legal de até 15 (quinze) dias úteis, garantindo total transparência ao titular."
+        ]
+      },
+      {
+        "id": "atualizacoes",
+        "numero": "10",
+        "titulo": "Atualizações desta Política",
+        "icone": "FileText",
+        "paragrafos": [
+          "Buscando sempre o aperfeiçoamento e o alinhamento com alterações legislativas ou normativas da Autoridade Nacional de Proteção de Dados (ANPD), esta Política de Privacidade poderá ser revisada e atualizada periodicamente.",
+          "Recomendamos que você consulte esta página com frequência. A data da versão mais recente estará sempre indicada no topo deste documento."
+        ]
+      }
+    ]
+  },
+  "en": {
+    "privacidade": "Privacy & Data Protection",
+    "titulo_pagina": "Privacy Policy",
+    "link": "/en/privacy",
+    "cabecalho_pagina": "Privacy and Data Protection Policy",
+    "subtitulo": "Transparency, security, and global compliance in processing your personal data across all NFT Logistics operations.",
+    "badge": "LGPD & Global Compliance",
+    "data_atualizacao": "August 2026",
+    "versao": "2.1",
+    "tempo_leitura": "5 min read",
+    "sumario_titulo": "Table of Contents",
+    "dpo_info": {
+      "titulo": "Data Protection Officer (DPO)",
+      "descricao": "To exercise your data subject rights or clarify questions regarding this Policy, please reach out to our dedicated privacy team:",
+      "email": "comercial@nftlogistics.com.br",
+      "tempo_resposta": "Inquiries answered within 15 business days",
+      "endereco": "São Paulo, SP - Brazil"
+    },
+    "secoes": [
+      {
+        "id": "introducao",
+        "numero": "01",
+        "titulo": "Introduction & Data Controller",
+        "icone": "ShieldCheck",
+        "paragrafos": [
+          "NFT Logistics (\"NFT Logistics\", \"we\", or \"our\"), specialized in international logistics, special customs regimes, exhibitions, events, and customized supply chain solutions, is firmly dedicated to safeguarding privacy and protecting the personal data of our clients, business partners, website visitors, and vendors.",
+          "This Privacy Policy details how we collect, use, store, share, and protect your personal data in accordance with the Brazilian General Data Protection Law (LGPD - Law No. 13,709/2018), international data privacy standards (such as the EU GDPR and Chinese PIPL where applicable), and Brazilian internet regulations.",
+          "For the purposes of this Policy, NFT Logistics acts primarily as the Data Controller for personal data gathered through our digital channels and business communications."
+        ]
+      },
+      {
+        "id": "dados-coletados",
+        "numero": "02",
+        "titulo": "Personal Data We Collect",
+        "icone": "Database",
+        "paragrafos": [
+          "We collect only the personal information strictly necessary to provide top-tier freight forwarding, customs clearance, and customer support:"
+        ],
+        "itens": [
+          {
+            "titulo": "Corporate & Contact Information",
+            "detalhe": "Full name, corporate or personal email address, telephone/WhatsApp number, company name, and job title."
+          },
+          {
+            "titulo": "Operational & Customs Documentation",
+            "detalhe": "Government identification documents (CPF, ID, or Passport) and authorization records required for issuing import/export licenses, legal representations, and clearances before the Brazilian Federal Revenue (Receita Federal), Siscomex, and regulatory agencies (Anvisa, MAPA, Vigiagro)."
+          },
+          {
+            "titulo": "Browsing & Device Information",
+            "detalhe": "IP address, approximate geolocation, browser type, operating system, pages viewed, and session metrics collected through authorized cookies and connection logs."
+          }
+        ]
+      },
+      {
+        "id": "finalidades",
+        "numero": "03",
+        "titulo": "Purposes and Legal Grounds for Processing",
+        "icone": "Scale",
+        "paragrafos": [
+          "All personal data processing performed by NFT Logistics is founded on valid legal bases under LGPD Article 7:"
+        ],
+        "itens": [
+          {
+            "titulo": "Execution of Contract and Pre-contractual Measures (Art. 7, V)",
+            "detalhe": "Preparing quotations, managing international air, ocean, and road freight, advising on special regimes, and fulfilling service agreements."
+          },
+          {
+            "titulo": "Compliance with Legal or Regulatory Obligations (Art. 7, II)",
+            "detalhe": "Fulfilling customs requirements, tax and fiscal declarations, and mandatory reporting before customs and trade authorities."
+          },
+          {
+            "titulo": "Legitimate Interests (Art. 7, IX)",
+            "detalhe": "Enhancing our services, defending against fraud, securing our web infrastructure, and providing tailored corporate customer support."
+          },
+          {
+            "titulo": "Consent (Art. 7, I)",
+            "detalhe": "Deploying optional analytical cookies and specific commercial newsletters, which you may withdraw at any time."
+          }
+        ]
+      },
+      {
+        "id": "compartilhamento",
+        "numero": "04",
+        "titulo": "Data Sharing with Third Parties",
+        "icone": "Share2",
+        "paragrafos": [
+          "To carry out international freight forwarding and customs processes, NFT Logistics may share essential data with the following partners:",
+          "1. Government & Regulatory Authorities: Federal Revenue of Brazil (Receita Federal), trade agencies (Anvisa, MAPA, Inmetro, IBAMA), and port/airport administrative entities for mandatory customs clearance.",
+          "2. Operating Logistics Partners: Ocean shipping lines, air carriers, bonded warehouses, terminal operators, and local transport companies participating in the supply chain.",
+          "3. IT & Infrastructure Providers: Secure cloud hosts, ERP systems, and communication platforms bound by strict non-disclosure and data protection contracts.",
+          "NFT Logistics explicitly states that we DO NOT sell, lease, or monetize personal data under any circumstances."
+        ]
+      },
+      {
+        "id": "transferencia-internacional",
+        "numero": "05",
+        "titulo": "International Data Transfers",
+        "icone": "Globe",
+        "paragrafos": [
+          "Given our global operations connecting Brazil, China, the United States, and Europe, cross-border data transfers are necessary to schedule international shipping, file export/import manifests, and liaise with foreign logistics agents.",
+          "Such transfers strictly comply with Chapter V of the LGPD, using standard contractual clauses, data processing agreements (DPAs), and stringent cybersecurity safeguards."
+        ]
+      },
+      {
+        "id": "seguranca-armazenamento",
+        "numero": "06",
+        "titulo": "Information Security and Retention",
+        "icone": "Lock",
+        "paragrafos": [
+          "We deploy advanced technical, administrative, and physical safeguards to protect your personal data against unauthorized access, loss, misuse, or alteration. These measures include HTTPS/TLS encryption, firewall architectures, and role-based access privileges.",
+          "Personal data is retained only as long as necessary to achieve operational objectives and satisfy Brazilian statutory retention laws (such as the mandatory 5-year retention period for fiscal and foreign trade records)."
+        ]
+      },
+      {
+        "id": "direitos-titular",
+        "numero": "07",
+        "titulo": "Your Rights as a Data Subject",
+        "icone": "UserCheck",
+        "paragrafos": [
+          "Under LGPD Article 18, you possess the following rights regarding your personal information, which can be exercised free of charge:"
+        ],
+        "itens": [
+          {
+            "titulo": "Confirmation and Access",
+            "detalhe": "Confirm whether your personal data is being processed and obtain a copy of the stored records."
+          },
+          {
+            "titulo": "Correction and Rectification",
+            "detalhe": "Request immediate correction of inaccurate, incomplete, or outdated data."
+          },
+          {
+            "titulo": "Anonymization or Deletion",
+            "detalhe": "Request anonymization, blocking, or elimination of unnecessary or unlawfully processed data."
+          },
+          {
+            "titulo": "Portability and Consent Withdrawal",
+            "detalhe": "Request data portability to another provider or revoke any previously granted consent."
+          }
+        ]
+      },
+      {
+        "id": "cookies",
+        "numero": "08",
+        "titulo": "Cookies and Browsing Preferences",
+        "icone": "Cookie",
+        "paragrafos": [
+          "We utilize essential cookies to ensure portal stability and security, preference cookies to preserve your language and color mode settings, and analytical cookies to measure site engagement.",
+          "You can review or adjust your preferences at any time through our interactive cookie notice or directly via your web browser settings."
+        ]
+      },
+      {
+        "id": "contato-dpo",
+        "numero": "09",
+        "titulo": "Contact Channel & DPO",
+        "icone": "Mail",
+        "paragrafos": [
+          "To submit data subject inquiries, report security concerns, or ask questions regarding this Policy, please email comercial@nftlogistics.com.br with the subject \"Privacy & Data Protection\".",
+          "Our compliance office will evaluate your request and respond within the statutory deadline of up to 15 (fifteen) business days."
+        ]
+      },
+      {
+        "id": "atualizacoes",
+        "numero": "10",
+        "titulo": "Updates to this Policy",
+        "icone": "FileText",
+        "paragrafos": [
+          "To maintain compliance with emerging regulatory directives and optimize our processes, this Privacy Policy may be revised periodically.",
+          "We encourage you to review this page from time to time. The latest revision date is prominently displayed at the top of this document."
+        ]
+      }
+    ]
+  },
+  "cn": {
+    "privacidade": "隐私和数据保护",
+    "titulo_pagina": "隐私政策",
+    "link": "/cn/privacy-cn",
+    "cabecalho_pagina": "隐私和数据保护政策",
+    "subtitulo": "在 NFT Logistics 的所有国际物流业务中，我们致力于确保您的个人数据安全、合规与高度透明。",
+    "badge": "LGPD 与全球合规体系",
+    "data_atualizacao": "2026年8月",
+    "versao": "2.1",
+    "tempo_leitura": "阅读约需 5 分钟",
+    "sumario_titulo": "本页目录",
+    "dpo_info": {
+      "titulo": "数据保护专员 (DPO)",
+      "descricao": "如需行使数据主体权利或咨询本政策相关疑问，请直接联系我们的隐私保护合规团队：",
+      "email": "comercial@nftlogistics.com.br",
+      "tempo_resposta": "法定期限：15个工作日内答复",
+      "endereco": "巴西圣保罗 (São Paulo, SP - Brazil)"
+    },
+    "secoes": [
+      {
+        "id": "introducao",
+        "numero": "01",
+        "titulo": "引言与数据控制者",
+        "icone": "ShieldCheck",
+        "paragrafos": [
+          "NFT Logistics（以下简称“NFT Logistics”、“我们”或“我们的”），专业从事国际物流、海关特殊监管制度、展会活动物流及外贸定制供应链解决方案，高度重视客户、商业伙伴、访客及供应商的个人隐私与数据安全。",
+          "本隐私政策阐明了我们如何根据巴西通用数据保护法（LGPD - 第13.709/2018号法律）、中国《个人信息保护法》(PIPL)以及国际通用数据保护标准（如欧盟GDPR），收集、使用、存储、共享和保护您的个人数据。",
+          "在本政策适用的场景中，NFT Logistics 作为通过官方网站及业务往来收集个人数据的主要“数据控制者”（Data Controller）。"
+        ]
+      },
+      {
+        "id": "dados-coletados",
+        "numero": "02",
+        "titulo": "我们收集的个人数据",
+        "icone": "Database",
+        "paragrafos": [
+          "为提供国际货物运输、海关申报及业务咨询服务，我们仅收集严格必要的个人数据："
+        ],
+        "itens": [
+          {
+            "titulo": "商业联络与身份信息",
+            "detalhe": "包括全名、工作或个人电子邮箱、电话/WhatsApp号码、所在企业名称及担任职务。"
+          },
+          {
+            "titulo": "外贸操作与海关监管证明材料",
+            "detalhe": "法定代表人或授权经办人的身份证件信息（如CPF税号、护照或有效证件号），用于在巴西联邦税务局（Receita Federal）、Siscomex外贸系统及监管审批机构（Anvisa卫生署、MAPA农牧业部等）办理进出口清关、特种许可及授权备案。"
+          },
+          {
+            "titulo": "网站浏览与设备技术数据",
+            "detalhe": "包括IP地址、大致地理位置、浏览器类型、操作系统、页面访问足迹及停留时长，通过受信任的Cookie和网络连接日志采集。"
+          }
+        ]
+      },
+      {
+        "id": "finalidades",
+        "numero": "03",
+        "titulo": "数据处理目的与法律依据",
+        "icone": "Scale",
+        "paragrafos": [
+          "NFT Logistics 处理个人数据均严格基于巴西 LGPD 第7条及相关国际法规的法定依据："
+        ],
+        "itens": [
+          {
+            "titulo": "履行合同及合同前置程序 (LGPD 第7条第V款)",
+            "detalhe": "用于处理运价询盘、国际空海运方案制定、特殊报关制度协调以及执行物流服务合同。"
+          },
+          {
+            "titulo": "履行法律与监管合规义务 (LGPD 第7条第II款)",
+            "detalhe": "配合巴西联邦海关、税务、卫生及农牧监管机构的法定审查要求，呈交必需的报关单据及清关档案。"
+          },
+          {
+            "titulo": "正当合法利益 (LGPD 第7条第IX款)",
+            "detalhe": "优化数字化物流服务体验、保障网络系统安全、防止欺诈并提供专属商务支持。"
+          },
+          {
+            "titulo": "用户同意 (LGPD 第7条第I款)",
+            "detalhe": "用于非必要的网站分析型Cookie及商业通讯推送，您可随时撤回该授权。"
+          }
+        ]
+      },
+      {
+        "id": "compartilhamento",
+        "numero": "04",
+        "titulo": "与第三方的必要数据共享",
+        "icone": "Share2",
+        "paragrafos": [
+          "为确保国际货物运输与通关顺利进行，NFT Logistics 可能会在必要范围内与以下实体共享相关信息：",
+          "1. 政府及海关监管机构：巴西联邦税务局（Receita Federal）、审批机关（Anvisa、MAPA、Inmetro、IBAMA）、港口与机场海关监管局，以完成强制性通关流程。",
+          "2. 国际物流合作伙伴：船运公司、航空货运承运商、陆运车队、保税仓库以及国际货代网络。",
+          "3. 技术支持服务商：提供云存储服务器、企业管理软件及信息安全防护的专业供应商，均受严格保密协议约束。",
+          "NFT Logistics 郑重承诺：在任何情况下均不向任何第三方出售、出租或不正当交易您的个人数据。"
+        ]
+      },
+      {
+        "id": "transferencia-internacional",
+        "numero": "05",
+        "titulo": "数据的跨境传输",
+        "icone": "Globe",
+        "paragrafos": [
+          "鉴于国际物流与跨国贸易的业务属性（业务网络涵盖中国、巴西、美国及欧洲），为了完成舱位预订、目的港清关及国际货运协调，跨境传输数据具有业务必要性。",
+          "此类传输严格遵守巴西 LGPD 第33条及相关跨境传输合规标准，通过签署标准合同条款、数据处理协议（DPA）及行业安全标准，确保数据在境外同样享有不低于本国标准的安全防护。"
+        ]
+      },
+      {
+        "id": "seguranca-armazenamento",
+        "numero": "06",
+        "titulo": "信息安全保护与留存期限",
+        "icone": "Lock",
+        "paragrafos": [
+          "我们采取了完备的技术防范与管理措施，防止个人数据发生未授权访问、泄露、篡改或遗失。关键措施包括全站 HTTPS/TLS 加密传输、网络防火墙及多级访问权限管控。",
+          "我们仅在实现业务目的所必需的时间内保留您的个人数据，并在法定留存要求（如巴西外贸及税务凭据法定的5年留存期）届满后，进行安全销毁或匿名化处理。"
+        ]
+      },
+      {
+        "id": "direitos-titular",
+        "numero": "07",
+        "titulo": "您的个人数据主体权利",
+        "icone": "UserCheck",
+        "paragrafos": [
+          "根据巴西 LGPD 第18条等规定，您拥有以下合法权益，并可随时免费行使："
+        ],
+        "itens": [
+          {
+            "titulo": "确认与查询权",
+            "detalhe": "确认我们是否正在处理您的个人数据，并获取相关记录的副本。"
+          },
+          {
+            "titulo": "更正权",
+            "detalhe": "申请更正不完整、不准确或已过期的个人信息。"
+          },
+          {
+            "titulo": "限制处理或删除权",
+            "detalhe": "要求对非必要、过度或违规处理的数据进行匿名化、冻结或彻底删除。"
+          },
+          {
+            "titulo": "数据可携权与撤回同意",
+            "detalhe": "申请将数据迁移给其他服务商，或随时撤销此前作出的授权许可。"
+          }
+        ]
+      },
+      {
+        "id": "cookies",
+        "numero": "08",
+        "titulo": "Cookie 与浏览偏好管理",
+        "icone": "Cookie",
+        "paragrafos": [
+          "我们使用必要型 Cookie 维护网站基本安全与运行，使用偏好型 Cookie 记录您的语言选择与深/浅色模式，并使用统计分析型 Cookie 改善访问体验。",
+          "您可以通过网站底部的 Cookie 偏好弹窗或通过所用浏览器的隐私设置，随时修改或停用非必要的 Cookie 项。"
+        ]
+      },
+      {
+        "id": "contato-dpo",
+        "numero": "09",
+        "titulo": "联系渠道与数据保护专员 (DPO)",
+        "icone": "Mail",
+        "paragrafos": [
+          "如需行使上述法定权利、就隐私政策提出建议或报告安全事项，请发送邮件至 comercial@nftlogistics.com.br ，邮件主题注明“个人信息与数据保护”。",
+          "我们的数据合规部门将在收到请求后的15个工作日法定时间内予以正式回复。"
+        ]
+      },
+      {
+        "id": "atualizacoes",
+        "numero": "10",
+        "titulo": "政策的修订与更新",
+        "icone": "FileText",
+        "paragrafos": [
+          "随着相关法律法规的变化或业务流程的升级，NFT Logistics 可能会适时更新本隐私政策。",
+          "任何修改均会在本页面公布，并在顶部标注最新生效日期，建议您定期查阅以掌握最新动态。"
+        ]
+      }
+    ]
+  }
 }

@@ -1,0 +1,98 @@
+{
+  "pt": {
+    "solucoes": {
+      "title": "Soluções",
+      "description": "Nossas soluções de logística internacional de feiras e eventos são especializadas  no transporte e documentação para garantir que todos os materiais e equipamentos necessários cheguem ao local do evento no prazo evitando atrasos e problemas que possam comprometer a participação no evento.",
+      "sections": {
+        "feiras_eventos": {
+          "title": "Feiras e Eventos",
+          "description": "Soluções em logística internacional para feiras e eventos",
+          "texto": "Importação e Exportação de equipamentos, máquinas e produtos de divulgação internacional para representantes comerciais, participação em congressos, eventos e outras finalidades.",
+          "link": "/pt/solucoes/feiras-e-eventos"
+        },
+        "regimes_especiais": {
+          "title": "Regimes Especiais",
+          "description": "Soluções em regimes especiais para logística internacional",
+          "texto": "Projetos de carga com excesso de peso, tamanhos maiores que o normal e que precisam de movimentação e atenção especial. Nos contate e teremos prazer em ouvi-lo, entender suas necessidades e trabalharmos em seu projeto.",
+          "link": "/pt/solucoes/regimes-especiais"
+        },
+        "projetos_customizados": {
+          "title": "Projetos Customizados",
+          "description": "Soluções em projetos customizados para logística internacional",
+          "texto": "Desenvolvimento de soluções logísticas personalizadas para atender às necessidades específicas de cada cliente.",
+          "link": "/pt/solucoes/projetos-customizados"
+        },
+        "logistica_obras_arte": {
+          "title": "Logística Obras Arte",
+          "description": "Soluções em logística de obras de arte",
+          "texto": "Importação, exportação, admissões temporárias, transportes nacionais e internacionais, manuseio especializado, confecção de caixas e acompanhamento personalizado de todo o processo de bens de alto valor agregado.",
+          "link": "/pt/solucoes/logistica-obras-arte"
+        }
+      }
+    }
+  },
+  "en": {
+    "solutions": {
+      "title": "Solutions",
+      "description": "Our international logistics solutions for fairs and events are specialized in transportation and documentation to ensure that all necessary materials and equipment arrive at the event location on time, avoiding delays and issues that could compromise event participation.",
+      "sections": {
+        "feiras_eventos": {
+          "title": "Fairs and Events",
+          "description": "International logistics solutions for fairs and events",
+          "texto": "Import and export of equipment, machinery, and internationally promoted products for commercial representatives, participation in conferences, events, and other purposes.",
+          "link": "/en/solutions/fairs-and-events"
+        },
+        "regimes_especiais": {
+          "title": "Special Regimes",
+          "description": "Special regimes solutions for international logistics",
+          "texto": "We are specialists in special regimes for import and export, providing unique advantages for cargo transported to participate in international fairs and events.",
+          "link": "/en/solutions/special-customs-regimes"
+        },
+        "projetos_customizados": {
+          "title": "Customized Projects",
+          "description": "Customized projects solutions for international logistics",
+          "texto": "Heavy-lift cargo projects, oversized shipments, and items requiring special handling and attention. Contact us and we'll be pleased to listen, understand your needs, and work on your project together.",
+          "link": "/en/solutions/customized-projects"
+        },
+        "logistica_obras_arte": {
+          "title": "Artworks Logistics",
+          "description": "Artworks logistics solutions",
+          "texto": "Importation, exportation, temporary admissions, domestic and international transportation, specialized handling, custom crate fabrication, and personalized monitoring of the entire process for high-value goods.",
+          "link": "/en/solutions/artworks-logistics"
+        }
+      }
+    }
+  },
+  "cn": {
+    "solutions": {
+      "title": "解决方案",
+      "description": "无论您要办展会、活动，还是其他项目，我们都能提供各种国际物流解决方案，确保所有材料和设备准时、完好地到达目的地，帮您达成目标。",
+      "sections": {
+        "feiras_eventos": {
+          "title": "展会和活动",
+          "description": "展会和活动国际物流解决方案",
+          "texto": "我们提供设备、机器和宣传品的进出口服务，以满足展会、商务代表、会议、活动等各种需求。",
+          "link": "/cn/solutions-cn/fairs-and-events-cn"
+        },
+        "regimes_especiais": {
+          "title": "特殊制度",
+          "description": "特殊制度国际物流解决方案",
+          "texto": "关于临时入境、保税仓库等等，这些进出口特殊制度我们都非常熟悉，能为您的公司提供特殊优势，助您顺利参与国际展览、活动或其他项目。",
+          "link": "/cn/solutions-cn/special-customs-regimes-cn"
+        },
+        "projetos_customizados": {
+          "title": "定制项目",
+          "description": "定制项目国际物流解决方案",
+          "texto": "您的货物超重、超尺寸、易碎？需要特殊搬运和照顾？没问题！联系我们，告诉我们您的需求，我们会尽力协助您的项目。",
+          "link": "/cn/solutions-cn/customized-projetcs-cn"
+        },
+        "logistica_obras_arte": {
+          "title": "艺术品物流",
+          "description": "艺术品物流解决方案",
+          "texto": "针对艺术品和其他高价值物品，我们提供全方位的服务：进出口、临时入境、国内和国际运输、专业处理、订制箱子，以及全程追踪。",
+          "link": "/cn/solutions-cn/artworks-logistics-cn"
+        }
+      }
+    }
+  }
+}

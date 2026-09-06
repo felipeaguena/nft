@@ -95,8 +95,14 @@ export default function CookieConsent() {
     };
 
     window.addEventListener("languageChange", handleLanguageChange);
+    const handleOpenConsent = () => {
+      setIsVisible(true);
+    };
+    window.addEventListener("openCookieConsent", handleOpenConsent);
+
     return () => {
       window.removeEventListener("languageChange", handleLanguageChange);
+      window.removeEventListener("openCookieConsent", handleOpenConsent);
     };
   }, []);
 
@@ -163,12 +169,12 @@ export default function CookieConsent() {
             <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
               {text.title}
             </h3>
-            <p className="mt-1 text-xs leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <p className="mt-1 text-xs leading-relaxed text-neutral-700 dark:text-neutral-200">
               {text.description}
             </p>
 
             {/* Link discreto para Política de Privacidade */}
-            <div className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
+            <div className="mt-2 text-xs text-neutral-600 dark:text-neutral-300">
               {text.privacyPrefix}{" "}
               <Link
                 href={text.privacyLink}

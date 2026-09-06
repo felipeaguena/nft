@@ -5,6 +5,7 @@ export interface HeroProps {
   children?: React.ReactNode;
   title?: React.ReactNode;
   subtitle?: React.ReactNode;
+  actions?: React.ReactNode;
   videoSrc?: string;
   imageSrc?: string;
   imageAlt?: string;
@@ -18,13 +19,14 @@ export default function Hero({
   children,
   title,
   subtitle,
+  actions,
   videoSrc,
   imageSrc = "/imagens/bg-nft-logistics.jpg",
   imageAlt = "NFT Logistics",
   overlayClassName = "bg-gradient-to-b from-black/60 via-black/40 to-black/80 dark:from-black/70 dark:via-black/50 dark:to-neutral-950",
   className = "",
   contentClassName = "",
-  heightClassName = "min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh]",
+  heightClassName = "min-h-[40vh] sm:min-h-[50vh] lg:min-h-[60vh]",
 }: HeroProps) {
   return (
     <section
@@ -81,6 +83,12 @@ export default function Hero({
           <p className="text-base sm:text-lg lg:text-xl text-neutral-200 dark:text-neutral-300 max-w-3xl font-normal leading-relaxed drop-shadow">
             {subtitle}
           </p>
+        )}
+
+        {actions && (
+          <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-4">
+            {actions}
+          </div>
         )}
       </div>
     </section>

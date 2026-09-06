@@ -70,8 +70,8 @@
           "nome": "客制化项目",
           "rota": "/cn/solutions-cn/customized-projetcs-cn"
         },
-        { "nome": "健康", "rota": "/cn/health-cn" },
-        { "nome": "艺术品", "rota": "/cn/solutions-cn/artworks-logistics-cn" }
+        { "nome": "艺术品", "rota": "/cn/solutions-cn/artworks-logistics-cn" },
+        { "nome": "健康", "rota": "/cn/health-cn" }
       ]
     },
     "联系方式": "/cn/contact-cn",
