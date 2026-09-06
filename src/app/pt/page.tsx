@@ -1,6 +1,45 @@
+import type { Metadata } from "next";
 import Hero from "@/src/components/Hero";
 import Button from "@/src/components/Button";
-import HomeClient from "@/src/components/HomeClient";
+import HomeClient from "@/src/components/pagesComponents/HomeClient";
+
+export const metadata: Metadata = {
+  title: "NFT Logistics | Soluções em Logística Internacional & Regimes Especiais",
+  description:
+    "Ajudamos empresas globais a expor, importar e operar no Brasil sem surpresas regulatórias. Logística internacional de ponta a ponta, desembaraço aduaneiro e regimes aduaneiros especiais.",
+  alternates: {
+    canonical: "/pt",
+    languages: {
+      "pt-BR": "https://www.nftlogistics.com.br/pt",
+      "en": "https://www.nftlogistics.com.br/en",
+      "zh": "https://www.nftlogistics.com.br/cn",
+      "x-default": "https://www.nftlogistics.com.br/en",
+    },
+  },
+  openGraph: {
+    title: "NFT Logistics | Soluções em Logística Internacional & Regimes Especiais",
+    description:
+      "Ajudamos empresas globais a expor, importar e operar no Brasil sem surpresas regulatórias.",
+    url: "https://www.nftlogistics.com.br/pt",
+    siteName: "NFT Logistics",
+    locale: "pt_BR",
+    images: [
+      {
+        url: "https://www.nftlogistics.com.br/logo/nft-logistics-icone-branco.png",
+        width: 1200,
+        height: 630,
+        alt: "NFT Logistics",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NFT Logistics | Soluções em Logística Internacional & Regimes Especiais",
+    description:
+      "Ajudamos empresas globais a expor, importar e operar no Brasil sem surpresas regulatórias.",
+    images: ["https://www.nftlogistics.com.br/logo/nft-logistics-icone-branco.png"],
+  },
+};
 
 export default function PtPage() {
   return (

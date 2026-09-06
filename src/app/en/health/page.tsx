@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import HealthPageClient from "./HealthPageClient";
+import HealthClient from "@/src/components/pagesComponents/HealthClient";
 
 export const metadata: Metadata = {
   title: "Import of Medical Equipment and Healthcare Machinery | NFT Logistics",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export default function HealthPage() {
   return (
     <main className="min-h-screen">
-      <HealthPageClient />
+      <HealthClient lang="en" />
     </main>
   );
 }

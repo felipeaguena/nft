@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import ArtworksLogisticsCnClient from './ArtworksLogisticsCnClient';
+import ArtworksLogisticsClient from '@/src/components/pagesComponents/ArtworksLogisticsClient';
 
 export const metadata: Metadata = {
   title: '艺术品与高价值物流 | NFT Logistics',
@@ -17,5 +17,9 @@ export const metadata: Metadata = {
 };
 
 export default function ArtworksLogisticsCnPage() {
-  return <ArtworksLogisticsCnClient />;
+  return (
+    <main className="min-h-screen">
+      <ArtworksLogisticsClient lang="cn" />
+    </main>
+  );
 }

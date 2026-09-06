@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SolucoesClient from "@/src/components/SolucoesClient";
+import SolucoesClient from "@/src/components/pagesComponents/SolucoesClient";
 
 export const metadata: Metadata = {
   title: "国际物流与巴西清关专业解决方案 | NFT Logistics",

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RegimesEspeciaisClient from "./RegimesEspeciaisClient";
+import SpecialCustomsRegimesClient from "@/src/components/pagesComponents/SpecialCustomsRegimesClient";
 
 export const metadata: Metadata = {
   title: "Regimes Aduaneiros Especiais | NFT Logistics",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export default function RegimesEspeciaisPage() {
   return (
     <main className="min-h-screen">
-      <RegimesEspeciaisClient />
+      <SpecialCustomsRegimesClient lang="pt" />
     </main>
   );
 }

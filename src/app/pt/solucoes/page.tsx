@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SolucoesClient from "@/src/components/SolucoesClient";
+import SolucoesClient from "@/src/components/pagesComponents/SolucoesClient";
 
 export const metadata: Metadata = {
   title: "Soluções em Logística Internacional & Regimes Especiais | NFT Logistics",

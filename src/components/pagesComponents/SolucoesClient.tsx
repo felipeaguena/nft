@@ -694,7 +694,7 @@ const CONTENT = {
             "专业特种重型装备：大型吊机、特种低平板拖车等",
             "资深项目工程师全程现场监督装卸作业",
           ],
-          href: "/cn/solutions-cn/customized-projetcs-cn",
+          href: "/cn/solutions-cn/customized-projects-cn",
         },
         {
           id: "arte",

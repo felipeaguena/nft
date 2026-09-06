@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import LogisticaObrasArteClient from "./LogisticaObrasArteClient";
+import ArtworksLogisticsClient from "@/src/components/pagesComponents/ArtworksLogisticsClient";
 
 export const metadata: Metadata = {
   title: "Logística para Obras de Arte e Acervos Culturais | NFT Logistics",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export default function LogisticaObrasArtePage() {
   return (
     <main className="min-h-screen">
-      <LogisticaObrasArteClient />
+      <ArtworksLogisticsClient lang="pt" />
     </main>
   );
 }

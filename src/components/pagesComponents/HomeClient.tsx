@@ -8,7 +8,6 @@ import {
   ArrowRight,
   ShieldCheck,
   CalendarCheck,
-  Scale,
   Boxes,
   Palette,
   Truck,
@@ -23,9 +22,11 @@ import {
   Building2,
   Cpu,
   HeartPulse,
+  MessageSquareDot,
 } from "lucide-react";
-import Button from "./Button";
-import HealthCTA from "./HealthCTA";
+import Button from "../Button";
+import HealthCTA from "../HealthCTA";
+import SolutionsShowcase from "../SolutionsShowcase";
 
 export type LanguageCode = "pt" | "en" | "cn";
 
@@ -91,72 +92,6 @@ const HOME_CONTENT = {
         icon: Plane,
       },
     ],
-    solutions: {
-      badge: "Soluções Estratégicas",
-      title: "Inteligência Logística de Ponta a Ponta",
-      subtitle:
-        "Soluções completas com gestão aduaneira e logística multimodal integrada para desarmar a burocracia brasileira.",
-      btnAll: "Ver Todas as Soluções",
-      allHref: "/pt/solucoes",
-      items: [
-        {
-          title: "Feiras e Eventos Internacionais",
-          tag: "Tolerância Zero a Atrasos",
-          desc: "Transporte door-to-booth e admissão temporária com suspensão de impostos para expositores internacionais no Brasil.",
-          bullets: [
-            "Entrega e coleta direta no estande",
-            "Admissão temporária sem impostos",
-            "Acompanhamento presencial no pavilhão",
-          ],
-          href: "/pt/solucoes/feiras-e-eventos",
-          icon: CalendarCheck,
-          accent: "text-orange-600 dark:text-orange-400",
-          badgeBg: "bg-orange-50 dark:bg-orange-950/50 text-orange-700 dark:text-orange-300 border-orange-200 dark:border-orange-800",
-        },
-        {
-          title: "Regimes Aduaneiros Especiais",
-          tag: "Eficiência Tributária",
-          desc: "Estruturação técnica de Admissão Temporária, Drawback e Entreposto Aduaneiro para redução legal de custos fiscais.",
-          bullets: [
-            "Suspensão de impostos federais e estaduais",
-            "Auditoria preventiva de compliance",
-            "Gestão contínua de prazos e baixas",
-          ],
-          href: "/pt/solucoes/regimes-especiais",
-          icon: Scale,
-          accent: "text-orange-600 dark:text-orange-400",
-          badgeBg: "bg-orange-50 dark:bg-orange-950/50 text-orange-700 dark:text-orange-300 border-orange-200 dark:border-orange-800",
-        },
-        {
-          title: "Projetos Customizados & Cargas Críticas",
-          tag: "Cargas Sobredimensionadas",
-          desc: "Engenharia de transporte para cargas de grande porte, maquinário industrial pesado e rotas de alta complexidade.",
-          bullets: [
-            "Estudo de viabilidade de rotas (route survey)",
-            "Licenças especiais (DNIT, DER, PRF)",
-            "Equipamentos especiais e batedores",
-          ],
-          href: "/pt/solucoes/projetos-customizados",
-          icon: Boxes,
-          accent: "text-orange-600 dark:text-orange-400",
-          badgeBg: "bg-orange-50 dark:bg-orange-950/50 text-orange-700 dark:text-orange-300 border-orange-200 dark:border-orange-800",
-        },
-        {
-          title: "Logística para Obras de Arte & Alto Valor",
-          tag: "Máxima Discrição e Cuidado",
-          desc: "Transporte para museus, galerias e leilões com embalagens climáticas especiais, correio dedicado e seguro prego a prego.",
-          bullets: [
-            "Embalagens de padrão museológico",
-            "Desembaraço com anuência IPHAN e RFB",
-            "Seguro internacional nail-to-nail",
-          ],
-          href: "/pt/solucoes/logistica-obras-arte",
-          icon: Palette,
-          accent: "text-orange-600 dark:text-orange-400",
-          badgeBg: "bg-orange-50 dark:bg-orange-950/50 text-orange-700 dark:text-orange-300 border-orange-200 dark:border-orange-800",
-        },
-      ],
-    },
     process: {
       badge: "Como Trabalhamos",
       title: "O Fluxo Operacional NFT: Simples, Seguro e Previsível",
@@ -330,72 +265,6 @@ const HOME_CONTENT = {
         icon: Plane,
       },
     ],
-    solutions: {
-      badge: "Strategic Solutions",
-      title: "End-to-End International Logistics Intelligence",
-      subtitle:
-        "Complete freight, customs clearance, and special regimes tailored to eliminate Brazilian bureaucratic bottlenecks.",
-      btnAll: "Explore All Solutions",
-      allHref: "/en/solutions",
-      items: [
-        {
-          title: "Fairs & International Events",
-          tag: "Zero Delay Tolerance",
-          desc: "Door-to-booth transport and temporary admission with tax suspension for international exhibitors in Brazil.",
-          bullets: [
-            "Direct delivery and collection at exhibition stands",
-            "Tax-free temporary admission regimes",
-            "Dedicated on-site pavilion supervision",
-          ],
-          href: "/en/solutions/fairs-and-events",
-          icon: CalendarCheck,
-          accent: "text-orange-600 dark:text-orange-400",
-          badgeBg: "bg-orange-50 dark:bg-orange-950/50 text-orange-700 dark:text-orange-300 border-orange-200 dark:border-orange-800",
-        },
-        {
-          title: "Special Customs Regimes",
-          tag: "Tax Optimization",
-          desc: "Strategic setup of Temporary Admission, Drawback, and Bonded Warehousing to lawfully preserve cash flow.",
-          bullets: [
-            "Lawful federal and state tax suspension",
-            "Preventive compliance documentation audits",
-            "Strict deadline control and discharge filings",
-          ],
-          href: "/en/solutions/special-customs-regimes",
-          icon: Scale,
-          accent: "text-blue-600 dark:text-blue-400",
-          badgeBg: "bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800",
-        },
-        {
-          title: "Customized Projects & Heavy Lift",
-          tag: "Oversized & Critical Cargo",
-          desc: "Specialized logistics engineering for out-of-gauge (OOG) shipments, heavy machinery, and sensitive timelines.",
-          bullets: [
-            "Comprehensive route survey and feasibility",
-            "Special road permits (DNIT, DER, PRF)",
-            "Dedicated heavy trailers, cranes, and escorts",
-          ],
-          href: "/en/solutions/customized-projects",
-          icon: Boxes,
-          accent: "text-emerald-600 dark:text-emerald-400",
-          badgeBg: "bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800",
-        },
-        {
-          title: "Fine Art & High-Value Cargo",
-          tag: "Maximum Discretion & Care",
-          desc: "Museum-grade logistical curation for art galleries, museums, and collectors with climate-controlled crates and dedicated courier.",
-          bullets: [
-            "ISPM 15 museum-standard wooden crates",
-            "Customs clearance with IPHAN & Federal Revenue",
-            "Comprehensive nail-to-nail international insurance",
-          ],
-          href: "/en/solutions/artworks-logistics",
-          icon: Palette,
-          accent: "text-purple-600 dark:text-purple-400",
-          badgeBg: "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800",
-        },
-      ],
-    },
     process: {
       badge: "How We Work",
       title: "The NFT Operational Workflow: Predictable, Agile & Secure",
@@ -569,71 +438,6 @@ const HOME_CONTENT = {
         icon: Plane,
       },
     ],
-    solutions: {
-      badge: "专业解决方案",
-      title: "端到端国际物流与关务智慧",
-      subtitle: "提供全流程物流运输、关务申报与特殊制度支持，化繁为简，消除巴西复杂官僚风险。",
-      btnAll: "查看全部解决方案",
-      allHref: "/cn/solutions-cn",
-      items: [
-        {
-          title: "国际展会与活动物流",
-          tag: "严守展期 零延误",
-          desc: "为参展巴西的全球展商提供门到展位（Door-to-Booth）专线运输及暂时进境免税申报。",
-          bullets: [
-            "直达巴西展馆展位装卸",
-            "暂时进境税款全额保函免税",
-            "展会现场专人驻场协调",
-          ],
-          href: "/cn/solutions-cn/fairs-and-events-cn",
-          icon: CalendarCheck,
-          accent: "text-orange-600 dark:text-orange-400",
-          badgeBg: "bg-orange-50 dark:bg-orange-950/50 text-orange-700 dark:text-orange-300 border-orange-200 dark:border-orange-800",
-        },
-        {
-          title: "特殊海关监管制度",
-          tag: "税收合规优化",
-          desc: "专业规划暂时进境（Admissão Temporária）、退税（Drawback）及保税仓储制度，合法优化现金流。",
-          bullets: [
-            "合法暂缓缴纳联邦及州进出口税",
-            "事前单证合规审查与备案",
-            "严格把控复出口与延期申报节点",
-          ],
-          href: "/cn/solutions-cn/special-customs-regimes-cn",
-          icon: Scale,
-          accent: "text-blue-600 dark:text-blue-400",
-          badgeBg: "bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800",
-        },
-        {
-          title: "定制项目与超限重件物流",
-          tag: "超规及重大件货物",
-          desc: "针对超重、超限设备（OOG）及整套工业生产线的工程物流方案与专业路线勘测。",
-          bullets: [
-            "全线路线勘测（Route Survey）与可行性报告",
-            "巴西国家陆运局（DNIT/PRF）特许通行证",
-            "专用平板重型拖车、吊装与全程警力护送",
-          ],
-          href: "/cn/solutions-cn/customized-projetcs-cn",
-          icon: Boxes,
-          accent: "text-emerald-600 dark:text-emerald-400",
-          badgeBg: "bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800",
-        },
-        {
-          title: "艺术品与贵重物资运输",
-          tag: "极高安全性与保密",
-          desc: "为博物馆、艺术画廊及私人收藏提供恒温定制木箱、专属信使押运与全程保险服务。",
-          bullets: [
-            "符合国际博物馆标准的熏蒸免熏蒸木箱",
-            "巴西国家历史与艺术遗产局（IPHAN）特批",
-            "全程钉对钉（Nail-to-Nail）国际高额险",
-          ],
-          href: "/cn/solutions-cn/artworks-logistics-cn",
-          icon: Palette,
-          accent: "text-purple-600 dark:text-purple-400",
-          badgeBg: "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800",
-        },
-      ],
-    },
     process: {
       badge: "服务流程",
       title: "NFT 运营流程：清晰、敏捷且风险可控",
@@ -691,7 +495,7 @@ const HOME_CONTENT = {
           category: "重大件与项目工程",
           desc: "协助申请关税减免（Ex-Tarifário）与大型工程车辆运输。",
           image: "/imagens/operacao-nft-logistics-2.jpg",
-          href: "/cn/solutions-cn/customized-projetcs-cn",
+          href: "/cn/solutions-cn/customized-projects-cn",
           icon: Building2,
         },
         {
@@ -832,87 +636,7 @@ export default function HomeClient({ lang }: HomeClientProps) {
       </section>
 
       {/* 3. VITRINE DE SOLUÇÕES ESTRATÉGICAS */}
-      <section className="py-16 sm:py-20 bg-neutral-100/50 dark:bg-neutral-900/30 border-y border-neutral-200/80 dark:border-neutral-800/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 sm:mb-16 gap-6">
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-orange-100 text-orange-700 dark:bg-orange-950/60 dark:text-orange-400 border border-orange-200 dark:border-orange-800/60 mb-3">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>{t.solutions.badge}</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
-                {t.solutions.title}
-              </h2>
-              <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
-                {t.solutions.subtitle}
-              </p>
-            </div>
-            <div>
-              <Button
-                variant="outline"
-                size="md"
-                href={t.solutions.allHref}
-                rightIcon={<ArrowRight className="w-4 h-4" />}
-                className="whitespace-nowrap"
-              >
-                {t.solutions.btnAll}
-              </Button>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {t.solutions.items.map((item, idx) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={idx}
-                  className="group relative flex flex-col justify-between p-7 sm:p-8 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm hover:shadow-xl hover:shadow-orange-600/10 hover:border-orange-300 dark:hover:border-orange-700/60 transition-all duration-300 hover:-translate-y-1"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="p-3 rounded-xl bg-neutral-100 dark:bg-neutral-800 group-hover:bg-orange-50 dark:group-hover:bg-orange-950/40 transition-colors">
-                        <Icon className={`w-6 h-6 ${item.accent}`} />
-                      </div>
-                      <span
-                        className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${item.badgeBg}`}
-                      >
-                        {item.tag}
-                      </span>
-                    </div>
-
-                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-white mb-3 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-200 leading-relaxed mb-6">
-                      {item.desc}
-                    </p>
-
-                    <div className="space-y-2.5 mb-6 pt-4 border-t border-neutral-100 dark:border-neutral-800/80">
-                      {item.bullets.map((bullet, bIdx) => (
-                        <div
-                          key={bIdx}
-                          className="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700 dark:text-neutral-200"
-                        >
-                          <CheckCircle2 className="w-4 h-4 text-orange-600 dark:text-orange-500 shrink-0 mt-0.5" />
-                          <span>{bullet}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <Link
-                    href={item.href}
-                    className="inline-flex items-center gap-2 text-sm font-bold text-orange-600 dark:text-orange-400 group-hover:text-orange-500 transition-colors pt-2"
-                  >
-                    <span>Saiba mais sobre esta solução</span>
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <SolutionsShowcase lang={lang} />
 
       {/* 4. FLUXO OPERACIONAL EM 4 ETAPAS (COMO FUNCIONA) */}
       <section className="py-16 sm:py-24 bg-transparent">
@@ -1105,7 +829,7 @@ export default function HomeClient({ lang }: HomeClientProps) {
               size="lg"
               href={t.cta.btnSecondaryHref}
               target="_blank"
-              leftIcon={<MessageCircle className="w-5 h-5 text-emerald-400" />}
+              leftIcon={<MessageSquareDot className="w-5 h-5 text-emerald-400" />}
               className="!border-white/30 !text-white hover:!bg-white/10"
             >
               {t.cta.btnSecondary}

@@ -1,6 +1,45 @@
+import type { Metadata } from "next";
 import Hero from "@/src/components/Hero";
 import Button from "@/src/components/Button";
-import HomeClient from "@/src/components/HomeClient";
+import HomeClient from "@/src/components/pagesComponents/HomeClient";
+
+export const metadata: Metadata = {
+  title: "NFT Logistics | International Logistics Solutions & Customs Intelligence",
+  description:
+    "We help global companies exhibit, import and operate in Brazil without regulatory surprises. Specialized end-to-end logistics solutions and customs brokerage.",
+  alternates: {
+    canonical: "/en",
+    languages: {
+      "pt-BR": "https://www.nftlogistics.com.br/pt",
+      "en": "https://www.nftlogistics.com.br/en",
+      "zh": "https://www.nftlogistics.com.br/cn",
+      "x-default": "https://www.nftlogistics.com.br/en",
+    },
+  },
+  openGraph: {
+    title: "NFT Logistics | International Logistics Solutions & Customs Intelligence",
+    description:
+      "We help global companies exhibit, import and operate in Brazil without regulatory surprises.",
+    url: "https://www.nftlogistics.com.br/en",
+    siteName: "NFT Logistics",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://www.nftlogistics.com.br/logo/nft-logistics-icone-branco.png",
+        width: 1200,
+        height: 630,
+        alt: "NFT Logistics",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NFT Logistics | International Logistics Solutions & Customs Intelligence",
+    description:
+      "We help global companies exhibit, import and operate in Brazil without regulatory surprises.",
+    images: ["https://www.nftlogistics.com.br/logo/nft-logistics-icone-branco.png"],
+  },
+};
 
 export default function EnPage() {
   return (

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SobreClient from "@/src/components/SobreClient";
+import SobreClient from "@/src/components/pagesComponents/SobreClient";
 
 export const metadata: Metadata = {
   title: "Sobre Nós | NFT Logistics - Inteligência Regulatória & Logística Internacional",

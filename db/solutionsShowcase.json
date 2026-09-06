@@ -1,0 +1,212 @@
+{
+  "pt": {
+    "badge": "Soluções Estratégicas",
+    "title": "Inteligência Logística de Ponta a Ponta",
+    "subtitle": "Soluções completas com gestão aduaneira e logística multimodal integrada para desarmar a burocracia brasileira.",
+    "btnAll": "Ver Todas as Soluções",
+    "allHref": "/pt/solucoes",
+    "learnMore": "Saiba mais sobre esta solução",
+    "items": [
+      {
+        "id": "feiras-e-eventos",
+        "title": "Feiras e Eventos Internacionais",
+        "tag": "Tolerância Zero a Atrasos",
+        "desc": "Transporte door-to-booth e admissão temporária com suspensão de impostos para expositores internacionais no Brasil.",
+        "bullets": [
+          "Entrega e coleta direta no estande",
+          "Admissão temporária sem impostos",
+          "Acompanhamento presencial no pavilhão"
+        ],
+        "href": "/pt/solucoes/feiras-e-eventos",
+        "icon": "CalendarCheck",
+        "accent": "text-purple-600 dark:text-purple-400",
+        "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
+      },
+      {
+        "id": "regimes-especiais",
+        "title": "Regimes Aduaneiros Especiais",
+        "tag": "Eficiência Tributária",
+        "desc": "Estruturação técnica de Admissão Temporária, Drawback e Entreposto Aduaneiro para redução legal de custos fiscais.",
+        "bullets": [
+          "Suspensão de impostos federais e estaduais",
+          "Auditoria preventiva de compliance",
+          "Gestão contínua de prazos e baixas"
+        ],
+        "href": "/pt/solucoes/regimes-especiais",
+        "icon": "Scale",
+        "accent": "text-purple-600 dark:text-purple-400",
+        "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
+      },
+      {
+        "id": "projetos-customizados",
+        "title": "Projetos Customizados & Cargas Críticas",
+        "tag": "Cargas Sobredimensionadas",
+        "desc": "Engenharia de transporte para cargas de grande porte, maquinário industrial pesado e rotas de alta complexidade.",
+        "bullets": [
+          "Estudo de viabilidade de rotas (route survey)",
+          "Licenças especiais (DNIT, DER, PRF)",
+          "Equipamentos especiais e batedores"
+        ],
+        "href": "/pt/solucoes/projetos-customizados",
+        "icon": "Boxes",
+        "accent": "text-purple-600 dark:text-purple-400",
+        "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
+      },
+      {
+        "id": "logistica-obras-arte",
+        "title": "Logística para Obras de Arte & Alto Valor",
+        "tag": "Máxima Discrição e Cuidado",
+        "desc": "Transporte para museus, galerias e leilões com embalagens climáticas especiais, correio dedicado e seguro prego a prego.",
+        "bullets": [
+          "Embalagens de padrão museológico",
+          "Desembaraço com anuência IPHAN e RFB",
+          "Seguro internacional nail-to-nail"
+        ],
+        "href": "/pt/solucoes/logistica-obras-arte",
+        "icon": "Palette",
+        "accent": "text-purple-600 dark:text-purple-400",
+        "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
+      }
+    ]
+  },
+  "en": {
+    "badge": "Strategic Solutions",
+    "title": "End-to-End International Logistics Intelligence",
+    "subtitle": "Complete freight, customs clearance, and special regimes tailored to eliminate Brazilian bureaucratic bottlenecks.",
+    "btnAll": "Explore All Solutions",
+    "allHref": "/en/solutions",
+    "learnMore": "Learn more about this solution",
+    "items": [
+      {
+        "id": "fairs-and-events",
+        "title": "Fairs & International Events",
+        "tag": "Zero Delay Tolerance",
+        "desc": "Door-to-booth transport and temporary admission with tax suspension for international exhibitors in Brazil.",
+        "bullets": [
+          "Direct delivery and collection at exhibition stands",
+          "Tax-free temporary admission regimes",
+          "Dedicated on-site pavilion supervision"
+        ],
+        "href": "/en/solutions/fairs-and-events",
+        "icon": "CalendarCheck",
+        "accent": "text-purple-600 dark:text-purple-400",
+        "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
+      },
+      {
+        "id": "special-customs-regimes",
+        "title": "Special Customs Regimes",
+        "tag": "Tax Optimization",
+        "desc": "Strategic setup of Temporary Admission, Drawback, and Bonded Warehousing to lawfully preserve cash flow.",
+        "bullets": [
+          "Lawful federal and state tax suspension",
+          "Preventive compliance documentation audits",
+          "Strict deadline control and discharge filings"
+        ],
+        "href": "/en/solutions/special-customs-regimes",
+        "icon": "Scale",
+        "accent": "text-purple-600 dark:text-purple-400",
+        "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
+      },
+      {
+        "id": "customized-projects",
+        "title": "Customized Projects & Heavy Lift",
+        "tag": "Oversized & Critical Cargo",
+        "desc": "Specialized logistics engineering for out-of-gauge (OOG) shipments, heavy machinery, and sensitive timelines.",
+        "bullets": [
+          "Comprehensive route survey and feasibility",
+          "Special road permits (DNIT, DER, PRF)",
+          "Dedicated heavy trailers, cranes, and escorts"
+        ],
+        "href": "/en/solutions/customized-projects",
+        "icon": "Boxes",
+        "accent": "text-purple-600 dark:text-purple-400",
+        "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
+      },
+      {
+        "id": "artworks-logistics",
+        "title": "Fine Art & High-Value Cargo",
+        "tag": "Maximum Discretion & Care",
+        "desc": "Museum-grade logistical curation for art galleries, museums, and collectors with climate-controlled crates and dedicated courier.",
+        "bullets": [
+          "ISPM 15 museum-standard wooden crates",
+          "Customs clearance with IPHAN & Federal Revenue",
+          "Comprehensive nail-to-nail international insurance"
+        ],
+        "href": "/en/solutions/artworks-logistics",
+        "icon": "Palette",
+        "accent": "text-purple-600 dark:text-purple-400",
+        "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
+      }
+    ]
+  },
+  "cn": {
+    "badge": "专业解决方案",
+    "title": "端到端国际物流与关务智慧",
+    "subtitle": "提供全流程物流运输、关务申报与特殊制度支持，化繁为简，消除巴西复杂官僚风险。",
+    "btnAll": "查看全部解决方案",
+    "allHref": "/cn/solutions-cn",
+    "learnMore": "了解更多关于此方案",
+    "items": [
+      {
+        "id": "fairs-and-events-cn",
+        "title": "国际展会与活动物流",
+        "tag": "严守展期 零延误",
+        "desc": "为参展巴西的全球展商提供门到展位（Door-to-Booth）专线运输及暂时进境免税申报。",
+        "bullets": [
+          "直达巴西展馆展位装卸",
+          "暂时进境税款全额保函免税",
+          "展会现场专人驻场协调"
+        ],
+        "href": "/cn/solutions-cn/fairs-and-events-cn",
+        "icon": "CalendarCheck",
+        "accent": "text-purple-600 dark:text-purple-400",
+        "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
+      },
+      {
+        "id": "special-customs-regimes-cn",
+        "title": "特殊海关监管制度",
+        "tag": "税收合规优化",
+        "desc": "专业规划暂时进境（Admissão Temporária）、退税（Drawback）及保税仓储制度，合法优化现金流。",
+        "bullets": [
+          "合法暂缓缴纳联邦及州进出口税",
+          "事前单证合规审查与备案",
+          "严格把控复出口与延期申报节点"
+        ],
+        "href": "/cn/solutions-cn/special-customs-regimes-cn",
+        "icon": "Scale",
+        "accent": "text-purple-600 dark:text-purple-400",
+        "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
+      },
+      {
+        "id": "customized-projects-cn",
+        "title": "定制项目与超限重件物流",
+        "tag": "超规及重大件货物",
+        "desc": "针对超重、超限设备（OOG）及整套工业生产线的工程物流方案与专业路线勘测。",
+        "bullets": [
+          "全线路线勘测（Route Survey）与可行性报告",
+          "巴西国家陆运局（DNIT/PRF）特许通行证",
+          "专用平板重型拖车、吊装与全程警力护送"
+        ],
+        "href": "/cn/solutions-cn/customized-projects-cn",
+        "icon": "Boxes",
+        "accent": "text-purple-600 dark:text-purple-400",
+        "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
+      },
+      {
+        "id": "artworks-logistics-cn",
+        "title": "艺术品与贵重物资运输",
+        "tag": "极高安全性与保密",
+        "desc": "为博物馆、艺术画廊及私人收藏提供恒温定制木箱、专属信使押运与全程保险服务。",
+        "bullets": [
+          "符合国际博物馆标准的熏蒸免熏蒸木箱",
+          "巴西国家历史与艺术遗产局（IPHAN）特批",
+          "全程钉对钉（Nail-to-Nail）国际高额险"
+        ],
+        "href": "/cn/solutions-cn/artworks-logistics-cn",
+        "icon": "Palette",
+        "accent": "text-purple-600 dark:text-purple-400",
+        "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
+      }
+    ]
+  }
+}

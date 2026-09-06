@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SobreClient from "@/src/components/SobreClient";
+import SobreClient from "@/src/components/pagesComponents/SobreClient";
 
 export const metadata: Metadata = {
   title: "About Us | NFT Logistics - Regulatory Intelligence & Global Logistics in Brazil",
@@ -31,4 +31,4 @@ export default function AboutPage() {
       <SobreClient lang="en" />
     </main>
   );
-}
+}

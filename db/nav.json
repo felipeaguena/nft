@@ -68,7 +68,7 @@
         },
         {
           "nome": "客制化项目",
-          "rota": "/cn/solutions-cn/customized-projetcs-cn"
+          "rota": "/cn/solutions-cn/customized-projects-cn"
         },
         { "nome": "艺术品", "rota": "/cn/solutions-cn/artworks-logistics-cn" },
         { "nome": "健康", "rota": "/cn/health-cn" }

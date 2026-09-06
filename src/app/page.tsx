@@ -1,6 +1,22 @@
+import type { Metadata } from "next";
 import Hero from "@/src/components/Hero";
 import Button from "@/src/components/Button";
-import HomeClient from "@/src/components/HomeClient";
+import HomeClient from "@/src/components/pagesComponents/HomeClient";
+
+export const metadata: Metadata = {
+  title: "NFT Logistics | International Logistics Solutions & Customs Intelligence",
+  description:
+    "We help global companies exhibit, import and operate in Brazil without regulatory surprises. Specialized end-to-end logistics solutions, customs clearance, and regulatory advisory.",
+  alternates: {
+    canonical: "https://www.nftlogistics.com.br",
+    languages: {
+      "pt-BR": "https://www.nftlogistics.com.br/pt",
+      "en": "https://www.nftlogistics.com.br/en",
+      "zh": "https://www.nftlogistics.com.br/cn",
+      "x-default": "https://www.nftlogistics.com.br/en",
+    },
+  },
+};
 
 export default function Home() {
   return (

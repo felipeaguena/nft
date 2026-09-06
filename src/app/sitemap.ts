@@ -56,7 +56,7 @@ const MAIN_ROUTES: RouteConfig[] = [
   {
     pt: "/pt/solucoes/projetos-customizados",
     en: "/en/solutions/customized-projects",
-    cn: "/cn/solutions-cn/customized-projetcs-cn",
+    cn: "/cn/solutions-cn/customized-projects-cn",
     changeFrequency: "weekly",
     priority: 0.85,
   },
@@ -94,8 +94,8 @@ const MAIN_ROUTES: RouteConfig[] = [
   },
 ];
 
-// Páginas de equipe e links rápidos (vCard / NFT Links)
-const TEAM_MEMBERS = ["felipe", "marcos", "vitor"];
+// Páginas de equipe e links rápidos (vCard / NFT Links) - reativar quando páginas estiverem concluídas
+// const TEAM_MEMBERS = ["felipe", "marcos", "vitor"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date();
@@ -158,51 +158,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
-      alternates: {
-        languages: alternateLanguages,
-      },
-    });
-  });
-
-  // 3. Rotas de Apresentação de Membros / Links Digitais (/nft-links)
-  TEAM_MEMBERS.forEach((member) => {
-    const alternateLanguages = {
-      "pt-BR": `${BASE_URL}/nft-links/pt/${member}`,
-      "pt": `${BASE_URL}/nft-links/pt/${member}`,
-      "en": `${BASE_URL}/nft-links/${member}`,
-      "zh": `${BASE_URL}/nft-links/cn/${member}`,
-      "zh-Hans": `${BASE_URL}/nft-links/cn/${member}`,
-      "x-default": `${BASE_URL}/nft-links/${member}`,
-    };
-
-    // Versão padrão / inglês
-    sitemapEntries.push({
-      url: `${BASE_URL}/nft-links/${member}`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.5,
-      alternates: {
-        languages: alternateLanguages,
-      },
-    });
-
-    // Versão português
-    sitemapEntries.push({
-      url: `${BASE_URL}/nft-links/pt/${member}`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.5,
-      alternates: {
-        languages: alternateLanguages,
-      },
-    });
-
-    // Versão chinês
-    sitemapEntries.push({
-      url: `${BASE_URL}/nft-links/cn/${member}`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.5,
       alternates: {
         languages: alternateLanguages,
       },

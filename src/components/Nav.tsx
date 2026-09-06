@@ -53,7 +53,7 @@ const ROUTE_MAP: { pt: string; en: string; cn: string }[] = [
   {
     pt: "/pt/solucoes/projetos-customizados",
     en: "/en/solutions/customized-projects",
-    cn: "/cn/solutions-cn/customized-projetcs-cn",
+    cn: "/cn/solutions-cn/customized-projects-cn",
   },
   {
     pt: "/pt/solucoes/logistica-obras-arte",
@@ -61,6 +61,17 @@ const ROUTE_MAP: { pt: string; en: string; cn: string }[] = [
     cn: "/cn/solutions-cn/artworks-logistics-cn",
   },
 ];
+
+function updateHtmlLang(language: LanguageCode) {
+  if (typeof document === "undefined") return;
+  if (language === "pt") {
+    document.documentElement.lang = "pt-BR";
+  } else if (language === "cn") {
+    document.documentElement.lang = "zh-Hans";
+  } else {
+    document.documentElement.lang = "en";
+  }
+}
 
 function getTargetUrlForLanguage(
   pathname: string | null,
@@ -155,21 +166,13 @@ export default function Nav() {
 
   // Sincroniza com o idioma da rota ou da sessão
   useEffect(() => {
+    let active: LanguageCode = "en";
     if (pathname?.startsWith("/pt")) {
-      setLang("pt");
-      try {
-        sessionStorage.setItem("selected_language", "pt");
-      } catch {}
+      active = "pt";
     } else if (pathname?.startsWith("/cn")) {
-      setLang("cn");
-      try {
-        sessionStorage.setItem("selected_language", "cn");
-      } catch {}
+      active = "cn";
     } else if (pathname?.startsWith("/en")) {
-      setLang("en");
-      try {
-        sessionStorage.setItem("selected_language", "en");
-      } catch {}
+      active = "en";
     } else {
       try {
         const storedLang = sessionStorage.getItem(
@@ -179,19 +182,25 @@ export default function Nav() {
           storedLang &&
           (storedLang === "en" || storedLang === "pt" || storedLang === "cn")
         ) {
-          setLang(storedLang);
-        } else {
-          sessionStorage.setItem("selected_language", "en");
+          active = storedLang;
         }
       } catch {}
     }
+    setLang(active);
+    updateHtmlLang(active);
+    try {
+      sessionStorage.setItem("selected_language", active);
+      document.cookie = `preferred_language=${active}; path=/; max-age=31536000; SameSite=Lax`;
+    } catch {}
   }, [pathname]);
 
   const changeLanguage = (newLang: LanguageCode) => {
     setLang(newLang);
+    updateHtmlLang(newLang);
     setIsOpen(false);
     try {
       sessionStorage.setItem("selected_language", newLang);
+      document.cookie = `preferred_language=${newLang}; path=/; max-age=31536000; SameSite=Lax`;
       window.dispatchEvent(
         new CustomEvent("languageChange", { detail: newLang }),
       );

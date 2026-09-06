@@ -91,6 +91,15 @@ export default function RootLayout({
                 } else {
                   document.documentElement.classList.add('dark');
                 }
+
+                var path = window.location.pathname;
+                if (path.startsWith('/pt')) {
+                  document.documentElement.lang = 'pt-BR';
+                } else if (path.startsWith('/cn')) {
+                  document.documentElement.lang = 'zh-Hans';
+                } else {
+                  document.documentElement.lang = 'en';
+                }
               } catch (_) {}
             `,
           }}

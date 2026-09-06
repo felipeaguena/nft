@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import FairsAndEventsClient from "./FairsAndEventsClient";
+import FairsAndEventsClient from "@/src/components/pagesComponents/FairsAndEventsClient";
 
 export const metadata: Metadata = {
   title: "Logistics for International Fairs and Events | NFT Logistics",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export default function FairsAndEventsPage() {
   return (
     <main className="min-h-screen">
-      <FairsAndEventsClient />
+      <FairsAndEventsClient lang="en" />
     </main>
   );
 }

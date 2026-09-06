@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PrivacyPolicyView from "@/src/components/PrivacyPolicyView";
+import PrivacyPolicyView from "@/src/components/pagesComponents/PrivacyPolicyView";
 import privacyData from "@/db/privacy.json";
 
 export const metadata: Metadata = {

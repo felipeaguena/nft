@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SobreClient from "@/src/components/SobreClient";
+import SobreClient from "@/src/components/pagesComponents/SobreClient";
 
 export const metadata: Metadata = {
   title: "关于我们 | NFT Logistics - 巴西海关监管智慧与全球端到端物流",

@@ -26,7 +26,6 @@ import {
   Anchor,
   Warehouse,
 } from "lucide-react";
-import SolutionsGrid from "./SolutionsGrid";
 
 export type LanguageCode = "pt" | "en" | "cn";
 
@@ -230,7 +229,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
             icon: Palette,
             title: "Obras de Arte & Peças de Museu",
             desc: "Embalagens climatizadas especiais, escolta armada quando necessária e manuseio cirúrgico para mostras e bienais.",
-            link: "/pt/solucoes",
+            link: "/pt/solucoes/logisca-obras-arte",
             image: "/imagens/nft-art-2.jpg",
             category: "Acervos & Mostras",
           },
@@ -455,7 +454,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
             icon: Palette,
             title: "Fine Art & Museum Exhibitions",
             desc: "Climate-controlled specialized packaging, armed escorts when required, and white-glove museum handling.",
-            link: "/en/solutions",
+            link: "/en/solutions/artworks-logistics",
             image: "/imagens/nft-art-2.jpg",
             category: "Cultural Exhibitions",
           },
@@ -680,7 +679,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
             icon: Palette,
             title: "艺术品与贵重藏品",
             desc: "恒温恒湿特种包装、专业安保押运，为跨国艺术展览提供最高级别的细致服务。",
-            link: "/cn/solutions-cn",
+            link: "/cn/solutions-cn/artworks-logistics-cn",
             image: "/imagens/nft-art-2.jpg",
             category: "艺术双年展与博物馆",
           },

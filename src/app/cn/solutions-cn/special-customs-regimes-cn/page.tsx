@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import SpecialCustomsRegimesCnClient from './SpecialCustomsRegimesCnClient';
+import SpecialCustomsRegimesClient from '@/src/components/pagesComponents/SpecialCustomsRegimesClient';
 
 export const metadata: Metadata = {
   title: '巴西特殊海关监管制度（Regimes Especiais）与财税优化 | NFT Logistics',
@@ -17,5 +17,9 @@ export const metadata: Metadata = {
 };
 
 export default function SpecialCustomsRegimesCnPage() {
-  return <SpecialCustomsRegimesCnClient />;
+  return (
+    <main className="min-h-screen">
+      <SpecialCustomsRegimesClient lang="cn" />
+    </main>
+  );
 }

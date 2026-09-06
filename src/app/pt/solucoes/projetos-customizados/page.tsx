@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ProjetosCustomizadosClient from "./ProjetosCustomizadosClient";
+import CustomizedProjectsClient from "@/src/components/pagesComponents/CustomizedProjectsClient";
 
 export const metadata: Metadata = {
   title: "Projetos Customizados para Cargas Especiais | NFT Logistics",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export default function ProjetosCustomizadosPage() {
   return (
     <main className="min-h-screen">
-      <ProjetosCustomizadosClient />
+      <CustomizedProjectsClient lang="pt" />
     </main>
   );
 }
