@@ -43,7 +43,7 @@ const DEFAULT_LOCALES: Record<LanguageCode, ImagemTexto2ColunasLocale> = {
     texto:
       "凭借在特殊海关监管制度、国际展会物流和高复杂度货物运输方面的深厚专长，NFT Logistics 简化了巴西及全球范围内的复杂操作流程。我们严格把控每个环节，确保百分之百合规与准时交付。",
     buttonText: "了解我们的发展历程",
-    buttonHref: "/cn/about-cn",
+    buttonHref: "/cn/about",
     imageAlt: "NFT Logistics 国际物流与海关外贸运营",
     imageSrc: "/imagens/operacao-nft-logistics-2.jpg",
   },

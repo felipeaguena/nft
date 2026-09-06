@@ -647,7 +647,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
             icon: CalendarCheck,
             title: "国际展会与大型活动",
             desc: "暂时进境免税申报、门到展位全程配送，保障展品在布展日前安全进驻展台。",
-            link: "/cn/solutions-cn/fairs-and-events-cn",
+            link: "/cn/solutions/fairs-and-events",
             image: "/imagens/feira-nft-logistics-3.jpg",
             category: "大型展会与展台",
           },
@@ -655,7 +655,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
             icon: HeartPulse,
             title: "医疗器械、医药与大健康",
             desc: "严格符合巴西卫生监督局（Anvisa）标准，温控冷链保障，医疗急需物资优先通关。",
-            link: "/cn/health-cn",
+            link: "/cn/health",
             image: "/imagens/anvisa-health-nft-logistics.webp",
             category: "Anvisa卫生监管",
           },
@@ -663,7 +663,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
             icon: Building,
             title: "机械设备与大型工程项目",
             desc: "利用 Ex-Tarifário 关税减免政策，特种大件多式联运，支持巴西工业生产线建设。",
-            link: "/cn/solutions-cn",
+            link: "/cn/solutions",
             image: "/imagens/operacao-nft-logistics-2.jpg",
             category: "重大工业装备",
           },
@@ -671,7 +671,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
             icon: Cpu,
             title: "高新技术与电子通信",
             desc: "办理 Anatel 与 Inmetro 认证审批，提供高防震抗潮包装与加急空运方案。",
-            link: "/cn/solutions-cn",
+            link: "/cn/solutions",
             image: "/imagens/operacao-nft-logistics-6.jpg",
             category: "通信与高精硬件",
           },
@@ -679,7 +679,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
             icon: Palette,
             title: "艺术品与贵重藏品",
             desc: "恒温恒湿特种包装、专业安保押运，为跨国艺术展览提供最高级别的细致服务。",
-            link: "/cn/solutions-cn/artworks-logistics-cn",
+            link: "/cn/solutions/artworks-logistics",
             image: "/imagens/nft-art-2.jpg",
             category: "艺术双年展与博物馆",
           },
@@ -687,7 +687,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
             icon: Briefcase,
             title: "商业代表与市场拓展支持",
             desc: "为有意开拓巴西市场的海外制造商提供本地商业代表、资质准入与仓储支持。",
-            link: "/cn/contact-cn",
+            link: "/cn/contact",
             image: "/imagens/intersolar-nft-logistics.webp",
             category: "巴西市场落地",
           },
@@ -1307,7 +1307,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
                   ? "/pt/contato"
                   : resolvedLang === "en"
                   ? "/en/contact"
-                  : "/cn/contact-cn"
+                  : "/cn/contact"
               }
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-base backdrop-blur-md transition-all duration-200 hover:scale-[1.02]"
             >

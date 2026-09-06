@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "深入了解 NFT Logistics：专注巴西对外贸易、海关特殊监管制度、国际展会物流与高难度货物优先清关的专家团队。",
   alternates: {
-    canonical: "/cn/about-cn",
+    canonical: "/cn/about",
   },
   openGraph: {
     title: "关于我们 | NFT Logistics - 巴西外贸清关与国际物流卓越专家",
     description:
       "以资深关务智慧与零延误标准，协助跨国企业稳健拓展并扎根巴西市场。",
-    url: "https://www.nftlogistics.com.br/cn/about-cn",
+    url: "https://www.nftlogistics.com.br/cn/about",
     siteName: "NFT Logistics",
     images: [
       {

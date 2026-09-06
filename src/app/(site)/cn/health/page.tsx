@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "深耕巴西医疗机械与医院产品进口清关、暂时进境参展与法规合规，规避巴西国家卫生监督局（Anvisa）合规风险。",
   alternates: {
-    canonical: "/cn/health-cn",
+    canonical: "/cn/health",
   },
   openGraph: {
     title: "医疗设备与医院精密机械进口至巴西 | NFT Logistics",
     description:
       "针对医疗科技、影像诊断设备及巴西展会参展，提供全面符合 Anvisa 监管要求的全流程关务与物流解决方案。",
-    url: "https://www.nftlogistics.com.br/cn/health-cn",
+    url: "https://www.nftlogistics.com.br/cn/health",
     siteName: "NFT Logistics",
     images: [
       {

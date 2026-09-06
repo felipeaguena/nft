@@ -12,5 +12,9 @@ export default function NftLinksLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <div className="min-h-screen w-full bg-neutral-950 text-white flex flex-col items-center justify-center p-4">
+      {children}
+    </div>
+  );
 }

@@ -72,25 +72,25 @@
           "title": "展会和活动",
           "description": "展会和活动国际物流解决方案",
           "texto": "我们提供设备、机器和宣传品的进出口服务，以满足展会、商务代表、会议、活动等各种需求。",
-          "link": "/cn/solutions-cn/fairs-and-events-cn"
+          "link": "/cn/solutions/fairs-and-events"
         },
         "regimes_especiais": {
           "title": "特殊制度",
           "description": "特殊制度国际物流解决方案",
           "texto": "关于临时入境、保税仓库等等，这些进出口特殊制度我们都非常熟悉，能为您的公司提供特殊优势，助您顺利参与国际展览、活动或其他项目。",
-          "link": "/cn/solutions-cn/special-customs-regimes-cn"
+          "link": "/cn/solutions/special-customs-regimes"
         },
         "projetos_customizados": {
           "title": "定制项目",
           "description": "定制项目国际物流解决方案",
           "texto": "您的货物超重、超尺寸、易碎？需要特殊搬运和照顾？没问题！联系我们，告诉我们您的需求，我们会尽力协助您的项目。",
-          "link": "/cn/solutions-cn/customized-projects-cn"
+          "link": "/cn/solutions/customized-projects"
         },
         "logistica_obras_arte": {
           "title": "艺术品物流",
           "description": "艺术品物流解决方案",
           "texto": "针对艺术品和其他高价值物品，我们提供全方位的服务：进出口、临时入境、国内和国际运输、专业处理、订制箱子，以及全程追踪。",
-          "link": "/cn/solutions-cn/artworks-logistics-cn"
+          "link": "/cn/solutions/artworks-logistics"
         }
       }
     }

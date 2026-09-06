@@ -45,7 +45,7 @@ const CONSENT_TEXTS: Record<LanguageCode, ConsentContent> = {
     decline: "拒绝",
     privacyPrefix: "了解更多信息，请参阅我们的",
     privacyText: "隐私政策",
-    privacyLink: "/cn/privacy-cn",
+    privacyLink: "/cn/privacy",
   },
 };
 

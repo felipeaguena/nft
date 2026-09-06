@@ -24,7 +24,7 @@ const MAIN_ROUTES: RouteConfig[] = [
   {
     pt: "/pt/sobre",
     en: "/en/about",
-    cn: "/cn/about-cn",
+    cn: "/cn/about",
     changeFrequency: "monthly",
     priority: 0.8,
   },
@@ -32,7 +32,7 @@ const MAIN_ROUTES: RouteConfig[] = [
   {
     pt: "/pt/solucoes",
     en: "/en/solutions",
-    cn: "/cn/solutions-cn",
+    cn: "/cn/solutions",
     changeFrequency: "weekly",
     priority: 0.9,
   },
@@ -40,7 +40,7 @@ const MAIN_ROUTES: RouteConfig[] = [
   {
     pt: "/pt/solucoes/feiras-e-eventos",
     en: "/en/solutions/fairs-and-events",
-    cn: "/cn/solutions-cn/fairs-and-events-cn",
+    cn: "/cn/solutions/fairs-and-events",
     changeFrequency: "weekly",
     priority: 0.85,
   },
@@ -48,7 +48,7 @@ const MAIN_ROUTES: RouteConfig[] = [
   {
     pt: "/pt/solucoes/regimes-especiais",
     en: "/en/solutions/special-customs-regimes",
-    cn: "/cn/solutions-cn/special-customs-regimes-cn",
+    cn: "/cn/solutions/special-customs-regimes",
     changeFrequency: "weekly",
     priority: 0.85,
   },
@@ -56,7 +56,7 @@ const MAIN_ROUTES: RouteConfig[] = [
   {
     pt: "/pt/solucoes/projetos-customizados",
     en: "/en/solutions/customized-projects",
-    cn: "/cn/solutions-cn/customized-projects-cn",
+    cn: "/cn/solutions/customized-projects",
     changeFrequency: "weekly",
     priority: 0.85,
   },
@@ -64,7 +64,7 @@ const MAIN_ROUTES: RouteConfig[] = [
   {
     pt: "/pt/solucoes/logistica-obras-arte",
     en: "/en/solutions/artworks-logistics",
-    cn: "/cn/solutions-cn/artworks-logistics-cn",
+    cn: "/cn/solutions/artworks-logistics",
     changeFrequency: "weekly",
     priority: 0.85,
   },
@@ -72,7 +72,7 @@ const MAIN_ROUTES: RouteConfig[] = [
   {
     pt: "/pt/saude",
     en: "/en/health",
-    cn: "/cn/health-cn",
+    cn: "/cn/health",
     changeFrequency: "weekly",
     priority: 0.85,
   },
@@ -80,7 +80,7 @@ const MAIN_ROUTES: RouteConfig[] = [
   {
     pt: "/pt/contato",
     en: "/en/contact",
-    cn: "/cn/contact-cn",
+    cn: "/cn/contact",
     changeFrequency: "monthly",
     priority: 0.8,
   },
@@ -88,7 +88,7 @@ const MAIN_ROUTES: RouteConfig[] = [
   {
     pt: "/pt/privacidade",
     en: "/en/privacy",
-    cn: "/cn/privacy-cn",
+    cn: "/cn/privacy",
     changeFrequency: "yearly",
     priority: 0.3,
   },

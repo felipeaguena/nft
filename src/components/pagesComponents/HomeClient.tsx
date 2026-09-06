@@ -479,7 +479,7 @@ const HOME_CONTENT = {
           category: "展馆与展位专线",
           desc: "严守布展窗口期，点对点运送并协助现场组装就位。",
           image: "/imagens/feira-nft-logistics-3.jpg",
-          href: "/cn/solutions-cn/fairs-and-events-cn",
+          href: "/cn/solutions/fairs-and-events",
           icon: CalendarCheck,
         },
         {
@@ -487,7 +487,7 @@ const HOME_CONTENT = {
           category: "Anvisa 卫生监管",
           desc: "严格温控链管理，符合巴西国家卫生监督局合规标准。",
           image: "/imagens/anvisa-health-nft-logistics.webp",
-          href: "/cn/health-cn",
+          href: "/cn/health",
           icon: HeartPulse,
         },
         {
@@ -495,7 +495,7 @@ const HOME_CONTENT = {
           category: "重大件与项目工程",
           desc: "协助申请关税减免（Ex-Tarifário）与大型工程车辆运输。",
           image: "/imagens/operacao-nft-logistics-2.jpg",
-          href: "/cn/solutions-cn/customized-projects-cn",
+          href: "/cn/solutions/customized-projects",
           icon: Building2,
         },
         {
@@ -503,7 +503,7 @@ const HOME_CONTENT = {
           category: "Anatel 与 Inmetro",
           desc: "前置进口许可审批与高货值电子元器件快速清关。",
           image: "/imagens/operacao-nft-logistics-6.jpg",
-          href: "/cn/solutions-cn",
+          href: "/cn/solutions",
           icon: Cpu,
         },
         {
@@ -511,7 +511,7 @@ const HOME_CONTENT = {
           category: "文博与艺术专运",
           desc: "恒温定制包装，IPHAN 审批协调与武装押运安保。",
           image: "/imagens/nft-art-2.jpg",
-          href: "/cn/solutions-cn/artworks-logistics-cn",
+          href: "/cn/solutions/artworks-logistics",
           icon: Palette,
         },
       ],
@@ -548,7 +548,7 @@ const HOME_CONTENT = {
       title: "开启高效顺畅的巴西物流与清关之旅，无惧监管难题。",
       subtitle: "即刻联系我们的资深主管与关务专家，获取为您量身定制的无忧操作方案。",
       btnPrimary: "咨询专家团队",
-      btnPrimaryHref: "/cn/contact-cn",
+      btnPrimaryHref: "/cn/contact",
       btnSecondary: "通过 WhatsApp 沟通",
       btnSecondaryHref: "https://wa.me/5511948530057?text=Hello!%20I%20would%20like%20to%20know%20how%20NFT%20Logistics%20can%20assist%20our%20entry%20into%20the%20Brazilian%20market.",
     },

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "联系 NFT Logistics，获取国际物流、海关清关与对外贸易的定制化专业解决方案。",
   alternates: {
-    canonical: "/cn/contact-cn",
+    canonical: "/cn/contact",
   },
 };
 

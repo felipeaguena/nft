@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
-import CookieConsent from "../components/CookieConsent";
-import WhatsAppButton from "../components/WhatsAppButton";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -110,11 +106,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
-        <Nav />
-        <div className="flex-1">{children}</div>
-        <Footer />
-        <CookieConsent />
-        <WhatsAppButton />
+        {children}
       </body>
     </html>
   );

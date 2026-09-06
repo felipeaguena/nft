@@ -35,30 +35,30 @@ const LANGUAGES: LanguageOption[] = [
 
 const ROUTE_MAP: { pt: string; en: string; cn: string }[] = [
   { pt: "/pt", en: "/en", cn: "/cn" },
-  { pt: "/pt/sobre", en: "/en/about", cn: "/cn/about-cn" },
-  { pt: "/pt/contato", en: "/en/contact", cn: "/cn/contact-cn" },
-  { pt: "/pt/saude", en: "/en/health", cn: "/cn/health-cn" },
-  { pt: "/pt/privacidade", en: "/en/privacy", cn: "/cn/privacy-cn" },
-  { pt: "/pt/solucoes", en: "/en/solutions", cn: "/cn/solutions-cn" },
+  { pt: "/pt/sobre", en: "/en/about", cn: "/cn/about" },
+  { pt: "/pt/contato", en: "/en/contact", cn: "/cn/contact" },
+  { pt: "/pt/saude", en: "/en/health", cn: "/cn/health" },
+  { pt: "/pt/privacidade", en: "/en/privacy", cn: "/cn/privacy" },
+  { pt: "/pt/solucoes", en: "/en/solutions", cn: "/cn/solutions" },
   {
     pt: "/pt/solucoes/feiras-e-eventos",
     en: "/en/solutions/fairs-and-events",
-    cn: "/cn/solutions-cn/fairs-and-events-cn",
+    cn: "/cn/solutions/fairs-and-events",
   },
   {
     pt: "/pt/solucoes/regimes-especiais",
     en: "/en/solutions/special-customs-regimes",
-    cn: "/cn/solutions-cn/special-customs-regimes-cn",
+    cn: "/cn/solutions/special-customs-regimes",
   },
   {
     pt: "/pt/solucoes/projetos-customizados",
     en: "/en/solutions/customized-projects",
-    cn: "/cn/solutions-cn/customized-projects-cn",
+    cn: "/cn/solutions/customized-projects",
   },
   {
     pt: "/pt/solucoes/logistica-obras-arte",
     en: "/en/solutions/artworks-logistics",
-    cn: "/cn/solutions-cn/artworks-logistics-cn",
+    cn: "/cn/solutions/artworks-logistics",
   },
 ];
 
@@ -123,8 +123,7 @@ function checkIsHealth(key: string, href: string): boolean {
     k === "saude" ||
     k === "健康" ||
     h.endsWith("/health") ||
-    h.endsWith("/saude") ||
-    h.endsWith("/health-cn")
+    h.endsWith("/saude")
   );
 }
 

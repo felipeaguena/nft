@@ -662,7 +662,7 @@ const CONTENT = {
             "展馆现场拆箱卸货、布展及空箱安全寄存",
             "展后返运（复出口）或转为永久进口一站式清关",
           ],
-          href: "/cn/solutions-cn/fairs-and-events-cn",
+          href: "/cn/solutions/fairs-and-events",
         },
         {
           id: "regimes",
@@ -678,7 +678,7 @@ const CONTENT = {
             "海关期限与合法延期手续的严密跟进",
             "制度核销与复出口结案全流程护航",
           ],
-          href: "/cn/solutions-cn/special-customs-regimes-cn",
+          href: "/cn/solutions/special-customs-regimes",
         },
         {
           id: "projetos",
@@ -694,7 +694,7 @@ const CONTENT = {
             "专业特种重型装备：大型吊机、特种低平板拖车等",
             "资深项目工程师全程现场监督装卸作业",
           ],
-          href: "/cn/solutions-cn/customized-projects-cn",
+          href: "/cn/solutions/customized-projects",
         },
         {
           id: "arte",
@@ -710,7 +710,7 @@ const CONTENT = {
             "巴西文化遗产局（IPHAN）与海关专属清关批文",
             "全程钉对钉（Nail-to-Nail）综合艺术品保险",
           ],
-          href: "/cn/solutions-cn/artworks-logistics-cn",
+          href: "/cn/solutions/artworks-logistics",
         },
       ],
     },
@@ -821,7 +821,7 @@ const CONTENT = {
           name: "医疗设备、生命健康与诊断仪器",
           desc: "核磁共振、CT机、手术机器人等大型医疗仪器的进口清关及展会参展，具备专业 Anvisa 资质。",
           badge: "查看医疗健康物流",
-          href: "/cn/health-cn",
+          href: "/cn/health",
           image: "/imagens/doutores-health.nft-logistics.webp",
         },
         {
@@ -829,7 +829,7 @@ const CONTENT = {
           name: "展会博览与大型国际峰会",
           desc: "为 São Paulo Expo、Anhembi、Riocentro 等巴西国家级展馆提供全程门到展位保障。",
           badge: "查看展会物流",
-          href: "/cn/solutions-cn/fairs-and-events-cn",
+          href: "/cn/solutions/fairs-and-events",
           image: "/imagens/feira-nft-logistics-7.jpg",
         },
         {
@@ -853,7 +853,7 @@ const CONTENT = {
           name: "重工业机械与成套装备制造",
           desc: "完整厂房搬迁设备、重型机床在 Drawback 和保税制度下的进出口运作。",
           badge: "查看特殊制度",
-          href: "/cn/solutions-cn/special-customs-regimes-cn",
+          href: "/cn/solutions/special-customs-regimes",
           image: "/imagens/operacao-nft-logistics-6.jpg",
         },
         {
@@ -861,7 +861,7 @@ const CONTENT = {
           name: "艺术品、文博珍品与拍卖行",
           desc: "全恒温避震押运、博物馆级木箱以及全额钉对钉艺术品专属保险。",
           badge: "查看艺术品物流",
-          href: "/cn/solutions-cn/artworks-logistics-cn",
+          href: "/cn/solutions/artworks-logistics",
           image: "/imagens/nft-art.jpg",
         },
       ],

@@ -48,7 +48,7 @@ const HEALTH_LOCALES: Record<LanguageCode, LocaleContent> = {
     description:
       "进出口、暂时进出境、国内外运输、专业装卸、定制包装箱制作以及全程专属跟踪服务。",
     buttonText: "查看更多",
-    buttonHref: "/cn/health-cn",
+    buttonHref: "/cn/health",
   },
 };
 

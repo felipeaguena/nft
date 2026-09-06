@@ -144,11 +144,11 @@
     "title": "端到端国际物流与关务智慧",
     "subtitle": "提供全流程物流运输、关务申报与特殊制度支持，化繁为简，消除巴西复杂官僚风险。",
     "btnAll": "查看全部解决方案",
-    "allHref": "/cn/solutions-cn",
+    "allHref": "/cn/solutions",
     "learnMore": "了解更多关于此方案",
     "items": [
       {
-        "id": "fairs-and-events-cn",
+        "id": "fairs-and-events",
         "title": "国际展会与活动物流",
         "tag": "严守展期 零延误",
         "desc": "为参展巴西的全球展商提供门到展位（Door-to-Booth）专线运输及暂时进境免税申报。",
@@ -157,13 +157,13 @@
           "暂时进境税款全额保函免税",
           "展会现场专人驻场协调"
         ],
-        "href": "/cn/solutions-cn/fairs-and-events-cn",
+        "href": "/cn/solutions/fairs-and-events",
         "icon": "CalendarCheck",
         "accent": "text-purple-600 dark:text-purple-400",
         "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
       },
       {
-        "id": "special-customs-regimes-cn",
+        "id": "special-customs-regimes",
         "title": "特殊海关监管制度",
         "tag": "税收合规优化",
         "desc": "专业规划暂时进境（Admissão Temporária）、退税（Drawback）及保税仓储制度，合法优化现金流。",
@@ -172,13 +172,13 @@
           "事前单证合规审查与备案",
           "严格把控复出口与延期申报节点"
         ],
-        "href": "/cn/solutions-cn/special-customs-regimes-cn",
+        "href": "/cn/solutions/special-customs-regimes",
         "icon": "Scale",
         "accent": "text-purple-600 dark:text-purple-400",
         "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
       },
       {
-        "id": "customized-projects-cn",
+        "id": "customized-projects",
         "title": "定制项目与超限重件物流",
         "tag": "超规及重大件货物",
         "desc": "针对超重、超限设备（OOG）及整套工业生产线的工程物流方案与专业路线勘测。",
@@ -187,13 +187,13 @@
           "巴西国家陆运局（DNIT/PRF）特许通行证",
           "专用平板重型拖车、吊装与全程警力护送"
         ],
-        "href": "/cn/solutions-cn/customized-projects-cn",
+        "href": "/cn/solutions/customized-projects",
         "icon": "Boxes",
         "accent": "text-purple-600 dark:text-purple-400",
         "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
       },
       {
-        "id": "artworks-logistics-cn",
+        "id": "artworks-logistics",
         "title": "艺术品与贵重物资运输",
         "tag": "极高安全性与保密",
         "desc": "为博物馆、艺术画廊及私人收藏提供恒温定制木箱、专属信使押运与全程保险服务。",
@@ -202,7 +202,7 @@
           "巴西国家历史与艺术遗产局（IPHAN）特批",
           "全程钉对钉（Nail-to-Nail）国际高额险"
         ],
-        "href": "/cn/solutions-cn/artworks-logistics-cn",
+        "href": "/cn/solutions/artworks-logistics",
         "icon": "Palette",
         "accent": "text-purple-600 dark:text-purple-400",
         "badgeBg": "bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800"
