@@ -1,0 +1,466 @@
+{
+  "regimes-especiais": {
+    "pt": {
+      "id": "etapas",
+      "tag": "Metodologia Operacional",
+      "title": "Como Estruturamos Regimes Especiais em 5 Etapas",
+      "description": "Um processo estruturado em rigor fiscal e governança aduaneira para assegurar o deferimento rápido e a segurança jurídica contínua.",
+      "steps": [
+        {
+          "num": "01",
+          "icon": "FileText",
+          "title": "Diagnóstico de Viabilidade Tributária",
+          "desc": "Classificação fiscal precisa (NCM), análise do enquadramento legal e cálculo comparativo do impacto financeiro entre o regime comum e o especial."
+        },
+        {
+          "num": "02",
+          "icon": "Boxes",
+          "title": "Estruturação do Dossiê e Contratos",
+          "desc": "Montagem documental completa, minutas contratuais fundamentadas, laudos técnicos e dimensionamento de garantias aduaneiras (se exigidas)."
+        },
+        {
+          "num": "03",
+          "icon": "Sparkles",
+          "title": "Protocolo e Deferimento Aduaneiro",
+          "desc": "Submissão perante a Receita Federal via Siscomex/Módulos Especiais e acompanhamento diligente da conferência física e documental até a concessão."
+        },
+        {
+          "num": "04",
+          "icon": "FileCheck2",
+          "title": "Gestão Contínua de Vigência e Prazos",
+          "desc": "Monitoramento sistemático do período de permanência, controle de saldos alfandegados e elaboração preventiva de prorrogações legais."
+        },
+        {
+          "num": "05",
+          "icon": "Workflow",
+          "title": "Extinção do Regime & Baixa Definitiva",
+          "desc": "Execução do trâmite de encerramento (reexportação, nacionalização definitiva ou baixa de ato concessório) com cancelamento formal do Termo de Responsabilidade."
+        }
+      ]
+    },
+    "en": {
+      "id": "steps",
+      "tag": "Operational Methodology",
+      "title": "How We Structure Special Regimes in 5 Stages",
+      "description": "A structured process grounded in fiscal rigor and customs governance to ensure swift authorization and continuous legal safety.",
+      "steps": [
+        {
+          "num": "01",
+          "icon": "FileText",
+          "title": "Tax Feasibility Diagnostic",
+          "desc": "Precise HS/NCM tariff classification, statutory qualification check, and comparative financial simulation between standard and special regimes."
+        },
+        {
+          "num": "02",
+          "icon": "Boxes",
+          "title": "Dossier & Contract Structuring",
+          "desc": "Complete documentation compilation, substantiated contracts, technical reports, and customs bond calculation (if applicable)."
+        },
+        {
+          "num": "03",
+          "icon": "Sparkles",
+          "title": "Protocol & Customs Grant",
+          "desc": "Filing through Siscomex and diligent follow-up through physical and documentary inspection until official approval."
+        },
+        {
+          "num": "04",
+          "icon": "FileCheck2",
+          "title": "Active Term & Validity Management",
+          "desc": "Systematic monitoring of permitted stay deadlines, bonded inventory ledger tracking, and proactive extension processing."
+        },
+        {
+          "num": "05",
+          "icon": "Workflow",
+          "title": "Regime Extinction & Final Discharge",
+          "desc": "Execution of final closing formalities (re-exportation, definitive clearance for consumption, or drawback write-off) with official release of liabilities."
+        }
+      ]
+    },
+    "cn": {
+      "id": "steps",
+      "tag": "操作方法论",
+      "title": "特殊监管制度构建的五大阶段",
+      "description": "以严谨财税法理与海关治理为基石的成熟服务流程，保障高效批复与持续合规。",
+      "steps": [
+        {
+          "num": "01",
+          "icon": "FileText",
+          "title": "税法可行性综合诊断",
+          "desc": "精确判定海关编码（NCM/HS Code）、核定适用监管法规并测算普通清关与特殊制度下的财务对比收益。"
+        },
+        {
+          "num": "02",
+          "icon": "Boxes",
+          "title": "法务卷宗与商务合同架构",
+          "desc": "起草全套合规报关文件、技术报告与合同草案，核定并办理海关要求的保函/担保手续。"
+        },
+        {
+          "num": "03",
+          "icon": "Sparkles",
+          "title": "海关递单与准予批复",
+          "desc": "通过巴西 Siscomex 外贸系统呈报，全程跟进海关官员实物查验与单据审核，直至取得正式批复。"
+        },
+        {
+          "num": "04",
+          "icon": "FileCheck2",
+          "title": "有效期与时限动态管理",
+          "desc": "严密监管保税货物停留期与保税台账余额，在法定窗口期内稳妥提交合法展期申请。"
+        },
+        {
+          "num": "05",
+          "icon": "Workflow",
+          "title": "监管制度终止与责任核销",
+          "desc": "执行闭环结算手续（复运出境、转为常规消费清关或核销加工贸易令），正式注销担保与责任承诺。"
+        }
+      ]
+    }
+  },
+  "logistica-obras-arte": {
+    "pt": {
+      "id": "etapas",
+      "tag": "Protocolo Museológico",
+      "title": "Como Conduzimos a Logística de Arte em 5 Etapas",
+      "description": "Um fluxo rigoroso pautado nos padrões internacionais de preservação para que sua coleção viaje com proteção integral.",
+      "steps": [
+        {
+          "num": "01",
+          "icon": "FileSpreadsheet",
+          "title": "Vistoria & Condition Report Inicial",
+          "desc": "Avaliação técnica presencial das condições físicas da obra, dimensão, suporte, moldura e emissão do laudo inicial detalhado."
+        },
+        {
+          "num": "02",
+          "icon": "Boxes",
+          "title": "Embalagem Sob Medida Climatizada",
+          "desc": "Construção artesanal da caixa de madeira fumigada (NIMF 15) com forração inerte, barreira térmica e proteção antichoque."
+        },
+        {
+          "num": "03",
+          "icon": "Landmark",
+          "title": "Anuência IPHAN e Despacho Aduaneiro",
+          "desc": "Concessão de autorizações de trânsito cultural perante o IPHAN/IBRAM e desembaraço aduaneiro com Admissão Temporária."
+        },
+        {
+          "num": "04",
+          "icon": "Truck",
+          "title": "Transporte Climatizado & Courier",
+          "desc": "Translado em veículo dedicado com suspensão a ar, telemetria climática e acompanhamento presencial do courier da obra."
+        },
+        {
+          "num": "05",
+          "icon": "CheckCircle2",
+          "title": "Aclimatização & Fixação no Espaço",
+          "desc": "Período de repouso e aclimatização no ambiente de destino, desempacotamento cuidadoso, conferência do laudo final e montagem."
+        }
+      ]
+    },
+    "en": {
+      "id": "steps",
+      "tag": "Museum Protocol",
+      "title": "Our 5-Step Art Logistics Methodology",
+      "description": "A meticulous workflow compliant with international museum preservation standards.",
+      "steps": [
+        {
+          "num": "01",
+          "icon": "FileSpreadsheet",
+          "title": "Initial Condition Report",
+          "desc": "On-site physical inspection of dimensions, support, frame, and issuance of initial baseline report."
+        },
+        {
+          "num": "02",
+          "icon": "Boxes",
+          "title": "Custom Archival Packaging",
+          "desc": "Crafting of ISPM 15 fumigated timber crates with inert Tyvek lining and hygrothermal barrier."
+        },
+        {
+          "num": "03",
+          "icon": "Landmark",
+          "title": "Heritage Approvals & Clearance",
+          "desc": "Securing transit approvals with IPHAN / IBRAM and customs filing under Temporary Admission."
+        },
+        {
+          "num": "04",
+          "icon": "Truck",
+          "title": "Air-Ride Transport & Courier",
+          "desc": "Transit in air-ride pneumatic trucks with climate telemetry and professional courier monitoring."
+        },
+        {
+          "num": "05",
+          "icon": "CheckCircle2",
+          "title": "Acclimatization & Wall-Mounting",
+          "desc": "Controlled resting period, meticulous uncrating, final Condition Report signoff, and mounting."
+        }
+      ]
+    },
+    "cn": {
+      "id": "steps",
+      "tag": "博物馆标准规程",
+      "title": "艺术品物流五步实施流程",
+      "description": "严格遵循国际文物与艺术保护标准，确保您的珍贵藏品受到全方位呵护。",
+      "steps": [
+        {
+          "num": "01",
+          "icon": "FileSpreadsheet",
+          "title": "现场查验与初始状况报告",
+          "desc": "专员实地测量尺寸、评估材质框架状态，出具严谨的初始 Condition Report。"
+        },
+        {
+          "num": "02",
+          "icon": "Boxes",
+          "title": "定制恒温熏蒸木箱包装",
+          "desc": "手工打制符合 NIMF 15 标准的专用木箱，配以 Tyvek 呼吸层与惰性减震海绵。"
+        },
+        {
+          "num": "03",
+          "icon": "Landmark",
+          "title": "文化部批文与暂时进境清关",
+          "desc": "办妥 IPHAN 与 IBRAM 文化出入境许可证，办理展览专用的免税海关暂时进境。"
+        },
+        {
+          "num": "04",
+          "icon": "Truck",
+          "title": "气囊恒温专车与押运陪同",
+          "desc": "全气囊避震卡车转运，温湿度远程监控，专业押运专递员跟车保障。"
+        },
+        {
+          "num": "05",
+          "icon": "CheckCircle2",
+          "title": "环境适应与挂墙安装",
+          "desc": "进入展室环境适应静置期，专业开箱复核状态报告并配合布展固定。"
+        }
+      ]
+    }
+  },
+  "projetos-customizados": {
+    "pt": {
+      "id": "etapas",
+      "tag": "Metodologia Operacional",
+      "title": "Como Conduzimos Projetos Customizados em 5 Etapas",
+      "description": "Metodologia de engenharia de projetos testada para entregar equipamentos críticos com total pontualidade e segurança.",
+      "steps": [
+        {
+          "num": "01",
+          "icon": "FileText",
+          "title": "Estudo de Viabilidade Técnica",
+          "desc": "Avaliação detalhada das dimensões, centro de gravidade, pontos de içamento da carga e escolha dos modais ideais para transporte."
+        },
+        {
+          "num": "02",
+          "icon": "Milestone",
+          "title": "Route Survey & Rigging Plan",
+          "desc": "Vistoria in loco de rodovias, elaboração do plano de içamento de guindastes e projeto de amarração e peação (lashing plan)."
+        },
+        {
+          "num": "03",
+          "icon": "ScrollText",
+          "title": "Licenças e Escolta Viária",
+          "desc": "Obtenção de AETs no DNIT, DER e concessionárias, contratação de batedores civis e agendamento de escolta com a PRF."
+        },
+        {
+          "num": "04",
+          "icon": "Ship",
+          "title": "Embarque Multimodal & Transporte",
+          "desc": "Afretamento marítimo dedicado, transbordo portuário com supervisores de estiva e transporte rodoviário pesado rastreado."
+        },
+        {
+          "num": "05",
+          "icon": "CheckCircle2",
+          "title": "Içamento e Assentamento na Base",
+          "desc": "Descarga técnica no destino final, posicionamento exato na fundação da planta industrial (door-to-foundation) e entrega concluída."
+        }
+      ]
+    },
+    "en": {
+      "id": "steps",
+      "tag": "Operational Methodology",
+      "title": "How We Execute Customized Projects in 5 Stages",
+      "description": "A battle-tested engineering methodology to deliver mission-critical machinery with complete precision and absolute punctuality.",
+      "steps": [
+        {
+          "num": "01",
+          "icon": "FileText",
+          "title": "Technical Feasibility Study",
+          "desc": "Detailed assessment of cargo weight, dimensions, center of gravity, lifting points, and modal selection."
+        },
+        {
+          "num": "02",
+          "icon": "Milestone",
+          "title": "Route Survey & Rigging Plan",
+          "desc": "Physical on-road survey, crane lift simulation, and comprehensive cargo lashing/stowage engineering plan."
+        },
+        {
+          "num": "03",
+          "icon": "ScrollText",
+          "title": "Permits & Highway Escort",
+          "desc": "Securing oversized transit permits from transport authorities, hiring pilot cars, and scheduling highway police escorts."
+        },
+        {
+          "num": "04",
+          "icon": "Ship",
+          "title": "Multimodal Transit & Tracking",
+          "desc": "Dedicated sea chartering, stevedoring supervision at port terminals, and monitored heavy road transit."
+        },
+        {
+          "num": "05",
+          "icon": "CheckCircle2",
+          "title": "Lifting & Foundation Placement",
+          "desc": "Technical discharge at destination, precise placement onto plant foundation plinths (door-to-foundation), and project sign-off."
+        }
+      ]
+    },
+    "cn": {
+      "id": "steps",
+      "tag": "运营方法论",
+      "title": "定制工程物流实施的五大阶段",
+      "description": "历经实践验证的严密工程方法论，保障关键工业装备安全、精准、准时运抵交付。",
+      "steps": [
+        {
+          "num": "01",
+          "icon": "FileText",
+          "title": "技术可行性论证",
+          "desc": "详细评估货物重量尺寸、重心分布、起吊受力点，制定最佳多式联运路径与运输方案。"
+        },
+        {
+          "num": "02",
+          "icon": "Milestone",
+          "title": "路线勘测与吊装方案",
+          "desc": "实地勘探道路净空与桥梁承载力，编制专业吊车吊装图纸及货物绑扎固定（Lashing Plan）方案。"
+        },
+        {
+          "num": "03",
+          "icon": "ScrollText",
+          "title": "准行审批与交通护航",
+          "desc": "向交通主管机构申领超限准行证，协调引导车队伍与沿途各管区交警护送编队。"
+        },
+        {
+          "num": "04",
+          "icon": "Ship",
+          "title": "多式联运发运与在途监控",
+          "desc": "特种船舶租船运输、港口码头专人理货换装监护及重载运输GPS多维度实时追踪。"
+        },
+        {
+          "num": "05",
+          "icon": "CheckCircle2",
+          "title": "现场吊装与基座落位",
+          "desc": "在最终目的地现场实施工程卸车，毫厘不差落位于工厂设备基础（Door-to-Foundation），完成签署验收。"
+        }
+      ]
+    }
+  },
+  "feiras-e-eventos": {
+    "pt": {
+      "id": "etapas",
+      "tag": "Metodologia Operacional",
+      "title": "Como Funciona a Nossa Operação",
+      "description": "Um fluxo rigoroso, transparente e testado centenas de vezes para garantir que seu estande esteja 100% pronto no dia do evento.",
+      "steps": [
+        {
+          "num": "01",
+          "icon": "FileText",
+          "title": "Diagnóstico & Planejamento Aduaneiro",
+          "desc": "Análise antecipada da lista de materiais (Invoice & Packing List), classificação fiscal (NCM) e definição da estratégia ideal entre Admissão Temporária e Nacionalização."
+        },
+        {
+          "num": "02",
+          "icon": "CheckCircle2",
+          "title": "Licenciamento e Anuências Prévias",
+          "desc": "Emissão de Licenças de Importação (LI via módulo LPCO/Siscomex) e deferimentos prévios junto a órgãos como Anvisa, MAPA, Inmetro ou Anatel antes da saída do país de origem."
+        },
+        {
+          "num": "03",
+          "icon": "Truck",
+          "title": "Coleta na Origem & Frete Internacional",
+          "desc": "Coleta internacional, conferência de embalagens certificadas (madeira tratada NIMF 15) e coordenação de frete aéreo expresso ou marítimo com rastreamento integral."
+        },
+        {
+          "num": "04",
+          "icon": "ShieldCheck",
+          "title": "Desembaraço Aduaneiro Prioritário",
+          "desc": "Acompanhamento presencial da conferência física e documental pela Receita Federal, assinatura do Termo de Responsabilidade e liberação rápida nos portos e aeroportos."
+        },
+        {
+          "num": "05",
+          "icon": "Boxes",
+          "title": "Entrega no Estande & Reexportação",
+          "desc": "Transporte local dedicado até o pavilhão, descarregamento técnico no estande, guarda de embalagens vazias e coordenação do retorno (reexportação) pós-evento."
+        }
+      ]
+    },
+    "en": {
+      "id": "etapas",
+      "tag": "Operational Methodology",
+      "title": "How Our Operations Work",
+      "description": "A rigorous, transparent workflow tested across hundreds of exhibitions to ensure your booth is 100% prepared.",
+      "steps": [
+        {
+          "num": "01",
+          "icon": "FileText",
+          "title": "Customs Diagnosis & Planning",
+          "desc": "Advance audit of invoices, packing lists, HS classifications, and definition of optimal temporary vs. definitive regimes."
+        },
+        {
+          "num": "02",
+          "icon": "CheckCircle2",
+          "title": "Prior Licensing & Permits",
+          "desc": "Filing of LPCO import licenses with regulatory bodies like Anvisa, MAPA, Inmetro, or Anatel before cargo leaves the country of origin."
+        },
+        {
+          "num": "03",
+          "icon": "Truck",
+          "title": "Origin Pickup & Freight",
+          "desc": "International pickup, verification of ISPM 15 treated crates, and priority express air or ocean freight booking with full tracking."
+        },
+        {
+          "num": "04",
+          "icon": "ShieldCheck",
+          "title": "Priority Customs Clearance",
+          "desc": "On-site presence during customs inspections at Brazilian terminals, signing liability terms, and obtaining fast green channel release."
+        },
+        {
+          "num": "05",
+          "icon": "Boxes",
+          "title": "Booth Delivery & Re-Export",
+          "desc": "Dedicated local trucking to the venue, booth offloading, empty crate storage, and coordination of post-event re-exportation."
+        }
+      ]
+    },
+    "cn": {
+      "id": "etapas",
+      "tag": "标准化运作流程",
+      "title": "我们的展会物流五步流程",
+      "description": "严谨可靠、经过数百场大型国际展会反复验证的标准化操作体系。",
+      "steps": [
+        {
+          "num": "01",
+          "icon": "FileText",
+          "title": "方案评估与海关规划",
+          "desc": "装运前详细预审发票、装箱单与技术规格，精确分类海关编码（NCM），制定最优清关策略。"
+        },
+        {
+          "num": "02",
+          "icon": "CheckCircle2",
+          "title": "前置许可与单据审批",
+          "desc": "在货物离开起运国前，通过 Siscomex/LPCO 模块向 Anvisa、Inmetro 或 Anatel 办妥准入许可。"
+        },
+        {
+          "num": "03",
+          "icon": "Truck",
+          "title": "起运地提货与国际运输",
+          "desc": "安排境外工厂提货，核查符合 NIMF 15 国际熏蒸标准的包装，预订加急海空运舱位并全程跟踪。"
+        },
+        {
+          "num": "04",
+          "icon": "ShieldCheck",
+          "title": "口岸优先查验与快速放行",
+          "desc": "资深清关团队在巴西机场或港口现场跟进海关查验，签署责任保函，争取以最快速度获得绿通道放行。"
+        },
+        {
+          "num": "05",
+          "icon": "Boxes",
+          "title": "展台现场交付与后续复出境",
+          "desc": "专车安全送抵展馆内卸货就位，代管空箱包装，并在展会闭幕后高效协调展品复运出境手续。"
+        }
+      ]
+    }
+  }
+}

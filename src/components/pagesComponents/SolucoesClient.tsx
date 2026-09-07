@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import HeroSection from "@/src/components/HeroSection";
+import CtaSection from "@/src/components/CtaSection";
 import {
   Sparkles,
   ArrowRight,
@@ -923,72 +925,11 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
       {/* BLOCO 1: HERO                                                             */}
       {/* Título de impacto, subtítulo, botões e trust badge                        */}
       {/* ========================================================================= */}
-      <section className="relative w-full min-h-[82vh] flex items-center justify-center pt-28 pb-20 px-4 sm:px-6 lg:px-8">
-        {/* Background com imagem operacional e iluminação quente */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/imagens/operacao-nft-logistics-3.jpg"
-            alt="Soluções em Logística Internacional NFT Logistics"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center brightness-[0.38] dark:brightness-[0.34]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/90 via-[#160d06]/75 to-neutral-50 dark:to-[#0a0a0a] transition-colors duration-200" />
-          <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-orange-600/15 blur-[135px] pointer-events-none rounded-full" />
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/15 border border-orange-400/40 text-orange-300 dark:text-orange-400 text-xs sm:text-sm font-semibold tracking-wide uppercase mb-6 backdrop-blur-md">
-            <Sparkles className="w-4 h-4 text-orange-400" />
-            <span>{t.hero.badge}</span>
-          </div>
-
-          {/* Título */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white max-w-4xl leading-tight sm:leading-[1.14] drop-shadow-lg">
-            {t.hero.title}
-          </h1>
-
-          {/* Subtítulo / Descrição */}
-          <p className="mt-6 text-base sm:text-lg lg:text-xl text-neutral-200 dark:text-neutral-300 max-w-3xl leading-relaxed drop-shadow-sm">
-            {t.hero.description}
-          </p>
-
-          {/* Botões */}
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-semibold text-base shadow-lg shadow-orange-600/25 transition-all duration-200 hover:scale-[1.02] cursor-pointer"
-            >
-              <span>{t.hero.ctaTalk}</span>
-              <ArrowRight className="w-5 h-5" />
-            </a>
-
-            <a
-              href="#solucoes-grid"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold text-base backdrop-blur-md transition-all duration-200 hover:scale-[1.02] cursor-pointer"
-            >
-              <span>{t.hero.ctaExplore}</span>
-            </a>
-          </div>
-
-          {/* Trust Element */}
-          <div className="mt-12 flex items-center justify-center gap-3.5 max-w-xl text-left bg-white/90 dark:bg-neutral-900/80 backdrop-blur-md px-5 py-3.5 rounded-2xl border border-orange-200 dark:border-orange-900/40 shadow-xl transition-colors duration-200">
-            <div className="w-10 h-10 rounded-xl bg-orange-500/20 border border-orange-400/40 flex items-center justify-center shrink-0 text-orange-600 dark:text-orange-400">
-              <ShieldCheck className="w-6 h-6" />
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-neutral-900 dark:text-white">{t.hero.trustTitle}</p>
-              <p className="text-xs text-neutral-600 dark:text-neutral-300 leading-snug mt-0.5">
-                {t.hero.trustText}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        pageKey="solucoes"
+        lang={lang}
+        whatsappHref={whatsappHref}
+      />
 
       {/* ========================================================================= */}
       {/* BLOCO 2: DUAS COLUNAS (IMAGEM + TEXTO)                                    */}
@@ -1425,56 +1366,11 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
       {/* ========================================================================= */}
       {/* BLOCO 8: CTA PADRÃO COM WHATSAPP OFICIAL                                  */}
       {/* Fundo escuro, botão verde #25D366 com ícone do WhatsApp                   */}
-      {/* ========================================================================= */}
-      <section className="relative w-full py-24 sm:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#060606] border-t border-neutral-800/80">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/imagens/operacao-nft-logistics-5.jpg"
-            alt="Consultoria em Soluções Logísticas NFT Logistics"
-            fill
-            sizes="100vw"
-            className="object-cover object-center brightness-[0.25]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/95 via-[#180f08]/85 to-[#0a0a0a]/95" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-orange-600/10 blur-[140px] pointer-events-none rounded-full" />
-        </div>
-
-        <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 border border-orange-400/30 text-orange-400 text-xs sm:text-sm font-semibold uppercase tracking-wider mb-6">
-            <Sparkles className="w-4 h-4 text-orange-400" />
-            <span>{t.cta.badge}</span>
-          </span>
-
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight drop-shadow-md">
-            {t.cta.title}
-          </h2>
-
-          <p className="mt-6 text-base sm:text-xl text-neutral-300 max-w-2xl leading-relaxed">
-            {t.cta.text}
-          </p>
-
-          {/* Botão Oficial WhatsApp */}
-          <div className="mt-10">
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] active:bg-[#1da850] text-white font-bold text-base sm:text-lg shadow-2xl shadow-emerald-600/40 hover:shadow-emerald-600/60 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 cursor-pointer"
-            >
-              <svg
-                className="w-6 h-6 fill-current shrink-0"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path d="M17.472 14.382c-.301-.15-1.782-.879-2.057-.98-.276-.1-.477-.15-.678.15s-.779.98-.955 1.181c-.176.2-.352.226-.653.075s-1.272-.469-2.423-1.496c-.896-.799-1.501-1.786-1.677-2.088-.176-.301-.019-.464.132-.614.136-.135.301-.352.452-.527.15-.176.201-.301.301-.502.1-.201.05-.377-.025-.527s-.678-1.633-.929-2.235c-.244-.587-.493-.507-.678-.517l-.578-.01c-.201 0-.527.075-.803.377s-1.054 1.03-1.054 2.512c0 1.482 1.079 2.912 1.23 3.113.15.201 2.124 3.243 5.145 4.548.719.311 1.281.497 1.719.636.722.23 1.378.197 1.898.12.579-.087 1.782-.728 2.033-1.431.251-.703.251-1.306.176-1.431-.075-.125-.276-.201-.577-.351zM12.04 21.657h-.002a9.63 9.63 0 0 1-4.912-1.341l-.352-.209-3.652.958.975-3.56-.229-.365a9.638 9.638 0 0 1-1.478-5.1c0-5.32 4.329-9.648 9.655-9.648 2.578 0 5.003 1.004 6.827 2.828a9.587 9.587 0 0 1 2.826 6.822c0 5.322-4.329 9.65-9.653 9.65zm8.172-17.825A11.536 11.536 0 0 0 12.04 0C5.642 0 .438 5.204.438 11.602c0 2.043.534 4.04 1.549 5.8l-1.646 6.012 6.155-1.614a11.577 11.577 0 0 0 5.544 1.411h.005c6.398 0 11.602-5.204 11.602-11.603a11.53 11.53 0 0 0-3.39-8.176z" />
-              </svg>
-              <span>{t.cta.button}</span>
-            </a>
-          </div>
-
-          <p className="mt-4 text-xs text-neutral-300">{t.cta.subtext}</p>
-        </div>
-      </section>
+      <CtaSection
+        pageKey="solucoes"
+        lang={lang}
+        whatsappHref={whatsappHref}
+      />
     </div>
   );
 }

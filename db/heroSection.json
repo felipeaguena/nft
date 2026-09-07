@@ -1,0 +1,618 @@
+{
+  "feiras-e-eventos": {
+    "pt": {
+      "badge": "Logística Internacional & Regimes Aduaneiros",
+      "badgeIcon": "CalendarCheck",
+      "title": "Logística para Feiras e Eventos Internacionais no Brasil",
+      "description": "Garantimos o transporte porta-ao-estande, desembaraço aduaneiro sem surpresas e o cumprimento rigoroso de prazos para que sua empresa brilhe nos maiores centros de convenções e exposições do país.",
+      "image": "/imagens/feira-nft-logistics-3.jpg",
+      "imageAlt": "Logística para Feiras e Eventos Internacionais no Brasil",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Olá! Gostaria de saber mais sobre apoio para Feiras e Eventos no Brasil com a NFT Logistics.",
+      "primaryCta": {
+        "text": "Falar com Especialista",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "Ver Como Funciona",
+        "href": "#etapas"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "Compromisso com Tolerância Zero a Atrasos",
+        "desc": "Know-how comprovado nos principais pavilhões do Brasil: São Paulo Expo, Anhembi, Riocentro e Transamerica Expo Center."
+      }
+    },
+    "en": {
+      "badge": "International Logistics & Customs Regimes",
+      "badgeIcon": "CalendarCheck",
+      "title": "Logistics for International Fairs and Events in Brazil",
+      "description": "We guarantee door-to-booth delivery, flawless customs clearance, and strict schedule adherence so your enterprise shines across Brazil's leading convention centers.",
+      "image": "/imagens/feira-nft-logistics-3.jpg",
+      "imageAlt": "Logistics for International Fairs and Events in Brazil",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Hello! I would like to learn more about support for Fairs and Events in Brazil with NFT Logistics.",
+      "primaryCta": {
+        "text": "Speak with a Specialist",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "See How It Works",
+        "href": "#steps"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "Zero Delay Tolerance Commitment",
+        "desc": "Proven track record in Brazil's major venues: São Paulo Expo, Anhembi, Riocentro, and Transamerica Expo Center."
+      }
+    },
+    "cn": {
+      "badge": "国际物流与海关特殊监管制度",
+      "badgeIcon": "CalendarCheck",
+      "title": "巴西国际展会与大型商业活动物流服务",
+      "description": "我们保障门到展台全程交付、无缝海关优先清关以及严格按时履约，助力您的企业在巴西各大国际展览中心大放异彩。",
+      "image": "/imagens/feira-nft-logistics-3.jpg",
+      "imageAlt": "巴西国际展会与大型商业活动物流服务",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "您好！我想了解更多关于 NFT Logistics 在巴西的展会与商业活动物流服务。",
+      "primaryCta": {
+        "text": "咨询展会物流专家",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "了解服务流程",
+        "href": "#steps"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "延误零容忍庄严承诺",
+        "desc": "深谙巴西主流展馆操作准则：São Paulo Expo、Anhembi、Riocentro 及 Transamerica Expo Center。"
+      }
+    }
+  },
+  "regimes-especiais": {
+    "pt": {
+      "badge": "Consultoria Tributária & Aduaneira de Alta Performance",
+      "badgeIcon": "Scale",
+      "title": "Regimes Aduaneiros Especiais para Otimização Tributária",
+      "description": "Desonere suas operações de importação e exportação com total segurança jurídica. Estruturamos Admissão Temporária, Drawback, Entreposto Aduaneiro e RECOF para potencializar a competitividade e preservar o fluxo de caixa da sua empresa.",
+      "image": "/imagens/operacao-nft-logistics-3.jpg",
+      "imageAlt": "Regimes Aduaneiros Especiais para Otimização Tributária",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Olá! Gostaria de falar com um especialista sobre Regimes Aduaneiros Especiais com a NFT Logistics.",
+      "primaryCta": {
+        "text": "Falar com Especialista",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "Ver Como Funciona",
+        "href": "#etapas"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "100% de Conformidade Aduaneira com a Receita Federal",
+        "desc": "Assessoria técnica completa do diagnóstico prévio ao encerramento e baixa do Termo de Responsabilidade fiscal."
+      }
+    },
+    "en": {
+      "badge": "High-Performance Tax & Customs Consulting",
+      "badgeIcon": "Scale",
+      "title": "Special Customs Regimes for Tax & Duty Optimization",
+      "description": "Relieve import and export operations from heavy tax burdens with absolute legal certainty. We structure Temporary Admission, Drawback, Bonded Warehousing, and RECOF to boost competitiveness and preserve corporate working capital.",
+      "image": "/imagens/operacao-nft-logistics-3.jpg",
+      "imageAlt": "Special Customs Regimes for Tax & Duty Optimization",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Hello! I would like to speak with a specialist about Special Customs Regimes with NFT Logistics.",
+      "primaryCta": {
+        "text": "Speak with a Specialist",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "See How It Works",
+        "href": "#steps"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "100% Brazilian Federal Revenue Customs Compliance",
+        "desc": "Complete technical advisory from initial diagnostic to formal settlement and discharge of fiscal liability terms."
+      }
+    },
+    "cn": {
+      "badge": "高阶财税咨询与海关特殊监管方案",
+      "badgeIcon": "Scale",
+      "title": "特殊海关监管制度（Regimes Especiais）与财税优化",
+      "description": "在全方位合规框架下显著减轻进出口税负。我们专业架构暂时进境（Admissão Temporária）、退税/免税加工（Drawback）、保税仓储（Entreposto Aduaneiro）与RECOF等模式，提升企业资金使用效率。",
+      "image": "/imagens/operacao-nft-logistics-3.jpg",
+      "imageAlt": "特殊海关监管制度（Regimes Especiais）与财税优化",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "您好！我想咨询关于 NFT Logistics 特殊海关监管制度（Regimes Especiais）的专家服务。",
+      "primaryCta": {
+        "text": "咨询关税筹划专家",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "查看运作流程",
+        "href": "#steps"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "100% 符合巴西联邦税务局（Receita Federal）合规监管",
+        "desc": "从前期可行性诊断、全套卷宗呈报到期满销案核销（Baixa de Termo de Responsabilidade）的全程顾问保障。"
+      }
+    }
+  },
+  "logistica-obras-arte": {
+    "pt": {
+      "badge": "Curadoria Logística de Artes & Acervos Valiosos",
+      "badgeIcon": "Palette",
+      "title": "Logística Especializada para Obras de Arte e Acervos Culturais",
+      "description": "Transporte nacional e internacional seguro, caixas climatizadas sob medida e gestão aduaneira completa para bienais, museus, galerias, leilões e colecionadores particulares.",
+      "image": "/imagens/nft-art-2.jpg",
+      "imageAlt": "Logística Especializada para Obras de Arte e Acervos Culturais",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Olá! Gostaria de falar com um especialista sobre Logística para Obras de Arte e Acervos Culturais com a NFT Logistics.",
+      "primaryCta": {
+        "text": "Falar com Especialista em Arte",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "Conhecer Nossos Cuidados",
+        "href": "#etapas"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "Padrão Internacional Nail-to-Nail (Parede a Parede)",
+        "desc": "Supervisão presencial com couriers especializados, confecção de embalagens museológicas e discrição absoluta."
+      }
+    },
+    "en": {
+      "badge": "Museum-Grade Logistics Curatorship",
+      "badgeIcon": "Palette",
+      "title": "Specialized Logistics for Fine Arts and Cultural Heritage",
+      "description": "Secure domestic and international transport, tailor-made climate-controlled crating, and complete customs administration for biennials, museums, galleries, auctions, and private collectors.",
+      "image": "/imagens/nft-art-2.jpg",
+      "imageAlt": "Specialized Logistics for Fine Arts and Cultural Heritage",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Hello! I would like to speak with a specialist about Logistics for Fine Arts and Cultural Assets with NFT Logistics.",
+      "primaryCta": {
+        "text": "Speak with an Art Specialist",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "Explore Our Protocols",
+        "href": "#steps"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "International Nail-to-Nail Standard",
+        "desc": "On-site supervision with specialized fine-art couriers, bespoke archival packaging, and absolute discretion."
+      }
+    },
+    "cn": {
+      "badge": "博物馆级艺术物流策展方案",
+      "badgeIcon": "Palette",
+      "title": "艺术品与贵重文化资产专业物流服务",
+      "description": "为双年展、博物馆、画廊、拍卖行及私人藏家提供安全的巴西境内与跨国运输、定制恒温恒湿木箱以及全程海关特殊手续。",
+      "image": "/imagens/nft-art-2.jpg",
+      "imageAlt": "艺术品与贵重文化资产专业物流服务",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "您好！我想了解更多关于 NFT Logistics 艺术品与贵重文化藏品专业物流服务。",
+      "primaryCta": {
+        "text": "咨询艺术品物流专家",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "了解保护标准",
+        "href": "#steps"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "国际公认 Nail-to-Nail (墙到墙) 服务标准",
+        "desc": "专业艺术品专递押运员全程陪同、手工定制博物馆级包装与严守商业机密。"
+      }
+    }
+  },
+  "projetos-customizados": {
+    "pt": {
+      "badge": "Engenharia de Transporte & Cargas de Projeto",
+      "badgeIcon": "Compass",
+      "title": "Projetos Customizados para Cargas Especiais e Superdimensionadas",
+      "description": "Soluções completas em logística multimodal, estudo de rotas (route survey) e gerenciamento de ponta a ponta para cargas pesadas, volumosas (OOG), breakbulk e equipamentos industriais indivisíveis.",
+      "image": "/imagens/transporte-nft-logistics.webp",
+      "imageAlt": "Projetos Customizados para Cargas Especiais e Superdimensionadas",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Olá! Gostaria de falar com um especialista sobre Projetos Customizados e Cargas Especiais com a NFT Logistics.",
+      "primaryCta": {
+        "text": "Falar com Engenheiro de Logística",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "Ver Metodologia de Projetos",
+        "href": "#etapas"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "Rigor Técnico, Segurança e Pontualidade Absoluta",
+        "desc": "Operações de alta complexidade para setores de energia, mineração, óleo & gás, infraestrutura e indústrias pesadas."
+      }
+    },
+    "en": {
+      "badge": "Transport Engineering & Project Cargo",
+      "badgeIcon": "Compass",
+      "title": "Customized Projects for Special and Oversized Cargo",
+      "description": "Turnkey multimodal logistics solutions, technical route surveys, and end-to-end management for heavy lift, Out of Gauge (OOG), breakbulk, and indivisible industrial machinery.",
+      "image": "/imagens/transporte-nft-logistics.webp",
+      "imageAlt": "Customized Projects for Special and Oversized Cargo",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Hello! I would like to speak with a specialist about Customized Projects and Special Cargo with NFT Logistics.",
+      "primaryCta": {
+        "text": "Talk to a Logistics Engineer",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "View Project Methodology",
+        "href": "#steps"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "Technical Precision, Safety & Absolute Punctuality",
+        "desc": "High-complexity operations for energy, mining, oil & gas, civil infrastructure, and heavy industry sectors."
+      }
+    },
+    "cn": {
+      "badge": "运输工程与重大件项目物流",
+      "badgeIcon": "Compass",
+      "title": "超限与特种重大件定制项目物流",
+      "description": "提供多式联运、路线勘测（Route Survey）及超限（OOG）、散杂货（Breakbulk）与不可分割大型工业设备的端到端工程物流统筹方案。",
+      "image": "/imagens/transporte-nft-logistics.webp",
+      "imageAlt": "超限与特种重大件定制项目物流",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "您好！我想咨询关于 NFT Logistics 超限重大件定制项目物流的专家服务。",
+      "primaryCta": {
+        "text": "联系物流工程专家",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "查看工程实施方法",
+        "href": "#steps"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "严谨工程技术、极致安全与绝对准时",
+        "desc": "为能源电力、矿业开采、石油化工、基础设施建设及重工业领域提供高难度重型物流保障。"
+      }
+    }
+  },
+  "solucoes": {
+    "pt": {
+      "badge": "Logística Internacional & Inteligência Aduaneira",
+      "badgeIcon": "Sparkles",
+      "title": "Soluções Estratégicas para Conectar o seu Negócio ao Brasil",
+      "description": "Da desoneração tributária por regimes especiais ao transporte de cargas pesadas, obras de arte e participação em feiras internacionais. Gestão ponta a ponta com rigor regulatório e compromisso de tolerância zero a atrasos.",
+      "image": "/imagens/operacao-nft-logistics-3.jpg",
+      "imageAlt": "Soluções em Logística Internacional NFT Logistics",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Olá! Gostaria de falar com um especialista sobre as Soluções em Logística Internacional da NFT Logistics.",
+      "primaryCta": {
+        "text": "Falar com Especialista",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "Explorar Soluções",
+        "href": "#solucoes-grid"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "Mais de 20 anos de Segurança Operacional e Aduaneira",
+        "desc": "Know-how consolidado nos principais portos, aeroportos, recintos alfandegados e pavilhões de eventos do país."
+      }
+    },
+    "en": {
+      "badge": "International Logistics & Customs Intelligence",
+      "badgeIcon": "Sparkles",
+      "title": "Strategic Solutions to Connect Your Business to Brazil",
+      "description": "From tax exemption through special customs regimes to heavy-lift project cargo, fine arts, and international trade fair logistics. End-to-end management with strict regulatory compliance and zero-delay commitment.",
+      "image": "/imagens/operacao-nft-logistics-3.jpg",
+      "imageAlt": "International Logistics Solutions NFT Logistics",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Hello! I would like to speak with a specialist about International Logistics Solutions at NFT Logistics.",
+      "primaryCta": {
+        "text": "Talk to a Specialist",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "Explore Solutions",
+        "href": "#solucoes-grid"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "Over 20 Years of Operational and Customs Safety",
+        "desc": "Consolidated expertise across Brazil's key ports, airports, bonded warehouses, and major exhibition centers."
+      }
+    },
+    "cn": {
+      "badge": "国际物流与巴西海关清关专家",
+      "badgeIcon": "Sparkles",
+      "title": "连接您业务与巴西市场的战略性国际物流解决方案",
+      "description": "从特殊海关制度税收减免，到超限大型项目货物、艺术品及国际展会物流。全程严密风控、合规保障，对延误实行零容忍。",
+      "image": "/imagens/operacao-nft-logistics-3.jpg",
+      "imageAlt": "连接您业务与巴西市场的战略性国际物流解决方案",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "您好！我想了解更多关于 NFT Logistics 国际物流与海关清关综合解决方案。",
+      "primaryCta": {
+        "text": "咨询专家团队",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "探索解决方案",
+        "href": "#solucoes-grid"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "超过20年运营与海关安全经验",
+        "desc": "深入掌握巴西主要海运港口、空运机场、保税仓以及国家级展馆的操作全流程。"
+      }
+    }
+  },
+  "sobre": {
+    "pt": {
+      "badge": "Excelência em Comércio Exterior & Logística Internacional",
+      "badgeIcon": "Compass",
+      "title": "Conectamos sua empresa ao mercado brasileiro com inteligência regulatória e precisão cirúrgica",
+      "description": "Muito além do transporte de cargas: desarmamos a complexidade burocrática, eliminamos riscos fiscais e garantimos operações ponta a ponta com tolerância zero a atrasos.",
+      "image": "/imagens/operacao-nft-logistics.jpg",
+      "imageAlt": "NFT Logistics Operação Internacional",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Olá! Gostaria de falar com a equipe de especialistas da NFT Logistics.",
+      "primaryCta": {
+        "text": "Falar com Especialistas",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "Conhecer Nossa História",
+        "href": "#historia"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "Segurança e Conformidade Comprovadas",
+        "desc": "Atuação consolidada nos maiores portos, aeroportos e recintos alfandegados do Brasil (Santos, Paranaguá, GRU, VCP e GIG)."
+      }
+    },
+    "en": {
+      "badge": "Excellence in International Trade & Global Logistics",
+      "badgeIcon": "Compass",
+      "title": "Connecting global enterprises to the Brazilian market with regulatory certainty and surgical precision",
+      "description": "Far beyond traditional freight forwarding: we dismantle bureaucratic barriers, eliminate customs compliance risks, and guarantee end-to-end operations with zero tolerance for delays.",
+      "image": "/imagens/operacao-nft-logistics.jpg",
+      "imageAlt": "NFT Logistics Global Operations",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Hello! I would like to speak with the NFT Logistics team of specialists.",
+      "primaryCta": {
+        "text": "Speak with Specialists",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "Discover Our History",
+        "href": "#historia"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "Proven Compliance & Reliability",
+        "desc": "Consolidated footprint across Brazil's top ports, airports, and bonded warehouses (Santos, Paranaguá, GRU, VCP, and GIG)."
+      }
+    },
+    "cn": {
+      "badge": "国际贸易与全球物流卓越服务",
+      "badgeIcon": "Compass",
+      "title": "以资深监管智慧与精准关务，协助跨国企业稳健拓展巴西市场",
+      "description": "超越传统货运代理：我们化解繁琐的巴西官僚壁垒，消除合规与税务风险，提供端到端、零延误的高品质物流解决方案。",
+      "image": "/imagens/operacao-nft-logistics.jpg",
+      "imageAlt": "NFT Logistics 跨国物流运营",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "您好！我想与 NFT Logistics 专家团队取得联系。",
+      "primaryCta": {
+        "text": "咨询关务专家",
+        "isWhatsApp": true,
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "了解我们的历程",
+        "href": "#historia"
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "经实践检验的合规保障",
+        "desc": "在巴西主要港口、机场和保税园区（桑托斯港、瓜鲁柳斯GRU、维拉科波斯VCP等）拥有资深现场运作能力。"
+      }
+    }
+  },
+  "saude": {
+    "pt": {
+      "badge": "Official Freight Forwarder para a feira Hospitalar",
+      "badgeIcon": "Activity",
+      "title": "Importação de Máquinas e Produtos Hospitalares para o Brasil",
+      "description": "Especialistas em Admissão Temporária para uso hospitalar e eventos médicos. Compliance Total | Suspensão de Impostos | Gestão de Prazos",
+      "image": "/imagens/Home-Health-NFT-Logistics.jpg",
+      "imageAlt": "Logística e importação hospitalar NFT Logistics",
+      "theme": "sky",
+      "whatsappNumber": "5511948530048",
+      "whatsappMessage": "Olá! Gostaria de mais informações sobre importação de produtos hospitalares para o Brasil.",
+      "primaryCta": {
+        "text": "Conhecer o Processo",
+        "href": "#passos",
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "Falar com Especialista",
+        "isWhatsApp": true
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "Operações 100% em Conformidade Regulatória",
+        "desc": "Assessoria técnica especializada em exigências da Anvisa, RDCs sanitárias e rigorosos protocolos internacionais de manuseio."
+      }
+    },
+    "en": {
+      "badge": "Official Freight Forwarder for Hospitalar Trade Show",
+      "badgeIcon": "Activity",
+      "title": "Import of Medical Equipment and Healthcare Machinery into Brazil",
+      "description": "Specialists in Temporary Admission for hospital use and medical events. Full Compliance | Tax Suspension | Deadline Management",
+      "image": "/imagens/Home-Health-NFT-Logistics.jpg",
+      "imageAlt": "Healthcare logistics and medical import NFT Logistics",
+      "theme": "sky",
+      "whatsappNumber": "5511948530048",
+      "whatsappMessage": "Hello! I would like more information on medical equipment import into Brazil.",
+      "primaryCta": {
+        "text": "Explore the Process",
+        "href": "#steps",
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "Talk to a Specialist",
+        "isWhatsApp": true
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "100% Regulatory Compliant Operations",
+        "desc": "Specialized technical advice on Anvisa requirements, sanitary RDCs, and strict international handling protocols."
+      }
+    },
+    "cn": {
+      "badge": "Hospitalar 巴西国际医疗展官方指定国际货运代理",
+      "badgeIcon": "Activity",
+      "title": "医疗设备与医院精密机械进口至巴西",
+      "description": "专注于医院设备与医疗展会“暂时进境”（Admissão Temporária）特殊制度。全流程合规 | 全额税费暂免 | 精确时效把控",
+      "image": "/imagens/Home-Health-NFT-Logistics.jpg",
+      "imageAlt": "NFT Logistics 医疗设备与医院物流进口服务",
+      "theme": "sky",
+      "whatsappNumber": "5511948530048",
+      "whatsappMessage": "您好！我想咨询有关医疗机械设备及医院耗材进口至巴西的专业服务。",
+      "primaryCta": {
+        "text": "了解操作流程",
+        "href": "#steps",
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "咨询行业专家",
+        "isWhatsApp": true
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "100% 监管合规操作",
+        "desc": "资深专家全程把关巴西国家卫生监督局（Anvisa）技术准入、卫生决议（RDC）及严苛国际装卸规范。"
+      }
+    }
+  },
+  "health": {
+    "pt": {
+      "badge": "Official Freight Forwarder para a feira Hospitalar",
+      "badgeIcon": "Activity",
+      "title": "Importação de Máquinas e Produtos Hospitalares para o Brasil",
+      "description": "Especialistas em Admissão Temporária para uso hospitalar e eventos médicos. Compliance Total | Suspensão de Impostos | Gestão de Prazos",
+      "image": "/imagens/Home-Health-NFT-Logistics.jpg",
+      "imageAlt": "Logística e importação hospitalar NFT Logistics",
+      "theme": "sky",
+      "whatsappNumber": "5511948530048",
+      "whatsappMessage": "Olá! Gostaria de mais informações sobre importação de produtos hospitalares para o Brasil.",
+      "primaryCta": {
+        "text": "Conhecer o Processo",
+        "href": "#passos",
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "Falar com Especialista",
+        "isWhatsApp": true
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "Operações 100% em Conformidade Regulatória",
+        "desc": "Assessoria técnica especializada em exigências da Anvisa, RDCs sanitárias e rigorosos protocolos internacionais de manuseio."
+      }
+    },
+    "en": {
+      "badge": "Official Freight Forwarder for Hospitalar Trade Show",
+      "badgeIcon": "Activity",
+      "title": "Import of Medical Equipment and Healthcare Machinery into Brazil",
+      "description": "Specialists in Temporary Admission for hospital use and medical events. Full Compliance | Tax Suspension | Deadline Management",
+      "image": "/imagens/Home-Health-NFT-Logistics.jpg",
+      "imageAlt": "Healthcare logistics and medical import NFT Logistics",
+      "theme": "sky",
+      "whatsappNumber": "5511948530048",
+      "whatsappMessage": "Hello! I would like more information on medical equipment import into Brazil.",
+      "primaryCta": {
+        "text": "Explore the Process",
+        "href": "#steps",
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "Talk to a Specialist",
+        "isWhatsApp": true
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "100% Regulatory Compliant Operations",
+        "desc": "Specialized technical advice on Anvisa requirements, sanitary RDCs, and strict international handling protocols."
+      }
+    },
+    "cn": {
+      "badge": "Hospitalar 巴西国际医疗展官方指定国际货运代理",
+      "badgeIcon": "Activity",
+      "title": "医疗设备与医院精密机械进口至巴西",
+      "description": "专注于医院设备与医疗展会“暂时进境”（Admissão Temporária）特殊制度。全流程合规 | 全额税费暂免 | 精确时效把控",
+      "image": "/imagens/Home-Health-NFT-Logistics.jpg",
+      "imageAlt": "NFT Logistics 医疗设备与医院物流进口服务",
+      "theme": "sky",
+      "whatsappNumber": "5511948530048",
+      "whatsappMessage": "您好！我想咨询有关医疗机械设备及医院耗材进口至巴西的专业服务。",
+      "primaryCta": {
+        "text": "了解操作流程",
+        "href": "#steps",
+        "icon": "ArrowRight"
+      },
+      "secondaryCta": {
+        "text": "咨询行业专家",
+        "isWhatsApp": true
+      },
+      "trust": {
+        "icon": "ShieldCheck",
+        "title": "100% 监管合规操作",
+        "desc": "资深专家全程把关巴西国家卫生监督局（Anvisa）技术准入、卫生决议（RDC）及严苛国际装卸规范。"
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import HeroSection from "@/src/components/HeroSection";
 import {
   Globe2,
   ShieldCheck,
@@ -732,73 +733,11 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       {/* ========================================================================= */}
       {/* 1. HERO INSTITUCIONAL                                                     */}
       {/* ========================================================================= */}
-      <section className="relative w-full min-h-[82vh] flex items-center justify-center pt-28 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/imagens/operacao-nft-logistics.jpg"
-            alt="NFT Logistics Operação Internacional"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center brightness-[0.34] dark:brightness-[0.28]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/90 via-[#180f08]/75 to-neutral-50 dark:to-[#0a0a0a] transition-colors duration-200" />
-          <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-orange-600/15 blur-[140px] pointer-events-none rounded-full" />
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/15 border border-orange-400/40 text-orange-300 dark:text-orange-400 text-xs sm:text-sm font-semibold tracking-wide uppercase mb-6 backdrop-blur-md">
-            <Compass className="w-4 h-4 text-orange-400" />
-            <span>{t.hero.badge}</span>
-          </div>
-
-          {/* Title */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white max-w-4xl leading-tight sm:leading-[1.15] drop-shadow-lg">
-            {t.hero.title}
-          </h1>
-
-          {/* Subtitle */}
-          <p className="mt-6 text-base sm:text-lg lg:text-xl text-neutral-200 dark:text-neutral-300 max-w-3xl leading-relaxed drop-shadow-sm">
-            {t.hero.subtitle}
-          </p>
-
-          {/* Action Buttons */}
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-semibold text-base shadow-lg shadow-orange-600/25 transition-all duration-200 hover:scale-[1.02] cursor-pointer"
-            >
-              <span>{t.hero.btnPrimary}</span>
-              <ArrowRight className="w-5 h-5" />
-            </a>
-
-            <a
-              href="#historia"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold text-base backdrop-blur-md transition-all duration-200 hover:scale-[1.02] cursor-pointer"
-            >
-              <span>{t.hero.btnSecondary}</span>
-            </a>
-          </div>
-
-          {/* Trust Badge */}
-          <div className="mt-12 flex items-center justify-center gap-3.5 max-w-2xl text-left bg-white/90 dark:bg-neutral-900/80 backdrop-blur-md px-5 py-3.5 rounded-2xl border border-orange-200 dark:border-orange-900/40 shadow-xl transition-colors duration-200">
-            <div className="w-10 h-10 rounded-xl bg-orange-500/20 border border-orange-400/40 flex items-center justify-center shrink-0 text-orange-600 dark:text-orange-400">
-              <ShieldCheck className="w-6 h-6" />
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-neutral-900 dark:text-white">
-                {t.hero.trustBadgeTitle}
-              </p>
-              <p className="text-xs text-neutral-600 dark:text-neutral-300 leading-snug mt-0.5">
-                {t.hero.trustBadgeText}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        pageKey="sobre"
+        lang={resolvedLang}
+        whatsappHref={whatsappHref}
+      />
 
       {/* ========================================================================= */}
       {/* 2. STATS / KEY METRICS RIBBON                                             */}

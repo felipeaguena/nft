@@ -1,0 +1,289 @@
+{
+  "logistica-obras-arte": {
+    "pt": {
+      "badge": "Curadoria Logística em Arte",
+      "icon": "Palette",
+      "title": "Precisa transportar obras de arte com total sigilo e proteção?",
+      "description": "Converse diretamente com nossos curadores logísticos. Desenvolvemos soluções sob medida para exposições, galerias, leilões e colecionadores privados com garantia de preservação irrestrita.",
+      "btnWhatsapp": "Falar no WhatsApp com Especialista",
+      "disclaimer": "Atendimento exclusivo para museus, bem-sucedidas bienais, galerias e coleções privadas.",
+      "image": "/imagens/nft-art-2.jpg",
+      "imageAlt": "Logística Especializada para Obras de Arte e Acervos Culturais",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Olá! Gostaria de falar com um especialista sobre Logística para Obras de Arte e Acervos Culturais com a NFT Logistics."
+    },
+    "en": {
+      "badge": "Art Logistics Curatorship",
+      "icon": "Palette",
+      "title": "Need to transport fine art with utmost confidentiality and protection?",
+      "description": "Consult directly with our fine art logistics curators. We develop customized solutions for exhibitions, galleries, auctions, and private collectors with unconditional preservation guarantees.",
+      "btnWhatsapp": "Speak with a Specialist on WhatsApp",
+      "disclaimer": "Exclusive care for museums, biennials, galleries, and private collections.",
+      "image": "/imagens/nft-art-2.jpg",
+      "imageAlt": "Specialized Logistics for Fine Arts and Cultural Heritage",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Hello! I would like to speak with a specialist about Logistics for Fine Arts and Cultural Assets with NFT Logistics."
+    },
+    "cn": {
+      "badge": "艺术物流策展顾问",
+      "icon": "Palette",
+      "title": "需要在绝对保密与全面保护下运送艺术品吗？",
+      "description": "欢迎直接咨询我们的艺术品物流策展团队。我们为美术馆、画廊、拍卖机构及私人藏家定制专属运输方案，恪守无条件保护承诺。",
+      "btnWhatsapp": "通过 WhatsApp 直接咨询专家",
+      "disclaimer": "为博物馆、双年展、画廊及私人藏家提供专属尊享服务。",
+      "image": "/imagens/nft-art-2.jpg",
+      "imageAlt": "艺术品与贵重文化资产专业物流服务",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "您好！我想了解更多关于 NFT Logistics 艺术品与贵重文化藏品专业物流服务。"
+    }
+  },
+  "regimes-especiais": {
+    "pt": {
+      "badge": "Consultoria Tributária & Aduaneira",
+      "icon": "Scale",
+      "title": "Quer descobrir quanto sua empresa pode economizar em tributos?",
+      "description": "Nossos consultores realizam uma análise preliminar da sua operação para identificar os regimes especiais aplicáveis com segurança fiscal e ganho imediato de competitividade.",
+      "btnWhatsapp": "Falar no WhatsApp com Especialista",
+      "disclaimer": "Atendimento estratégico para importadores e exportadores em todo o território nacional.",
+      "image": "/imagens/operacao-nft-logistics.jpg",
+      "imageAlt": "Consultoria Tributária e Regimes Aduaneiros Especiais",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Olá! Gostaria de falar com um especialista sobre Regimes Aduaneiros Especiais com a NFT Logistics."
+    },
+    "en": {
+      "badge": "Tax & Customs Consulting",
+      "icon": "Scale",
+      "title": "Want to discover how much your company can save in taxes?",
+      "description": "Our consultants conduct an initial assessment of your operations to identify applicable special regimes with full compliance and immediate competitive gain.",
+      "btnWhatsapp": "Chat on WhatsApp with an Expert",
+      "disclaimer": "Strategic advisory for importers and exporters across Brazil and internationally.",
+      "image": "/imagens/operacao-nft-logistics.jpg",
+      "imageAlt": "Tax Consulting and Special Customs Regimes",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Hello! I would like to speak with a specialist about Special Customs Regimes with NFT Logistics."
+    },
+    "cn": {
+      "badge": "关务与财税合规咨询",
+      "icon": "Scale",
+      "title": "想了解您的企业能节省多少关税与流动资金？",
+      "description": "我们的关务顾问可对您的进出口模式进行初步评估，精准识别适用的特殊海关制度，确保税务安全并立即可行。",
+      "btnWhatsapp": "通过 WhatsApp 咨询关务专家",
+      "disclaimer": "为进出口企业在巴西全境及离岸贸易提供战略性海关财税顾问支持。",
+      "image": "/imagens/operacao-nft-logistics.jpg",
+      "imageAlt": "特殊海关监管制度与财税优化咨询",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "您好！我想与NFT Logistics的关务与财税专家咨询巴西特殊海关监管制度（Regimes Especiais）。"
+    }
+  },
+  "feiras-e-eventos": {
+    "pt": {
+      "badge": "Consultoria Especializada",
+      "icon": "CalendarCheck",
+      "title": "Pronto para expor no Brasil com total tranquilidade e pontualidade?",
+      "description": "Não deixe a complexidade aduaneira e o rigor dos prazos colocarem em risco a sua participação. Fale agora mesmo com nossos especialistas em logística de eventos e receba um planejamento sob medida.",
+      "btnWhatsapp": "Falar no WhatsApp com Especialista",
+      "disclaimer": "Atendimento ágil para feiras, congressos e exposições em todo o Brasil.",
+      "image": "/imagens/feira-nft-logistics-7.jpg",
+      "imageAlt": "Logística para Feiras e Eventos Internacionais no Brasil",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Olá! Gostaria de falar com um especialista sobre Logística para Feiras e Eventos Internacionais no Brasil com a NFT Logistics."
+    },
+    "en": {
+      "badge": "Specialized Advisory",
+      "icon": "CalendarCheck",
+      "title": "Ready to exhibit in Brazil with complete peace of mind and punctuality?",
+      "description": "Do not let regulatory hurdles and rigid deadlines jeopardize your participation. Contact our trade show logistics specialists today for customized planning.",
+      "btnWhatsapp": "Chat on WhatsApp with a Specialist",
+      "disclaimer": "Prompt support for fairs, congresses, and exhibitions throughout Brazil.",
+      "image": "/imagens/feira-nft-logistics-7.jpg",
+      "imageAlt": "Logistics for International Fairs and Events in Brazil",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Hello! I would like to learn more about support for Fairs and Events in Brazil with NFT Logistics."
+    },
+    "cn": {
+      "badge": "资深展会关务咨询",
+      "icon": "CalendarCheck",
+      "title": "准备好以百分之百的安心与准时在巴西精彩参展了吗？",
+      "description": "切勿让复杂的巴西海关法规与严苛的布展时限影响您的全球参展计划。立即与我们的国际展会物流专家团队取得联系。",
+      "btnWhatsapp": "通过 WhatsApp 直接咨询专家",
+      "disclaimer": "高效支持在圣保罗、里约热内卢及巴西全境举办的国际展会与经贸峰会。",
+      "image": "/imagens/feira-nft-logistics-7.jpg",
+      "imageAlt": "巴西国际展会与大型商业活动物流服务",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "您好！我想了解更多关于 NFT Logistics 在巴西的国际展会与大型活动物流支持服务。"
+    }
+  },
+  "projetos-customizados": {
+    "pt": {
+      "badge": "Consultoria em Cargas de Projeto",
+      "icon": "Compass",
+      "title": "Sua carga é pesada, complexa ou fora de padrão? Nós resolvemos.",
+      "description": "Fale diretamente com nossos engenheiros e especialistas em logística pesada. Desenvolvemos o estudo de viabilidade e a rota ideal para a entrega perfeita do seu projeto.",
+      "btnWhatsapp": "Falar no WhatsApp com Especialista",
+      "disclaimer": "Atendimento técnico de ponta a ponta para projetos em todo o Brasil e no exterior.",
+      "image": "/imagens/intersolar-nft-logistics.webp",
+      "imageAlt": "Projetos Customizados para Cargas Especiais e Superdimensionadas",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Olá! Gostaria de conversar com um especialista sobre Cargas de Projeto e Projetos Customizados com a NFT Logistics."
+    },
+    "en": {
+      "badge": "Project Cargo Consulting",
+      "icon": "Compass",
+      "title": "Is your cargo heavy, complex, or oversized? We solve it.",
+      "description": "Speak directly with our transport engineers and heavy lift logistics specialists. We formulate route surveys and feasibility plans for turnkey project success.",
+      "btnWhatsapp": "Chat on WhatsApp with a Specialist",
+      "disclaimer": "Turnkey technical execution across Brazil and cross-border international corridors.",
+      "image": "/imagens/intersolar-nft-logistics.webp",
+      "imageAlt": "Customized Projects for Special and Oversized Cargo",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Hello! I would like to speak with a specialist about Project Cargo and Customized Logistics Solutions with NFT Logistics."
+    },
+    "cn": {
+      "badge": "重大件工程物流咨询",
+      "icon": "Compass",
+      "title": "货物超重、超大或结构极度复杂？我们为您解决。",
+      "description": "直接与我们的运输工程师和重运物流专家交谈。我们为您提供全方位可行性评估与专属运输路线规划。",
+      "btnWhatsapp": "通过 WhatsApp 咨询专家",
+      "disclaimer": "为巴西全境及跨境国际重点工程项目提供端到端技术保障与实施交付。",
+      "image": "/imagens/intersolar-nft-logistics.webp",
+      "imageAlt": "超限与特种重大件定制项目物流",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "您好！我想与NFT Logistics的重大件与工程物流专家咨询定制物流方案。"
+    }
+  },
+  "solucoes": {
+    "pt": {
+      "badge": "Consultoria Dedicada",
+      "icon": "Sparkles",
+      "title": "Pronto para otimizar a logística internacional da sua empresa?",
+      "description": "Converse diretamente com nossos especialistas e receba um diagnóstico detalhado para sua próxima operação com foco em pontualidade, compliance e economia fiscal.",
+      "btnWhatsapp": "Falar no WhatsApp com Especialista",
+      "disclaimer": "Atendimento ágil em Português, Inglês e Mandarim.",
+      "image": "/imagens/operacao-nft-logistics-5.jpg",
+      "imageAlt": "Consultoria em Soluções Logísticas NFT Logistics",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Olá! Gostaria de falar com um especialista sobre as soluções em logística internacional e comércio exterior da NFT Logistics."
+    },
+    "en": {
+      "badge": "Dedicated Advisory",
+      "icon": "Sparkles",
+      "title": "Ready to elevate your international logistics in Brazil?",
+      "description": "Speak directly with our senior specialists and receive an operational roadmap focused on punctuality, compliance, and tax efficiency.",
+      "btnWhatsapp": "Chat on WhatsApp with Specialist",
+      "disclaimer": "Prompt support in English, Portuguese, and Mandarin.",
+      "image": "/imagens/operacao-nft-logistics-5.jpg",
+      "imageAlt": "Logistics Solutions Consulting NFT Logistics",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "Hello! I would like to speak with a specialist about NFT Logistics' international freight and customs solutions."
+    },
+    "cn": {
+      "badge": "一对一专属咨询",
+      "icon": "Sparkles",
+      "title": "准备好优化您在巴西的国际供应链了吗？",
+      "description": "立即与我们的资深国际物流与海关专家交流，获取针对您业务的详细操作方案与合规建议。",
+      "btnWhatsapp": "通过 WhatsApp 咨询专家",
+      "disclaimer": "支持葡萄牙语、英语、中文快速响应服务。",
+      "image": "/imagens/operacao-nft-logistics-5.jpg",
+      "imageAlt": "NFT Logistics 国际物流解决方案咨询",
+      "theme": "orange",
+      "whatsappNumber": "5511948530057",
+      "whatsappMessage": "您好！我想咨询有关 NFT Logistics 国际物流与巴西清关解决方案的详细信息。"
+    }
+  },
+  "saude": {
+    "pt": {
+      "badge": "Agende uma reunião",
+      "icon": "Activity",
+      "title": "Não arrisque sua carga com generalistas. Escolha quem entende de ANVISA e Regimes Aduaneiros Especiais.",
+      "description": "Seja para expor em feiras sem anvisa prévia ou para nacionalizar sua linha de tecnologia médica, nossa equipe especializada orienta você em cada passo.",
+      "btnWhatsapp": "Falar no WhatsApp com Especialista",
+      "disclaimer": "Atendimento imediato para feiras, congressos e importação hospitalar.",
+      "image": "/imagens/Home-Health-NFT-Logistics.jpg",
+      "imageAlt": "Atendimento para importação hospitalar e feiras NFT Logistics",
+      "theme": "sky",
+      "whatsappNumber": "5511948530048",
+      "whatsappMessage": "Quero participar de feiras no Brasil, mas meus equipamentos médicos ainda não têm registro na Anvisa. Gostaria de iniciar o processo de importação com a NFT Logistics."
+    },
+    "en": {
+      "badge": "Schedule a Meeting",
+      "icon": "Activity",
+      "title": "Do not risk your cargo with generalists. Choose experts who master ANVISA regulations and Special Customs Regimes.",
+      "description": "Whether exhibiting at trade shows without prior Anvisa registration or permanently nationalizing your medical technology line, our dedicated team guides you at every step.",
+      "btnWhatsapp": "Chat on WhatsApp with a Specialist",
+      "disclaimer": "Immediate support for trade shows, congresses, and healthcare equipment imports.",
+      "image": "/imagens/Home-Health-NFT-Logistics.jpg",
+      "imageAlt": "Consultation for healthcare import and trade shows NFT Logistics",
+      "theme": "sky",
+      "whatsappNumber": "5511948530048",
+      "whatsappMessage": "I want to exhibit at medical events in Brazil, but my devices lack prior Anvisa registration. I would like to start the import process with NFT Logistics."
+    },
+    "cn": {
+      "badge": "预约专属咨询",
+      "icon": "Activity",
+      "title": "切勿将精密设备托付给普通货代。选择真正精通 ANVISA 卫生法规与特殊海关制度的专家。",
+      "description": "无论是在无 Anvisa 注册的情况下赴巴参展演示，还是将医疗科技产品正式引入巴西市场，我们的专家团队都会全程为您护航。",
+      "btnWhatsapp": "通过 WhatsApp 咨询专家",
+      "disclaimer": "专人即时响应展会、峰会参展及医院设备进口需求。",
+      "image": "/imagens/Home-Health-NFT-Logistics.jpg",
+      "imageAlt": "预约咨询巴西医疗设备与展会物流",
+      "theme": "sky",
+      "whatsappNumber": "5511948530048",
+      "whatsappMessage": "我想参加巴西的展会，但我的医疗设备尚未在 Anvisa 注册，希望启动进口流程。"
+    }
+  },
+  "health": {
+    "pt": {
+      "badge": "Agende uma reunião",
+      "icon": "Activity",
+      "title": "Não arrisque sua carga com generalistas. Escolha quem entende de ANVISA e Regimes Aduaneiros Especiais.",
+      "description": "Seja para expor em feiras sem anvisa prévia ou para nacionalizar sua linha de tecnologia médica, nossa equipe especializada orienta você em cada passo.",
+      "btnWhatsapp": "Falar no WhatsApp com Especialista",
+      "disclaimer": "Atendimento imediato para feiras, congressos e importação hospitalar.",
+      "image": "/imagens/Home-Health-NFT-Logistics.jpg",
+      "imageAlt": "Atendimento para importação hospitalar e feiras NFT Logistics",
+      "theme": "sky",
+      "whatsappNumber": "5511948530048",
+      "whatsappMessage": "Quero participar de feiras no Brasil, mas meus equipamentos médicos ainda não têm registro na Anvisa. Gostaria de iniciar o processo de importação com a NFT Logistics."
+    },
+    "en": {
+      "badge": "Schedule a Meeting",
+      "icon": "Activity",
+      "title": "Do not risk your cargo with generalists. Choose experts who master ANVISA regulations and Special Customs Regimes.",
+      "description": "Whether exhibiting at trade shows without prior Anvisa registration or permanently nationalizing your medical technology line, our dedicated team guides you at every step.",
+      "btnWhatsapp": "Chat on WhatsApp with a Specialist",
+      "disclaimer": "Immediate support for trade shows, congresses, and healthcare equipment imports.",
+      "image": "/imagens/Home-Health-NFT-Logistics.jpg",
+      "imageAlt": "Consultation for healthcare import and trade shows NFT Logistics",
+      "theme": "sky",
+      "whatsappNumber": "5511948530048",
+      "whatsappMessage": "I want to exhibit at medical events in Brazil, but my devices lack prior Anvisa registration. I would like to start the import process with NFT Logistics."
+    },
+    "cn": {
+      "badge": "预约专属咨询",
+      "icon": "Activity",
+      "title": "切勿将精密设备托付给普通货代。选择真正精通 ANVISA 卫生法规与特殊海关制度的专家。",
+      "description": "无论是在无 Anvisa 注册的情况下赴巴参展演示，还是将医疗科技产品正式引入巴西市场，我们的专家团队都会全程为您护航。",
+      "btnWhatsapp": "通过 WhatsApp 咨询专家",
+      "disclaimer": "专人即时响应展会、峰会参展及医院设备进口需求。",
+      "image": "/imagens/Home-Health-NFT-Logistics.jpg",
+      "imageAlt": "预约咨询巴西医疗设备与展会物流",
+      "theme": "sky",
+      "whatsappNumber": "5511948530048",
+      "whatsappMessage": "我想参加巴西的展会，但我的医疗设备尚未在 Anvisa 注册，希望启动进口流程。"
+    }
+  }
+}
