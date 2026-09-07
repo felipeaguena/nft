@@ -1004,21 +1004,21 @@ export default function SpecialCustomsRegimesClient({
               return (
                 <div
                   key={idx}
-                  className="relative rounded-2xl p-6 sm:p-7 bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50 transition-all duration-300"
+                  className="group relative rounded-2xl p-6 sm:p-7 bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50 hover:bg-orange-600 dark:hover:bg-orange-600 transition-all duration-300"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-3xl font-extrabold text-orange-500/30">
+                      <span className="text-3xl font-extrabold text-orange-500/30 group-hover:text-white/50 transition-colors duration-300">
                         {step.num}
                       </span>
                       <div className="w-9 h-9 rounded-lg bg-orange-100/80 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 flex items-center justify-center">
                         <IconComp className="w-5 h-5" />
                       </div>
                     </div>
-                    <h3 className="text-base sm:text-lg font-bold text-neutral-900 dark:text-white mb-2">
+                    <h3 className="text-base sm:text-lg font-bold text-neutral-900 dark:text-white group-hover:text-white transition-colors duration-300 mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-neutral-700 dark:text-neutral-200 text-xs sm:text-sm leading-relaxed">
+                    <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 group-hover:text-white transition-colors duration-300 leading-relaxed">
                       {step.desc}
                     </p>
                   </div>

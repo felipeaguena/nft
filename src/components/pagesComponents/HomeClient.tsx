@@ -562,31 +562,32 @@ export default function HomeClient({ lang }: HomeClientProps) {
     <div className="w-full">
       {/* 1. SEÇÃO DE ESTATÍSTICAS E PROVA SOCIAL FLUTUANTE */}
       <section className="relative w-full sm:mt-5 md:mt-0 lg:mt-0 -lg:-mt-30 z-20 py-12 px-4 sm:px-6 lg:px-8 bg-transparent transition-colors duration-200">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {t.stats.map((stat, idx) => (
-              <div
-                key={idx}
-                className={`relative p-6 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800 shadow-sm hover:shadow-md transition-all duration-300 group ${
-                  idx > 0 ? "p-6 sm:p-6 lg:p-8" : ""
-                }`}
-              >
-                <div className="text-3xl sm:text-4xl font-extrabold text-orange-600 dark:text-orange-500 tracking-tight">
-                  <span className="text-orange-600 dark:text-orange-500">
-                    {stat.value}
-                  </span>
-                </div>
-                <div className="mt-1 text-base font-bold text-neutral-900 dark:text-white">
-                  {stat.label}
-                </div>
-                <div className="mt-2 text-xs text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                  {stat.detail}
-                </div>
-              </div>
-            ))}
+  <div className="max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {t.stats.map((stat, idx) => (
+        <div
+          key={idx}
+          className={`group relative rounded-2xl p-6 sm:p-7 bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50 hover:bg-orange-600 dark:hover:bg-orange-600 transition-all duration-300 ${
+            idx > 0 ? "p-6 sm:p-6 lg:p-8" : ""
+          }`}
+        >
+          <div className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            <span className="text-orange-600 dark:text-orange-500 group-hover:text-white transition-colors duration-300">
+              {stat.value}
+            </span>
+          </div>
+          <div className="mt-1 text-base font-bold text-neutral-900 dark:text-white group-hover:text-white transition-colors duration-300">
+            {stat.label}
+          </div>
+          <div className="mt-2 text-xs text-neutral-700 dark:text-neutral-300 group-hover:text-orange-100 transition-colors duration-300 leading-relaxed">
+            {stat.detail}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* 2. HUBS LOGÍSTICOS ESTRATÉGICOS NO BRASIL */}
       <section className="py-12 sm:py-16 bg-transparent">
@@ -772,16 +773,16 @@ export default function HomeClient({ lang }: HomeClientProps) {
               return (
                 <div
                   key={idx}
-                  className="p-6 sm:p-7 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/60 dark:bg-neutral-900/60 hover:bg-white dark:hover:bg-neutral-900 hover:shadow-lg transition-all duration-200 flex flex-col justify-between"
+                  className="group relative rounded-2xl p-6 sm:p-7 bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50 hover:bg-orange-600 dark:hover:bg-orange-600 transition-all duration-300"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/60 flex items-center justify-center text-orange-600 dark:text-orange-400 mb-5">
+                    <div className="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/60 flex items-center justify-center text-orange-600 dark:text-orange-400 group-hover:bg-white group-hover:text-orange-600 transition-colors duration-300 mb-5">
                       <DiffIcon className="w-6 h-6" />
                     </div>
-                    <h3 className="text-base sm:text-lg font-bold text-neutral-900 dark:text-white mb-2">
+                    <h3 className="text-base sm:text-lg font-bold text-neutral-900 dark:text-white group-hover:text-white transition-colors duration-300 mb-2">
                       {diff.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 group-hover:text-white dark:group-hover:text-white transition-colors duration-300 leading-relaxed">
                       {diff.desc}
                     </p>
                   </div>

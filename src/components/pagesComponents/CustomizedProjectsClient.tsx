@@ -968,11 +968,11 @@ export default function CustomizedProjectsClient({
               return (
                 <div
                   key={idx}
-                  className="relative rounded-2xl p-6 sm:p-7 bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50 transition-all duration-300"
+                  className="relative rounded-2xl p-6 sm:p-7 bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50 hover:bg-orange-600 dark:hover:bg-orange-600 transition-all duration-300 text-orange-500/30 hover:text-white dark:text-orange-600"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-3xl font-extrabold text-orange-500/30">
+                      <span className="text-3xl font-extrabold ">
                         {step.num}
                       </span>
                       <div className="w-9 h-9 rounded-lg bg-orange-100/80 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 flex items-center justify-center">

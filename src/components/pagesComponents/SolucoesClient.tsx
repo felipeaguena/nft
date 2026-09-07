@@ -1398,7 +1398,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
                   <button
                     type="button"
                     onClick={() => toggleFaq(fIdx)}
-                    className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 cursor-pointer hover:bg-neutral-100/80 dark:hover:text-black transition-colors"
+                    className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 cursor-pointer hover:bg-orange-600 dark:hover:text-black transition-colors"
                     aria-expanded={isOpen}
                   >
                     <span className="text-base sm:text-lg font-semibold text-neutral-900 dark:text-white">
