@@ -204,6 +204,7 @@ export interface HeroSectionProps {
   data?: Partial<HeroItemData>;
   whatsappHref?: string;
   className?: string;
+  heightClassName?: string;
   theme?: "orange" | "sky" | "emerald" | "purple" | string;
   themeColors?: Partial<HeroThemeColors>;
   image?: string;
@@ -219,6 +220,7 @@ export default function HeroSection({
   data,
   whatsappHref,
   className = "",
+  heightClassName = "min-h-[80vh]",
   theme: customTheme,
   themeColors: customThemeColors,
   image: customImage,
@@ -324,7 +326,7 @@ export default function HeroSection({
   return (
     <section
       style={cssVariables}
-      className={`relative w-full min-h-[82vh] flex items-center justify-center pt-28 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-200 ${className}`}
+      className={`relative w-full ${heightClassName} flex items-center justify-center pt-28 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-200 ${className}`}
     >
       {/* Background com imagem, gradiente e glow com variáveis CSS */}
       <div className="absolute inset-0 z-0 select-none">
@@ -382,7 +384,7 @@ export default function HeroSection({
         )}
 
         {/* Título Principal */}
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white max-w-4xl leading-tight sm:leading-[1.15] drop-shadow-lg">
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white max-w-4xl leading-tight sm:leading-[1.15] drop-shadow-lg">
           {content.title}
         </h1>
 

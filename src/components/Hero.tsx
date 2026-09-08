@@ -26,7 +26,7 @@ export default function Hero({
   overlayClassName = "bg-gradient-to-b from-black/60 via-black/40 to-black/80 dark:from-black/70 dark:via-black/50 dark:to-neutral-950",
   className = "",
   contentClassName = "",
-  heightClassName = "min-h-[40vh] sm:min-h-[50vh] lg:min-h-[60vh]",
+  heightClassName = "min-h-[80vh]",
 }: HeroProps) {
   return (
     <section
@@ -65,14 +65,14 @@ export default function Hero({
       >
         {/* Caso seja passado prop title ou subtitle diretamente */}
         {title && (
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6 drop-shadow-md">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-tight mb-6 drop-shadow-md">
             {title}
           </h1>
         )}
 
         {/* Children para títulos ou estruturas personalizadas por página */}
         {typeof children === "string" ? (
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight max-w-5xl leading-tight drop-shadow-md mb-6">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-tight max-w-5xl leading-tight drop-shadow-md mb-6">
             {children}
           </h1>
         ) : (
