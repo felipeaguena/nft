@@ -70,7 +70,7 @@ import { LanguageCode } from '@/src/types';
             title: "Nossa Visão",
             desc: "Ser a principal referência e parceiro de confiança na América Latina para operações de importação e exportação de alta complexidade, reconhecida pela excelência em regimes especiais, feiras internacionais, saúde e cargas críticas.",
             icon: Award,
-            image: "/imagens/armazem.jpg",
+            image: "/imagens/armazem.webp",
             imageAlt: "Infraestrutura e armazenagem logística NFT Logistics",
           },
           {
@@ -78,7 +78,7 @@ import { LanguageCode } from '@/src/types';
             title: "Nossos Valores",
             desc: "Segurança jurídica e conformidade inegociável; Pontualidade e tolerância zero a atrasos; Atendimento consultivo sênior e dedicado; Transparência e comunicação proativa em tempo real; Agilidade na resolução de desafios alfandegários.",
             icon: ShieldCheck,
-            image: "/imagens/operacao-nft-logistics-5.jpg",
+            image: "/imagens/operacao-nft-logistics-5.webp",
             imageAlt: "Equipe técnica e precisão operacional NFT Logistics",
           },
         ],
@@ -118,21 +118,21 @@ import { LanguageCode } from '@/src/types';
           {
             title: "Terminais Aéreos de Carga (GRU & VCP)",
             desc: "Agilidade expressa para componentes eletrônicos, saúde e feiras urgentes com liberação aduaneira acelerada.",
-            image: "/imagens/operacao-nft-logistics-4.jpg",
+            image: "/imagens/operacao-nft-logistics-4.webp",
             icon: Plane,
             badge: "Cargas Aéreas Críticas",
           },
           {
             title: "Portos de Santos, Paranaguá & Itajaí",
             desc: "Acompanhamento presencial de atracação, desova de containers FCL/LCL e coordenação aduaneira imediata.",
-            image: "/imagens/operacao-nft-logistics-2.jpg",
+            image: "/imagens/operacao-nft-logistics-2.webp",
             icon: Anchor,
             badge: "Comércio Marítimo",
           },
           {
             title: "Armazenagem & Recintos Alfandegados",
             desc: "Infraestrutura para entreposto aduaneiro, inspeções sanitárias da Anvisa e montagem de kits especializados.",
-            image: "/imagens/armazem-2.jpg",
+            image: "/imagens/armazem-2.webp",
             icon: Warehouse,
             badge: "Regimes Suspensivos",
           },
@@ -175,7 +175,7 @@ import { LanguageCode } from '@/src/types';
             title: "Feiras & Eventos Internacionais",
             desc: "Admissão temporária, entrega porta ao estande nos principais pavilhões do Brasil e cumprimento rígido de cronogramas.",
             link: "/pt/solucoes/feiras-e-eventos",
-            image: "/imagens/feira-nft-logistics-3.jpg",
+            image: "/imagens/feira-nft-logistics-3.webp",
             category: "Exposições & Pavilhões",
           },
           {
@@ -191,7 +191,7 @@ import { LanguageCode } from '@/src/types';
             title: "Bens de Capital & Máquinas",
             desc: "Aproveitamento de Ex-Tarifário, transporte de cargas pesadas de projeto e desoneração fiscal para ativos industriais.",
             link: "/pt/solucoes",
-            image: "/imagens/operacao-nft-logistics-2.jpg",
+            image: "/imagens/operacao-nft-logistics-2.webp",
             category: "Indústria & Projetos",
           },
           {
@@ -199,7 +199,7 @@ import { LanguageCode } from '@/src/types';
             title: "Alta Tecnologia & Eletrônicos",
             desc: "Homologações junto à Anatel e Inmetro, proteção contra avarias e logística expressa para produtos de alto valor agregado.",
             link: "/pt/solucoes",
-            image: "/imagens/operacao-nft-logistics-6.jpg",
+            image: "/imagens/operacao-nft-logistics-6.webp",
             category: "Telecom & Hardware",
           },
           {
@@ -207,7 +207,7 @@ import { LanguageCode } from '@/src/types';
             title: "Obras de Arte & Peças de Museu",
             desc: "Embalagens climatizadas especiais, escolta armada quando necessária e manuseio cirúrgico para mostras e bienais.",
             link: "/pt/solucoes/logisca-obras-arte",
-            image: "/imagens/nft-art-2.jpg",
+            image: "/imagens/nft-art-2.webp",
             category: "Acervos & Mostras",
           },
           {
@@ -295,7 +295,7 @@ import { LanguageCode } from '@/src/types';
             title: "Our Vision",
             desc: "To be Latin America's leading trusted partner for high-complexity import and export operations, celebrated for excellence in special customs regimes, trade fairs, health solutions, and critical cargo.",
             icon: Award,
-            image: "/imagens/armazem.jpg",
+            image: "/imagens/armazem.webp",
             imageAlt: "NFT Logistics bonded storage facility",
           },
           {
@@ -303,7 +303,7 @@ import { LanguageCode } from '@/src/types';
             title: "Our Values",
             desc: "Uncompromising legal and fiscal compliance; Strict punctuality and zero delay tolerance; Senior dedicated advisory; Transparent real-time communication; Agile resolution of customs challenges.",
             icon: ShieldCheck,
-            image: "/imagens/operacao-nft-logistics-5.jpg",
+            image: "/imagens/operacao-nft-logistics-5.webp",
             imageAlt: "NFT Logistics operational teamwork and rigor",
           },
         ],
@@ -343,21 +343,21 @@ import { LanguageCode } from '@/src/types';
           {
             title: "Air Cargo Hubs (GRU & VCP)",
             desc: "Expedited handling for high-tech components, healthcare supplies, and urgent exhibition materials with priority release.",
-            image: "/imagens/operacao-nft-logistics-4.jpg",
+            image: "/imagens/operacao-nft-logistics-4.webp",
             icon: Plane,
             badge: "Urgent Air Cargo",
           },
           {
             title: "Santos, Paranaguá & Itajaí Seaports",
             desc: "Active dockside tracking, FCL/LCL container devanning, and immediate customs clearance coordination.",
-            image: "/imagens/operacao-nft-logistics-2.jpg",
+            image: "/imagens/operacao-nft-logistics-2.webp",
             icon: Anchor,
             badge: "Maritime Trade",
           },
           {
             title: "Bonded Warehousing & Storage",
             desc: "Specialized infrastructure for customs warehousing, Anvisa sanitary inspections, and technical kit assembly.",
-            image: "/imagens/armazem-2.jpg",
+            image: "/imagens/armazem-2.webp",
             icon: Warehouse,
             badge: "Duty-Suspension Regimes",
           },
@@ -400,7 +400,7 @@ import { LanguageCode } from '@/src/types';
             title: "International Fairs & Exhibitions",
             desc: "Door-to-booth logistics, temporary admission regimes, and strict schedule compliance across Brazil's top convention centers.",
             link: "/en/solutions/fairs-and-events",
-            image: "/imagens/feira-nft-logistics-3.jpg",
+            image: "/imagens/feira-nft-logistics-3.webp",
             category: "Trade Fairs & Venues",
           },
           {
@@ -416,7 +416,7 @@ import { LanguageCode } from '@/src/types';
             title: "Capital Goods & Heavy Machinery",
             desc: "Ex-Tarifário duty reductions, heavy-lift project cargo, and tailored multimodal engineering for industrial plants.",
             link: "/en/solutions",
-            image: "/imagens/operacao-nft-logistics-2.jpg",
+            image: "/imagens/operacao-nft-logistics-2.webp",
             category: "Industrial Projects",
           },
           {
@@ -424,7 +424,7 @@ import { LanguageCode } from '@/src/types';
             title: "High-Tech & Electronics",
             desc: "Anatel and Inmetro conformity assessment, shock and moisture protection, and expedited air transport.",
             link: "/en/solutions",
-            image: "/imagens/operacao-nft-logistics-6.jpg",
+            image: "/imagens/operacao-nft-logistics-6.webp",
             category: "Telecom & Hardware",
           },
           {
@@ -432,7 +432,7 @@ import { LanguageCode } from '@/src/types';
             title: "Fine Art & Museum Exhibitions",
             desc: "Climate-controlled specialized packaging, armed escorts when required, and white-glove museum handling.",
             link: "/en/solutions/artworks-logistics",
-            image: "/imagens/nft-art-2.jpg",
+            image: "/imagens/nft-art-2.webp",
             category: "Cultural Exhibitions",
           },
           {
@@ -520,7 +520,7 @@ import { LanguageCode } from '@/src/types';
             title: "企业愿景",
             desc: "成为拉丁美洲处理高难度进出口物流与海关特殊监管的首选标杆，在国际展会、医疗健康与重大工程物流领域享有卓越声誉。",
             icon: Award,
-            image: "/imagens/armazem.jpg",
+            image: "/imagens/armazem.webp",
             imageAlt: "NFT Logistics 保税仓储中心",
           },
           {
@@ -528,7 +528,7 @@ import { LanguageCode } from '@/src/types';
             title: "核心价值观",
             desc: "百分之百合法合规；对延误零容忍；高管级专属咨询服务；全程透明的主动沟通；高效化解各类海关疑难问题。",
             icon: ShieldCheck,
-            image: "/imagens/operacao-nft-logistics-5.jpg",
+            image: "/imagens/operacao-nft-logistics-5.webp",
             imageAlt: "NFT Logistics 专业团队严谨操作",
           },
         ],
@@ -568,21 +568,21 @@ import { LanguageCode } from '@/src/types';
           {
             title: "国际空港枢纽 (GRU & VCP)",
             desc: "为高货值电子元器件、医疗急需物资与紧急展品提供优先通关与高速地面中转。",
-            image: "/imagens/operacao-nft-logistics-4.jpg",
+            image: "/imagens/operacao-nft-logistics-4.webp",
             icon: Plane,
             badge: "加急航空货运",
           },
           {
             title: "桑托斯港、巴拉那瓜港与伊塔雅伊港",
             desc: "集装箱靠泊全程跟踪、拆箱验货及查验现场高效配合，避免产生额外滞期费用。",
-            image: "/imagens/operacao-nft-logistics-2.jpg",
+            image: "/imagens/operacao-nft-logistics-2.webp",
             icon: Anchor,
             badge: "海运口岸运作",
           },
           {
             title: "保税仓储与特殊监管中心",
             desc: "提供保税仓储、卫生局查验专用区以及工程物资分拨等全方位配套支持。",
-            image: "/imagens/armazem-2.jpg",
+            image: "/imagens/armazem-2.webp",
             icon: Warehouse,
             badge: "保税暂存与分拨",
           },
@@ -625,7 +625,7 @@ import { LanguageCode } from '@/src/types';
             title: "国际展会与大型活动",
             desc: "暂时进境免税申报、门到展位全程配送，保障展品在布展日前安全进驻展台。",
             link: "/cn/solutions/fairs-and-events",
-            image: "/imagens/feira-nft-logistics-3.jpg",
+            image: "/imagens/feira-nft-logistics-3.webp",
             category: "大型展会与展台",
           },
           {
@@ -641,7 +641,7 @@ import { LanguageCode } from '@/src/types';
             title: "机械设备与大型工程项目",
             desc: "利用 Ex-Tarifário 关税减免政策，特种大件多式联运，支持巴西工业生产线建设。",
             link: "/cn/solutions",
-            image: "/imagens/operacao-nft-logistics-2.jpg",
+            image: "/imagens/operacao-nft-logistics-2.webp",
             category: "重大工业装备",
           },
           {
@@ -649,7 +649,7 @@ import { LanguageCode } from '@/src/types';
             title: "高新技术与电子通信",
             desc: "办理 Anatel 与 Inmetro 认证审批，提供高防震抗潮包装与加急空运方案。",
             link: "/cn/solutions",
-            image: "/imagens/operacao-nft-logistics-6.jpg",
+            image: "/imagens/operacao-nft-logistics-6.webp",
             category: "通信与高精硬件",
           },
           {
@@ -657,7 +657,7 @@ import { LanguageCode } from '@/src/types';
             title: "艺术品与贵重藏品",
             desc: "恒温恒湿特种包装、专业安保押运，为跨国艺术展览提供最高级别的细致服务。",
             link: "/cn/solutions/artworks-logistics",
-            image: "/imagens/nft-art-2.jpg",
+            image: "/imagens/nft-art-2.webp",
             category: "艺术双年展与博物馆",
           },
           {
@@ -700,4 +700,4 @@ import { LanguageCode } from '@/src/types';
         btnContact: "填写联络表单获取方案",
       },
     },
-  };
+  };

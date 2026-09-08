@@ -111,7 +111,7 @@ export const CONTENT: Record<LanguageCode, ContentLocale> = {
         "Veja registros reais de estandes montados, equipamentos manuseados e recintos atendidos pela equipe da NFT Logistics.",
       items: [
         {
-          src: "/imagens/feira-nft-logistics-7.jpg",
+          src: "/imagens/feira-nft-logistics-7.webp",
           alt: "Grande pavilhão com equipamentos pesados e iluminação moderna",
           tag: "Agrishow & Pesados",
           title: "Estandes de Alto Impacto",
@@ -125,14 +125,14 @@ export const CONTENT: Record<LanguageCode, ContentLocale> = {
           desc: "Desova milimétrica de robôs cirúrgicos em embalagens certificadas diretamente no estande.",
         },
         {
-          src: "/imagens/feira-nft-logistics-2.jpg",
+          src: "/imagens/feira-nft-logistics-2.webp",
           alt: "Estande de mobilidade elétrica e motos em exposição internacional",
           tag: "Mobilidade & Tech",
           title: "Mostruários Tecnológicos",
           desc: "Admissão temporária e liberação expressa para protótipos e veículos elétricos importados.",
         },
         {
-          src: "/imagens/feira-nft-logistics-6.jpg",
+          src: "/imagens/feira-nft-logistics-6.webp",
           alt: "Transamerica Expo Center - Fachada do centro de convenções",
           tag: "Centros de Convenções",
           title: "Transamerica & São Paulo Expo",
@@ -209,28 +209,28 @@ export const CONTENT: Record<LanguageCode, ContentLocale> = {
         "Explore authentic field photos of uncrating, customs clearance, and dedicated booth support performed by NFT Logistics.",
       items: [
         {
-          src: "/imagens/feira-nft-logistics.jpg",
+          src: "/imagens/feira-nft-logistics.webp",
           alt: "Agrishow and international agribusiness exhibition",
           tag: "Ribeirão Preto, SP",
           title: "Agrishow & Heavy Machinery",
           desc: "Temporary admission clearance and specialized flatbed transport for oversized agricultural tech.",
         },
         {
-          src: "/imagens/feira-nft-logistics-3.jpg",
+          src: "/imagens/feira-nft-logistics-3.webp",
           alt: "Hospitalar and international healthcare technology",
           tag: "São Paulo Expo, SP",
           title: "Hospitalar & Healthcare Tech",
           desc: "Diagnostic and ultrasound systems with import licenses pre-cleared with Anvisa.",
         },
         {
-          src: "/imagens/feira-nft-logistics-2.jpg",
+          src: "/imagens/feira-nft-logistics-2.webp",
           alt: "Electric mobility and industrial clean tech expo",
           tag: "Transamerica Expo, SP",
           title: "Mobility & Clean Energy",
           desc: "Complete rigging, uncrating, stand delivery, and secure storage of empty packaging throughout the show.",
         },
         {
-          src: "/imagens/feira-nft-logistics-6.jpg",
+          src: "/imagens/feira-nft-logistics-6.webp",
           alt: "Industrial automation and technology expo",
           tag: "Distrito Anhembi, SP",
           title: "Industry 4.0 & Automation",
@@ -307,28 +307,28 @@ export const CONTENT: Record<LanguageCode, ContentLocale> = {
         "见证 NFT Logistics 在巴西各大展会现场提供的专业拆箱、清关、就位与实地统筹服务。",
       items: [
         {
-          src: "/imagens/feira-nft-logistics.jpg",
+          src: "/imagens/feira-nft-logistics.webp",
           alt: "Agrishow 巴西国际农业机械展现场",
           tag: "Ribeirão Preto, SP",
           title: "Agrishow 重型机械展",
           desc: "大型农用装备与重型机械的暂准进境清关及特种低平板车辆运输。",
         },
         {
-          src: "/imagens/feira-nft-logistics-3.jpg",
+          src: "/imagens/feira-nft-logistics-3.webp",
           alt: "Hospitalar 巴西国际医疗器械展",
           tag: "São Paulo Expo, SP",
           title: "Hospitalar 医疗健康展",
           desc: "超声波及高端影像医疗设备，提前获得巴西国家卫生监督局（Anvisa）进口许可。",
         },
         {
-          src: "/imagens/feira-nft-logistics-2.jpg",
+          src: "/imagens/feira-nft-logistics-2.webp",
           alt: "巴西电动出行与新能源科技展",
           tag: "Transamerica Expo, SP",
           title: "Mobility & 绿色能源展",
           desc: "展台全套设备拆箱、吊装就位以及展期全程空箱安全仓储托管。",
         },
         {
-          src: "/imagens/feira-nft-logistics-6.jpg",
+          src: "/imagens/feira-nft-logistics-6.webp",
           alt: "巴西工业自动化与智能制造展",
           tag: "Distrito Anhembi, SP",
           title: "工业4.0 与自动化展",

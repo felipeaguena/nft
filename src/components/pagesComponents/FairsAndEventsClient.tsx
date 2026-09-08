@@ -58,7 +58,7 @@ export default function FairsAndEventsClient({
               <div className="relative overflow-hidden rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-xl dark:shadow-2xl group transition-colors duration-200">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/imagens/feira-nft-logistics.jpg"
+                    src="/imagens/feira-nft-logistics.webp"
                     alt={content.block2.imageAlt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"

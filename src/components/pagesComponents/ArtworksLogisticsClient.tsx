@@ -57,7 +57,7 @@ export default function ArtworksLogisticsClient({
               <div className="relative overflow-hidden rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 shadow-xl dark:shadow-2xl group">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/imagens/nft-art.jpg"
+                    src="/imagens/nft-art.webp"
                     alt={content.block2.imageAlt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -233,7 +233,7 @@ export default function ArtworksLogisticsClient({
               {/* <div className="relative mt-8 rounded-3xl overflow-hidden border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-xl group">
                 <div className="relative aspect-[16/10] w-full">
                   <Image
-                    src="/imagens/nft-art-2.jpg"
+                    src="/imagens/nft-art-2.webp"
                     alt={content.whyChoose.visualCard.badge}
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"

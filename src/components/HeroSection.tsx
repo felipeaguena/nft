@@ -248,7 +248,7 @@ export default function HeroSection({
   };
 
   const effectiveImage =
-    customImage || content.image || "/imagens/operacao-nft-logistics-3.jpg";
+    customImage || content.image || "/imagens/operacao-nft-logistics-3.webp";
   const effectiveImageAlt =
     customImageAlt || content.imageAlt || content.title;
 

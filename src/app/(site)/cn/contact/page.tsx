@@ -4,14 +4,24 @@ import { Mail, MapPin, Clock, ArrowRight } from "lucide-react";
 import Hero from "@/src/components/Hero";
 import Button from "@/src/components/Button";
 
-export const metadata: Metadata = {
+import { constructMetadata, SECTION_OG_IMAGES, SITE_ROUTES } from "@/src/lib/seo";
+
+export const metadata: Metadata = constructMetadata({
   title: "联系我们 | NFT Logistics",
   description:
-    "联系 NFT Logistics，获取国际物流、海关清关与对外贸易的定制化专业解决方案。",
-  alternates: {
-    canonical: "/cn/contact",
-  },
-};
+    "联系 NFT Logistics，获取国际物流、巴西展会物流、海关清关与对外贸易的定制化专业解决方案。",
+  path: SITE_ROUTES.contact.cn,
+  locale: "zh_CN",
+  image: SECTION_OG_IMAGES.contact,
+  keywords: [
+    "联系NFT Logistics",
+    "巴西物流咨询",
+    "巴西货代联系方式",
+    "展会物流咨询",
+    "圣保罗物流公司",
+  ],
+  languageAlternates: SITE_ROUTES.contact,
+});
 
 export default function ContactCnPage() {
   return (
@@ -94,7 +104,7 @@ export default function ContactCnPage() {
       </div>
 
       <Hero
-        imageSrc="/imagens/feira-nft-logistics-7.jpg"
+        imageSrc="/imagens/feira-nft-logistics-7.webp"
         title="携手巴西展会与大型活动首选的国际物流专家团队！"
         actions={
           <>

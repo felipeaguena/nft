@@ -1,7 +1,13 @@
-﻿export default function VitorPage() {
-  return (
-    <div>
-      <h1>vitor</h1>
-    </div>
-  );
+import type { Metadata } from 'next';
+import LinkTree from '@/src/app/nft-links/components/LinkTree';
+import data from '@/db/nft-links.json';
+import { constructLinkTreeMetadata } from '@/src/lib/seo';
+
+export const metadata: Metadata = constructLinkTreeMetadata({
+  personKey: 'vitor',
+  lang: 'pt',
+});
+
+export default function VitorPage() {
+  return <LinkTree personKey="vitor" personData={data.vitor} lang="pt" />;
 }

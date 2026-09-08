@@ -57,7 +57,7 @@ export default function CustomizedProjectsClient({
               <div className="relative overflow-hidden rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 shadow-xl dark:shadow-2xl group">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/imagens/operacao-nft-logistics-5.jpg"
+                    src="/imagens/operacao-nft-logistics-5.webp"
                     alt={current.block2.imageAlt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"

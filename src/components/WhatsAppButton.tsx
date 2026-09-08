@@ -31,8 +31,8 @@ const CONTENT: Record<LanguageCode, WhatsAppContent> = {
     balloonCta:
       "Como podemos te ajudar a entrar no mercado brasileiro? Seja por Representação comercial ou por feira, estamos prontos para te ajudar nesse processo.",
     timeLabel: "Agora",
-    repBtn: "🤝 Representação Comercial",
-    fairBtn: "🎪 Feiras & Eventos",
+    repBtn: "Representação Comercial",
+    fairBtn: "Feiras & Eventos",
     mainCtaBtn: "Iniciar conversa no WhatsApp",
     repMessage:
       "Olá! Gostaria de saber mais sobre Representação Comercial no Brasil com a NFT Logistics.",
@@ -51,8 +51,8 @@ const CONTENT: Record<LanguageCode, WhatsAppContent> = {
     balloonCta:
       "How can we help you enter the Brazilian market? Whether through commercial representation or trade fairs, we are ready to assist you in this process.",
     timeLabel: "Now",
-    repBtn: "🤝 Commercial Representation",
-    fairBtn: "🎪 Fairs & Events",
+    repBtn: "Commercial Representation",
+    fairBtn: "Fairs & Events",
     mainCtaBtn: "Start chat on WhatsApp",
     repMessage:
       "Hello! I would like to learn more about Commercial Representation in Brazil with NFT Logistics.",
@@ -71,14 +71,16 @@ const CONTENT: Record<LanguageCode, WhatsAppContent> = {
     balloonCta:
       "我们如何帮助您进入巴西市场？无论是成为巴西的商业代表，或是参加展会，我们随时准备协助您完成这个过程。",
     timeLabel: "刚刚",
-    repBtn: "🤝 商业代表服务",
-    fairBtn: "🎪 展会与活动物流",
+    repBtn: "商业代表服务",
+    fairBtn: "展会与活动物流",
     mainCtaBtn: "通过 WhatsApp 立即咨询",
-    repMessage: "您好！我想了解更多关于 NFT Logistics 在巴西的商业代表服务。",
+    repMessage:
+      "Hello! I would like to learn more about Commercial Representation in Brazil with NFT Logistics.",
     fairMessage:
-      "您好！我想了解更多关于 NFT Logistics 在巴西的展会与活动支持服务。",
-    generalMessage: "您好！我想了解 NFT Logistics 如何协助我们拓展巴西市场。",
-    quickOptionsLabel: "快捷选项：",
+      "Hello! I would like to learn more about support for Fairs and Events in Brazil with NFT Logistics.",
+    generalMessage:
+      "Hello! I would like to know how NFT Logistics can assist our entry into the Brazilian market.",
+    quickOptionsLabel: "Quick options:",
     ariaOpen: "打开 WhatsApp 在线咨询",
     ariaClose: "关闭 WhatsApp 对话框",
   },
@@ -170,7 +172,7 @@ export default function WhatsAppButton({
               <div className="relative">
                 <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center border border-white/30 backdrop-blur-sm overflow-hidden">
                   <Image
-                    src="/logo/nft-logistics-icone-branco.png"
+                    src="/logo/nft-logistics-icone-branco.webp"
                     alt="NFT Logistics"
                     width={26}
                     height={26}

@@ -118,14 +118,14 @@ export const CONTENT: Record<LanguageCode, ContentLocale> = {
         "Transporte de obras tridimensionais, telas de valor inestimável e acervos históricos com discrição e conformidade IPHAN.",
       items: [
         {
-          src: "/imagens/nft-art-2.jpg",
+          src: "/imagens/nft-art-2.webp",
           alt: "Escultura curvilínea em madeira sob iluminação de galeria",
           tag: "Escultura & Tridimensional",
           title: "Peças Tridimensionais",
           desc: "Caixas sob medida com berço de amortecimento interno adaptado a cada curva da obra.",
         },
         {
-          src: "/imagens/nft-art.jpg",
+          src: "/imagens/nft-art.webp",
           alt: "Detalhes anatômicos e veios de escultura em preto e branco",
           tag: "Laudo & Vistoria",
           title: "Macroinspeção de Superfície",
@@ -139,7 +139,7 @@ export const CONTENT: Record<LanguageCode, ContentLocale> = {
           desc: "Madeira tratada e fumigada internacionalmente com vedação contra poeira e variações de umidade.",
         },
         {
-          src: "/imagens/feira-nft-logistics-7.jpg",
+          src: "/imagens/feira-nft-logistics-7.webp",
           alt: "Pavilhão amplo de exposições com público e iluminação cenográfica",
           tag: "Grandes Mostras",
           title: "Bienais & Exposições",
@@ -224,14 +224,14 @@ export const CONTENT: Record<LanguageCode, ContentLocale> = {
         "Witness our technical precision in crating, temperature control, and physical handling of invaluable cultural collections.",
       items: [
         {
-          src: "/imagens/nft-art-2.jpg",
+          src: "/imagens/nft-art-2.webp",
           alt: "Contemporary sculpture and exhibition logistics",
           tag: "Anti-Vibration Handling",
           title: "Sculptures & Large Installations",
           desc: "Specialized vibration-dampening rigging equipment and secure placement at galleries and biennales.",
         },
         {
-          src: "/imagens/nft-art.jpg",
+          src: "/imagens/nft-art.webp",
           alt: "Technical inspection and art condition reporting",
           tag: "Photographic Audit",
           title: "Condition Reports & Forensics",
@@ -245,7 +245,7 @@ export const CONTENT: Record<LanguageCode, ContentLocale> = {
           desc: "Double-walled museum crating with progressive-density Ethafoam linings and vapor barrier protection.",
         },
         {
-          src: "/imagens/feira-nft-logistics-7.jpg",
+          src: "/imagens/feira-nft-logistics-7.webp",
           alt: "International exhibitions and museum collections",
           tag: "End-to-End Care",
           title: "International Museum Exhibitions",
@@ -329,14 +329,14 @@ export const CONTENT: Record<LanguageCode, ContentLocale> = {
         "真实呈现我们在文化遗产、馆藏文物及当代艺术品在跨国运输与布展中的严苛技术标准。",
       items: [
         {
-          src: "/imagens/nft-art-2.jpg",
+          src: "/imagens/nft-art-2.webp",
           alt: "当代大型雕塑与装置艺术品运输",
           tag: "高阶减震吊装",
           title: "重型雕塑与空间装置艺术",
           desc: "气垫悬挂重型特种车运输，双年展及画廊大型雕塑毫米级精细位移。",
         },
         {
-          src: "/imagens/nft-art.jpg",
+          src: "/imagens/nft-art.webp",
           alt: "艺术品微观状态报告鉴定与检验",
           tag: "数码高清存证",
           title: "状况报告（Condition Reports）与司法鉴定",
@@ -350,7 +350,7 @@ export const CONTENT: Record<LanguageCode, ContentLocale> = {
           desc: "双层结构博物馆级木箱，内附渐进式密度吸震发泡胶与铝箔高分子防潮密封气室。",
         },
         {
-          src: "/imagens/feira-nft-logistics-7.jpg",
+          src: "/imagens/feira-nft-logistics-7.webp",
           alt: "国际巡回展览与博物馆馆藏运输",
           tag: "全程点对点保障",
           title: "国际大展与巡展护航",

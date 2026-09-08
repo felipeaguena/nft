@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.nftlogistics.com.br";
+import { SITE_URL, SITE_ROUTES } from "@/src/lib/seo";
 
 interface RouteConfig {
   pt: string;
@@ -10,92 +9,70 @@ interface RouteConfig {
   priority: number;
 }
 
-// Mapeamento das rotas principais do site com suporte a múltiplos idiomas
+// Mapeamento das rotas públicas principais indexáveis
+// NOTA: As rotas de cartão digital ("/nft-links") estão estritamente excluídas do sitemap
 const MAIN_ROUTES: RouteConfig[] = [
   // Páginas Iniciais por Idioma
   {
-    pt: "/pt",
-    en: "/en",
-    cn: "/cn",
+    ...SITE_ROUTES.home,
     changeFrequency: "daily",
     priority: 1.0,
   },
   // Sobre a NFT Logistics
   {
-    pt: "/pt/sobre",
-    en: "/en/about",
-    cn: "/cn/about",
+    ...SITE_ROUTES.about,
     changeFrequency: "monthly",
     priority: 0.8,
   },
   // Hub de Soluções
   {
-    pt: "/pt/solucoes",
-    en: "/en/solutions",
-    cn: "/cn/solutions",
+    ...SITE_ROUTES.solutions,
     changeFrequency: "weekly",
     priority: 0.9,
   },
   // Soluções: Feiras e Eventos
   {
-    pt: "/pt/solucoes/feiras-e-eventos",
-    en: "/en/solutions/fairs-and-events",
-    cn: "/cn/solutions/fairs-and-events",
+    ...SITE_ROUTES.fairsAndEvents,
     changeFrequency: "weekly",
     priority: 0.85,
   },
   // Soluções: Regimes Aduaneiros Especiais
   {
-    pt: "/pt/solucoes/regimes-especiais",
-    en: "/en/solutions/special-customs-regimes",
-    cn: "/cn/solutions/special-customs-regimes",
+    ...SITE_ROUTES.specialRegimes,
     changeFrequency: "weekly",
     priority: 0.85,
   },
   // Soluções: Projetos Customizados
   {
-    pt: "/pt/solucoes/projetos-customizados",
-    en: "/en/solutions/customized-projects",
-    cn: "/cn/solutions/customized-projects",
+    ...SITE_ROUTES.customizedProjects,
     changeFrequency: "weekly",
     priority: 0.85,
   },
   // Soluções: Logística de Obras de Arte
   {
-    pt: "/pt/solucoes/logistica-obras-arte",
-    en: "/en/solutions/artworks-logistics",
-    cn: "/cn/solutions/artworks-logistics",
+    ...SITE_ROUTES.artworks,
     changeFrequency: "weekly",
     priority: 0.85,
   },
   // Divisão de Saúde / Hospitalar (Health)
   {
-    pt: "/pt/saude",
-    en: "/en/health",
-    cn: "/cn/health",
+    ...SITE_ROUTES.health,
     changeFrequency: "weekly",
     priority: 0.85,
   },
   // Contato / Fale Conosco
   {
-    pt: "/pt/contato",
-    en: "/en/contact",
-    cn: "/cn/contact",
+    ...SITE_ROUTES.contact,
     changeFrequency: "monthly",
     priority: 0.8,
   },
   // Política de Privacidade
   {
-    pt: "/pt/privacidade",
-    en: "/en/privacy",
-    cn: "/cn/privacy",
+    ...SITE_ROUTES.privacy,
     changeFrequency: "yearly",
     priority: 0.3,
   },
 ];
-
-// Páginas de equipe e links rápidos (vCard / NFT Links) - reativar quando páginas estiverem concluídas
-// const TEAM_MEMBERS = ["felipe", "marcos", "vitor"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date();
@@ -103,18 +80,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 1. Rota Raiz ("/")
   sitemapEntries.push({
-    url: BASE_URL,
+    url: SITE_URL,
     lastModified: currentDate,
     changeFrequency: "daily",
     priority: 1.0,
     alternates: {
       languages: {
-        "pt-BR": `${BASE_URL}/pt`,
-        "pt": `${BASE_URL}/pt`,
-        "en": `${BASE_URL}/en`,
-        "zh": `${BASE_URL}/cn`,
-        "zh-Hans": `${BASE_URL}/cn`,
-        "x-default": `${BASE_URL}/en`,
+        "pt-BR": `${SITE_URL}/pt`,
+        pt: `${SITE_URL}/pt`,
+        en: `${SITE_URL}/en`,
+        zh: `${SITE_URL}/cn`,
+        "zh-Hans": `${SITE_URL}/cn`,
+        "x-default": `${SITE_URL}/en`,
       },
     },
   });
@@ -122,17 +99,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 2. Rotas Principais em cada idioma com referências cruzadas (hreflang / alternates)
   MAIN_ROUTES.forEach((route) => {
     const alternateLanguages = {
-      "pt-BR": `${BASE_URL}${route.pt}`,
-      "pt": `${BASE_URL}${route.pt}`,
-      "en": `${BASE_URL}${route.en}`,
-      "zh": `${BASE_URL}${route.cn}`,
-      "zh-Hans": `${BASE_URL}${route.cn}`,
-      "x-default": `${BASE_URL}${route.en}`,
+      "pt-BR": `${SITE_URL}${route.pt}`,
+      pt: `${SITE_URL}${route.pt}`,
+      en: `${SITE_URL}${route.en}`,
+      zh: `${SITE_URL}${route.cn}`,
+      "zh-Hans": `${SITE_URL}${route.cn}`,
+      "x-default": `${SITE_URL}${route.en}`,
     };
 
     // Entrada em Português
     sitemapEntries.push({
-      url: `${BASE_URL}${route.pt}`,
+      url: `${SITE_URL}${route.pt}`,
       lastModified: currentDate,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
@@ -143,7 +120,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Entrada em Inglês
     sitemapEntries.push({
-      url: `${BASE_URL}${route.en}`,
+      url: `${SITE_URL}${route.en}`,
       lastModified: currentDate,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
@@ -154,7 +131,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Entrada em Chinês
     sitemapEntries.push({
-      url: `${BASE_URL}${route.cn}`,
+      url: `${SITE_URL}${route.cn}`,
       lastModified: currentDate,
       changeFrequency: route.changeFrequency,
       priority: route.priority,

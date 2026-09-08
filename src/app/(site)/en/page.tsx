@@ -3,43 +3,27 @@ import Hero from "@/src/components/Hero";
 import Button from "@/src/components/Button";
 import HomeClient from "@/src/components/pagesComponents/HomeClient";
 
-export const metadata: Metadata = {
-  title: "NFT Logistics | International Logistics Solutions & Customs Intelligence",
+import { constructMetadata, SITE_ROUTES, SECTION_OG_IMAGES } from "@/src/lib/seo";
+
+export const metadata: Metadata = constructMetadata({
+  title: "NFT Logistics | International Logistics, Customs Clearance & Special Regimes in Brazil",
   description:
-    "We help global companies exhibit, import and operate in Brazil without regulatory surprises. Specialized end-to-end logistics solutions and customs brokerage.",
-  alternates: {
-    canonical: "/en",
-    languages: {
-      "pt-BR": "https://www.nftlogistics.com.br/pt",
-      "en": "https://www.nftlogistics.com.br/en",
-      "zh": "https://www.nftlogistics.com.br/cn",
-      "x-default": "https://www.nftlogistics.com.br/en",
-    },
-  },
-  openGraph: {
-    title: "NFT Logistics | International Logistics Solutions & Customs Intelligence",
-    description:
-      "We help global companies exhibit, import and operate in Brazil without regulatory surprises.",
-    url: "https://www.nftlogistics.com.br/en",
-    siteName: "NFT Logistics",
-    locale: "en_US",
-    images: [
-      {
-        url: "https://www.nftlogistics.com.br/logo/nft-logistics-icone-branco.png",
-        width: 1200,
-        height: 630,
-        alt: "NFT Logistics",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "NFT Logistics | International Logistics Solutions & Customs Intelligence",
-    description:
-      "We help global companies exhibit, import and operate in Brazil without regulatory surprises.",
-    images: ["https://www.nftlogistics.com.br/logo/nft-logistics-icone-branco.png"],
-  },
-};
+    "NFT Logistics is a Brazilian customs broker and freight forwarder specializing in international logistics, special customs regimes, trade fair logistics, fine art shipping, and health logistics across Brazil. Over 15 years of regulatory expertise at Santos, Paranaguá, GRU, VCP, and GIG.",
+  path: "/en",
+  lang: "en",
+  image: SECTION_OG_IMAGES.home,
+  keywords: [
+    "International Logistics Brazil",
+    "Customs Broker Brazil",
+    "Freight Forwarder Brazil",
+    "Temporary Admission Brazil",
+    "Special Customs Regimes Brazil",
+    "Exhibition Logistics Brazil",
+    "Brazil Customs Clearance",
+    "NFT Logistics",
+  ],
+  alternates: SITE_ROUTES.home,
+});
 
 export default function EnPage() {
   return (

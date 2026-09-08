@@ -101,7 +101,7 @@ export default function CtaSection({
   }
 
   const effectiveTheme = customTheme || content.theme || "orange";
-  const effectiveImage = customImage || content.image || "/imagens/operacao-nft-logistics.jpg";
+  const effectiveImage = customImage || content.image || "/imagens/operacao-nft-logistics.webp";
   const effectiveImageAlt = customImageAlt || content.imageAlt || content.title;
 
   const IconComp =

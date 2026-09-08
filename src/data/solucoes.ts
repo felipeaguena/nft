@@ -56,7 +56,7 @@ export const CONTENT: any = {
           icon: CalendarCheck,
           tag: "Tolerância Zero a Atrasos",
           title: "Feiras e Eventos Internacionais",
-          image: "/imagens/feira-nft-logistics.jpg",
+          image: "/imagens/feira-nft-logistics.webp",
           imageAlt: "Logística para feiras e eventos internacionais no Brasil",
           description:
             "Transporte porta-ao-estande (door-to-booth), Admissão Temporária com suspensão tributária e suporte presencial nos maiores centros de convenções do Brasil.",
@@ -73,7 +73,7 @@ export const CONTENT: any = {
           icon: Scale,
           tag: "Otimização Tributária",
           title: "Regimes Aduaneiros Especiais",
-          image: "/imagens/armazem.jpg",
+          image: "/imagens/armazem.webp",
           imageAlt: "Armazém alfandegado e gestão de regimes aduaneiros especiais",
           description:
             "Estruturação jurídica e operacional de Admissão Temporária, Drawback, Entreposto Aduaneiro e RECOF para preservar o fluxo de caixa da sua empresa.",
@@ -90,7 +90,7 @@ export const CONTENT: any = {
           icon: Boxes,
           tag: "Cargas Especiais & Turn-key",
           title: "Projetos Customizados & Cargas Críticas",
-          image: "/imagens/operacao-nft-logistics-7.jpg",
+          image: "/imagens/operacao-nft-logistics-7.webp",
           imageAlt: "Movimentação de cargas de projeto e maquinário pesado em pavilhão",
           description:
             "Logística para cargas sobredimensionadas (OOG), equipamentos de alto peso (breakbulk), plantas industriais e cronogramas de entrega ultrassensíveis.",
@@ -107,7 +107,7 @@ export const CONTENT: any = {
           icon: Palette,
           tag: "Máximo Cuidado & Sigilo",
           title: "Logística para Obras de Arte & Alto Valor",
-          image: "/imagens/nft-art-2.jpg",
+          image: "/imagens/nft-art-2.webp",
           imageAlt: "Curadoria logística e transporte para obras de arte e acervos valiosos",
           description:
             "Curadoria logística para galerias, museus, leilões e colecionadores com caixas climáticas personalizadas, escolta dedicada e seguro especializado.",
@@ -128,7 +128,7 @@ export const CONTENT: any = {
         "Registros reais de operações complexas coordenadas pela equipe da NFT Logistics nos principais portos, aeroportos e pavilhões de eventos do país.",
       items: [
         {
-          image: "/imagens/feira-nft-logistics-4.jpg",
+          image: "/imagens/feira-nft-logistics-4.webp",
           title: "Montagem Técnica em Pavilhões",
           category: "Feiras & Congressos",
           desc: "Supervisão presencial com ferramental e equipe técnica qualificada dentro do pavilhão.",
@@ -140,13 +140,13 @@ export const CONTENT: any = {
           desc: "Descarregamento técnico com caixas tratadas e manuseio milimétrico de equipamentos cirúrgicos.",
         },
         {
-          image: "/imagens/operacao-nft-logistics-4.jpg",
+          image: "/imagens/operacao-nft-logistics-4.webp",
           title: "Cargas em Carretas Prancha",
           category: "Cargas de Projeto",
           desc: "Transporte rodoviário pesado e amarração de maquinário industrial de grande porte.",
         },
         {
-          image: "/imagens/feira-nft-logistics-6.jpg",
+          image: "/imagens/feira-nft-logistics-6.webp",
           title: "Grandes Centros de Convenções",
           category: "Infraestrutura",
           desc: "Operações contínuas em recintos como Transamerica Expo Center, São Paulo Expo e Anhembi.",
@@ -242,7 +242,7 @@ export const CONTENT: any = {
           desc: "Logística porta ao estande para os maiores eventos em pavilhões como São Paulo Expo, Anhembi, Transamerica e Riocentro.",
           badge: "Ver Feiras & Eventos",
           href: "/pt/solucoes/feiras-e-eventos",
-          image: "/imagens/feira-nft-logistics-7.jpg",
+          image: "/imagens/feira-nft-logistics-7.webp",
         },
         {
           icon: Zap,
@@ -258,7 +258,7 @@ export const CONTENT: any = {
           desc: "Desembaraço ágil com homologação Anatel para servidores, estações rádio-base, fibra óptica e componentes eletrônicos.",
           badge: null,
           href: null,
-          image: "/imagens/operacao-nft-logistics-2.jpg",
+          image: "/imagens/operacao-nft-logistics-2.webp",
         },
         {
           icon: Layers,
@@ -266,7 +266,7 @@ export const CONTENT: any = {
           desc: "Linhas de produção fabris, peças de reposição e maquinário sobredimensionado em regimes de Drawback e Admissão Temporária.",
           badge: "Ver Regimes Especiais",
           href: "/pt/solucoes/regimes-especiais",
-          image: "/imagens/operacao-nft-logistics-6.jpg",
+          image: "/imagens/operacao-nft-logistics-6.webp",
         },
         {
           icon: Palette,
@@ -274,7 +274,7 @@ export const CONTENT: any = {
           desc: "Transporte climatizado, seguro total nail-to-nail e embalagens museum grade para mostras de relevância global.",
           badge: "Ver Logística de Arte",
           href: "/pt/solucoes/logistica-obras-arte",
-          image: "/imagens/nft-art.jpg",
+          image: "/imagens/nft-art.webp",
         },
       ],
     },
@@ -351,7 +351,7 @@ export const CONTENT: any = {
           icon: CalendarCheck,
           tag: "Zero Tolerance for Delays",
           title: "Trade Fairs & International Events",
-          image: "/imagens/feira-nft-logistics.jpg",
+          image: "/imagens/feira-nft-logistics.webp",
           imageAlt: "Trade fair logistics and booth setups in Brazil",
           description:
             "Door-to-booth logistics, Temporary Admission with duty suspension, and on-site support at Brazil's leading convention centers.",
@@ -368,7 +368,7 @@ export const CONTENT: any = {
           icon: Scale,
           tag: "Tax Optimization",
           title: "Special Customs Regimes",
-          image: "/imagens/armazem.jpg",
+          image: "/imagens/armazem.webp",
           imageAlt: "Bonded warehouse and special customs regimes in Brazil",
           description:
             "Legal and operational structuring of Temporary Admission, Drawback, Bonded Warehousing, and RECOF to protect cash flow.",
@@ -385,7 +385,7 @@ export const CONTENT: any = {
           icon: Boxes,
           tag: "Project Cargo & Turn-Key",
           title: "Customized Projects & Heavy-Lift Cargo",
-          image: "/imagens/operacao-nft-logistics-7.jpg",
+          image: "/imagens/operacao-nft-logistics-7.webp",
           imageAlt: "Heavy project cargo handling and industrial logistics in Brazil",
           description:
             "Logistics for out-of-gauge (OOG) equipment, breakbulk shipments, complete manufacturing lines, and time-critical project timelines.",
@@ -402,7 +402,7 @@ export const CONTENT: any = {
           icon: Palette,
           tag: "Maximum Care & Discretion",
           title: "Fine Art & High-Value Cargo Logistics",
-          image: "/imagens/nft-art-2.jpg",
+          image: "/imagens/nft-art-2.webp",
           imageAlt: "Museum-grade fine art logistics and high-value cultural artifacts",
           description:
             "Logistics curation for galleries, museums, art auctions, and private collectors with climate-controlled crates, escorts, and nail-to-nail insurance.",
@@ -423,7 +423,7 @@ export const CONTENT: any = {
         "Real-world photographic records of mission-critical logistics coordinated by NFT Logistics across Brazil's top ports, airports, and convention pavilions.",
       items: [
         {
-          image: "/imagens/feira-nft-logistics-4.jpg",
+          image: "/imagens/feira-nft-logistics-4.webp",
           title: "On-Site Pavilion Assembly",
           category: "Trade Fairs & Expos",
           desc: "Dedicated hands-on technical supervision and booth setup within major convention centers.",
@@ -435,13 +435,13 @@ export const CONTENT: any = {
           desc: "Precision uncrating and delicate positioning of advanced robotic medical systems.",
         },
         {
-          image: "/imagens/operacao-nft-logistics-4.jpg",
+          image: "/imagens/operacao-nft-logistics-4.webp",
           title: "Flatbed Heavy-Lift Transport",
           category: "Project Cargo",
           desc: "Specialized lowboy trucking and heavy industrial machinery rigging on location.",
         },
         {
-          image: "/imagens/feira-nft-logistics-6.jpg",
+          image: "/imagens/feira-nft-logistics-6.webp",
           title: "Major Exhibition Centers",
           category: "Infrastructure",
           desc: "Continuous presence at premier venues: Transamerica Expo Center, São Paulo Expo, and Anhembi.",
@@ -537,7 +537,7 @@ export const CONTENT: any = {
           desc: "Door-to-booth logistics for leading exhibitions at São Paulo Expo, Anhembi, Transamerica, and Riocentro.",
           badge: "View Fairs & Events",
           href: "/en/solutions/fairs-and-events",
-          image: "/imagens/feira-nft-logistics-7.jpg",
+          image: "/imagens/feira-nft-logistics-7.webp",
         },
         {
           icon: Zap,
@@ -553,7 +553,7 @@ export const CONTENT: any = {
           desc: "Fast customs clearance with Anatel approvals for servers, cell towers, fiber optics, and advanced electronics.",
           badge: null,
           href: null,
-          image: "/imagens/operacao-nft-logistics-2.jpg",
+          image: "/imagens/operacao-nft-logistics-2.webp",
         },
         {
           icon: Layers,
@@ -561,7 +561,7 @@ export const CONTENT: any = {
           desc: "Full factory assembly lines, oversized replacement components, and capital goods under Drawback regimes.",
           badge: "View Special Regimes",
           href: "/en/solutions/special-customs-regimes",
-          image: "/imagens/operacao-nft-logistics-6.jpg",
+          image: "/imagens/operacao-nft-logistics-6.webp",
         },
         {
           icon: Palette,
@@ -569,7 +569,7 @@ export const CONTENT: any = {
           desc: "Climate-controlled transport, nail-to-nail insurance, and museum-grade handling for world-class exhibitions.",
           badge: "View Art Logistics",
           href: "/en/solutions/artworks-logistics",
-          image: "/imagens/nft-art.jpg",
+          image: "/imagens/nft-art.webp",
         },
       ],
     },
@@ -644,7 +644,7 @@ export const CONTENT: any = {
           icon: CalendarCheck,
           tag: "时效零延误",
           title: "国际展会与大型会议物流",
-          image: "/imagens/feira-nft-logistics.jpg",
+          image: "/imagens/feira-nft-logistics.webp",
           imageAlt: "巴西国际展会物流与展位搭建现场",
           description: "门到展位（Door-to-Booth）运输、临时入境（Admissão Temporária）全额税收暂缓，以及巴西各大展馆现场驻场服务。",
           bullets: [
@@ -660,7 +660,7 @@ export const CONTENT: any = {
           icon: Scale,
           tag: "税收合规优化",
           title: "特殊海关监管制度（免税/保税）",
-          image: "/imagens/armazem.jpg",
+          image: "/imagens/armazem.webp",
           imageAlt: "巴西保税仓储与特殊海关监管制度",
           description: "临时入境、Drawback（退税/免税）、保税仓及 RECOF 制度方案设计，大幅减轻企业进口现金流压力。",
           bullets: [
@@ -676,7 +676,7 @@ export const CONTENT: any = {
           icon: Boxes,
           tag: "重大件与交钥匙工程",
           title: "定制工程与超限特种货物物流",
-          image: "/imagens/operacao-nft-logistics-7.jpg",
+          image: "/imagens/operacao-nft-logistics-7.webp",
           imageAlt: "巴西大型工业重大件与超限设备现场吊装作业",
           description: "针对超重、超长、超高（OOG）重大件货物、成套工业生产线以及超紧急供应链的高难度运输保障。",
           bullets: [
@@ -692,7 +692,7 @@ export const CONTENT: any = {
           icon: Palette,
           tag: "极度细致与保密",
           title: "艺术品与高价值藏品物流",
-          image: "/imagens/nft-art-2.jpg",
+          image: "/imagens/nft-art-2.webp",
           imageAlt: "高价值艺术珍品、博物馆展品定制木箱与安全押运",
           description: "为画廊、艺术馆、拍卖行和收藏家提供定制恒温防震木箱、专业押运人员护送以及全程钉到钉保险保障。",
           bullets: [
@@ -711,7 +711,7 @@ export const CONTENT: any = {
       description: "NFT Logistics 团队在巴西各大海空港口、保税仓及国际会展中心亲自把关与护航关键业务的真实记录。",
       items: [
         {
-          image: "/imagens/feira-nft-logistics-4.jpg",
+          image: "/imagens/feira-nft-logistics-4.webp",
           title: "展馆现场专业安装作业",
           category: "国际展会与博览会",
           desc: "持证专业团队进驻展馆，亲自操作工具监督设备拆箱就位与安全安装。",
@@ -723,13 +723,13 @@ export const CONTENT: any = {
           desc: "遵循国际严密操作规程，以定制防震熏蒸木箱完成高精密医疗仪器卸载。",
         },
         {
-          image: "/imagens/operacao-nft-logistics-4.jpg",
+          image: "/imagens/operacao-nft-logistics-4.webp",
           title: "重工业机床与特种低平板拖车",
           category: "特种工程物流",
           desc: "超限工业设备严密捆扎加固，专线平稳运抵最终厂区及交付现场。",
         },
         {
-          image: "/imagens/feira-nft-logistics-6.jpg",
+          image: "/imagens/feira-nft-logistics-6.webp",
           title: "巴西国家级重点大型会展中心",
           category: "展会场馆枢纽",
           desc: "长期驻场服务于 Transamerica Expo Center、São Paulo Expo 等核心展馆。",
@@ -821,7 +821,7 @@ export const CONTENT: any = {
           desc: "为 São Paulo Expo、Anhembi、Riocentro 等巴西国家级展馆提供全程门到展位保障。",
           badge: "查看展会物流",
           href: "/cn/solutions/fairs-and-events",
-          image: "/imagens/feira-nft-logistics-7.jpg",
+          image: "/imagens/feira-nft-logistics-7.webp",
         },
         {
           icon: Zap,
@@ -837,7 +837,7 @@ export const CONTENT: any = {
           desc: "配合巴西电信局（Anatel）认证标准，提供服务器、基站、光纤及高科技器材绿色通道。",
           badge: null,
           href: null,
-          image: "/imagens/operacao-nft-logistics-2.jpg",
+          image: "/imagens/operacao-nft-logistics-2.webp",
         },
         {
           icon: Layers,
@@ -845,7 +845,7 @@ export const CONTENT: any = {
           desc: "完整厂房搬迁设备、重型机床在 Drawback 和保税制度下的进出口运作。",
           badge: "查看特殊制度",
           href: "/cn/solutions/special-customs-regimes",
-          image: "/imagens/operacao-nft-logistics-6.jpg",
+          image: "/imagens/operacao-nft-logistics-6.webp",
         },
         {
           icon: Palette,
@@ -853,7 +853,7 @@ export const CONTENT: any = {
           desc: "全恒温避震押运、博物馆级木箱以及全额钉对钉艺术品专属保险。",
           badge: "查看艺术品物流",
           href: "/cn/solutions/artworks-logistics",
-          image: "/imagens/nft-art.jpg",
+          image: "/imagens/nft-art.webp",
         },
       ],
     },

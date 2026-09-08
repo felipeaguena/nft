@@ -75,7 +75,7 @@ export default function HealthCTA({
 
   return (
     <CTA
-      imageSrc="/imagens/health-1-nft-logistics.jpg"
+      imageSrc="/imagens/health-1-nft-logistics.webp"
       imageAlt={title ? String(title) : "Health Logistics NFT"}
       title={title || content.title}
       description={description || content.description}

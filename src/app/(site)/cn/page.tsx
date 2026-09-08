@@ -3,43 +3,26 @@ import Hero from "@/src/components/Hero";
 import Button from "@/src/components/Button";
 import HomeClient from "@/src/components/pagesComponents/HomeClient";
 
-export const metadata: Metadata = {
+import { constructMetadata, SITE_ROUTES, SECTION_OG_IMAGES } from "@/src/lib/seo";
+
+export const metadata: Metadata = constructMetadata({
   title: "NFT Logistics | 国际物流解决方案与巴西海关清关专家",
   description:
     "我们协助全球企业在巴西参展、进口和运营，免除监管困扰。提供端到端国际物流解决方案、巴西海关清关及特殊监管制度定制服务。",
-  alternates: {
-    canonical: "/cn",
-    languages: {
-      "pt-BR": "https://www.nftlogistics.com.br/pt",
-      "en": "https://www.nftlogistics.com.br/en",
-      "zh": "https://www.nftlogistics.com.br/cn",
-      "x-default": "https://www.nftlogistics.com.br/en",
-    },
-  },
-  openGraph: {
-    title: "NFT Logistics | 国际物流解决方案与巴西海关清关专家",
-    description:
-      "我们协助全球企业在巴西参展、进口和运营，免除监管困扰。",
-    url: "https://www.nftlogistics.com.br/cn",
-    siteName: "NFT Logistics",
-    locale: "zh_CN",
-    images: [
-      {
-        url: "https://www.nftlogistics.com.br/logo/nft-logistics-icone-branco.png",
-        width: 1200,
-        height: 630,
-        alt: "NFT Logistics",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "NFT Logistics | 国际物流解决方案与巴西海关清关专家",
-    description:
-      "我们协助全球企业在巴西参展、进口和运营，免除监管困扰。",
-    images: ["https://www.nftlogistics.com.br/logo/nft-logistics-icone-branco.png"],
-  },
-};
+  path: "/cn",
+  lang: "cn",
+  image: SECTION_OG_IMAGES.home,
+  keywords: [
+    "巴西国际物流",
+    "巴西海关清关",
+    "巴西暂时进境",
+    "巴西特殊监管制度",
+    "巴西展会物流",
+    "巴西货运代理",
+    "NFT Logistics",
+  ],
+  alternates: SITE_ROUTES.home,
+});
 
 export default function CnPage() {
   return (

@@ -95,7 +95,7 @@ export const CONTENT: any = {
         "Projetos complexos conduzidos com excelência em logística médica, feiras e operações de alto calibre no Brasil.",
       items: [
         {
-          src: "/imagens/health-1-nft-logistics.jpg",
+          src: "/imagens/health-1-nft-logistics.webp",
           alt: "Importação de Sistemas Cirúrgicos e Tecnologias de Imagem",
           tag: "Alta Complexidade",
           title: "Sistemas Cirúrgicos e Equipamentos de Diagnóstico por Imagem",
@@ -243,7 +243,7 @@ export const CONTENT: any = {
         "Complex projects delivered with excellence in healthcare logistics, trade shows, and high-caliber operations across Brazil.",
       items: [
         {
-          src: "/imagens/health-1-nft-logistics.jpg",
+          src: "/imagens/health-1-nft-logistics.webp",
           alt: "Import of Surgical Systems and Diagnostic Imaging Equipment",
           tag: "High Complexity",
           title: "Surgical Systems & Advanced Diagnostic Imaging Equipment",
@@ -391,7 +391,7 @@ export const CONTENT: any = {
         "在巴西医疗物流、大型国际展会与尖端设备供应链领域成功执行多起高难度复杂项目。",
       items: [
         {
-          src: "/imagens/health-1-nft-logistics.jpg",
+          src: "/imagens/health-1-nft-logistics.webp",
           alt: "手术系统与诊断影像设备进口",
           tag: "高精密与复杂项目",
           title: "手术动力系统与高端医学影像诊断设备",
@@ -464,4 +464,4 @@ export const CONTENT: any = {
       subText: "专人即时响应展会、峰会参展及医院设备进口需求。",
     },
   },
-};
+};

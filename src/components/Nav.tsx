@@ -28,9 +28,9 @@ interface LanguageOption {
 }
 
 const LANGUAGES: LanguageOption[] = [
-  { code: "en", label: "English", icon: "/idiomas/usa.png" },
-  { code: "pt", label: "Português", icon: "/idiomas/brazil.png" },
-  { code: "cn", label: "中文", icon: "/idiomas/china.png" },
+  { code: "en", label: "English", icon: "/idiomas/usa.webp" },
+  { code: "pt", label: "Português", icon: "/idiomas/brazil.webp" },
+  { code: "cn", label: "中文", icon: "/idiomas/china.webp" },
 ];
 
 const ROUTE_MAP: { pt: string; en: string; cn: string }[] = [
@@ -271,7 +271,7 @@ export default function Nav() {
             className="flex items-center"
           >
             <Image
-              src="/logo/nft-logistics-logo-preto.png"
+              src="/logo/nft-logistics-logo-preto.webp"
               alt="NFT Logistics"
               width={120}
               height={67}
@@ -279,7 +279,7 @@ export default function Nav() {
               priority
             />
             <Image
-              src="/logo/nft-logistics-logo-branco.png"
+              src="/logo/nft-logistics-logo-branco.webp"
               alt="NFT Logistics"
               width={120}
               height={67}

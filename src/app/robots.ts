@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.nftlogistics.com.br";
+import { SITE_URL } from "@/src/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -11,10 +10,11 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           "/api/",
           "/_next/",
+          "/nft-links/",
         ],
       },
     ],
-    sitemap: `${BASE_URL}/sitemap.xml`,
-    host: BASE_URL,
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
   };
 }

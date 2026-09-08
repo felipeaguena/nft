@@ -4,14 +4,24 @@ import { Mail, MapPin, Clock, ArrowRight } from "lucide-react";
 import Hero from "@/src/components/Hero";
 import Button from "@/src/components/Button";
 
-export const metadata: Metadata = {
+import { constructMetadata, SECTION_OG_IMAGES, SITE_ROUTES } from "@/src/lib/seo";
+
+export const metadata: Metadata = constructMetadata({
   title: "Contact Us | NFT Logistics",
   description:
-    "Get in touch with NFT Logistics for personalized solutions in international logistics, customs clearance, and foreign trade.",
-  alternates: {
-    canonical: "/en/contact",
-  },
-};
+    "Get in touch with NFT Logistics for personalized solutions in international freight forwarding, event logistics, customs clearance, and foreign trade in Brazil.",
+  path: SITE_ROUTES.contact.en,
+  locale: "en_US",
+  image: SECTION_OG_IMAGES.contact,
+  keywords: [
+    "contact NFT Logistics",
+    "freight forwarding brazil contact",
+    "customs clearance quotes brazil",
+    "event logistics contact",
+    "Sao Paulo logistics office",
+  ],
+  languageAlternates: SITE_ROUTES.contact,
+});
 
 export default function ContactPage() {
   return (
@@ -94,7 +104,7 @@ export default function ContactPage() {
       </div>
 
       <Hero
-        imageSrc="/imagens/feira-nft-logistics-7.jpg"
+        imageSrc="/imagens/feira-nft-logistics-7.webp"
         title="Join the best international logistics team for fairs and events in Brazil!"
         actions={
           <>

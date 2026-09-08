@@ -25,7 +25,7 @@ const DEFAULT_LOCALES: Record<LanguageCode, ImagemTexto2ColunasLocale> = {
     buttonText: "Conheça Nossa História",
     buttonHref: "/pt/sobre",
     imageAlt: "Operação de logística e comércio exterior da NFT Logistics",
-    imageSrc: "/imagens/operacao-nft-logistics-2.jpg",
+    imageSrc: "/imagens/operacao-nft-logistics-2.webp",
   },
   en: {
     tag: "Operational Excellence",
@@ -35,7 +35,7 @@ const DEFAULT_LOCALES: Record<LanguageCode, ImagemTexto2ColunasLocale> = {
     buttonText: "Discover Our Story",
     buttonHref: "/en/about",
     imageAlt: "NFT Logistics operations and international customs intelligence",
-    imageSrc: "/imagens/operacao-nft-logistics-2.jpg",
+    imageSrc: "/imagens/operacao-nft-logistics-2.webp",
   },
   cn: {
     tag: "卓越运营",
@@ -45,7 +45,7 @@ const DEFAULT_LOCALES: Record<LanguageCode, ImagemTexto2ColunasLocale> = {
     buttonText: "了解我们的发展历程",
     buttonHref: "/cn/about",
     imageAlt: "NFT Logistics 国际物流与海关外贸运营",
-    imageSrc: "/imagens/operacao-nft-logistics-2.jpg",
+    imageSrc: "/imagens/operacao-nft-logistics-2.webp",
   },
 };
 

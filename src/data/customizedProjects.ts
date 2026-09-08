@@ -118,21 +118,21 @@ export const CONTENT: Record<LanguageCode, ContentLocale> = {
         "Equipamentos de grande porte, carretas dedicadas e logística de transbordo registradas em operações reais da NFT Logistics.",
       items: [
         {
-          src: "/imagens/operacao-nft-logistics-4.jpg",
+          src: "/imagens/operacao-nft-logistics-4.webp",
           alt: "Carreta extensiva carregada com maquinário pesado e empilhadeira",
           tag: "Transporte Rodoviário",
           title: "Carretas Prancha & Extensivas",
           desc: "Amarração técnica e transporte rodoviário pesado para maquinário industrial superdimensionado.",
         },
         {
-          src: "/imagens/operacao-nft-logistics-6.jpg",
+          src: "/imagens/operacao-nft-logistics-6.webp",
           alt: "Empilhadeiras industriais descarregando grandes estruturas em recinto fechado",
           tag: "Manuseio Técnico",
           title: "Desova com Múltiplas Frentes",
           desc: "Operação sincronizada com empilhadeiras pesadas para movimentação de estruturas compridas.",
         },
         {
-          src: "/imagens/operacao-nft-logistics-7.jpg",
+          src: "/imagens/operacao-nft-logistics-7.webp",
           alt: "Visão angular de içamento e posicionamento de equipamento pesado",
           tag: "Cargas Críticas",
           title: "Equipamentos Indivisíveis",
@@ -224,14 +224,14 @@ export const CONTENT: Record<LanguageCode, ContentLocale> = {
         "Real imagery of heavy industrial machinery movements, energy infrastructure components, and on-site assembly.",
       items: [
         {
-          src: "/imagens/operacao-nft-logistics.jpg",
+          src: "/imagens/operacao-nft-logistics.webp",
           alt: "Road transport of heavy indivisible machinery",
           tag: "Multimodal Logistics",
           title: "Industrial Plants & Heavy Machinery",
           desc: "Technical handling of presses and indivisible manufacturing units with lowbed trailers and accredited escorts.",
         },
         {
-          src: "/imagens/operacao-nft-logistics-2.jpg",
+          src: "/imagens/operacao-nft-logistics-2.webp",
           alt: "Rigging and uncrating of industrial equipment",
           tag: "Technical Handling",
           title: "Mechanized Uncrating & Rigging",
@@ -330,14 +330,14 @@ export const CONTENT: Record<LanguageCode, ContentLocale> = {
         "真实记录大型工业重型机械搬迁、新能源电站、精密制造产线及现场重吊组装。",
       items: [
         {
-          src: "/imagens/operacao-nft-logistics.jpg",
+          src: "/imagens/operacao-nft-logistics.webp",
           alt: "不可分割大型工业机械公路运输",
           tag: "多式联运工程",
           title: "重型工业产线与整机运输",
           desc: "大型冲压机与不可拆卸工业构件的技术移位，配备特种超低平板挂车与持证警车护航。",
         },
         {
-          src: "/imagens/operacao-nft-logistics-2.jpg",
+          src: "/imagens/operacao-nft-logistics-2.webp",
           alt: "机械设备现场拆箱与重装卸车",
           tag: "专业工程吊装",
           title: "机械化拆箱与起重就位",

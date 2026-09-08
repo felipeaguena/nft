@@ -3,43 +3,27 @@ import Hero from "@/src/components/Hero";
 import Button from "@/src/components/Button";
 import HomeClient from "@/src/components/pagesComponents/HomeClient";
 
-export const metadata: Metadata = {
-  title: "NFT Logistics | Soluções em Logística Internacional & Regimes Especiais",
+import { constructMetadata, SITE_ROUTES, SECTION_OG_IMAGES } from "@/src/lib/seo";
+
+export const metadata: Metadata = constructMetadata({
+  title: "NFT Logistics | Logística Internacional, Desembaraço Aduaneiro e Regimes Especiais no Brasil",
   description:
-    "Ajudamos empresas globais a expor, importar e operar no Brasil sem surpresas regulatórias. Logística internacional de ponta a ponta, desembaraço aduaneiro e regimes aduaneiros especiais.",
-  alternates: {
-    canonical: "/pt",
-    languages: {
-      "pt-BR": "https://www.nftlogistics.com.br/pt",
-      "en": "https://www.nftlogistics.com.br/en",
-      "zh": "https://www.nftlogistics.com.br/cn",
-      "x-default": "https://www.nftlogistics.com.br/en",
-    },
-  },
-  openGraph: {
-    title: "NFT Logistics | Soluções em Logística Internacional & Regimes Especiais",
-    description:
-      "Ajudamos empresas globais a expor, importar e operar no Brasil sem surpresas regulatórias.",
-    url: "https://www.nftlogistics.com.br/pt",
-    siteName: "NFT Logistics",
-    locale: "pt_BR",
-    images: [
-      {
-        url: "https://www.nftlogistics.com.br/logo/nft-logistics-icone-branco.png",
-        width: 1200,
-        height: 630,
-        alt: "NFT Logistics",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "NFT Logistics | Soluções em Logística Internacional & Regimes Especiais",
-    description:
-      "Ajudamos empresas globais a expor, importar e operar no Brasil sem surpresas regulatórias.",
-    images: ["https://www.nftlogistics.com.br/logo/nft-logistics-icone-branco.png"],
-  },
-};
+    "A NFT Logistics é especialista em logística internacional, desembaraço aduaneiro, regimes aduaneiros especiais e comércio exterior no Brasil. Mais de 15 anos de expertise nos portos de Santos e Paranaguá e aeroportos GRU, VCP e GIG.",
+  path: "/pt",
+  lang: "pt",
+  image: SECTION_OG_IMAGES.home,
+  keywords: [
+    "Logística Internacional Brasil",
+    "Desembaraço Aduaneiro Brasil",
+    "Regimes Aduaneiros Especiais",
+    "Admissão Temporária Brasil",
+    "Comércio Exterior Brasil",
+    "Despachante Aduaneiro",
+    "Frete Internacional Brasil",
+    "NFT Logistics",
+  ],
+  alternates: SITE_ROUTES.home,
+});
 
 export default function PtPage() {
   return (

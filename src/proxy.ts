@@ -4,12 +4,23 @@ import type { NextRequest } from "next/server";
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // ─── Propaga o pathname via response header para que Server Components
+  // possam ler e definir o atributo `lang` do <html> corretamente no SSR
+  // (necessário porque o layout raiz não tem acesso direto aos route segments)
+  const response = NextResponse.next({
+    request: {
+      headers: new Headers(request.headers),
+    },
+  });
+
   // 1. Intercepta estritamente a rota raiz "/"
   if (pathname === "/") {
     // Verifica se há preferência salva em cookie
     const cookieLang = request.cookies.get("preferred_language")?.value;
     if (cookieLang === "pt" || cookieLang === "en" || cookieLang === "cn") {
-      return NextResponse.redirect(new URL(`/${cookieLang}`, request.url), 307);
+      const redirectResponse = NextResponse.redirect(new URL(`/${cookieLang}`, request.url), 307);
+      redirectResponse.headers.set("x-pathname", pathname);
+      return redirectResponse;
     }
 
     // Detecta idioma com base no cabeçalho Accept-Language do navegador
@@ -22,7 +33,9 @@ export function proxy(request: NextRequest) {
       targetLang = "cn";
     }
 
-    return NextResponse.redirect(new URL(`/${targetLang}`, request.url), 307);
+    const redirectResponse = NextResponse.redirect(new URL(`/${targetLang}`, request.url), 307);
+    redirectResponse.headers.set("x-pathname", pathname);
+    return redirectResponse;
   }
 
   // 2. Redirecionamento de compatibilidade para URLs legadas em chinês com sufixo "-cn"
@@ -41,15 +54,24 @@ export function proxy(request: NextRequest) {
 
     const cleanPath = pathname.replace(/\/+$/, "");
     if (legacyRedirectMap[cleanPath]) {
-      return NextResponse.redirect(new URL(legacyRedirectMap[cleanPath], request.url), 301);
+      const redirectResponse = NextResponse.redirect(new URL(legacyRedirectMap[cleanPath], request.url), 301);
+      redirectResponse.headers.set("x-pathname", cleanPath);
+      return redirectResponse;
     }
   }
 
-  return NextResponse.next();
+  // Propaga o pathname atual para leitura no Server Component do layout raiz
+  response.headers.set("x-pathname", pathname);
+  return response;
 }
 
 export const config = {
-  // Executa o proxy na raiz "/" e nas subrotas "/cn/:path*"
-  matcher: ["/", "/cn/:path*"],
+  // Amplia o matcher para incluir todas as rotas públicas (necessário para propagar o x-pathname header)
+  // Exclui API, arquivos estáticos do Next.js e arquivos com extensão
+  matcher: [
+    "/",
+    "/cn/:path*",
+    "/pt/:path*",
+    "/en/:path*",
+  ],
 };
-

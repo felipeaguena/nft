@@ -103,7 +103,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
               <div className="relative overflow-hidden rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-xl dark:shadow-2xl group transition-colors duration-200">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/imagens/operacao-nft-logistics-3.jpg"
+                    src="/imagens/operacao-nft-logistics-3.webp"
                     alt="Operações de alta complexidade da NFT Logistics"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"

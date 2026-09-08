@@ -1,4 +1,3 @@
-"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -220,7 +219,7 @@ export default function HomeClient({ lang }: HomeClientProps) {
                       </p>
                     </div>
                     <div className="mt-4 pt-3 border-t border-neutral-100 dark:border-neutral-800/80 flex items-center justify-between text-xs font-bold text-orange-600 dark:text-orange-400 group-hover:text-orange-500">
-                      <span>Ver detalhes do setor</span>
+                      <span>{t.sectors.seeDetails}</span>
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                     </div>
                   </div>
