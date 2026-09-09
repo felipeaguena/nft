@@ -16,8 +16,9 @@ import {
   ScrollText,
   Ship,
   ShieldCheck,
+  ArrowRight,
 } from "lucide-react";
-import rawStepsData from "@/db/stepsSection.json";
+import { stepsSection as rawStepsData } from "@/src/data/db";
 
 export type SolutionPageKey =
   | "regimes-especiais"

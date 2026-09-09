@@ -23,8 +23,7 @@ import {
   Building2,
   FileCheck,
 } from "lucide-react";
-import privacyDataRaw from "@/db/privacy.json";
-import contatosData from "@/db/contatos.json";
+import { privacy as privacyDataRaw, contatos as contatosData } from "@/src/data/db";
 
 export type LanguageCode = "pt" | "en" | "cn";
 

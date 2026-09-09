@@ -34,8 +34,8 @@ export interface HomeClientProps {
   lang: LanguageCode;
 }
 
-export default function HomeClient({ lang }: HomeClientProps) {
-  const t = HOME_CONTENT[lang] || (HOME_CONTENT as any).pt;
+export default function HomeClient({ lang = "pt" }: HomeClientProps) {
+  const t = HOME_CONTENT[lang] || HOME_CONTENT.pt;
 
   return (
     <div className="w-full">
@@ -43,7 +43,7 @@ export default function HomeClient({ lang }: HomeClientProps) {
       <section className="relative w-full sm:mt-5 md:mt-0 lg:mt-0 -lg:-mt-30 z-20 py-12 px-4 sm:px-6 lg:px-8 bg-transparent transition-colors duration-200">
   <div className="max-w-7xl mx-auto">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {t.stats.map((stat: any, idx: number) => (
+      {t.stats.map((stat, idx: number) => (
         <div
           key={idx}
           className={`group relative rounded-2xl p-6 sm:p-7 bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50 hover:bg-orange-600 dark:hover:bg-orange-600 transition-all duration-300 ${
@@ -87,7 +87,7 @@ export default function HomeClient({ lang }: HomeClientProps) {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4">
-            {t.hubs.map((hub: any, idx: number) => {
+            {t.hubs.map((hub, idx: number) => {
               const HubIcon = hub.icon;
               return (
                 <div
@@ -135,7 +135,7 @@ export default function HomeClient({ lang }: HomeClientProps) {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {t.process.steps.map((step: any, idx: number) => {
+            {t.process.steps.map((step, idx: number) => {
               const StepIcon = step.icon;
               return (
                 <div
@@ -182,7 +182,7 @@ export default function HomeClient({ lang }: HomeClientProps) {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {t.sectors.cards.map((card: any, idx: number) => {
+            {t.sectors.cards.map((card, idx: number) => {
               const CardIcon = card.icon;
               return (
                 <Link
@@ -247,7 +247,7 @@ export default function HomeClient({ lang }: HomeClientProps) {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {t.differentials.cards.map((diff: any, idx: number) => {
+            {t.differentials.cards.map((diff, idx: number) => {
               const DiffIcon = diff.icon;
               return (
                 <div

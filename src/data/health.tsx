@@ -19,7 +19,7 @@ export interface FaqItem {
   answer: React.ReactNode;
 }
 
-export const CONTENT: any = {
+export const CONTENT = {
   pt: {
     whatsappMsg:
       "Quero participar de feiras no Brasil e meus equipamentos ainda não tem registro na Anvisa, quero começar um processo de importação.",

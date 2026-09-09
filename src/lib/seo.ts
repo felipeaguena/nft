@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import type { LanguageCode } from "@/src/types";
+
+export { type LanguageCode };
 
 export const SITE_URL = "https://www.nftlogistics.com.br";
-
-export type LanguageCode = "pt" | "en" | "cn";
 
 export interface SeoConfig {
   title: string;
@@ -87,7 +88,7 @@ export const SECTION_OG_IMAGES = {
   customizedProjects: "/imagens/operacao-nft-logistics-5.webp",
   artworks: "/imagens/nft-art.webp",
   health: "/imagens/Home-Health-NFT-Logistics.webp",
-  contact: "/imagens/bg-nft-logistics.webp",
+  contact: "/imagens/operacao-nft-logistics-4.webp",
   privacy: "/imagens/operacao-nft-logistics-4.webp",
 } as const;
 

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { verifyChallenge } from "@/src/lib/bot-protection";
+import { checkRateLimit, CONTACT_RATE_LIMIT, getClientIp } from "@/src/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -16,6 +17,24 @@ interface ContactRequestBody {
 
 export async function POST(req: NextRequest) {
   try {
+    // 0. Rate Limiting por IP
+    const clientIp = getClientIp(req);
+    const rateCheck = checkRateLimit(clientIp, CONTACT_RATE_LIMIT);
+    if (!rateCheck.allowed) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: `Muitas tentativas. Tente novamente em ${rateCheck.retryAfterSeconds} segundos.`,
+        },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": String(rateCheck.retryAfterSeconds),
+          },
+        }
+      );
+    }
+
     const body: ContactRequestBody = await req.json();
     const { name, email, message, website, challengeToken, challengeAnswer, lang = "pt" } = body;
 
@@ -64,6 +83,26 @@ export async function POST(req: NextRequest) {
     if (!message || message.trim().length < 5) {
       return NextResponse.json(
         { success: false, error: "A mensagem deve conter pelo menos 5 caracteres." },
+        { status: 400 }
+      );
+    }
+
+    // 3b. Validação de tamanho máximo dos campos
+    if (name.length > 200) {
+      return NextResponse.json(
+        { success: false, error: "O nome deve ter no máximo 200 caracteres." },
+        { status: 400 }
+      );
+    }
+    if (email.length > 320) {
+      return NextResponse.json(
+        { success: false, error: "O e-mail deve ter no máximo 320 caracteres." },
+        { status: 400 }
+      );
+    }
+    if (message.length > 5000) {
+      return NextResponse.json(
+        { success: false, error: "A mensagem deve ter no máximo 5000 caracteres." },
         { status: 400 }
       );
     }

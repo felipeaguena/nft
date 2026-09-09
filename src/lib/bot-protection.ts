@@ -1,6 +1,33 @@
 import crypto from "crypto";
 
-const SECRET_KEY = process.env.BOT_PROTECTION_SECRET || "contact_form_security_salt_key_default";
+let _secretKey: string | null = null;
+
+function getSecretKey(): string {
+  if (_secretKey) return _secretKey;
+
+  const envSecret = process.env.BOT_PROTECTION_SECRET;
+  if (envSecret) {
+    _secretKey = envSecret;
+    return _secretKey;
+  }
+
+  if (process.env.NODE_ENV === "production") {
+    // Log de erro grave, mas não crash para não derrubar o build
+    console.error(
+      "[SECURITY] BOT_PROTECTION_SECRET must be set in production! " +
+        "Add it to your .env.local or hosting environment variables. " +
+        "Using a random temporary key — challenges will NOT persist across restarts."
+    );
+  } else {
+    console.warn(
+      "[Bot Protection] BOT_PROTECTION_SECRET não definido. Usando chave aleatória temporária (apenas dev)."
+    );
+  }
+
+  // Gera chave aleatória (não persiste entre restarts/instâncias)
+  _secretKey = crypto.randomBytes(32).toString("hex");
+  return _secretKey;
+}
 
 export interface BotChallenge {
   question: string;
@@ -17,7 +44,7 @@ export function generateChallenge(lang: string = "pt"): BotChallenge {
   const timestamp = Date.now();
 
   const payload = `${answer}:${timestamp}`;
-  const hmac = crypto.createHmac("sha256", SECRET_KEY).update(payload).digest("hex");
+  const hmac = crypto.createHmac("sha256", getSecretKey()).update(payload).digest("hex");
   const token = Buffer.from(`${payload}:${hmac}`).toString("base64url");
 
   let question = `Quanto é ${num1} + ${num2}?`;
@@ -55,7 +82,7 @@ export function verifyChallenge(token: string, userAnswer: string | number): { i
     }
 
     const payload = `${answerStr}:${timestampStr}`;
-    const expectedHmac = crypto.createHmac("sha256", SECRET_KEY).update(payload).digest("hex");
+    const expectedHmac = crypto.createHmac("sha256", getSecretKey()).update(payload).digest("hex");
 
     if (hmac !== expectedHmac) {
       return { isValid: false, error: "Token de segurança inválido." };

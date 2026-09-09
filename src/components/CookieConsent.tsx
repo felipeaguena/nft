@@ -3,8 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-type LanguageCode = "pt" | "en" | "cn";
+import type { LanguageCode } from "@/src/types";
 
 interface ConsentContent {
   title: string;

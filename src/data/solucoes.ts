@@ -20,7 +20,7 @@ import {
   Globe2,
 } from "lucide-react";
 
-export const CONTENT: any = {
+export const CONTENT = {
   pt: {
     hero: {
       badge: "Logística Internacional & Inteligência Aduaneira",

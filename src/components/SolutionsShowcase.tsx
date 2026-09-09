@@ -13,8 +13,9 @@ import {
   Palette,
   type LucideIcon,
 } from "lucide-react";
+import { Globe2, Layers } from "lucide-react";
+import { solutionsShowcase as rawData } from "@/src/data/db";
 import Button from "./Button";
-import rawData from "@/db/solutionsShowcase.json";
 
 export type LanguageCode = "pt" | "en" | "cn";
 

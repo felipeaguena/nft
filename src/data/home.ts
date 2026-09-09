@@ -22,7 +22,7 @@ import {
   MessageSquareDot,
 } from "lucide-react";
 
-export const HOME_CONTENT: any = {
+export const HOME_CONTENT = {
   pt: {
     stats: [
       {

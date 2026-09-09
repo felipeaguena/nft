@@ -7,16 +7,17 @@ import { usePathname } from "next/navigation";
 import { Mail, Phone, ExternalLink, ShieldCheck } from "lucide-react";
 import { InstagramIcon, LinkedinIcon, WhatsAppIcon } from "@/src/components/icons";
 
-import navData from "@/db/nav.json";
-import solutionsData from "@/db/solutions.json";
-import contatosData from "@/db/contatos.json";
-import privacyData from "@/db/privacy.json";
-
-export type FooterLanguage = "pt" | "en" | "cn";
+import {
+  nav as navData,
+  solutions as solutionsData,
+  contatos as contatosData,
+  privacy as privacyData,
+} from "@/src/data/db";
+import type { LanguageCode } from "@/src/types";
 
 export interface FooterProps {
   /** Idioma customizado opcional. Se não informado, detecta pela rota (/pt, /en, /cn) */
-  lang?: FooterLanguage;
+  lang?: LanguageCode;
   /** Classes CSS adicionais */
   className?: string;
 }
@@ -30,7 +31,7 @@ interface NavObjectValue {
 
 /** Títulos e labels das colunas por idioma */
 const COLUMN_TITLES: Record<
-  FooterLanguage,
+  LanguageCode,
   {
     navigation: string;
     solutions: string;
@@ -70,10 +71,9 @@ const COLUMN_TITLES: Record<
   },
 };
 
-/**
- * Normaliza o link da rota de solução de acordo com o idioma ativo
- */
-function normalizeSolutionLink(link: string, lang: FooterLanguage): string {
+// === FUNÇÕES AUXILIARES DE ROTEAMENTO ===
+
+function normalizeSolutionLink(link: string, lang: LanguageCode): string {
   if (link.startsWith("/pt") || link.startsWith("/en") || link.startsWith("/cn")) {
     return link;
   }
@@ -97,14 +97,15 @@ function normalizeSolutionLink(link: string, lang: FooterLanguage): string {
 }
 
 export default function Footer({ lang: propLang, className = "" }: FooterProps) {
+  // === ESTADO DE IDIOMA E NAVEGAÇÃO ===
   const pathname = usePathname();
-  const getInitialLang = (): FooterLanguage => {
+  const getInitialLang = (): LanguageCode => {
     if (propLang) return propLang;
     if (pathname?.startsWith("/cn")) return "cn";
     if (pathname?.startsWith("/en")) return "en";
     return "pt";
   };
-  const [currentLang, setCurrentLang] = useState<FooterLanguage>(getInitialLang);
+  const [currentLang, setCurrentLang] = useState<LanguageCode>(getInitialLang);
 
   // Sincroniza idioma via prop, pathname ou evento global de troca de idioma
   useEffect(() => {
@@ -122,7 +123,7 @@ export default function Footer({ lang: propLang, className = "" }: FooterProps) 
     }
 
     const handleLanguageChange = (e: Event) => {
-      const customEvent = e as CustomEvent<FooterLanguage>;
+      const customEvent = e as CustomEvent<LanguageCode>;
       if (customEvent.detail && ["pt", "en", "cn"].includes(customEvent.detail)) {
         setCurrentLang(customEvent.detail);
       }

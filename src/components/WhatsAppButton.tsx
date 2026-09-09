@@ -3,8 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-
-type LanguageCode = "pt" | "en" | "cn";
+import type { LanguageCode } from "@/src/types";
 
 interface WhatsAppContent {
   headerTitle: string;

@@ -35,8 +35,9 @@ interface SolucoesClientProps {
 
 
 export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
-  const t = (CONTENT as any)[lang] || (CONTENT as any).pt;
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const t = CONTENT[lang] || CONTENT.pt;
+
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
     setOpenFaqIndex((prev) => (prev === index ? null : index));
@@ -106,7 +107,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
               </h2>
 
               <div className="space-y-4 text-neutral-600 dark:text-neutral-300 text-sm sm:text-base leading-relaxed">
-                {t.col2.paragraphs.map((p: any, idx: number) => (
+                {t.col2.paragraphs.map((p, idx: number) => (
                   <p key={idx}>{p}</p>
                 ))}
               </div>
@@ -139,7 +140,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
 
           {/* Grid de 4 cards (2x2 em telas médias/grandes) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {t.solutionsGrid.items.map((item: any, index: number) => {
+            {t.solutionsGrid.items.map((item, index: number) => {
               const Icon = item.icon;
               return (
                 <div
@@ -173,7 +174,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
 
                       {/* Bullets de diferenciais */}
                       <ul className="space-y-2.5 border-t border-neutral-200/80 dark:border-neutral-800/80 pt-6">
-                        {item.bullets.map((b: any, bIdx: number) => (
+                        {item.bullets.map((b, bIdx: number) => (
                           <li
                             key={bIdx}
                             className="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700 dark:text-neutral-200"
@@ -243,7 +244,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
 
             {/* Coluna da Direita (7 colunas): 4 Cards */}
             <div className="lg:col-span-7 flex flex-col gap-5">
-              {t.whyUs.cards.map((card: any, cIdx: number) => {
+              {t.whyUs.cards.map((card, cIdx: number) => {
                 const CardIcon = card.icon;
                 return (
                   <div
@@ -292,7 +293,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
 
           {/* Grid de 4 fotos em 2 colunas / 4 colunas */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {t.gallery.items.map((item: any, gIdx: number) => (
+            {t.gallery.items.map((item, gIdx: number) => (
               <div
                 key={gIdx}
                 className="group relative rounded-3xl overflow-hidden border border-neutral-200/90 dark:border-neutral-800/90 bg-neutral-100 dark:bg-neutral-900 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-600/10"
@@ -347,7 +348,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
 
           {/* Grid das 5 Etapas */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {t.methodology.steps.map((step: any, index: number) => {
+            {t.methodology.steps.map((step, index: number) => {
               const StepIcon = step.icon;
               return (
                 <div
@@ -393,7 +394,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {t.sectors.items.map((sec: any, sIdx: number) => {
+            {t.sectors.items.map((sec, sIdx: number) => {
               const SecIcon = sec.icon;
               return (
                 <div
@@ -456,7 +457,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
           </div>
 
           <div className="space-y-4">
-            {t.faq.items.map((item: any, fIdx: number) => {
+            {t.faq.items.map((item, fIdx: number) => {
               const isOpen = openFaqIndex === fIdx;
               return (
                 <div

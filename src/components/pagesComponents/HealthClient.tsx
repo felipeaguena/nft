@@ -22,9 +22,9 @@ export interface HealthClientProps {
 }
 
 export default function HealthClient({ lang = "pt" }: HealthClientProps) {
-  const t = (CONTENT as any)[lang] || (CONTENT as any).pt;
+  const t = CONTENT[lang] || CONTENT.pt;
 
-  // Estado para o Accordion de FAQ (Bloco 5)
+  // Estado para os acordeões da FAQ (Bloco 5)
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   const toggleFaq = (index: number) => {
@@ -80,14 +80,14 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
 
           {/* Grid com 3 cards escuros com hover suave para fundo azul e letras brancas */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {t.challenge.cards.map((card: any, idx: number) => (
+            {t.challenge.cards.map((card, idx: number) => (
               <div
                 key={idx}
                 className="group relative rounded-2xl p-8 bg-[#09111e] shadow-xl transition-all duration-300 hover:bg-sky-600 hover:shadow-2xl hover:shadow-sky-600/30 hover:-translate-y-1 cursor-pointer flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-full bg-sky-950/80 text-sky-400 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-sky-600 group-hover:border-transparent transition-all duration-300">
-                    {renderCardIcon(card.icon)}
+                    {renderCardIcon(card.icon as "stethoscope" | "calendar" | "file")}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
                     {card.title}
@@ -141,7 +141,7 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
 
             {/* Coluna da Direita: 5 passos estratégicos */}
             <div className="lg:col-span-7 flex flex-col gap-4 sm:gap-5">
-              {t.stepsSection.steps.map((step: any, idx: number) => (
+              {t.stepsSection.steps.map((step, idx: number) => (
                 <div
                   key={idx}
                   className="p-6 sm:p-12 rounded-2xl bg-[#0a1424] hover:bg-orange-600 hover:border-sky-600/50 transition-all duration-200 shadow-md"
@@ -183,7 +183,7 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
 
           {/* 4 Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {t.experience.items.map((item: any, idx: number) => (
+            {t.experience.items.map((item, idx: number) => (
               <div
                 key={idx}
                 className="group relative overflow-hidden rounded-2xl aspect-[4/3] sm:aspect-[16/10] bg-[#09111e] shadow-2xl flex items-end p-6 sm:p-8 cursor-pointer"
@@ -254,7 +254,7 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
 
             {/* Coluna da Direita: Accordion */}
             <div className="lg:col-span-7 space-y-4">
-              {t.faq.items.map((item: any, idx: number) => (
+              {t.faq.items.map((item, idx: number) => (
                 <div
                   key={idx}
                   className="rounded-2xl bg-[#091220] border border-sky-950/70 overflow-hidden transition-colors"

@@ -24,7 +24,7 @@ import {
 
 import { LanguageCode } from '@/src/types';
 
-  export const CONTENT: any = {
+  export const CONTENT = {
     pt: {
       hero: {
         badge: "Excelência em Comércio Exterior & Logística Internacional",

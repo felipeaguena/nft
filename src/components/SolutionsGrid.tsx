@@ -3,8 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight } from "lucide-react";
-import solutionsRaw from "@/db/solutions.json";
+import { ShieldCheck, TrendingUp, Cpu, Globe2, LayoutTemplate, ArrowRight } from "lucide-react";
+import { solutions as solutionsRaw } from "@/src/data/db";
 import HealthCTA from "./HealthCTA";
 import CTA from "./CTA";
 

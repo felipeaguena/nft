@@ -21,7 +21,7 @@ export default function Hero({
   subtitle,
   actions,
   videoSrc,
-  imageSrc = "/imagens/bg-nft-logistics.webp",
+  imageSrc = "/imagens/operacao-nft-logistics.webp",
   imageAlt = "NFT Logistics",
   overlayClassName = "bg-gradient-to-b from-black/60 via-black/40 to-black/80 dark:from-black/70 dark:via-black/50 dark:to-neutral-950",
   className = "",

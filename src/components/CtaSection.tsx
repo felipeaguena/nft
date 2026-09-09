@@ -10,14 +10,16 @@ import {
   Compass,
   Sparkles,
   Activity,
+  ArrowRight,
   ShieldCheck,
+  Mail,
   Clock,
   CheckCircle2,
   Truck,
   FileText,
   MessageCircle,
 } from "lucide-react";
-import rawCtaData from "@/db/ctaSection.json";
+import { ctaSection as rawCtaData } from "@/src/data/db";
 
 export type CtaPageKey =
   | "logistica-obras-arte"

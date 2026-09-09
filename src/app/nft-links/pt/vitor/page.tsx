@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import LinkTree from '@/src/app/nft-links/components/LinkTree';
-import data from '@/db/nft-links.json';
+import { nftLinks as data } from '@/src/data/db';
 import { constructLinkTreeMetadata } from '@/src/lib/seo';
 
 export const metadata: Metadata = constructLinkTreeMetadata({

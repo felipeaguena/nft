@@ -12,8 +12,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import Button from "./Button";
-
-export type ContactFormLanguage = "pt" | "en" | "cn";
+import type { LanguageCode } from "@/src/types";
 
 export interface ContactFormLabels {
   title?: string;
@@ -40,7 +39,7 @@ export interface ContactFormProps {
   className?: string;
   labels?: ContactFormLabels;
   onSuccess?: () => void;
-  lang?: ContactFormLanguage;
+  lang?: LanguageCode;
 }
 
 interface ChallengeData {

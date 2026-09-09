@@ -19,7 +19,7 @@ import {
   FileText,
   MessageCircle,
 } from "lucide-react";
-import rawHeroData from "@/db/heroSection.json";
+import { heroSection as rawHeroData } from "@/src/data/db";
 
 export type HeroPageKey =
   | "feiras-e-eventos"

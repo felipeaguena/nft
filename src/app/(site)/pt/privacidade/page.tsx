@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PrivacyPolicyView from "@/src/components/pagesComponents/PrivacyPolicyView";
-import privacyData from "@/db/privacy.json";
+import { privacy as privacyData } from "@/src/data/db";
 
 import { constructMetadata, SECTION_OG_IMAGES, SITE_ROUTES } from "@/src/lib/seo";
 

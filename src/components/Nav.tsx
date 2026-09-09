@@ -5,7 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { Sun, Moon } from "lucide-react";
-import nav from "../../db/nav.json";
+import { nav } from "@/src/data/db";
+import type { LanguageCode } from "@/src/types";
 
 interface Servico {
   nome: string;
@@ -18,8 +19,6 @@ interface NavSection {
   servicos?: Servico[];
   services?: Servico[];
 }
-
-type LanguageCode = "en" | "pt" | "cn";
 
 interface LanguageOption {
   code: LanguageCode;

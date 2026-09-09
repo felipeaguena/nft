@@ -50,7 +50,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
   )}`;
 
 
-  const t = (CONTENT as any)[resolvedLang] || (CONTENT as any).pt;
+  const t = CONTENT[resolvedLang] || CONTENT.pt;
 
   return (
     <div className="w-full bg-white dark:bg-[#0a0a0a] text-neutral-900 dark:text-neutral-100 transition-colors duration-200 overflow-hidden">
@@ -69,7 +69,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       <section className="relative w-full py-12 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[#0e0e0e] border-y border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {t.stats.map((stat: any, idx: number) => (
+            {t.stats.map((stat, idx: number) => (
               <div
                 key={idx}
                 className="relative p-6 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800 shadow-sm hover:shadow-md transition-all duration-300 group"
@@ -181,7 +181,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {t.triad.cards.map((card: any, idx: number) => {
+            {t.triad.cards.map((card, idx: number) => {
               const IconComp = card.icon;
               return (
                 <div
@@ -248,7 +248,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {t.pillars.items.map((pillar: any, idx: number) => {
+            {t.pillars.items.map((pillar, idx: number) => {
               const IconComp = pillar.icon;
               return (
                 <div
@@ -291,7 +291,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {t.infrastructure.items.map((infra: any, idx: number) => {
+            {t.infrastructure.items.map((infra, idx: number) => {
               const IconComp = infra.icon;
               return (
                 <div
@@ -357,7 +357,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {t.method.steps.map((step: any, idx: number) => (
+            {t.method.steps.map((step, idx: number) => (
               <div
                 key={idx}
                 className="relative p-7 rounded-2xl bg-neutral-50/90 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800 shadow-sm flex flex-col justify-between"
@@ -400,7 +400,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {t.sectors.items.map((sector: any, idx: number) => {
+            {t.sectors.items.map((sector, idx: number) => {
               const IconComp = sector.icon;
               return (
                 <Link
@@ -498,7 +498,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
             </div>
 
             <div className="lg:col-span-7 flex flex-col gap-5">
-              {t.differentials.cards.map((item: any, idx: number) => (
+              {t.differentials.cards.map((item, idx: number) => (
                 <div
                   key={idx}
                   className="p-6 sm:p-8 rounded-2xl bg-neutral-50/90 dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-sm"
