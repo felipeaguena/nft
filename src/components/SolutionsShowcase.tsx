@@ -121,10 +121,6 @@ export default function SolutionsShowcase({
         {/* Cabeçalho da Seção */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-orange-100 text-orange-700 dark:bg-orange-950/60 dark:text-orange-400 border border-orange-200 dark:border-orange-800/60 mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{currentBadge}</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
               {currentTitle}
             </h2>
@@ -158,21 +154,16 @@ export default function SolutionsShowcase({
                 key={item.id || idx}
                 href={item.href}>
                 <div
-                  className="group relative flex flex-col justify-between p-7 sm:p-8 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm hover:shadow-xl hover:shadow-orange-600/10 hover:border-orange-300 dark:hover:border-orange-700/60 transition-all duration-300 hover:-translate-y-1"
+                  className="group relative flex flex-col justify-between p-7 sm:p-8 rounded dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:-translate-y-1"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <div className="p-3 rounded-xl bg-neutral-100 dark:bg-neutral-800 group-hover:bg-orange-50 dark:group-hover:bg-orange-950/40 transition-colors">
+                      <div className="p-3 rounded-xl bg-neutral-100 dark:bg-neutral-800">
                         <Icon className={`w-6 h-6 ${item.accent}`} />
                       </div>
-                      {/* <span
-                        className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${item.badgeBg}`}
-                      >
-                        {item.tag}
-                      </span> */}
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-white mb-3 group-hover:text-purple-700 dark:group-hover:text-orange-400 transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-white mb-3 transition-colors">
                       {item.title}
                     </h3>
                     <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-200 leading-relaxed mb-6">

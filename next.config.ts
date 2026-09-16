@@ -24,7 +24,7 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ["localhost", "192.168.15.6"],
+  allowedDevOrigins: ["localhost", "192.168.15.4"],
   images: {
     formats: ["image/webp", "image/avif"],
   },

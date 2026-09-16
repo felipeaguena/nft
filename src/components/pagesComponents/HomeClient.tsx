@@ -73,17 +73,13 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-orange-100 text-orange-700 dark:bg-orange-950/60 dark:text-orange-400 border border-orange-200 dark:border-orange-800/60 mb-2">
-                <Warehouse className="w-3.5 h-3.5" />
-                <span>Infraestrutura Nacional</span>
-              </div>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">
                 {t.hubsTitle}
               </h2>
+              <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-200 max-w-md">
+                {t.hubsSubtitle}
+              </p>  
             </div>
-            <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-200 max-w-md">
-              {t.hubsSubtitle}
-            </p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4">
@@ -92,16 +88,16 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
               return (
                 <div
                   key={idx}
-                  className="group relative p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/60 dark:bg-neutral-900/60 hover:bg-white dark:hover:bg-neutral-900 transition-all duration-200 hover:shadow-md hover:border-orange-300 dark:hover:border-orange-700/60 flex flex-col justify-between min-h-[140px]"
+                  className="group relative p-4 rounded border border-neutral-200 dark:border-neutral-800 bg-neutral-50/60 dark:bg-neutral-900/60 hover:bg-white dark:hover:bg-neutral-900 transition-all duration-200 hover:shadow-md hover:border-neutral-700 dark:hover:border-neutral-400  flex flex-col justify-between min-h-[140px]"
                 >
                   <div className="flex items-center justify-between mb-2.5">
                     <span className="text-[11px] font-semibold text-orange-600 dark:text-orange-400 uppercase tracking-wide">
                       {hub.type}
                     </span>
-                    <HubIcon className="w-4 h-4 text-neutral-400 group-hover:text-orange-500 transition-colors" />
+                    <HubIcon className="w-4 h-4 text-neutral-400 transition-colors" />
                   </div>
                   <div>
-                    <h3 className="text-sm sm:text-base font-bold text-neutral-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors leading-snug mb-1">
+                    <h3 className="text-sm sm:text-base font-bold text-neutral-900 dark:text-white  transition-colors leading-snug mb-1">
                       {hub.name}
                     </h3>
                     <p className="text-xs text-neutral-600 dark:text-neutral-300 line-clamp-2 leading-relaxed">
@@ -122,10 +118,6 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
       <section className="py-16 sm:py-24 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-orange-100 text-orange-700 dark:bg-orange-950/60 dark:text-orange-400 border border-orange-200 dark:border-orange-800/60 mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{t.process.badge}</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
               {t.process.title}
             </h2>
@@ -147,9 +139,6 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
                       <span className="text-3xl font-black text-orange-600/30 dark:text-orange-500/30 tracking-tight">
                         {step.number}
                       </span>
-                      <div className="w-10 h-10 rounded-xl bg-orange-100/60 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400">
-                        <StepIcon className="w-5 h-5" />
-                      </div>
                     </div>
                     <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-2">
                       {step.title}
@@ -169,10 +158,6 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
       <section className="py-16 sm:py-20 bg-neutral-100/40 dark:bg-neutral-900/30 border-t border-neutral-200/80 dark:border-neutral-800/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-orange-100 text-orange-700 dark:bg-orange-950/60 dark:text-orange-400 border border-orange-200 dark:border-orange-800/60 mb-3">
-              <Boxes className="w-3.5 h-3.5" />
-              <span>{t.sectors.badge}</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
               {t.sectors.title}
             </h2>
@@ -199,13 +184,6 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                    <div className="absolute top-3 left-3">
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold bg-black/60 backdrop-blur-md text-white border border-white/20">
-                        <CardIcon className="w-3.5 h-3.5 text-orange-400" />
-                        <span>{card.category}</span>
-                      </span>
-                    </div>
                   </div>
 
                   {/* Informações */}
@@ -218,7 +196,7 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
                         {card.desc}
                       </p>
                     </div>
-                    <div className="mt-4 pt-3 border-t border-neutral-100 dark:border-neutral-800/80 flex items-center justify-between text-xs font-bold text-orange-600 dark:text-orange-400 group-hover:text-orange-500">
+                    <div className="mt-4 flex items-center justify-between text-xs font-bold text-orange-600 dark:text-orange-400 group-hover:text-orange-500">
                       <span>{t.sectors.seeDetails}</span>
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                     </div>
@@ -234,10 +212,6 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
       <section className="py-16 sm:py-24 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-orange-100 text-orange-700 dark:bg-orange-950/60 dark:text-orange-400 border border-orange-200 dark:border-orange-800/60 mb-3">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>{t.differentials.badge}</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
               {t.differentials.title}
             </h2>
@@ -281,11 +255,6 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-orange-600/20 blur-[120px] pointer-events-none rounded-full" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-orange-500/20 text-orange-300 border border-orange-500/30 mb-6">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>{t.cta.badge}</span>
-          </div>
-
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6">
             {t.cta.title}
           </h2>

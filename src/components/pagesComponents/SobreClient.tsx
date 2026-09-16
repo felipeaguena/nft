@@ -131,10 +131,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
 
             {/* Coluna Texto (6 colunas) */}
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
-                {t.story.tag}
-              </span>
-
+              
               <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
                 {t.story.title}
               </h2>
@@ -169,9 +166,6 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[#0e0e0e] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
-              {t.triad.tag}
-            </span>
             <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
               {t.triad.title}
             </h2>
@@ -236,9 +230,6 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
-              {t.pillars.tag}
-            </span>
             <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
               {t.pillars.title}
             </h2>
@@ -279,9 +270,6 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       <section className="relative w-full py-20 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[#0e0e0e] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
-              {t.infrastructure.tag}
-            </span>
             <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
               {t.infrastructure.title}
             </h2>
@@ -307,19 +295,6 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
                       className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/30 to-transparent" />
-                    
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
-                        {infra.badge}
-                      </span>
-                    </div>
-
-                    <div className="absolute bottom-4 left-4 flex items-center gap-2 text-white">
-                      <div className="w-8 h-8 rounded-lg bg-orange-600 flex items-center justify-center shrink-0">
-                        <IconComp className="w-4 h-4" />
-                      </div>
-                      <span className="text-xs font-semibold drop-shadow-sm">NFT Logistics Ground Presence</span>
-                    </div>
                   </div>
 
                   <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
@@ -345,9 +320,6 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
-              {t.method.tag}
-            </span>
             <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
               {t.method.title}
             </h2>
@@ -388,9 +360,6 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[#0e0e0e] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
-              {t.sectors.tag}
-            </span>
             <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
               {t.sectors.title}
             </h2>
@@ -406,7 +375,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
                 <Link
                   key={idx}
                   href={sector.link}
-                  className="group relative rounded-3xl overflow-hidden bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 hover:border-orange-500/60 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between cursor-pointer hover:-translate-y-1.5"
+                  className="group relative rounded overflow-hidden bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 hover:border-orange-500/60 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between cursor-pointer hover:-translate-y-1.5"
                 >
                   {/* Foto de Capa do Setor */}
                   <div className="relative aspect-[16/10] w-full overflow-hidden">
@@ -417,7 +386,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/20 to-transparent" />
+                      
 
                     {/* Tag Categoria sobre a foto */}
                     <div className="absolute top-4 left-4">
@@ -443,7 +412,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
                       </p>
                     </div>
 
-                    <div className="mt-6 pt-4 border-t border-neutral-200/80 dark:border-neutral-800 flex items-center text-xs font-semibold text-orange-600 dark:text-orange-400 group-hover:translate-x-1 transition-transform">
+                    <div className="mt-6 pt-4 dark:border-neutral-800 flex items-center text-xs font-semibold text-orange-600 dark:text-orange-400 group-hover:translate-x-1 transition-transform">
                       <span>
                         {resolvedLang === "pt"
                           ? "Saiba mais sobre o setor"
@@ -541,10 +510,6 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
-          <span className="text-xs font-bold uppercase tracking-wider text-orange-400 bg-orange-950/70 border border-orange-800/60 px-4 py-1.5 rounded-full mb-6 backdrop-blur-md">
-            {t.ctaSection.tag}
-          </span>
-
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight leading-tight max-w-4xl drop-shadow-md">
             {t.ctaSection.title}
           </h2>
