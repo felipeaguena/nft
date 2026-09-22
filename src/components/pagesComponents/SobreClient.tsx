@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroSection from "@/src/components/HeroSection";
 import { CONTENT } from "@/src/data/sobre";
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from "@/src/components/animations";
 import {
   Globe2,
   ShieldCheck,
@@ -62,30 +63,25 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
         lang={resolvedLang}
         whatsappHref={whatsappHref}
       />
-
-      {/* ========================================================================= */}
-      {/* 2. STATS / KEY METRICS RIBBON                                             */}
-      {/* ========================================================================= */}
       <section className="relative w-full py-12 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[#0e0e0e] border-y border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.stats.map((stat, idx: number) => (
-              <div
-                key={idx}
-                className="relative p-6 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800 shadow-sm hover:shadow-md transition-all duration-300 group"
-              >
-                <div className="text-3xl sm:text-4xl font-extrabold text-orange-600 dark:text-orange-500 tracking-tight">
-                  {stat.value}
+              <FadeInStaggerItem key={idx}>
+                <div className="relative p-6 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800 shadow-sm hover:shadow-md transition-all duration-300 group h-full">
+                  <div className="text-3xl sm:text-4xl font-extrabold text-orange-600 dark:text-orange-500 tracking-tight">
+                    {stat.value}
+                  </div>
+                  <div className="mt-1 text-base font-bold text-neutral-900 dark:text-white">
+                    {stat.label}
+                  </div>
+                  <p className="mt-2 text-xs text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                    {stat.detail}
+                  </p>
                 </div>
-                <div className="mt-1 text-base font-bold text-neutral-900 dark:text-white">
-                  {stat.label}
-                </div>
-                <p className="mt-2 text-xs text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                  {stat.detail}
-                </p>
-              </div>
+              </FadeInStaggerItem>
             ))}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -100,61 +96,64 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Coluna Imagem (6 colunas) */}
             <div className="lg:col-span-6">
-              <div className="relative overflow-hidden rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-xl dark:shadow-2xl group transition-colors duration-200">
-                <div className="relative aspect-[4/3] w-full">
-                  <Image
-                    src="/imagens/operacao-nft-logistics-3.webp"
-                    alt="Operações de alta complexidade da NFT Logistics"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-                </div>
+              <FadeIn direction="right" duration={0.7}>
+                <div className="relative overflow-hidden rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-xl dark:shadow-2xl group transition-colors duration-200">
+                  <div className="relative aspect-[4/3] w-full">
+                    <Image
+                      src="/imagens/operacao-nft-logistics-3.webp"
+                      alt="Operações de alta complexidade da NFT Logistics"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                  </div>
 
-                {/* Floating Badge */}
-                <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 right-4 sm:right-auto bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md border border-orange-200 dark:border-orange-500/30 px-4 py-3 rounded-2xl flex items-center gap-3 shadow-lg transition-colors duration-200">
-                  <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
-                    <Sparkles className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-neutral-900 dark:text-white">
-                      {t.story.floatingTitle}
-                    </p>
-                    <p className="text-[11px] text-neutral-600 dark:text-neutral-300">
-                      {t.story.floatingSubtitle}
-                    </p>
+                  {/* Floating Badge */}
+                  <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 right-4 sm:right-auto bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md border border-orange-200 dark:border-orange-500/30 px-4 py-3 rounded-2xl flex items-center gap-3 shadow-lg transition-colors duration-200">
+                    <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
+                      <Sparkles className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-neutral-900 dark:text-white">
+                        {t.story.floatingTitle}
+                      </p>
+                      <p className="text-[11px] text-neutral-600 dark:text-neutral-300">
+                        {t.story.floatingSubtitle}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </FadeIn>
             </div>
 
             {/* Coluna Texto (6 colunas) */}
             <div className="lg:col-span-6 space-y-6">
-              
-              <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
-                {t.story.title}
-              </h2>
+              <FadeIn direction="left" delay={0.2} duration={0.7} className="space-y-6">
+                <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
+                  {t.story.title}
+                </h2>
 
-              <div className="space-y-4 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
-                <p>{t.story.p1}</p>
-                <p>{t.story.p2}</p>
-                <p className="text-neutral-700 dark:text-neutral-300 text-sm font-medium">
-                  {t.story.p3}
-                </p>
-              </div>
+                <div className="space-y-4 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
+                  <p>{t.story.p1}</p>
+                  <p>{t.story.p2}</p>
+                  <p className="text-neutral-700 dark:text-neutral-300 text-sm font-medium">
+                    {t.story.p3}
+                  </p>
+                </div>
 
-              <div className="pt-2">
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 font-semibold text-sm hover:bg-orange-600 dark:hover:bg-orange-600 dark:hover:text-white transition-all duration-200 shadow-md"
-                >
-                  <span>{t.hero.btnPrimary}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
+                <div className="pt-2">
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 font-semibold text-sm hover:bg-orange-600 dark:hover:bg-orange-600 dark:hover:text-white transition-all duration-200 shadow-md"
+                  >
+                    <span>{t.hero.btnPrimary}</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </FadeIn>
             </div>
           </div>
         </div>
@@ -165,62 +164,63 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       {/* ========================================================================= */}
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[#0e0e0e] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
-              {t.triad.title}
-            </h2>
-            <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
-              {t.triad.subtitle}
-            </p>
-          </div>
+          <FadeIn direction="up">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                {t.triad.title}
+              </h2>
+              <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
+                {t.triad.subtitle}
+              </p>
+            </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {t.triad.cards.map((card, idx: number) => {
               const IconComp = card.icon;
               return (
-                <div
-                  key={idx}
-                  className="group relative rounded-3xl overflow-hidden bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-xl transition-all duration-300 hover:shadow-2xl hover:border-orange-500/50 hover:-translate-y-1.5 flex flex-col justify-between"
-                >
-                  {/* Foto de Capa do Card */}
-                  <div className="relative aspect-[16/10] w-full overflow-hidden">
-                    <Image
-                      src={card.image}
-                      alt={card.imageAlt}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-neutral-900/20 to-transparent" />
-                    
-                    {/* Badge sobre a imagem */}
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-full bg-white/90 dark:bg-neutral-900/90 text-orange-600 dark:text-orange-400 backdrop-blur-md shadow-xs border border-orange-200 dark:border-orange-500/30">
-                        {card.badge}
-                      </span>
+                <FadeInStaggerItem key={idx}>
+                  <div className="group relative rounded-3xl overflow-hidden bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-xl transition-all duration-300 hover:shadow-2xl hover:border-orange-500/50 hover:-translate-y-1.5 flex flex-col justify-between h-full">
+                    {/* Foto de Capa do Card */}
+                    <div className="relative aspect-[16/10] w-full overflow-hidden">
+                      <Image
+                        src={card.image}
+                        alt={card.imageAlt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-neutral-900/20 to-transparent" />
+                      
+                      {/* Badge sobre a imagem */}
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-full bg-white/90 dark:bg-neutral-900/90 text-orange-600 dark:text-orange-400 backdrop-blur-md shadow-xs border border-orange-200 dark:border-orange-500/30">
+                          {card.badge}
+                        </span>
+                      </div>
+
+                      {/* Ícone flutuante */}
+                      <div className="absolute bottom-4 right-4 w-12 h-12 rounded-2xl bg-orange-600 text-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <IconComp className="w-6 h-6" />
+                      </div>
                     </div>
 
-                    {/* Ícone flutuante */}
-                    <div className="absolute bottom-4 right-4 w-12 h-12 rounded-2xl bg-orange-600 text-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <IconComp className="w-6 h-6" />
+                    {/* Conteúdo textual do card */}
+                    <div className="p-7 sm:p-8 flex-1 flex flex-col justify-between">
+                      <div>
+                        <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3 tracking-tight group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
+                          {card.title}
+                        </h3>
+                        <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed">
+                          {card.desc}
+                        </p>
+                      </div>
                     </div>
                   </div>
-
-                  {/* Conteúdo textual do card */}
-                  <div className="p-7 sm:p-8 flex-1 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-3 tracking-tight group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
-                        {card.title}
-                      </h3>
-                      <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed">
-                        {card.desc}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                </FadeInStaggerItem>
               );
             })}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -229,38 +229,39 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       {/* ========================================================================= */}
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
-              {t.pillars.title}
-            </h2>
-            <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
-              {t.pillars.subtitle}
-            </p>
-          </div>
+          <FadeIn direction="up">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                {t.pillars.title}
+              </h2>
+              <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
+                {t.pillars.subtitle}
+              </p>
+            </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {t.pillars.items.map((pillar, idx: number) => {
               const IconComp = pillar.icon;
               return (
-                <div
-                  key={idx}
-                  className="p-8 rounded-2xl bg-neutral-50/90 dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col sm:flex-row gap-5 items-start"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
-                    <IconComp className="w-6 h-6" />
+                <FadeInStaggerItem key={idx}>
+                  <div className="p-8 rounded-2xl bg-neutral-50/90 dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col sm:flex-row gap-5 items-start h-full">
+                    <div className="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
+                      <IconComp className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight">
+                        {pillar.title}
+                      </h3>
+                      <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed">
+                        {pillar.desc}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight">
-                      {pillar.title}
-                    </h3>
-                    <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed">
-                      {pillar.desc}
-                    </p>
-                  </div>
-                </div>
+                </FadeInStaggerItem>
               );
             })}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -269,48 +270,48 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       {/* ========================================================================= */}
       <section className="relative w-full py-20 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[#0e0e0e] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
-              {t.infrastructure.title}
-            </h2>
-            <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
-              {t.infrastructure.subtitle}
-            </p>
-          </div>
+          <FadeIn direction="up">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                {t.infrastructure.title}
+              </h2>
+              <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
+                {t.infrastructure.subtitle}
+              </p>
+            </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {t.infrastructure.items.map((infra, idx: number) => {
-              const IconComp = infra.icon;
               return (
-                <div
-                  key={idx}
-                  className="group relative rounded-3xl overflow-hidden border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col"
-                >
-                  <div className="relative aspect-[16/10] w-full overflow-hidden">
-                    <Image
-                      src={infra.image}
-                      alt={infra.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/30 to-transparent" />
-                  </div>
+                <FadeInStaggerItem key={idx}>
+                  <div className="group relative rounded-3xl overflow-hidden border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                    <div className="relative aspect-[16/10] w-full overflow-hidden">
+                      <Image
+                        src={infra.image}
+                        alt={infra.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/30 to-transparent" />
+                    </div>
 
-                  <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white mb-2">
-                        {infra.title}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                        {infra.desc}
-                      </p>
+                    <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                      <div>
+                        <h3 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white mb-2">
+                          {infra.title}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                          {infra.desc}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </FadeInStaggerItem>
               );
             })}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -319,38 +320,39 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       {/* ========================================================================= */}
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
-              {t.method.title}
-            </h2>
-            <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
-              {t.method.subtitle}
-            </p>
-          </div>
+          <FadeIn direction="up">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                {t.method.title}
+              </h2>
+              <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
+                {t.method.subtitle}
+              </p>
+            </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.method.steps.map((step, idx: number) => (
-              <div
-                key={idx}
-                className="relative p-7 rounded-2xl bg-neutral-50/90 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800 shadow-sm flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-3xl font-extrabold text-orange-600 dark:text-orange-500">
-                      {step.num}
-                    </span>
-                    <div className="w-2 h-2 rounded-full bg-orange-500" />
+              <FadeInStaggerItem key={idx}>
+                <div className="relative p-7 rounded-2xl bg-neutral-50/90 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800 shadow-sm flex flex-col justify-between h-full">
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-3xl font-extrabold text-orange-600 dark:text-orange-500">
+                        {step.num}
+                      </span>
+                      <div className="w-2 h-2 rounded-full bg-orange-500" />
+                    </div>
+                    <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-2 leading-snug">
+                      {step.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-200 leading-relaxed">
+                      {step.desc}
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-2 leading-snug">
-                    {step.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-200 leading-relaxed">
-                    {step.desc}
-                  </p>
                 </div>
-              </div>
+              </FadeInStaggerItem>
             ))}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -359,74 +361,76 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       {/* ========================================================================= */}
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[#0e0e0e] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
-              {t.sectors.title}
-            </h2>
-            <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
-              {t.sectors.subtitle}
-            </p>
-          </div>
+          <FadeIn direction="up">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                {t.sectors.title}
+              </h2>
+              <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
+                {t.sectors.subtitle}
+              </p>
+            </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {t.sectors.items.map((sector, idx: number) => {
               const IconComp = sector.icon;
               return (
-                <Link
-                  key={idx}
-                  href={sector.link}
-                  className="group relative rounded overflow-hidden bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 hover:border-orange-500/60 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between cursor-pointer hover:-translate-y-1.5"
-                >
-                  {/* Foto de Capa do Setor */}
-                  <div className="relative aspect-[16/10] w-full overflow-hidden">
-                    <Image
-                      src={sector.image}
-                      alt={sector.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-                    />
-                      
+                <FadeInStaggerItem key={idx}>
+                  <Link
+                    href={sector.link}
+                    className="group relative rounded overflow-hidden bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 hover:border-orange-500/60 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between cursor-pointer hover:-translate-y-1.5 h-full"
+                  >
+                    {/* Foto de Capa do Setor */}
+                    <div className="relative aspect-[16/10] w-full overflow-hidden">
+                      <Image
+                        src={sector.image}
+                        alt={sector.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                      />
 
-                    {/* Tag Categoria sobre a foto */}
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-full bg-white/90 dark:bg-neutral-900/90 text-orange-600 dark:text-orange-400 backdrop-blur-md shadow-xs border border-orange-200 dark:border-orange-500/30">
-                        {sector.category}
-                      </span>
+                      {/* Tag Categoria sobre a foto */}
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-full bg-white/90 dark:bg-neutral-900/90 text-orange-600 dark:text-orange-400 backdrop-blur-md shadow-xs border border-orange-200 dark:border-orange-500/30">
+                          {sector.category}
+                        </span>
+                      </div>
+
+                      {/* Ícone flutuante */}
+                      <div className="absolute bottom-4 right-4 w-10 h-10 rounded-xl bg-orange-600 text-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <IconComp className="w-5 h-5" />
+                      </div>
                     </div>
 
-                    {/* Ícone flutuante */}
-                    <div className="absolute bottom-4 right-4 w-10 h-10 rounded-xl bg-orange-600 text-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <IconComp className="w-5 h-5" />
-                    </div>
-                  </div>
+                    {/* Conteúdo textual */}
+                    <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                      <div>
+                        <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
+                          {sector.title}
+                        </h3>
+                        <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                          {sector.desc}
+                        </p>
+                      </div>
 
-                  {/* Conteúdo textual */}
-                  <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
-                        {sector.title}
-                      </h3>
-                      <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                        {sector.desc}
-                      </p>
+                      <div className="mt-6 pt-4 dark:border-neutral-800 flex items-center text-xs font-semibold text-orange-600 dark:text-orange-400 group-hover:translate-x-1 transition-transform">
+                        <span>
+                          {resolvedLang === "pt"
+                            ? "Saiba mais sobre o setor"
+                            : resolvedLang === "en"
+                            ? "Learn more about the sector"
+                            : "了解该行业解决方案"}
+                        </span>
+                        <ChevronRight className="w-4 h-4 ml-1" />
+                      </div>
                     </div>
-
-                    <div className="mt-6 pt-4 dark:border-neutral-800 flex items-center text-xs font-semibold text-orange-600 dark:text-orange-400 group-hover:translate-x-1 transition-transform">
-                      <span>
-                        {resolvedLang === "pt"
-                          ? "Saiba mais sobre o setor"
-                          : resolvedLang === "en"
-                          ? "Learn more about the sector"
-                          : "了解该行业解决方案"}
-                      </span>
-                      <ChevronRight className="w-4 h-4 ml-1" />
-                    </div>
-                  </div>
-                </Link>
+                  </Link>
+                </FadeInStaggerItem>
               );
             })}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -437,56 +441,59 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
-                {t.differentials.tag}
-              </span>
+              <FadeIn direction="right" duration={0.7} className="space-y-6">
+                <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
+                  {t.differentials.tag}
+                </span>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
-                {t.differentials.title}
-              </h2>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
+                  {t.differentials.title}
+                </h2>
 
-              <p className="text-neutral-700 dark:text-neutral-200 text-base sm:text-lg leading-relaxed">
-                {resolvedLang === "pt"
-                  ? "Entrar ou operar no Brasil sem uma assessoria especializada é assumir riscos tributários e operacionais imensos. Nós transformamos incertezas em solidez."
-                  : resolvedLang === "en"
-                  ? "Operating in Brazil without specialized customs intelligence invites tremendous tax and operational risk. We transform uncertainty into solid results."
-                  : "在缺乏专业关务智慧的情况下进入巴西市场将面临巨大的税务与清关风险。我们将不确定性转化为坚实的商业成果。"}
-              </p>
+                <p className="text-neutral-700 dark:text-neutral-200 text-base sm:text-lg leading-relaxed">
+                  {resolvedLang === "pt"
+                    ? "Entrar ou operar no Brasil sem uma assessoria especializada é assumir riscos tributários e operacionais imensos. Nós transformamos incertezas em solidez."
+                    : resolvedLang === "en"
+                    ? "Operating in Brazil without specialized customs intelligence invites tremendous tax and operational risk. We transform uncertainty into solid results."
+                    : "在缺乏专业关务智慧的情况下进入巴西市场将面临巨大的税务与清关风险。我们将不确定性转化为坚实的商业成果。"}
+                </p>
 
-              <div>
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-semibold text-base transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-orange-600/25 cursor-pointer"
-                >
-                  <span>{t.hero.btnPrimary}</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
+                <div>
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-semibold text-base transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-orange-600/25 cursor-pointer"
+                  >
+                    <span>{t.hero.btnPrimary}</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </a>
+                </div>
+              </FadeIn>
             </div>
 
-            <div className="lg:col-span-7 flex flex-col gap-5">
-              {t.differentials.cards.map((item, idx: number) => (
-                <div
-                  key={idx}
-                  className="p-6 sm:p-8 rounded-2xl bg-neutral-50/90 dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-sm"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-lg bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0 mt-0.5">
-                      <CheckCircle2 className="w-5 h-5" />
+            <div className="lg:col-span-7">
+              <FadeInStagger className="flex flex-col gap-5">
+                {t.differentials.cards.map((item, idx: number) => (
+                  <FadeInStaggerItem key={idx}>
+                    <div className="p-6 sm:p-8 rounded-2xl bg-neutral-50/90 dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-sm">
+                      <div className="flex items-start gap-4">
+                        <div className="w-8 h-8 rounded-lg bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0 mt-0.5">
+                          <CheckCircle2 className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-2">
+                            {item.title}
+                          </h3>
+                          <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                  </FadeInStaggerItem>
+                ))}
+              </FadeInStagger>
             </div>
           </div>
         </div>
@@ -509,40 +516,42 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
           <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-orange-600/15 blur-[120px] rounded-full" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight leading-tight max-w-4xl drop-shadow-md">
-            {t.ctaSection.title}
-          </h2>
+        <FadeIn direction="up">
+          <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight leading-tight max-w-4xl drop-shadow-md">
+              {t.ctaSection.title}
+            </h2>
 
-          <p className="mt-6 text-neutral-300 text-base sm:text-lg max-w-2xl leading-relaxed drop-shadow-sm">
-            {t.ctaSection.desc}
-          </p>
+            <p className="mt-6 text-neutral-300 text-base sm:text-lg max-w-2xl leading-relaxed drop-shadow-sm">
+              {t.ctaSection.desc}
+            </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-semibold text-base shadow-xl shadow-orange-600/30 transition-all duration-200 hover:scale-[1.02]"
-            >
-              <span>{t.ctaSection.btnWhatsapp}</span>
-              <ArrowRight className="w-5 h-5" />
-            </a>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-semibold text-base shadow-xl shadow-orange-600/30 transition-all duration-200 hover:scale-[1.02]"
+              >
+                <span>{t.ctaSection.btnWhatsapp}</span>
+                <ArrowRight className="w-5 h-5" />
+              </a>
 
-            <Link
-              href={
-                resolvedLang === "pt"
-                  ? "/pt/contato"
-                  : resolvedLang === "en"
-                  ? "/en/contact"
-                  : "/cn/contact"
-              }
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-base backdrop-blur-md transition-all duration-200 hover:scale-[1.02]"
-            >
-              <span>{t.ctaSection.btnContact}</span>
-            </Link>
+              <Link
+                href={
+                  resolvedLang === "pt"
+                    ? "/pt/contato"
+                    : resolvedLang === "en"
+                    ? "/en/contact"
+                    : "/cn/contact"
+                }
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-base backdrop-blur-md transition-all duration-200 hover:scale-[1.02]"
+              >
+                <span>{t.ctaSection.btnContact}</span>
+              </Link>
+            </div>
           </div>
-        </div>
+        </FadeIn>
       </section>
     </div>
   );

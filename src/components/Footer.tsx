@@ -13,6 +13,7 @@ import {
   contatos as contatosData,
   privacy as privacyData,
 } from "@/src/data/db";
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from "@/src/components/animations";
 import type { LanguageCode } from "@/src/types";
 
 export interface FooterProps {
@@ -195,11 +196,11 @@ export default function Footer({ lang: propLang, className = "" }: FooterProps) 
 
   return (
     <footer className={`bg-neutral-950 text-white border-t border-neutral-900 ${className}`}>
-      {/* Container Principal: Grid de 5 Colunas no Desktop */}
+      {/* Container Principal: Grid de 4 Colunas com animação escalonada */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* ================= COLUNA 1: LOGO & EMPRESA ================= */}
-          <div className="flex flex-col items-start space-y-4">
+          <FadeInStaggerItem direction="up" distance={20} className="flex flex-col items-start space-y-4">
             <Link
               href={homeLink}
               className="inline-flex items-center transition-opacity hover:opacity-90"
@@ -229,10 +230,10 @@ export default function Footer({ lang: propLang, className = "" }: FooterProps) 
                 </Link>
               </li>
             </ul>
-          </div>
+          </FadeInStaggerItem>
 
           {/* ================= COLUNA 2: NAVEGAÇÃO ================= */}
-          <div>
+          <FadeInStaggerItem direction="up" distance={20}>
             <h3 className="text-xs font-bold uppercase tracking-wider text-white mb-4 pb-1.5 border-b border-neutral-800 inline-block">
               {titles.navigation}
             </h3>
@@ -248,10 +249,10 @@ export default function Footer({ lang: propLang, className = "" }: FooterProps) 
                 </li>
               ))}
             </ul>
-          </div>
+          </FadeInStaggerItem>
 
           {/* ================= COLUNA 3: SOLUÇÕES ================= */}
-          <div>
+          <FadeInStaggerItem direction="up" distance={20}>
             <h3 className="text-xs font-bold uppercase tracking-wider text-white mb-4 pb-1.5 border-b border-neutral-800 inline-block">
               {titles.solutions}
             </h3>
@@ -267,10 +268,10 @@ export default function Footer({ lang: propLang, className = "" }: FooterProps) 
                 </li>
               ))}
             </ul>
-          </div>
+          </FadeInStaggerItem>
 
           {/* ================= COLUNA 4: CONTATOS ================= */}
-          <div>
+          <FadeInStaggerItem direction="up" distance={20}>
             <h3 className="text-xs font-bold uppercase tracking-wider text-white mb-4 pb-1.5 border-b border-neutral-800 inline-block">
               {titles.contact}
             </h3>
@@ -336,12 +337,12 @@ export default function Footer({ lang: propLang, className = "" }: FooterProps) 
                 </li>
               )}
             </ul>
-          </div>
-        </div>
+          </FadeInStaggerItem>
+        </FadeInStagger>
       </div>
 
       {/* ================= DIV INFERIOR COM LOGO STUDIO AGUENA ================= */}
-      <div className="border-t border-neutral-900 bg-black/60">
+      <FadeIn direction="up" distance={15} delay={0.2} className="border-t border-neutral-900 bg-black/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Copyright */}
           <p className="text-xs text-neutral-300 text-center sm:text-left">
@@ -369,7 +370,7 @@ export default function Footer({ lang: propLang, className = "" }: FooterProps) 
             </a>
           </div>
         </div>
-      </div>
+      </FadeIn>
     </footer>
   );
 }

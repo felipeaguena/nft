@@ -7,6 +7,7 @@ import HeroSection from "@/src/components/HeroSection";
 import SolutionsGrid from "@/src/components/SolutionsGrid";
 import { CONTENT } from "@/src/data/solucoes";
 import CtaSection from "@/src/components/CtaSection";
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from "@/src/components/animations";
 import {
   Sparkles,
   ArrowRight,
@@ -68,7 +69,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Coluna da Esquerda (6 colunas): Imagem com Badge */}
-            <div className="lg:col-span-6">
+            <FadeIn direction="right" duration={0.65} className="lg:col-span-6">
               <div className="relative overflow-hidden rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-xl dark:shadow-2xl group transition-colors duration-200">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
@@ -95,10 +96,10 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
                   </div>
                 </div>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Coluna da Direita (6 colunas): Texto */}
-            <div className="lg:col-span-6 space-y-6">
+            <FadeIn direction="left" duration={0.65} className="lg:col-span-6 space-y-6">
               <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
                 {t.col2.tag}
               </span>
@@ -112,7 +113,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
                   <p key={idx}>{p}</p>
                 ))}
               </div>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -131,7 +132,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Coluna da Esquerda (5 colunas): Sticky */}
-            <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
+            <FadeIn direction="up" duration={0.65} className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/60 text-orange-600 dark:text-orange-400 text-xs font-semibold uppercase tracking-wider">
                 <span>{t.whyUs.tag}</span>
               </span>
@@ -159,14 +160,14 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Coluna da Direita (7 colunas): 4 Cards */}
-            <div className="lg:col-span-7 flex flex-col gap-5">
+            <FadeInStagger staggerDelay={0.1} className="lg:col-span-7 flex flex-col gap-5">
               {t.whyUs.cards.map((card, cIdx: number) => {
                 const CardIcon = card.icon;
                 return (
-                  <div
+                  <FadeInStaggerItem
                     key={cIdx}
                     className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg group"
                   >
@@ -183,10 +184,10 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </FadeInStaggerItem>
                 );
               })}
-            </div>
+            </FadeInStagger>
           </div>
         </div>
       </section>
@@ -198,22 +199,24 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
           {/* Cabeçalho */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
-              {t.gallery.tag}
-            </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white">
-              {t.gallery.title}
-            </h2>
-            <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
-              {t.gallery.description}
-            </p>
-          </div>
+          <FadeIn direction="up" duration={0.6}>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
+                {t.gallery.tag}
+              </span>
+              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                {t.gallery.title}
+              </h2>
+              <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
+                {t.gallery.description}
+              </p>
+            </div>
+          </FadeIn>
 
           {/* Grid de 4 fotos em 2 colunas / 4 colunas */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <FadeInStagger staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.gallery.items.map((item, gIdx: number) => (
-              <div
+              <FadeInStaggerItem
                 key={gIdx}
                 className="group relative rounded-3xl overflow-hidden border border-neutral-200/90 dark:border-neutral-800/90 bg-neutral-100 dark:bg-neutral-900 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-600/10"
               >
@@ -240,9 +243,9 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
                     {item.desc}
                   </p>
                 </div>
-              </div>
+              </FadeInStaggerItem>
             ))}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -253,24 +256,26 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
           {/* Cabeçalho */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
-              {t.methodology.tag}
-            </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
-              {t.methodology.title}
-            </h2>
-            <p className="mt-3 text-neutral-600 dark:text-neutral-300 text-sm sm:text-base leading-relaxed">
-              {t.methodology.description}
-            </p>
-          </div>
+          <FadeIn direction="up" duration={0.6}>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
+                {t.methodology.tag}
+              </span>
+              <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                {t.methodology.title}
+              </h2>
+              <p className="mt-3 text-neutral-600 dark:text-neutral-300 text-sm sm:text-base leading-relaxed">
+                {t.methodology.description}
+              </p>
+            </div>
+          </FadeIn>
 
           {/* Grid das 5 Etapas */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <FadeInStagger staggerDelay={0.08} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {t.methodology.steps.map((step, index: number) => {
               const StepIcon = step.icon;
               return (
-                <div
+                <FadeInStaggerItem
                   key={step.number}
                   className="relative rounded-2xl p-6 sm:p-7 bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50  transition-all duration-300"
                 >
@@ -290,10 +295,10 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
                       {step.text}
                     </p>
                   </div>
-                </div>
+                </FadeInStaggerItem>
               );
             })}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -303,20 +308,22 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
       {/* ========================================================================= */}
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[#0e0e0e] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
-              {t.sectors.title}
-            </h2>
-            <p className="mt-3 text-neutral-600 dark:text-neutral-300 text-sm sm:text-base leading-relaxed">
-              {t.sectors.description}
-            </p>
-          </div>
+          <FadeIn direction="up" duration={0.6}>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                {t.sectors.title}
+              </h2>
+              <p className="mt-3 text-neutral-600 dark:text-neutral-300 text-sm sm:text-base leading-relaxed">
+                {t.sectors.description}
+              </p>
+            </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <FadeInStagger staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {t.sectors.items.map((sec, sIdx: number) => {
               const SecIcon = sec.icon;
               return (
-                <div
+                <FadeInStaggerItem
                   key={sIdx}
                   className="group rounded-3xl overflow-hidden bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 flex flex-col justify-between shadow-md dark:shadow-lg hover:shadow-xl hover:shadow-orange-600/10"
                 >
@@ -350,10 +357,10 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
                       </p>
                     </div>
                   </div>
-                </div>
+                </FadeInStaggerItem>
               );
             })}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -363,23 +370,25 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
       {/* ========================================================================= */}
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
-              {t.faq.tag}
-            </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
-              {t.faq.title}
-            </h2>
-            <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
-              {t.faq.description}
-            </p>
-          </div>
+          <FadeIn direction="up" duration={0.6}>
+            <div className="text-center mb-16">
+              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
+                {t.faq.tag}
+              </span>
+              <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                {t.faq.title}
+              </h2>
+              <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
+                {t.faq.description}
+              </p>
+            </div>
+          </FadeIn>
 
-          <div className="space-y-4">
+          <FadeInStagger staggerDelay={0.07} className="space-y-4">
             {t.faq.items.map((item, fIdx: number) => {
               const isOpen = openFaqIndex === fIdx;
               return (
-                <div
+                <FadeInStaggerItem
                   key={fIdx}
                   className="rounded-2xl bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-sm dark:shadow-md overflow-hidden transition-all duration-200"
                 >
@@ -403,10 +412,10 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
                       {item.a}
                     </div>
                   )}
-                </div>
+                </FadeInStaggerItem>
               );
             })}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 

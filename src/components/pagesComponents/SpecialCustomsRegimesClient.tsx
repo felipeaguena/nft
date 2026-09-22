@@ -24,6 +24,7 @@ import {
 
 import { LanguageCode } from "@/src/types";
 import { CONTENT } from "@/src/data/specialCustomsRegimes";
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from "@/src/components/animations";
 
 export interface SpecialCustomsRegimesClientProps {
   lang?: LanguageCode;
@@ -58,58 +59,62 @@ export default function SpecialCustomsRegimesClient({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Coluna da Esquerda: Imagem */}
             <div className="lg:col-span-6">
-              <div className="relative overflow-hidden rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-xl dark:shadow-2xl group transition-colors duration-200">
-                <div className="relative aspect-[4/3] w-full">
-                  <Image
-                    src="/imagens/armazem-2.webp"
-                    alt={content.block2.imageAlt}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-                </div>
-                {/* Badge flutuante na imagem */}
-                <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 right-4 sm:right-auto bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md border border-orange-200 dark:border-orange-500/30 px-4 py-3 rounded-2xl flex items-center gap-3 shadow-lg transition-colors duration-200">
-                  <div className="w-9 h-9 rounded-xl bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
-                    <Sparkles className="w-5 h-5" />
+              <FadeIn direction="right" duration={0.7}>
+                <div className="relative overflow-hidden rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-xl dark:shadow-2xl group transition-colors duration-200">
+                  <div className="relative aspect-[4/3] w-full">
+                    <Image
+                      src="/imagens/armazem-2.webp"
+                      alt={content.block2.imageAlt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                   </div>
-                  <div>
-                    <p className="text-xs font-semibold text-neutral-900 dark:text-white">
-                      {content.block2.floatingBadgeTitle}
-                    </p>
-                    <p className="text-[11px] text-neutral-600 dark:text-neutral-300">
-                      {content.block2.floatingBadgeDesc}
-                    </p>
+                  {/* Badge flutuante na imagem */}
+                  <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 right-4 sm:right-auto bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md border border-orange-200 dark:border-orange-500/30 px-4 py-3 rounded-2xl flex items-center gap-3 shadow-lg transition-colors duration-200">
+                    <div className="w-9 h-9 rounded-xl bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
+                      <Sparkles className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-neutral-900 dark:text-white">
+                        {content.block2.floatingBadgeTitle}
+                      </p>
+                      <p className="text-[11px] text-neutral-600 dark:text-neutral-300">
+                        {content.block2.floatingBadgeDesc}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </FadeIn>
             </div>
 
             {/* Coluna da Direita: Texto */}
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
-                {content.block2.tag}
-              </span>
+              <FadeIn direction="left" delay={0.2} duration={0.7} className="space-y-6">
+                <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
+                  {content.block2.tag}
+                </span>
 
-              <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
-                {content.block2.title}
-              </h2>
+                <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
+                  {content.block2.title}
+                </h2>
 
-              <div className="space-y-4 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
-                {content.block2.paragraphs.map((p, idx) => (
-                  <p
-                    key={idx}
-                    className={
-                      idx === content.block2.paragraphs.length - 1
-                        ? "text-neutral-700 dark:text-neutral-300 text-sm"
-                        : undefined
-                    }
-                  >
-                    {p}
-                  </p>
-                ))}
-              </div>
+                <div className="space-y-4 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
+                  {content.block2.paragraphs.map((p, idx) => (
+                    <p
+                      key={idx}
+                      className={
+                        idx === content.block2.paragraphs.length - 1
+                          ? "text-neutral-700 dark:text-neutral-300 text-sm"
+                          : undefined
+                      }
+                    >
+                      {p}
+                    </p>
+                  ))}
+                </div>
+              </FadeIn>
             </div>
           </div>
         </div>
@@ -120,88 +125,96 @@ export default function SpecialCustomsRegimesClient({
       {/* ========================================================================= */}
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
-              {content.regimes.tag}
-            </span>
-            <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
-              {content.regimes.title}
-            </h2>
-            <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
-              {content.regimes.description}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {/* Card 1: Admissão Temporária */}
-            <div className="group relative rounded-2xl p-8 bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-xl transition-all duration-300 hover:bg-orange-600 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-600/20 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between">
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-orange-100/80 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-800/50 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-orange-600 group-hover:border-transparent transition-all duration-300">
-                  <Layers className="w-7 h-7" />
-                </div>
-                <div className="mb-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-orange-700 dark:text-orange-400 group-hover:text-orange-100 transition-colors">
-                    {content.regimes.card1.badge}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
-                  {content.regimes.card1.title}
-                </h3>
-                <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed group-hover:text-white/95 transition-colors duration-300">
-                  {content.regimes.card1.desc}
-                </p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-neutral-200/80 dark:border-neutral-800 group-hover:border-white/20 transition-colors flex items-center text-xs font-semibold text-orange-600 dark:text-orange-400 group-hover:text-white">
-                <span>{content.regimes.card1.footer}</span>
-              </div>
+          <FadeIn direction="up">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
+                {content.regimes.tag}
+              </span>
+              <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                {content.regimes.title}
+              </h2>
+              <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
+                {content.regimes.description}
+              </p>
             </div>
+          </FadeIn>
+
+          <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {/* Card 1: Admissão Temporária */}
+            <FadeInStaggerItem>
+              <div className="group relative rounded-2xl p-8 bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-xl transition-all duration-300 hover:bg-orange-600 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-600/20 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between h-full">
+                <div>
+                  <div className="w-14 h-14 rounded-2xl bg-orange-100/80 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-800/50 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-orange-600 group-hover:border-transparent transition-all duration-300">
+                    <Layers className="w-7 h-7" />
+                  </div>
+                  <div className="mb-2">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-orange-700 dark:text-orange-400 group-hover:text-orange-100 transition-colors">
+                      {content.regimes.card1.badge}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
+                    {content.regimes.card1.title}
+                  </h3>
+                  <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed group-hover:text-white/95 transition-colors duration-300">
+                    {content.regimes.card1.desc}
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-neutral-200/80 dark:border-neutral-800 group-hover:border-white/20 transition-colors flex items-center text-xs font-semibold text-orange-600 dark:text-orange-400 group-hover:text-white">
+                  <span>{content.regimes.card1.footer}</span>
+                </div>
+              </div>
+            </FadeInStaggerItem>
 
             {/* Card 2: Drawback */}
-            <div className="group relative rounded-2xl p-8 bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-xl transition-all duration-300 hover:bg-orange-600 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-600/20 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between">
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-orange-100/80 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-800/50 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-orange-600 group-hover:border-transparent transition-all duration-300">
-                  <BadgePercent className="w-7 h-7" />
+            <FadeInStaggerItem>
+              <div className="group relative rounded-2xl p-8 bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-xl transition-all duration-300 hover:bg-orange-600 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-600/20 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between h-full">
+                <div>
+                  <div className="w-14 h-14 rounded-2xl bg-orange-100/80 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-800/50 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-orange-600 group-hover:border-transparent transition-all duration-300">
+                    <BadgePercent className="w-7 h-7" />
+                  </div>
+                  <div className="mb-2">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-orange-700 dark:text-orange-400 group-hover:text-orange-100 transition-colors">
+                      {content.regimes.card2.badge}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
+                    {content.regimes.card2.title}
+                  </h3>
+                  <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed group-hover:text-white/95 transition-colors duration-300">
+                    {content.regimes.card2.desc}
+                  </p>
                 </div>
-                <div className="mb-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-orange-700 dark:text-orange-400 group-hover:text-orange-100 transition-colors">
-                    {content.regimes.card2.badge}
-                  </span>
+                <div className="mt-6 pt-4 border-t border-neutral-200/80 dark:border-neutral-800 group-hover:border-white/20 transition-colors flex items-center text-xs font-semibold text-orange-600 dark:text-orange-400 group-hover:text-white">
+                  <span>{content.regimes.card2.footer}</span>
                 </div>
-                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
-                  {content.regimes.card2.title}
-                </h3>
-                <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed group-hover:text-white/95 transition-colors duration-300">
-                  {content.regimes.card2.desc}
-                </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-neutral-200/80 dark:border-neutral-800 group-hover:border-white/20 transition-colors flex items-center text-xs font-semibold text-orange-600 dark:text-orange-400 group-hover:text-white">
-                <span>{content.regimes.card2.footer}</span>
-              </div>
-            </div>
+            </FadeInStaggerItem>
 
             {/* Card 3: Entreposto Aduaneiro & RECOF */}
-            <div className="group relative rounded-2xl p-8 bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-xl transition-all duration-300 hover:bg-orange-600 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-600/20 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between">
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-orange-100/80 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-800/50 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-orange-600 group-hover:border-transparent transition-all duration-300">
-                  <Landmark className="w-7 h-7" />
+            <FadeInStaggerItem>
+              <div className="group relative rounded-2xl p-8 bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-xl transition-all duration-300 hover:bg-orange-600 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-600/20 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between h-full">
+                <div>
+                  <div className="w-14 h-14 rounded-2xl bg-orange-100/80 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-800/50 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-orange-600 group-hover:border-transparent transition-all duration-300">
+                    <Landmark className="w-7 h-7" />
+                  </div>
+                  <div className="mb-2">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-orange-700 dark:text-orange-400 group-hover:text-orange-100 transition-colors">
+                      {content.regimes.card3.badge}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
+                    {content.regimes.card3.title}
+                  </h3>
+                  <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed group-hover:text-white/95 transition-colors duration-300">
+                    {content.regimes.card3.desc}
+                  </p>
                 </div>
-                <div className="mb-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-orange-700 dark:text-orange-400 group-hover:text-orange-100 transition-colors">
-                    {content.regimes.card3.badge}
-                  </span>
+                <div className="mt-6 pt-4 border-t border-neutral-200/80 dark:border-neutral-800 group-hover:border-white/20 transition-colors flex items-center text-xs font-semibold text-orange-600 dark:text-orange-400 group-hover:text-white">
+                  <span>{content.regimes.card3.footer}</span>
                 </div>
-                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
-                  {content.regimes.card3.title}
-                </h3>
-                <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed group-hover:text-white/95 transition-colors duration-300">
-                  {content.regimes.card3.desc}
-                </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-neutral-200/80 dark:border-neutral-800 group-hover:border-white/20 transition-colors flex items-center text-xs font-semibold text-orange-600 dark:text-orange-400 group-hover:text-white">
-                <span>{content.regimes.card3.footer}</span>
-              </div>
-            </div>
-          </div>
+            </FadeInStaggerItem>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -213,131 +226,121 @@ export default function SpecialCustomsRegimesClient({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Coluna da Esquerda: Título, Textos, Botão e Card Visual */}
             <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/60 text-orange-600 dark:text-orange-400 text-xs font-semibold uppercase tracking-wider">
-                <span>{content.whyChoose.tag}</span>
-              </div>
-
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
-                {content.whyChoose.title}
-              </h2>
-
-              {content.whyChoose.paragraphs.map((p, idx) => (
-                <p
-                  key={idx}
-                  className={
-                    idx === 0
-                      ? "text-neutral-700 dark:text-neutral-200 text-base sm:text-lg leading-relaxed"
-                      : "text-neutral-700 dark:text-neutral-300 text-sm sm:text-base leading-relaxed"
-                  }
-                >
-                  {p}
-                </p>
-              ))}
-
-              <div className="pt-4">
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-semibold text-sm sm:text-base transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-orange-600/25 cursor-pointer"
-                >
-                  <span>{content.whyChoose.ctaTalk}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-
-              {/* Card visual de autoridade em armazenagem e entreposto */}
-              {/* <div className="relative mt-8 rounded-3xl overflow-hidden border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-xl group">
-                <div className="relative aspect-[16/10] w-full">
-                  <Image
-                    src="/imagens/armazem.webp"
-                    alt={content.whyChoose.visualCard.imageAlt}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                    className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-orange-600 text-white text-[10px] font-bold uppercase tracking-wider mb-1.5">
-                      {content.whyChoose.visualCard.badge}
-                    </span>
-                    <p className="text-xs sm:text-sm font-semibold text-white/95 leading-snug">
-                      {content.whyChoose.visualCard.desc}
-                    </p>
-                  </div>
+              <FadeIn direction="right" duration={0.7} className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/60 text-orange-600 dark:text-orange-400 text-xs font-semibold uppercase tracking-wider">
+                  <span>{content.whyChoose.tag}</span>
                 </div>
-              </div> */}
+
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
+                  {content.whyChoose.title}
+                </h2>
+
+                {content.whyChoose.paragraphs.map((p, idx) => (
+                  <p
+                    key={idx}
+                    className={
+                      idx === 0
+                        ? "text-neutral-700 dark:text-neutral-200 text-base sm:text-lg leading-relaxed"
+                        : "text-neutral-700 dark:text-neutral-300 text-sm sm:text-base leading-relaxed"
+                    }
+                  >
+                    {p}
+                  </p>
+                ))}
+
+                <div className="pt-4">
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-semibold text-sm sm:text-base transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-orange-600/25 cursor-pointer"
+                  >
+                    <span>{content.whyChoose.ctaTalk}</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </FadeIn>
             </div>
 
             {/* Coluna da Direita: 4 Cards */}
-            <div className="lg:col-span-7 flex flex-col gap-5">
-              {/* Card 1 */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg">
-                <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 rounded-xl bg-orange-100/80 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
-                    <TrendingDown className="w-6 h-6" />
+            <div className="lg:col-span-7">
+              <FadeInStagger className="flex flex-col gap-5">
+                {/* Card 1 */}
+                <FadeInStaggerItem>
+                  <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg">
+                    <div className="flex items-start gap-5">
+                      <div className="w-12 h-12 rounded-xl bg-orange-100/80 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
+                        <TrendingDown className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight">
+                          {content.whyChoose.feature1.title}
+                        </h3>
+                        <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed">
+                          {content.whyChoose.feature1.desc}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight">
-                      {content.whyChoose.feature1.title}
-                    </h3>
-                    <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed">
-                      {content.whyChoose.feature1.desc}
-                    </p>
-                  </div>
-                </div>
-              </div>
+                </FadeInStaggerItem>
 
-              {/* Card 2 */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg">
-                <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 rounded-xl bg-orange-100/80 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
-                    <ShieldCheck className="w-6 h-6" />
+                {/* Card 2 */}
+                <FadeInStaggerItem>
+                  <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg">
+                    <div className="flex items-start gap-5">
+                      <div className="w-12 h-12 rounded-xl bg-orange-100/80 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
+                        <ShieldCheck className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight">
+                          {content.whyChoose.feature2.title}
+                        </h3>
+                        <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed">
+                          {content.whyChoose.feature2.desc}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight">
-                      {content.whyChoose.feature2.title}
-                    </h3>
-                    <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed">
-                      {content.whyChoose.feature2.desc}
-                    </p>
-                  </div>
-                </div>
-              </div>
+                </FadeInStaggerItem>
 
-              {/* Card 3 */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg">
-                <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 rounded-xl bg-orange-100/80 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
-                    <Clock className="w-6 h-6" />
+                {/* Card 3 */}
+                <FadeInStaggerItem>
+                  <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg">
+                    <div className="flex items-start gap-5">
+                      <div className="w-12 h-12 rounded-xl bg-orange-100/80 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
+                        <Clock className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight">
+                          {content.whyChoose.feature3.title}
+                        </h3>
+                        <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed">
+                          {content.whyChoose.feature3.desc}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight">
-                      {content.whyChoose.feature3.title}
-                    </h3>
-                    <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed">
-                      {content.whyChoose.feature3.desc}
-                    </p>
-                  </div>
-                </div>
-              </div>
+                </FadeInStaggerItem>
 
-              {/* Card 4 */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg">
-                <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 rounded-xl bg-orange-100/80 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
-                    <Workflow className="w-6 h-6" />
+                {/* Card 4 */}
+                <FadeInStaggerItem>
+                  <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg">
+                    <div className="flex items-start gap-5">
+                      <div className="w-12 h-12 rounded-xl bg-orange-100/80 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
+                        <Workflow className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight">
+                          {content.whyChoose.feature4.title}
+                        </h3>
+                        <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed">
+                          {content.whyChoose.feature4.desc}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight">
-                      {content.whyChoose.feature4.title}
-                    </h3>
-                    <p className="text-neutral-700 dark:text-neutral-200 text-sm leading-relaxed">
-                      {content.whyChoose.feature4.desc}
-                    </p>
-                  </div>
-                </div>
-              </div>
+                </FadeInStaggerItem>
+              </FadeInStagger>
             </div>
           </div>
         </div>
@@ -353,50 +356,51 @@ export default function SpecialCustomsRegimesClient({
       {/* ========================================================================= */}
       <section className="relative w-full py-20 px-4 sm:px-6 lg:px-8 bg-neutral-100/70 dark:bg-neutral-900/60 border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/60 text-orange-600 dark:text-orange-400 text-xs font-semibold uppercase tracking-wider mb-4">
-              <span>{content.gallery.tag}</span>
+          <FadeIn direction="up">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/60 text-orange-600 dark:text-orange-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                <span>{content.gallery.tag}</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white mb-4">
+                {content.gallery.title}
+              </h2>
+              <p className="text-neutral-600 dark:text-neutral-400 text-sm sm:text-base">
+                {content.gallery.description}
+              </p>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white mb-4">
-              {content.gallery.title}
-            </h2>
-            <p className="text-neutral-600 dark:text-neutral-400 text-sm sm:text-base">
-              {content.gallery.description}
-            </p>
-          </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {content.gallery.items.map((item, idx) => (
-              <div
-                key={idx}
-                className="group relative rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-neutral-200/90 dark:border-neutral-800/90 shadow-md hover:shadow-2xl hover:border-orange-500/50 transition-all duration-300 flex flex-col"
-              >
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <span className="absolute top-3 left-3 text-[11px] font-semibold px-2.5 py-1 rounded-md bg-neutral-900/80 backdrop-blur-md text-orange-400 border border-white/10">
-                    {item.tag}
-                  </span>
-                </div>
-                <div className="p-5 flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-base font-bold text-neutral-900 dark:text-white mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                      {item.desc}
-                    </p>
+              <FadeInStaggerItem key={idx}>
+                <div className="group relative rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-neutral-200/90 dark:border-neutral-800/90 shadow-md hover:shadow-2xl hover:border-orange-500/50 transition-all duration-300 flex flex-col h-full">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <span className="absolute top-3 left-3 text-[11px] font-semibold px-2.5 py-1 rounded-md bg-neutral-900/80 backdrop-blur-md text-orange-400 border border-white/10">
+                      {item.tag}
+                    </span>
+                  </div>
+                  <div className="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-base font-bold text-neutral-900 dark:text-white mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </FadeInStaggerItem>
             ))}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 

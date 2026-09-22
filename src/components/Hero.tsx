@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+import { FadeIn } from "@/src/components/animations";
+
 export interface HeroProps {
   children?: React.ReactNode;
   title?: React.ReactNode;
@@ -59,36 +61,44 @@ export default function Hero({
       {/* Overlay com gradiente escurecido para máxima legibilidade do conteúdo */}
       <div className={`absolute inset-0 z-10 ${overlayClassName}`} />
 
-      {/* Conteúdo do Hero */}
+      {/* Conteúdo do Hero com FadeIn */}
       <div
         className={`relative z-20 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center text-center text-white ${contentClassName}`}
       >
         {/* Caso seja passado prop title ou subtitle diretamente */}
         {title && (
-          <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight mb-6 drop-shadow-md leading-tight sm:leading-[1.15]">
-            {title}
-          </h1>
+          <FadeIn direction="up" duration={0.7} distance={20}>
+            <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight mb-6 drop-shadow-md leading-tight sm:leading-[1.15]">
+              {title}
+            </h1>
+          </FadeIn>
         )}
 
         {/* Children para títulos ou estruturas personalizadas por página */}
         {typeof children === "string" ? (
-          <h1 className="text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight max-w-5xl leading-tight sm:leading-[1.15] drop-shadow-md mb-6">
-            {children}
-          </h1>
+          <FadeIn direction="up" duration={0.7} distance={20}>
+            <h1 className="text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight max-w-5xl leading-tight sm:leading-[1.15] drop-shadow-md mb-6">
+              {children}
+            </h1>
+          </FadeIn>
         ) : (
           children
         )}
 
         {subtitle && (
-          <p className="text-base sm:text-lg lg:text-xl text-neutral-200 dark:text-neutral-300 max-w-3xl font-normal leading-relaxed drop-shadow">
-            {subtitle}
-          </p>
+          <FadeIn direction="up" duration={0.7} delay={0.2} distance={20}>
+            <p className="text-base sm:text-lg lg:text-xl text-neutral-200 dark:text-neutral-300 max-w-3xl font-normal leading-relaxed drop-shadow">
+              {subtitle}
+            </p>
+          </FadeIn>
         )}
 
         {actions && (
-          <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-4">
-            {actions}
-          </div>
+          <FadeIn direction="up" duration={0.7} delay={0.35} distance={20}>
+            <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-4">
+              {actions}
+            </div>
+          </FadeIn>
         )}
       </div>
     </section>

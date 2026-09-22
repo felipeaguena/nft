@@ -16,6 +16,7 @@ import {
 import { Globe2, Layers } from "lucide-react";
 import { solutionsShowcase as rawData } from "@/src/data/db";
 import Button from "./Button";
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from "@/src/components/animations";
 
 export type LanguageCode = "pt" | "en" | "cn";
 
@@ -119,78 +120,83 @@ export default function SolutionsShowcase({
     >
       <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${containerClassName}`}>
         {/* Cabeçalho da Seção */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 sm:mb-16 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
-              {currentTitle}
-            </h2>
-            <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
-              {currentSubtitle}
-            </p>
-          </div>
-
-          {showAllButton && currentAllHref && (
-            <div>
-              <Button
-                variant="outline"
-                size="md"
-                href={currentAllHref}
-                rightIcon={<ArrowRight className="w-4 h-4" />}
-                className="whitespace-nowrap"
-              >
-                {currentBtnAll}
-              </Button>
+        <FadeIn direction="up">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 sm:mb-16 gap-6">
+            <div className="max-w-2xl">
+              <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
+                {currentTitle}
+              </h2>
+              <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
+                {currentSubtitle}
+              </p>
             </div>
-          )}
-        </div>
+
+            {showAllButton && currentAllHref && (
+              <div>
+                <Button
+                  variant="outline"
+                  size="md"
+                  href={currentAllHref}
+                  rightIcon={<ArrowRight className="w-4 h-4" />}
+                  className="whitespace-nowrap"
+                >
+                  {currentBtnAll}
+                </Button>
+              </div>
+            )}
+          </div>
+        </FadeIn>
 
         {/* Grid com os 4 Cards Padronizados */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {group.items.map((item, idx) => {
             const Icon = ICON_MAP[item.icon] || Sparkles;
 
             return (
-              <Link
-                key={item.id || idx}
-                href={item.href}>
-                <div
-                  className="group relative flex flex-col justify-between p-7 sm:p-8 rounded dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:-translate-y-1"
+              <FadeInStaggerItem key={item.id || idx}>
+                <Link
+                  href={item.href}
+                  className="block h-full"
                 >
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="p-3 rounded-xl bg-neutral-100 dark:bg-neutral-800">
-                        <Icon className={`w-6 h-6 ${item.accent}`} />
+                  <div
+                    className="group relative flex flex-col justify-between p-7 sm:p-8 rounded dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm transition-all duration-300 hover:-translate-y-1 h-full"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="p-3 rounded-xl bg-neutral-100 dark:bg-neutral-800">
+                          <Icon className={`w-6 h-6 ${item.accent}`} />
+                        </div>
+                      </div>
+
+                      <h3 className="text-2xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-white mb-3 transition-colors leading-tight">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-200 leading-relaxed mb-6">
+                        {item.desc}
+                      </p>
+
+                      <div className="space-y-2.5 mb-6 pt-4 border-t border-neutral-100 dark:border-neutral-800/80">
+                        {item.bullets.map((bullet, bIdx) => (
+                          <div
+                            key={bIdx}
+                            className="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700 dark:text-neutral-200"
+                          >
+                            <CheckCircle2 className="w-4 h-4 text-purple-700 dark:text-purple-500 shrink-0 mt-0.5" />
+                            <span>{bullet}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
-
-                    <h3 className="text-2xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-white mb-3 transition-colors leading-tight">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-200 leading-relaxed mb-6">
-                      {item.desc}
-                    </p>
-
-                    <div className="space-y-2.5 mb-6 pt-4 border-t border-neutral-100 dark:border-neutral-800/80">
-                      {item.bullets.map((bullet, bIdx) => (
-                        <div
-                          key={bIdx}
-                          className="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700 dark:text-neutral-200"
-                        >
-                          <CheckCircle2 className="w-4 h-4 text-purple-700 dark:text-purple-500 shrink-0 mt-0.5" />
-                          <span>{bullet}</span>
-                        </div>
-                      ))}
+                    <div className="inline-flex items-center gap-2 text-sm font-bold text-purple-700 dark:text-purple-400 group-hover:text-orange-500 transition-colors pt-2">
+                      <span>{currentLearnMore}</span>
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </div>
                   </div>
-                  <div className="inline-flex items-center gap-2 text-sm font-bold text-purple-700 dark:text-purple-400 group-hover:text-orange-500 transition-colors pt-2">
-                    <span>{currentLearnMore}</span>
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              </FadeInStaggerItem>
             );
           })}
-        </div>
+        </FadeInStagger>
       </div>
     </ContentWrapper>
   );

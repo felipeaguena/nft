@@ -3,6 +3,7 @@ import ContactForm from "@/src/components/ContactForm";
 import { Mail, MapPin, Clock, ArrowRight } from "lucide-react";
 import Hero from "@/src/components/Hero";
 import Button from "@/src/components/Button";
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from "@/src/components/animations";
 
 import { constructMetadata, SECTION_OG_IMAGES, SITE_ROUTES } from "@/src/lib/seo";
 
@@ -37,7 +38,7 @@ export default function ContactCnPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* 左侧联系信息栏 (5列) */}
           <div className="lg:col-span-5 space-y-8 pt-2 max-w-lg mx-6">
-            <div>
+            <FadeIn direction="left" duration={0.6}>
               <span className="inline-flex items-center px-3 py-1 text-xs font-semibold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/60 rounded-full border border-orange-200 dark:border-orange-900/60">
                 专业服务
               </span>
@@ -47,11 +48,11 @@ export default function ContactCnPage() {
               <p className="mt-4 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
                 我们的专业团队随时准备了解您的运营挑战，在国际物流和海关清关领域提供量身定制的高效解决方案。
               </p>
-            </div>
+            </FadeIn>
 
             {/* 联系方式卡片 */}
-            <div className="space-y-4">
-              <div className="flex items-start gap-4 p-4 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm">
+            <FadeInStagger className="space-y-4">
+              <FadeInStaggerItem direction="up" distance={16} className="flex items-start gap-4 p-4 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm">
                 <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
@@ -64,9 +65,9 @@ export default function ContactCnPage() {
                     comercial@nftlogistics.com.br
                   </a>
                 </div>
-              </div>
+              </FadeInStaggerItem>
 
-              <div className="flex items-start gap-4 p-4 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm">
+              <FadeInStaggerItem direction="up" distance={16} className="flex items-start gap-4 p-4 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm">
                 <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
@@ -76,9 +77,9 @@ export default function ContactCnPage() {
                     巴西 圣保罗 (São Paulo - SP, Brazil)
                   </p>
                 </div>
-              </div>
+              </FadeInStaggerItem>
 
-              <div className="flex items-start gap-4 p-4 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm">
+              <FadeInStaggerItem direction="up" distance={16} className="flex items-start gap-4 p-4 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm">
                 <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
                   <Clock className="w-5 h-5" />
                 </div>
@@ -88,17 +89,19 @@ export default function ContactCnPage() {
                     周一至周五，09:00 - 18:00 (巴西利亚时间 BRT)
                   </p>
                 </div>
-              </div>
-            </div>
+              </FadeInStaggerItem>
+            </FadeInStagger>
           </div>
 
           {/* 右侧表单栏 (7列) */}
           <div className="lg:col-span-7 pt-2 max-w-lg mx-6">
-            <ContactForm
-              lang="cn"
-              title="发送留言"
-              description="请在下方填写您的信息并详细说明您的需求。"
-            />
+            <FadeIn direction="right" duration={0.6} delay={0.15}>
+              <ContactForm
+                lang="cn"
+                title="发送留言"
+                description="请在下方填写您的信息并详细说明您的需求。"
+              />
+            </FadeIn>
           </div>
         </div>
       </div>

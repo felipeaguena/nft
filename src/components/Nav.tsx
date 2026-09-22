@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { Sun, Moon } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
 import { nav } from "@/src/data/db";
 import type { LanguageCode } from "@/src/types";
 
@@ -220,7 +221,12 @@ export default function Nav() {
   const menuItems = Object.entries(currentNavData);
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-neutral-100/90 dark:bg-neutral-950/50 backdrop-blur-md border-b border-neutral-200/50 dark:border-neutral-800/50 shadow-xs px-4 sm:px-6 lg:px-8 transition-colors duration-200">
+    <motion.header
+      initial={{ y: -16, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
+      className="fixed top-0 left-0 right-0 w-full z-50 bg-neutral-100/90 dark:bg-neutral-950/50 backdrop-blur-md border-b border-neutral-200/50 dark:border-neutral-800/50 shadow-xs px-4 sm:px-6 lg:px-8 transition-colors duration-200"
+    >
       <div className="flex items-center justify-between w-full py-2">
         {/* Lado Esquerdo: Hamburger (Mobile) + Logo + Menu Desktop */}
         <div className="flex items-center gap-2 sm:gap-6 lg:gap-8">
@@ -457,8 +463,15 @@ export default function Nav() {
       </div>
 
       {/* Menu Mobile - Largura Total com Todos os Links Abertos */}
-      {isOpen && (
-        <div className="md:hidden w-full absolute top-full left-0 right-0 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md border-t border-b border-neutral-200/80 dark:border-neutral-800/80 shadow-xl py-4 px-6 z-50 transition-all duration-300">
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0, y: -8 }}
+            animate={{ opacity: 1, height: "auto", y: 0 }}
+            exit={{ opacity: 0, height: 0, y: -8 }}
+            transition={{ duration: 0.25, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="md:hidden w-full absolute top-full left-0 right-0 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md border-t border-b border-neutral-200/80 dark:border-neutral-800/80 shadow-xl py-4 px-6 z-50 overflow-hidden"
+          >
           <nav className="flex flex-col space-y-3 w-full">
             {menuItems.map(([key, value]) => {
               const isObject = typeof value === "object" && value !== null;
@@ -552,8 +565,9 @@ export default function Nav() {
               );
             })}
           </nav>
-        </div>
-      )}
-    </header>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 }

@@ -3,6 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Button, { ButtonVariant } from "./Button";
+import { FadeIn } from "@/src/components/animations";
 
 export interface CTAProps {
   /**
@@ -221,47 +222,49 @@ export default function CTA({
 
   return (
     <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-      <div
-        className={`relative w-full max-w-7xl mx-auto overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl border border-neutral-200/20 dark:border-neutral-800/80 flex items-center p-6 sm:p-10 lg:p-14 ${minHeightClassName} ${className}`}
-      >
-        {/* Imagem de Fundo (se fornecida via prop) */}
-        {imageSrc && (
-          <CTABackground
-            src={imageSrc}
-            alt={imageAlt}
-            priority={imagePriority}
-          />
-        )}
-
-        {/* Camada de Overlay com Gradiente para legibilidade do texto e contraste visual */}
+      <FadeIn direction="up" duration={0.65} distance={24}>
         <div
-          className={`absolute inset-0 z-[1] transition-opacity duration-300 pointer-events-none ${overlayClassName}`}
-          aria-hidden="true"
-        />
+          className={`relative w-full max-w-7xl mx-auto overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl border border-neutral-200/20 dark:border-neutral-800/80 flex items-center p-6 sm:p-10 lg:p-14 ${minHeightClassName} ${className}`}
+        >
+          {/* Imagem de Fundo (se fornecida via prop) */}
+          {imageSrc && (
+            <CTABackground
+              src={imageSrc}
+              alt={imageAlt}
+              priority={imagePriority}
+            />
+          )}
 
-        {/* Conteúdo: Se forem passadas as props diretas, renderiza a estrutura otimizada */}
-        {hasPropsContent ? (
-          <CTAContent position={contentPosition} className={contentClassName}>
-            {title && <CTATitle>{title}</CTATitle>}
-            {description && <CTADescription>{description}</CTADescription>}
-            {buttonText && buttonHref && (
-              <CTAButton
-                href={buttonHref}
-                target={buttonTarget}
-                variant={buttonVariant}
-                icon={buttonIcon}
-              >
-                {buttonText}
-              </CTAButton>
-            )}
-            {/* Permite adicionar nós adicionais dentro do bloco de 40% se desejado */}
-            {children}
-          </CTAContent>
-        ) : (
-          /* Se o usuário preferir compor tudo livremente via children */
-          children
-        )}
-      </div>
+          {/* Camada de Overlay com Gradiente para legibilidade do texto e contraste visual */}
+          <div
+            className={`absolute inset-0 z-[1] transition-opacity duration-300 pointer-events-none ${overlayClassName}`}
+            aria-hidden="true"
+          />
+
+          {/* Conteúdo: Se forem passadas as props diretas, renderiza a estrutura otimizada */}
+          {hasPropsContent ? (
+            <CTAContent position={contentPosition} className={contentClassName}>
+              {title && <CTATitle>{title}</CTATitle>}
+              {description && <CTADescription>{description}</CTADescription>}
+              {buttonText && buttonHref && (
+                <CTAButton
+                  href={buttonHref}
+                  target={buttonTarget}
+                  variant={buttonVariant}
+                  icon={buttonIcon}
+                >
+                  {buttonText}
+                </CTAButton>
+              )}
+              {/* Permite adicionar nós adicionais dentro do bloco de 40% se desejado */}
+              {children}
+            </CTAContent>
+          ) : (
+            /* Se o usuário preferir compor tudo livremente via children */
+            children
+          )}
+        </div>
+      </FadeIn>
     </section>
   );
 }

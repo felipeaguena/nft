@@ -20,6 +20,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { heroSection as rawHeroData } from "@/src/data/db";
+import { FadeIn } from "@/src/components/animations";
 
 export type HeroPageKey =
   | "feiras-e-eventos"
@@ -367,103 +368,113 @@ export default function HeroSection({
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
         {/* Badge de Identificação */}
         {content.badge && (
-          <div
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase mb-6 backdrop-blur-md transition-all duration-200"
-            style={{
-              backgroundColor: "var(--hero-badge-bg)",
-              border: `1px solid var(--hero-badge-border)`,
-              color: "var(--hero-badge-text)",
-            }}
-          >
-            <BadgeIconComp
-              className="w-4 h-4 shrink-0 transition-colors duration-200"
-              style={{ color: "var(--hero-badge-icon)" }}
-            />
-            <span>{content.badge}</span>
-          </div>
+          <FadeIn direction="down" duration={0.6} distance={16}>
+            <div
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase mb-6 backdrop-blur-md transition-all duration-200"
+              style={{
+                backgroundColor: "var(--hero-badge-bg)",
+                border: `1px solid var(--hero-badge-border)`,
+                color: "var(--hero-badge-text)",
+              }}
+            >
+              <BadgeIconComp
+                className="w-4 h-4 shrink-0 transition-colors duration-200"
+                style={{ color: "var(--hero-badge-icon)" }}
+              />
+              <span>{content.badge}</span>
+            </div>
+          </FadeIn>
         )}
 
         {/* Título Principal */}
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white max-w-5xl leading-tight sm:leading-[1.15] drop-shadow-lg">
-          {content.title}
-        </h1>
+        <FadeIn direction="up" duration={0.7} delay={0.1} distance={20}>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white max-w-5xl leading-tight sm:leading-[1.15] drop-shadow-lg">
+            {content.title}
+          </h1>
+        </FadeIn>
 
         {/* Texto descritivo embaixo do título */}
         {content.description && (
-          <p className="mt-6 text-base sm:text-lg lg:text-xl text-neutral-200 dark:text-neutral-300 max-w-3xl leading-relaxed drop-shadow-sm font-normal">
-            {content.description}
-          </p>
+          <FadeIn direction="up" duration={0.7} delay={0.25} distance={20}>
+            <p className="mt-6 text-base sm:text-lg lg:text-xl text-neutral-200 dark:text-neutral-300 max-w-3xl leading-relaxed drop-shadow-sm font-normal">
+              {content.description}
+            </p>
+          </FadeIn>
         )}
 
         {/* Botões de Ação */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-          {/* Botão Primário */}
-          <a
-            href={primaryHref}
-            target={primaryTarget}
-            rel={primaryRel}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-white font-semibold text-base transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
-            style={{
-              backgroundColor: "var(--hero-btn-primary-bg)",
-              boxShadow: "0 10px 25px -5px var(--hero-btn-primary-shadow)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor =
-                "var(--hero-accent-hover)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor =
-                "var(--hero-btn-primary-bg)";
-            }}
-            onMouseDown={(e) => {
-              e.currentTarget.style.backgroundColor =
-                "var(--hero-accent-active)";
-            }}
-            onMouseUp={(e) => {
-              e.currentTarget.style.backgroundColor =
-                "var(--hero-accent-hover)";
-            }}
-          >
-            <span>{content.primaryCta.text}</span>
-            {PrimaryIconComp && <PrimaryIconComp className="w-5 h-5 shrink-0" />}
-          </a>
-
-          {/* Botão Secundário (opcional) */}
-          {hasSecondaryCta && content.secondaryCta && (
+        <FadeIn direction="up" duration={0.7} delay={0.4} distance={20} className="w-full sm:w-auto">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+            {/* Botão Primário */}
             <a
-              href={secondaryHref}
-              target={secondaryTarget}
-              rel={secondaryRel}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/15 hover:bg-white/25 active:bg-white/30 border border-white/30 text-white font-semibold text-base backdrop-blur-md transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+              href={primaryHref}
+              target={primaryTarget}
+              rel={primaryRel}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-white font-semibold text-base transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+              style={{
+                backgroundColor: "var(--hero-btn-primary-bg)",
+                boxShadow: "0 10px 25px -5px var(--hero-btn-primary-shadow)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor =
+                  "var(--hero-accent-hover)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor =
+                  "var(--hero-btn-primary-bg)";
+              }}
+              onMouseDown={(e) => {
+                e.currentTarget.style.backgroundColor =
+                  "var(--hero-accent-active)";
+              }}
+              onMouseUp={(e) => {
+                e.currentTarget.style.backgroundColor =
+                  "var(--hero-accent-hover)";
+              }}
             >
-              <span>{content.secondaryCta.text}</span>
+              <span>{content.primaryCta.text}</span>
+              {PrimaryIconComp && <PrimaryIconComp className="w-5 h-5 shrink-0" />}
             </a>
-          )}
-        </div>
+
+            {/* Botão Secundário (opcional) */}
+            {hasSecondaryCta && content.secondaryCta && (
+              <a
+                href={secondaryHref}
+                target={secondaryTarget}
+                rel={secondaryRel}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/15 hover:bg-white/25 active:bg-white/30 border border-white/30 text-white font-semibold text-base backdrop-blur-md transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+              >
+                <span>{content.secondaryCta.text}</span>
+              </a>
+            )}
+          </div>
+        </FadeIn>
 
         {/* Elemento de Confiança / Trust Badge */}
         {content.trust && (
-          <div className="mt-12 flex items-center justify-center gap-3.5 max-w-xl text-left bg-white/90 dark:bg-neutral-900/80 backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-xl transition-all duration-200 border border-[var(--hero-trust-border-light)] dark:border-[var(--hero-trust-border-dark)]">
-            <div
-              className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border transition-colors duration-200"
-              style={{
-                backgroundColor: "var(--hero-trust-icon-bg)",
-                borderColor: "var(--hero-trust-icon-border)",
-              }}
-            >
-              <TrustIconComp
-                className="w-6 h-6 text-[var(--hero-trust-icon-color-light)] dark:text-[var(--hero-trust-icon-color-dark)] transition-colors duration-200"
-              />
+          <FadeIn direction="up" duration={0.7} delay={0.55} distance={20}>
+            <div className="mt-12 flex items-center justify-center gap-3.5 max-w-xl text-left bg-white/90 dark:bg-neutral-900/80 backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-xl transition-all duration-200 border border-[var(--hero-trust-border-light)] dark:border-[var(--hero-trust-border-dark)]">
+              <div
+                className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border transition-colors duration-200"
+                style={{
+                  backgroundColor: "var(--hero-trust-icon-bg)",
+                  borderColor: "var(--hero-trust-icon-border)",
+                }}
+              >
+                <TrustIconComp
+                  className="w-6 h-6 text-[var(--hero-trust-icon-color-light)] dark:text-[var(--hero-trust-icon-color-dark)] transition-colors duration-200"
+                />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-neutral-900 dark:text-white transition-colors duration-200">
+                  {content.trust.title}
+                </p>
+                <p className="text-xs text-neutral-600 dark:text-neutral-300 leading-snug mt-0.5 transition-colors duration-200">
+                  {content.trust.desc}
+                </p>
+              </div>
             </div>
-            <div>
-              <p className="text-sm font-semibold text-neutral-900 dark:text-white transition-colors duration-200">
-                {content.trust.title}
-              </p>
-              <p className="text-xs text-neutral-600 dark:text-neutral-300 leading-snug mt-0.5 transition-colors duration-200">
-                {content.trust.desc}
-              </p>
-            </div>
-          </div>
+          </FadeIn>
         )}
       </div>
     </section>

@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import { ArrowRight } from "lucide-react";
 import Button, { ButtonVariant, ButtonSize } from "./Button";
+import { FadeIn } from "@/src/components/animations";
 
 export type LanguageCode = "pt" | "en" | "cn";
 
@@ -279,7 +282,11 @@ export default function ImagemTexto2Colunas({
         {/* =========================================================================
             COLUNA DE IMAGEM
         ========================================================================= */}
-        <div className={`w-full ${imageOrderClasses} ${imageColumnClassName}`}>
+        <FadeIn
+          direction={isReversed ? "right" : "left"}
+          duration={0.6}
+          className={`w-full ${imageOrderClasses} ${imageColumnClassName}`}
+        >
           {image ? (
             image
           ) : resolvedImageSrc ? (
@@ -298,12 +305,15 @@ export default function ImagemTexto2Colunas({
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-60 dark:opacity-80 transition-opacity duration-300" />
             </div>
           ) : null}
-        </div>
+        </FadeIn>
 
         {/* =========================================================================
             COLUNA DE CONTEÚDO (TÍTULO, PARÁGRAFO E BOTÃO)
         ========================================================================= */}
-        <div
+        <FadeIn
+          direction={isReversed ? "left" : "right"}
+          duration={0.6}
+          delay={0.1}
           className={`w-full flex flex-col justify-center space-y-6 ${textOrderClasses} ${textColumnClassName}`}
         >
           {/* Badge / Tag Opcional */}
@@ -396,7 +406,7 @@ export default function ImagemTexto2Colunas({
               {actions}
             </div>
           )}
-        </div>
+        </FadeIn>
       </div>
     </Component>
   );

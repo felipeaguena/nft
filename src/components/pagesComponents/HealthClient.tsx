@@ -16,6 +16,7 @@ import {
 
 import { LanguageCode } from "@/src/types";
 import { CONTENT, ChallengeCard, ExperienceItem, FaqItem } from "@/src/data/health";
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from "@/src/components/animations";
 
 export interface HealthClientProps {
   lang?: LanguageCode;
@@ -66,39 +67,40 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
       <section className="relative w-full py-20 px-4 sm:px-6 lg:px-8 bg-[#040912] border-t border-sky-950/50">
         <div className="max-w-7xl mx-auto">
           {/* Cabeçalho da seção */}
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-950/60 border border-sky-800/50 px-3.5 py-1 rounded-full">
-              {t.challenge.tag}
-            </span>
-            <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-white">
-              {t.challenge.title}
-            </h2>
-            <p className="mt-3 text-neutral-200 text-sm sm:text-base leading-relaxed">
-              {t.challenge.description}
-            </p>
-          </div>
+          <FadeIn direction="up">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <span className="text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-950/60 border border-sky-800/50 px-3.5 py-1 rounded-full">
+                {t.challenge.tag}
+              </span>
+              <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-white">
+                {t.challenge.title}
+              </h2>
+              <p className="mt-3 text-neutral-200 text-sm sm:text-base leading-relaxed">
+                {t.challenge.description}
+              </p>
+            </div>
+          </FadeIn>
 
           {/* Grid com 3 cards escuros com hover suave para fundo azul e letras brancas */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {t.challenge.cards.map((card, idx: number) => (
-              <div
-                key={idx}
-                className="group relative rounded-2xl p-8 bg-[#09111e] shadow-xl transition-all duration-300 hover:bg-sky-600 hover:shadow-2xl hover:shadow-sky-600/30 hover:-translate-y-1 cursor-pointer flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-12 h-12 rounded-full bg-sky-950/80 text-sky-400 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-sky-600 group-hover:border-transparent transition-all duration-300">
-                    {renderCardIcon(card.icon as "stethoscope" | "calendar" | "file")}
+              <FadeInStaggerItem key={idx}>
+                <div className="group relative rounded-2xl p-8 bg-[#09111e] shadow-xl transition-all duration-300 hover:bg-sky-600 hover:shadow-2xl hover:shadow-sky-600/30 hover:-translate-y-1 cursor-pointer flex flex-col justify-between h-full">
+                  <div>
+                    <div className="w-12 h-12 rounded-full bg-sky-950/80 text-sky-400 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-sky-600 group-hover:border-transparent transition-all duration-300">
+                      {renderCardIcon(card.icon as "stethoscope" | "calendar" | "file")}
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
+                      {card.title}
+                    </h3>
+                    <p className="text-neutral-300 text-sm leading-relaxed group-hover:text-white/95 transition-colors duration-300">
+                      {card.desc}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
-                    {card.title}
-                  </h3>
-                  <p className="text-neutral-300 text-sm leading-relaxed group-hover:text-white/95 transition-colors duration-300">
-                    {card.desc}
-                  </p>
                 </div>
-              </div>
+              </FadeInStaggerItem>
             ))}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -110,54 +112,57 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Coluna da Esquerda: Título e Texto */}
             <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-950/80 border border-sky-800/60 text-sky-400 text-xs font-semibold uppercase tracking-wider">
-                <span>{t.stepsSection.tag}</span>
-              </div>
+              <FadeIn direction="right" duration={0.7} className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-950/80 border border-sky-800/60 text-sky-400 text-xs font-semibold uppercase tracking-wider">
+                  <span>{t.stepsSection.tag}</span>
+                </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
-                {t.stepsSection.title}
-              </h2>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
+                  {t.stepsSection.title}
+                </h2>
 
-              <p className="text-neutral-300 text-base sm:text-lg leading-relaxed">
-                {t.stepsSection.p1}
-              </p>
+                <p className="text-neutral-300 text-base sm:text-lg leading-relaxed">
+                  {t.stepsSection.p1}
+                </p>
 
-              <p className="text-neutral-200 text-sm sm:text-base leading-relaxed">
-                {t.stepsSection.p2}
-              </p>
+                <p className="text-neutral-200 text-sm sm:text-base leading-relaxed">
+                  {t.stepsSection.p2}
+                </p>
 
-              <div className="pt-4">
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-sky-600/25"
-                >
-                  <span>{t.stepsSection.ctaButton}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
+                <div className="pt-4">
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-sky-600/25"
+                  >
+                    <span>{t.stepsSection.ctaButton}</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </FadeIn>
             </div>
 
             {/* Coluna da Direita: 5 passos estratégicos */}
-            <div className="lg:col-span-7 flex flex-col gap-4 sm:gap-5">
-              {t.stepsSection.steps.map((step, idx: number) => (
-                <div
-                  key={idx}
-                  className="p-6 sm:p-12 rounded-2xl bg-[#0a1424] hover:bg-orange-600 hover:border-sky-600/50 transition-all duration-200 shadow-md"
-                >
-                  <div className="flex items-start gap-4">
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-neutral-300 text-sm leading-relaxed">
-                        {step.desc}
-                      </p>
+            <div className="lg:col-span-7">
+              <FadeInStagger className="flex flex-col gap-4 sm:gap-5">
+                {t.stepsSection.steps.map((step, idx: number) => (
+                  <FadeInStaggerItem key={idx}>
+                    <div className="p-6 sm:p-12 rounded-2xl bg-[#0a1424] hover:bg-orange-600 hover:border-sky-600/50 transition-all duration-200 shadow-md">
+                      <div className="flex items-start gap-4">
+                        <div>
+                          <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
+                            {step.title}
+                          </h3>
+                          <p className="text-neutral-300 text-sm leading-relaxed">
+                            {step.desc}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  </FadeInStaggerItem>
+                ))}
+              </FadeInStagger>
             </div>
           </div>
         </div>
@@ -169,51 +174,52 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-[#040812] border-t border-sky-950/50">
         <div className="max-w-7xl mx-auto">
           {/* Cabeçalho */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-950/60 border border-sky-800/50 px-3.5 py-1 rounded-full">
-              {t.experience.tag}
-            </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-white">
-              {t.experience.title}
-            </h2>
-            <p className="mt-3 text-neutral-200 text-sm sm:text-base leading-relaxed">
-              {t.experience.description}
-            </p>
-          </div>
+          <FadeIn direction="up">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-950/60 border border-sky-800/50 px-3.5 py-1 rounded-full">
+                {t.experience.tag}
+              </span>
+              <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-white">
+                {t.experience.title}
+              </h2>
+              <p className="mt-3 text-neutral-200 text-sm sm:text-base leading-relaxed">
+                {t.experience.description}
+              </p>
+            </div>
+          </FadeIn>
 
           {/* 4 Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {t.experience.items.map((item, idx: number) => (
-              <div
-                key={idx}
-                className="group relative overflow-hidden rounded-2xl aspect-[4/3] sm:aspect-[16/10] bg-[#09111e] shadow-2xl flex items-end p-6 sm:p-8 cursor-pointer"
-              >
-                {/* Imagem de fundo: escurece no hover sem encolher */}
-                <div className="absolute inset-0 w-full h-full overflow-hidden">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover object-center transition-all duration-500 ease-out group-hover:brightness-60"
-                  />
-                </div>
+              <FadeInStaggerItem key={idx}>
+                <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] sm:aspect-[16/10] bg-[#09111e] shadow-2xl flex items-end p-6 sm:p-8 cursor-pointer">
+                  {/* Imagem de fundo: escurece no hover sem encolher */}
+                  <div className="absolute inset-0 w-full h-full overflow-hidden">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover object-center transition-all duration-500 ease-out group-hover:brightness-60"
+                    />
+                  </div>
 
-                {/* Overlay com gradiente azul hospitalar escuro */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050b14]/95 via-[#050b14]/40 to-transparent transition-opacity duration-300 pointer-events-none" />
+                  {/* Overlay com gradiente azul hospitalar escuro */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050b14]/95 via-[#050b14]/40 to-transparent transition-opacity duration-300 pointer-events-none" />
 
-                {/* Título H3 */}
-                <div className="relative z-10 w-full">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-sky-400 mb-2 block">
-                    {item.tag}
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug drop-shadow-md">
-                    {item.title}
-                  </h3>
+                  {/* Título H3 */}
+                  <div className="relative z-10 w-full">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-sky-400 mb-2 block">
+                      {item.tag}
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug drop-shadow-md">
+                      {item.title}
+                    </h3>
+                  </div>
                 </div>
-              </div>
+              </FadeInStaggerItem>
             ))}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -225,65 +231,68 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Coluna da Esquerda: Título e Texto */}
             <div className="lg:col-span-5 space-y-5">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-950/80 border border-sky-800/60 text-sky-400 text-xs font-semibold uppercase tracking-wider">
-                <span>{t.faq.tag}</span>
-              </span>
+              <FadeIn direction="right" duration={0.7} className="space-y-5">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-950/80 border border-sky-800/60 text-sky-400 text-xs font-semibold uppercase tracking-wider">
+                  <span>{t.faq.tag}</span>
+                </span>
 
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
-                {t.faq.title}
-              </h2>
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
+                  {t.faq.title}
+                </h2>
 
-              <p className="text-neutral-300 text-base leading-relaxed">
-                {t.faq.description}
-              </p>
+                <p className="text-neutral-300 text-base leading-relaxed">
+                  {t.faq.description}
+                </p>
 
-              <div className="pt-2 text-sm text-neutral-300">
-                {t.faq.bottomPrompt}{" "}
-                <br />
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-400 hover:text-sky-300 underline font-medium"
-                >
-                  {t.faq.bottomLinkText}
-                </a>
-                .
-              </div>
+                <div className="pt-2 text-sm text-neutral-300">
+                  {t.faq.bottomPrompt}{" "}
+                  <br />
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sky-400 hover:text-sky-300 underline font-medium"
+                  >
+                    {t.faq.bottomLinkText}
+                  </a>
+                  .
+                </div>
+              </FadeIn>
             </div>
 
             {/* Coluna da Direita: Accordion */}
-            <div className="lg:col-span-7 space-y-4">
-              {t.faq.items.map((item, idx: number) => (
-                <div
-                  key={idx}
-                  className="rounded-2xl bg-[#091220] border border-sky-950/70 overflow-hidden transition-colors"
-                >
-                  <button
-                    type="button"
-                    onClick={() => toggleFaq(idx)}
-                    aria-expanded={openFaqIndex === idx}
-                    className="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 cursor-pointer hover:bg-sky-950/20 transition-colors"
-                  >
-                    <span className="text-base sm:text-lg font-bold text-white leading-snug">
-                      {item.question}
-                    </span>
-                    <div
-                      className={`w-9 h-9 rounded-full bg-sky-950/80 border border-sky-800/50 flex items-center justify-center shrink-0 text-sky-400 transition-transform duration-300 ${
-                        openFaqIndex === idx ? "rotate-180 bg-sky-600 text-white" : ""
-                      }`}
-                    >
-                      <ChevronDown className="w-5 h-5" />
-                    </div>
-                  </button>
+            <div className="lg:col-span-7">
+              <FadeInStagger className="space-y-4">
+                {t.faq.items.map((item, idx: number) => (
+                  <FadeInStaggerItem key={idx}>
+                    <div className="rounded-2xl bg-[#091220] border border-sky-950/70 overflow-hidden transition-colors">
+                      <button
+                        type="button"
+                        onClick={() => toggleFaq(idx)}
+                        aria-expanded={openFaqIndex === idx}
+                        className="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 cursor-pointer hover:bg-sky-950/20 transition-colors"
+                      >
+                        <span className="text-base sm:text-lg font-bold text-white leading-snug">
+                          {item.question}
+                        </span>
+                        <div
+                          className={`w-9 h-9 rounded-full bg-sky-950/80 border border-sky-800/50 flex items-center justify-center shrink-0 text-sky-400 transition-transform duration-300 ${
+                            openFaqIndex === idx ? "rotate-180 bg-sky-600 text-white" : ""
+                          }`}
+                        >
+                          <ChevronDown className="w-5 h-5" />
+                        </div>
+                      </button>
 
-                  {openFaqIndex === idx && (
-                    <div className="px-6 pb-6 sm:px-7 sm:pb-7 text-neutral-300 text-sm sm:text-base leading-relaxed border-t border-sky-950/60 pt-4">
-                      {item.answer}
+                      {openFaqIndex === idx && (
+                        <div className="px-6 pb-6 sm:px-7 sm:pb-7 text-neutral-300 text-sm sm:text-base leading-relaxed border-t border-sky-950/60 pt-4">
+                          {item.answer}
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
-              ))}
+                  </FadeInStaggerItem>
+                ))}
+              </FadeInStagger>
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { CONTENT } from "@/src/data/solucoes";
 import { LanguageCode } from "@/src/types";
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from "@/src/components/animations";
 
 export interface SolutionsGridProps {
   /**
@@ -102,23 +103,25 @@ export default function SolutionsGrid({
     >
       <div className="max-w-7xl mx-auto">
         {/* Cabeçalho */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
-            {currentTag}
-          </span>
-          <h2 className="mt-4 text-4xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
-            {currentTitle}
-          </h2>
-          <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-base sm:text-base leading-relaxed">
-            {currentDescription}
-          </p>
-        </div>
+        <FadeIn direction="up" duration={0.6}>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
+              {currentTag}
+            </span>
+            <h2 className="mt-4 text-4xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
+              {currentTitle}
+            </h2>
+            <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-base sm:text-base leading-relaxed">
+              {currentDescription}
+            </p>
+          </div>
+        </FadeIn>
 
-        {/* Grid de 4 cards (2x2 em telas médias/grandes) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Grid de 4 cards (2x2 em telas médias/grandes) com Stagger */}
+        <FadeInStagger staggerDelay={0.12} className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {solutionsGridData.items.map((item) => {
             return (
-              <div
+              <FadeInStaggerItem
                 key={item.id}
                 className="group relative rounded-3xl overflow-hidden bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/90 shadow-md dark:shadow-xl transition-all duration-300 hover:border-orange-500/60 hover:shadow-2xl hover:shadow-orange-600/10 dark:hover:shadow-orange-600/20 flex flex-col justify-between"
               >
@@ -172,10 +175,10 @@ export default function SolutionsGrid({
                     <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
                   </Link>
                 </div>
-              </div>
+              </FadeInStaggerItem>
             );
           })}
-        </div>
+        </FadeInStagger>
       </div>
     </section>
   );

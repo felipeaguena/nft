@@ -20,6 +20,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { ctaSection as rawCtaData } from "@/src/data/db";
+import { FadeIn } from "@/src/components/animations";
 
 export type CtaPageKey =
   | "logistica-obras-arte"
@@ -145,7 +146,7 @@ export default function CtaSection({
         />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+      <FadeIn direction="up" duration={0.65} className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
         <span
           className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full ${
             isSky
@@ -188,7 +189,7 @@ export default function CtaSection({
         <p className="mt-4 text-xs text-neutral-300">
           {content.disclaimer}
         </p>
-      </div>
+      </FadeIn>
     </section>
   );
 }

@@ -26,6 +26,7 @@ import {
 import Button from "../Button";
 import HealthCTA from "../HealthCTA";
 import SolutionsGrid from "../SolutionsGrid";
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from "@/src/components/animations";
 
 import { LanguageCode } from "@/src/types";
 import { HOME_CONTENT } from "@/src/data/home";
@@ -41,52 +42,53 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
     <div className="w-full">
       {/* 1. SEÇÃO DE ESTATÍSTICAS E PROVA SOCIAL FLUTUANTE */}
       <section className="relative w-full sm:mt-5 md:mt-0 lg:mt-0 -lg:-mt-30 z-20 py-12 px-4 sm:px-6 lg:px-8 bg-transparent transition-colors duration-200">
-  <div className="max-w-7xl mx-auto">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {t.stats.map((stat, idx: number) => (
-        <div
-          key={idx}
-          className={`group relative rounded-2xl p-6 sm:p-7 bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50 hover:bg-orange-600 dark:hover:bg-orange-600 transition-all duration-300 ${
-            idx > 0 ? "p-6 sm:p-6 lg:p-8" : ""
-          }`}
-        >
-          <div className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-            <span className="text-orange-600 dark:text-orange-500 group-hover:text-white transition-colors duration-300">
-              {stat.value}
-            </span>
-          </div>
-          <div className="mt-1 text-base font-bold text-neutral-900 dark:text-white group-hover:text-white transition-colors duration-300">
-            {stat.label}
-          </div>
-          <div className="mt-2 text-xs text-neutral-700 dark:text-neutral-300 group-hover:text-orange-100 transition-colors duration-300 leading-relaxed">
-            {stat.detail}
-          </div>
+        <div className="max-w-7xl mx-auto">
+          <FadeInStagger staggerDelay={0.08} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {t.stats.map((stat, idx: number) => (
+              <FadeInStaggerItem
+                key={idx}
+                className={`group relative rounded-2xl p-6 sm:p-7 bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50 hover:bg-orange-600 dark:hover:bg-orange-600 transition-all duration-300 ${
+                  idx > 0 ? "p-6 sm:p-6 lg:p-8" : ""
+                }`}
+              >
+                <div className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                  <span className="text-orange-600 dark:text-orange-500 group-hover:text-white transition-colors duration-300">
+                    {stat.value}
+                  </span>
+                </div>
+                <div className="mt-1 text-base font-bold text-neutral-900 dark:text-white group-hover:text-white transition-colors duration-300">
+                  {stat.label}
+                </div>
+                <div className="mt-2 text-xs text-neutral-700 dark:text-neutral-300 group-hover:text-orange-100 transition-colors duration-300 leading-relaxed">
+                  {stat.detail}
+                </div>
+              </FadeInStaggerItem>
+            ))}
+          </FadeInStagger>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* 2. HUBS LOGÍSTICOS ESTRATÉGICOS NO BRASIL */}
       <section className="py-12 sm:py-16 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">
-                {t.hubsTitle}
-              </h2>
-              <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-200 max-w-md">
-                {t.hubsSubtitle}
-              </p>  
+          <FadeIn direction="up" duration={0.6}>
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                  {t.hubsTitle}
+                </h2>
+                <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-200 max-w-md">
+                  {t.hubsSubtitle}
+                </p>  
+              </div>
             </div>
-          </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4">
+          <FadeInStagger staggerDelay={0.08} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4">
             {t.hubs.map((hub, idx: number) => {
               const HubIcon = hub.icon;
               return (
-                <div
+                <FadeInStaggerItem
                   key={idx}
                   className="group relative p-4 rounded border border-neutral-200 dark:border-neutral-800 bg-neutral-50/60 dark:bg-neutral-900/60 hover:bg-white dark:hover:bg-neutral-900 transition-all duration-200 hover:shadow-md hover:border-neutral-700 dark:hover:border-neutral-400  flex flex-col justify-between min-h-[140px]"
                 >
@@ -104,10 +106,10 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
                       {hub.desc}
                     </p>
                   </div>
-                </div>
+                </FadeInStaggerItem>
               );
             })}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -117,20 +119,22 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
       {/* 4. FLUXO OPERACIONAL EM 4 ETAPAS (COMO FUNCIONA) */}
       <section className="py-16 sm:py-24 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
-              {t.process.title}
-            </h2>
-            <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
-              {t.process.subtitle}
-            </p>
-          </div>
+          <FadeIn direction="up" duration={0.6}>
+            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
+                {t.process.title}
+              </h2>
+              <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
+                {t.process.subtitle}
+              </p>
+            </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <FadeInStagger staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.process.steps.map((step, idx: number) => {
               const StepIcon = step.icon;
               return (
-                <div
+                <FadeInStaggerItem
                   key={idx}
                   className="relative p-6 sm:p-7 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm flex flex-col justify-between"
                 >
@@ -147,84 +151,89 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
                       {step.desc}
                     </p>
                   </div>
-                </div>
+                </FadeInStaggerItem>
               );
             })}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
       {/* 5. VITRINE DE SETORES ATENDIDOS (CARDS FOTOGRÁFICOS) */}
       <section className="py-16 sm:py-20 bg-neutral-100/40 dark:bg-neutral-900/30 border-t border-neutral-200/80 dark:border-neutral-800/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
-              {t.sectors.title}
-            </h2>
-            <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
-              {t.sectors.subtitle}
-            </p>
-          </div>
+          <FadeIn direction="up" duration={0.6}>
+            <div className="max-w-2xl mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
+                {t.sectors.title}
+              </h2>
+              <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
+                {t.sectors.subtitle}
+              </p>
+            </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <FadeInStagger staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {t.sectors.cards.map((card, idx: number) => {
               const CardIcon = card.icon;
               return (
-                <Link
-                  key={idx}
-                  href={card.href}
-                  className="group relative overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
-                >
-                  {/* Imagem do Setor */}
-                  <div className="relative h-48 w-full overflow-hidden bg-neutral-200 dark:bg-neutral-800">
-                    <Image
-                      src={card.image}
-                      alt={card.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
+                <FadeInStaggerItem key={idx}>
+                  <Link
+                    href={card.href}
+                    className="group relative overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
+                  >
+                    {/* Imagem do Setor */}
+                    <div className="relative h-48 w-full overflow-hidden bg-neutral-200 dark:bg-neutral-800">
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
 
-                  {/* Informações */}
-                  <div className="p-5 sm:p-6 flex flex-col justify-between flex-1">
-                    <div>
-                      <h3 className="text-base sm:text-lg font-bold text-neutral-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors mb-2 leading-snug">
-                        {card.title}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                        {card.desc}
-                      </p>
+                    {/* Informações */}
+                    <div className="p-5 sm:p-6 flex flex-col justify-between flex-1">
+                      <div>
+                        <h3 className="text-base sm:text-lg font-bold text-neutral-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors mb-2 leading-snug">
+                          {card.title}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                          {card.desc}
+                        </p>
+                      </div>
+                      <div className="mt-4 flex items-center justify-between text-xs font-bold text-orange-600 dark:text-orange-400 group-hover:text-orange-500">
+                        <span>{t.sectors.seeDetails}</span>
+                        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                      </div>
                     </div>
-                    <div className="mt-4 flex items-center justify-between text-xs font-bold text-orange-600 dark:text-orange-400 group-hover:text-orange-500">
-                      <span>{t.sectors.seeDetails}</span>
-                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                    </div>
-                  </div>
-                </Link>
+                  </Link>
+                </FadeInStaggerItem>
               );
             })}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
       {/* 6. DIFERENCIAIS COMPETITIVOS EM 4 PILARES VISUAIS */}
       <section className="py-16 sm:py-24 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
-              {t.differentials.title}
-            </h2>
-            <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
-              {t.differentials.subtitle}
-            </p>
-          </div>
+          <FadeIn direction="up" duration={0.6}>
+            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
+                {t.differentials.title}
+              </h2>
+              <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
+                {t.differentials.subtitle}
+              </p>
+            </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <FadeInStagger staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.differentials.cards.map((diff, idx: number) => {
               const DiffIcon = diff.icon;
               return (
-                <div
+                <FadeInStaggerItem
                   key={idx}
                   className="group relative rounded-2xl p-6 sm:p-7 bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50 hover:bg-orange-600 dark:hover:bg-orange-600 transition-all duration-300"
                 >
@@ -239,10 +248,10 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
                       {diff.desc}
                     </p>
                   </div>
-                </div>
+                </FadeInStaggerItem>
               );
             })}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
@@ -254,7 +263,7 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
         {/* Glow de fundo */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-orange-600/20 blur-[120px] pointer-events-none rounded-full" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <FadeIn direction="up" duration={0.65} className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6">
             {t.cta.title}
           </h2>
@@ -284,7 +293,7 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
               {t.cta.btnSecondary}
             </Button>
           </div>
-        </div>
+        </FadeIn>
       </section>
     </div>
   );

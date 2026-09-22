@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "motion/react";
 import type { LanguageCode } from "@/src/types";
 
 interface ConsentContent {
@@ -134,76 +135,80 @@ export default function CookieConsent() {
     setIsVisible(false);
   };
 
-  if (!isMounted || !isVisible) {
-    return null;
-  }
-
   return (
-    <aside
-      aria-label="Consentimento de Cookies"
-      role="dialog"
-      aria-modal="false"
-      className="fixed bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:bottom-6 z-50 sm:max-w-md w-auto"
-    >
-      <div className="bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl p-5 shadow-2xl transition-all duration-300 animate-in fade-in slide-in-from-bottom-5">
-        <div className="flex items-start gap-3">
-          <div className="p-2 bg-orange-100 dark:bg-orange-950/60 rounded-xl text-orange-600 dark:text-orange-400 shrink-0 mt-0.5">
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </div>
+    <AnimatePresence>
+      {isMounted && isVisible && (
+        <motion.aside
+          initial={{ opacity: 0, y: 25, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 20, scale: 0.95 }}
+          transition={{ duration: 0.35, ease: [0.21, 0.47, 0.32, 0.98] }}
+          aria-label="Consentimento de Cookies"
+          role="dialog"
+          aria-modal="false"
+          className="fixed bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:bottom-6 z-50 sm:max-w-md w-auto"
+        >
+          <div className="bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 rounded-2xl p-5 shadow-2xl transition-all duration-300">
+            <div className="flex items-start gap-3">
+              <div className="p-2 bg-orange-100 dark:bg-orange-950/60 rounded-xl text-orange-600 dark:text-orange-400 shrink-0 mt-0.5">
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
 
-          <div className="flex-1">
-            <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
-              {text.title}
-            </h3>
-            <p className="mt-1 text-xs leading-relaxed text-neutral-700 dark:text-neutral-200">
-              {text.description}
-            </p>
+              <div className="flex-1">
+                <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+                  {text.title}
+                </h3>
+                <p className="mt-1 text-xs leading-relaxed text-neutral-700 dark:text-neutral-200">
+                  {text.description}
+                </p>
 
-            {/* Link discreto para Política de Privacidade */}
-            <div className="mt-2 text-xs text-neutral-600 dark:text-neutral-300">
-              {text.privacyPrefix}{" "}
-              <Link
-                href={text.privacyLink}
-                className="font-medium text-orange-600 dark:text-orange-400 underline underline-offset-2 hover:text-orange-700 dark:hover:text-orange-300 transition-colors"
+                {/* Link discreto para Política de Privacidade */}
+                <div className="mt-2 text-xs text-neutral-600 dark:text-neutral-300">
+                  {text.privacyPrefix}{" "}
+                  <Link
+                    href={text.privacyLink}
+                    className="font-medium text-orange-600 dark:text-orange-400 underline underline-offset-2 hover:text-orange-700 dark:hover:text-orange-300 transition-colors"
+                  >
+                    {text.privacyText}
+                  </Link>
+                  .
+                </div>
+              </div>
+            </div>
+
+            {/* Botões de Ação */}
+            <div className="mt-4 flex items-center justify-end gap-2.5 pt-2 border-t border-neutral-100 dark:border-neutral-800/80">
+              <button
+                type="button"
+                onClick={() => handleDecision("declined")}
+                className="px-3.5 py-1.5 text-xs font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 rounded-lg transition-colors cursor-pointer"
               >
-                {text.privacyText}
-              </Link>
-              .
+                {text.decline}
+              </button>
+              <button
+                type="button"
+                onClick={() => handleDecision("accepted")}
+                className="px-4 py-1.5 text-xs font-medium text-white bg-orange-600 hover:bg-orange-700 active:bg-orange-800 rounded-lg shadow-sm hover:shadow transition-all cursor-pointer"
+              >
+                {text.accept}
+              </button>
             </div>
           </div>
-        </div>
-
-        {/* Botões de Ação */}
-        <div className="mt-4 flex items-center justify-end gap-2.5 pt-2 border-t border-neutral-100 dark:border-neutral-800/80">
-          <button
-            type="button"
-            onClick={() => handleDecision("declined")}
-            className="px-3.5 py-1.5 text-xs font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 rounded-lg transition-colors cursor-pointer"
-          >
-            {text.decline}
-          </button>
-          <button
-            type="button"
-            onClick={() => handleDecision("accepted")}
-            className="px-4 py-1.5 text-xs font-medium text-white bg-orange-600 hover:bg-orange-700 active:bg-orange-800 rounded-lg shadow-sm hover:shadow transition-all cursor-pointer"
-          >
-            {text.accept}
-          </button>
-        </div>
-      </div>
-    </aside>
+        </motion.aside>
+      )}
+    </AnimatePresence>
   );
 }

@@ -24,6 +24,7 @@ import {
   FileCheck,
 } from "lucide-react";
 import { privacy as privacyDataRaw, contatos as contatosData } from "@/src/data/db";
+import { FadeIn } from "@/src/components/animations";
 
 export type LanguageCode = "pt" | "en" | "cn";
 
@@ -224,120 +225,126 @@ export default function PrivacyPolicyView({ lang }: { lang: LanguageCode }) {
         </nav>
 
         {/* Hero Header Section */}
-        <header className="border-b border-neutral-200 dark:border-neutral-800 pb-6 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-orange-100/80 dark:bg-orange-950/60 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800/80 mb-5">
-            <ShieldCheck className="w-4 h-4 text-orange-600 dark:text-orange-400" />
-            <span>{content.badge}</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
-            {content.cabecalho_pagina}
-          </h1>
-
-          <p className="mt-4 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 max-w-3xl leading-relaxed">
-            {content.subtitulo}
-          </p>
-
-          {/* Document metadata info & Quick actions */}
-          <div className="mt-8 flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-neutral-200/70 dark:border-neutral-800/70">
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-neutral-600 dark:text-neutral-300">
-              <span className="inline-flex items-center gap-1.5 font-medium">
-                <Calendar className="w-4 h-4 text-orange-600 dark:text-orange-400" />
-                {content.data_atualizacao}
-              </span>
-              <span className="inline-flex items-center gap-1.5 font-medium">
-                <Clock className="w-4 h-4 text-orange-600 dark:text-orange-400" />
-                {content.tempo_leitura}
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-neutral-200/70 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-mono text-[11px]">
-                v{content.versao}
-              </span>
+        <FadeIn direction="up">
+          <header className="border-b border-neutral-200 dark:border-neutral-800 pb-6 mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-orange-100/80 dark:bg-orange-950/60 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800/80 mb-5">
+              <ShieldCheck className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+              <span>{content.badge}</span>
             </div>
 
-            <div className="flex items-center gap-2.5">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
+              {content.cabecalho_pagina}
+            </h1>
+
+            <p className="mt-4 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 max-w-3xl leading-relaxed">
+              {content.subtitulo}
+            </p>
+
+            {/* Document metadata info & Quick actions */}
+            <div className="mt-8 flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-neutral-200/70 dark:border-neutral-800/70">
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-neutral-600 dark:text-neutral-300">
+                <span className="inline-flex items-center gap-1.5 font-medium">
+                  <Calendar className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+                  {content.data_atualizacao}
+                </span>
+                <span className="inline-flex items-center gap-1.5 font-medium">
+                  <Clock className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+                  {content.tempo_leitura}
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-neutral-200/70 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-mono text-[11px]">
+                  v{content.versao}
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2.5">
+              </div>
             </div>
-          </div>
-        </header>
+          </header>
+        </FadeIn>
 
         {/* Regulatory Framework Banner */}
-        <div className="mb-12 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-orange-500/10 via-amber-500/5 to-transparent border border-orange-200 dark:border-orange-900/50 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <div className="p-3 bg-orange-600 text-white rounded-xl shrink-0 shadow-md">
-            <FileCheck className="w-6 h-6" />
+        <FadeIn direction="up" delay={0.1}>
+          <div className="mb-12 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-orange-500/10 via-amber-500/5 to-transparent border border-orange-200 dark:border-orange-900/50 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div className="p-3 bg-orange-600 text-white rounded-xl shrink-0 shadow-md">
+              <FileCheck className="w-6 h-6" />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-sm sm:text-base font-bold text-neutral-900 dark:text-white">
+                {ui.frameworkTitle}
+              </h2>
+              <p className="mt-1 text-xs sm:text-sm text-neutral-700 dark:text-neutral-200 leading-relaxed">
+                {ui.frameworkDesc}
+              </p>
+            </div>
           </div>
-          <div className="flex-1">
-            <h2 className="text-sm sm:text-base font-bold text-neutral-900 dark:text-white">
-              {ui.frameworkTitle}
-            </h2>
-            <p className="mt-1 text-xs sm:text-sm text-neutral-700 dark:text-neutral-200 leading-relaxed">
-              {ui.frameworkDesc}
-            </p>
-          </div>
-        </div>
+        </FadeIn>
 
         {/* Main Grid: Sticky Sidebar + Content Sections */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Sidebar / Table of Contents (Desktop) */}
           <aside className="lg:col-span-4 hidden lg:block">
-            <div className="sticky top-28 space-y-6">
-              <div className="bg-white dark:bg-neutral-900/90 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-5 shadow-sm">
-                <div className="flex items-center justify-between mb-4 pb-3 border-b border-neutral-100 dark:border-neutral-800">
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-300">
-                    {content.sumario_titulo}
-                  </h3>
-                  <span className="text-[11px] font-mono text-orange-600 dark:text-orange-400">
-                    {content.secoes.length} seções
-                  </span>
-                </div>
+            <FadeIn direction="left" duration={0.5}>
+              <div className="sticky top-28 space-y-6">
+                <div className="bg-white dark:bg-neutral-900/90 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-5 shadow-sm">
+                  <div className="flex items-center justify-between mb-4 pb-3 border-b border-neutral-100 dark:border-neutral-800">
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-300">
+                      {content.sumario_titulo}
+                    </h3>
+                    <span className="text-[11px] font-mono text-orange-600 dark:text-orange-400">
+                      {content.secoes.length} seções
+                    </span>
+                  </div>
 
-                <nav className="space-y-1" aria-label="Sumário de Seções">
-                  {content.secoes.map((secao) => {
-                    const isActive = activeSection === secao.id;
-                    return (
-                      <a
-                        key={secao.id}
-                        href={`#${secao.id}`}
-                        className={`group flex items-center justify-between px-3 py-2 text-xs rounded-xl font-medium transition-all ${
-                          isActive
-                            ? "bg-orange-50 dark:bg-orange-950/50 text-orange-700 dark:text-orange-400 font-semibold shadow-xs"
-                            : "text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white"
-                        }`}
-                      >
-                        <span className="truncate pr-2">{secao.titulo}</span>
-                        <span
-                          className={`text-[10px] font-mono transition-opacity ${
+                  <nav className="space-y-1" aria-label="Sumário de Seções">
+                    {content.secoes.map((secao) => {
+                      const isActive = activeSection === secao.id;
+                      return (
+                        <a
+                          key={secao.id}
+                          href={`#${secao.id}`}
+                          className={`group flex items-center justify-between px-3 py-2 text-xs rounded-xl font-medium transition-all ${
                             isActive
-                              ? "opacity-100 text-orange-600 dark:text-orange-400"
-                              : "opacity-40 group-hover:opacity-100"
+                              ? "bg-orange-50 dark:bg-orange-950/50 text-orange-700 dark:text-orange-400 font-semibold shadow-xs"
+                              : "text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white"
                           }`}
                         >
-                          {secao.numero}
-                        </span>
-                      </a>
-                    );
-                  })}
-                </nav>
-              </div>
-
-              {/* DPO Quick Card */}
-              <div className="p-5 rounded-2xl bg-neutral-100/80 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800">
-                <div className="flex items-center gap-2 text-xs font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
-                  <Mail className="w-4 h-4 text-orange-600 dark:text-orange-400" />
-                  <span>{content.dpo_info.titulo}</span>
+                          <span className="truncate pr-2">{secao.titulo}</span>
+                          <span
+                            className={`text-[10px] font-mono transition-opacity ${
+                              isActive
+                                ? "opacity-100 text-orange-600 dark:text-orange-400"
+                                : "opacity-40 group-hover:opacity-100"
+                            }`}
+                          >
+                            {secao.numero}
+                          </span>
+                        </a>
+                      );
+                    })}
+                  </nav>
                 </div>
-                <p className="text-xs text-neutral-700 dark:text-neutral-300 leading-relaxed mb-3">
-                  {content.dpo_info.descricao}
-                </p>
-                <a
-                  href={`mailto:${content.dpo_info.email}?subject=LGPD%20-%20NFT%20Logistics`}
-                  className="inline-flex items-center justify-center w-full gap-2 px-3.5 py-2 text-xs font-medium text-white bg-orange-600 hover:bg-orange-700 active:bg-orange-800 rounded-xl shadow-sm transition-all"
-                >
-                  <span>{content.dpo_info.email}</span>
-                </a>
-                <p className="mt-2.5 text-[11px] text-neutral-600 dark:text-neutral-300 text-center">
-                  {content.dpo_info.tempo_resposta}
-                </p>
+
+                {/* DPO Quick Card */}
+                <div className="p-5 rounded-2xl bg-neutral-100/80 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800">
+                  <div className="flex items-center gap-2 text-xs font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
+                    <Mail className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+                    <span>{content.dpo_info.titulo}</span>
+                  </div>
+                  <p className="text-xs text-neutral-700 dark:text-neutral-300 leading-relaxed mb-3">
+                    {content.dpo_info.descricao}
+                  </p>
+                  <a
+                    href={`mailto:${content.dpo_info.email}?subject=LGPD%20-%20NFT%20Logistics`}
+                    className="inline-flex items-center justify-center w-full gap-2 px-3.5 py-2 text-xs font-medium text-white bg-orange-600 hover:bg-orange-700 active:bg-orange-800 rounded-xl shadow-sm transition-all"
+                  >
+                    <span>{content.dpo_info.email}</span>
+                  </a>
+                  <p className="mt-2.5 text-[11px] text-neutral-600 dark:text-neutral-300 text-center">
+                    {content.dpo_info.tempo_resposta}
+                  </p>
+                </div>
               </div>
-            </div>
+            </FadeIn>
           </aside>
 
           {/* Main Article Content */}
@@ -346,103 +353,106 @@ export default function PrivacyPolicyView({ lang }: { lang: LanguageCode }) {
               const IconComp = ICON_MAP[secao.icone] || FileText;
 
               return (
-                <section
-                  key={secao.id}
-                  id={secao.id}
-                  className="scroll-mt-32 p-6 sm:p-8 bg-white dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-xs transition-shadow hover:shadow-md"
-                >
-                  {/* Section Title & Icon */}
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="p-2.5 rounded-xl bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 shrink-0">
-                      <IconComp className="w-5 h-5" />
+                <FadeIn key={secao.id} direction="up" distance={20}>
+                  <section
+                    id={secao.id}
+                    className="scroll-mt-32 p-6 sm:p-8 bg-white dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-xs transition-shadow hover:shadow-md"
+                  >
+                    {/* Section Title & Icon */}
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="p-2.5 rounded-xl bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 shrink-0">
+                        <IconComp className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <span className="text-xs font-mono font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wider">
+                          Seção {secao.numero}
+                        </span>
+                        <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white mt-0.5">
+                          {secao.titulo}
+                        </h2>
+                      </div>
                     </div>
-                    <div>
-                      <span className="text-xs font-mono font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wider">
-                        Seção {secao.numero}
-                      </span>
-                      <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white mt-0.5">
-                        {secao.titulo}
-                      </h2>
-                    </div>
-                  </div>
 
-                  {/* Section Paragraphs */}
-                  <div className="space-y-4 text-sm sm:text-base text-neutral-700 dark:text-neutral-200 leading-relaxed">
-                    {secao.paragrafos.map((paragrafo, idx) => (
-                      <p key={idx}>{paragrafo}</p>
-                    ))}
-                  </div>
-
-                  {/* Structured Items / Subsections if present */}
-                  {secao.itens && secao.itens.length > 0 && (
-                    <div className="mt-6 space-y-3 pt-6 border-t border-neutral-100 dark:border-neutral-800/80">
-                      {secao.itens.map((item, itemIdx) => (
-                        <div
-                          key={itemIdx}
-                          className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950/50 border border-neutral-100 dark:border-neutral-800/60"
-                        >
-                          <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
-                            {item.titulo}
-                          </h3>
-                          <p className="mt-1.5 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed pl-3.5">
-                            {item.detalhe}
-                          </p>
-                        </div>
+                    {/* Section Paragraphs */}
+                    <div className="space-y-4 text-sm sm:text-base text-neutral-700 dark:text-neutral-200 leading-relaxed">
+                      {secao.paragrafos.map((paragrafo, idx) => (
+                        <p key={idx}>{paragrafo}</p>
                       ))}
                     </div>
-                  )}
-                </section>
+
+                    {/* Structured Items / Subsections if present */}
+                    {secao.itens && secao.itens.length > 0 && (
+                      <div className="mt-6 space-y-3 pt-6 border-t border-neutral-100 dark:border-neutral-800/80">
+                        {secao.itens.map((item, itemIdx) => (
+                          <div
+                            key={itemIdx}
+                            className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950/50 border border-neutral-100 dark:border-neutral-800/60"
+                          >
+                            <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 flex items-center gap-2">
+                              <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                              {item.titulo}
+                            </h3>
+                            <p className="mt-1.5 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed pl-3.5">
+                              {item.detalhe}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </section>
+                </FadeIn>
               );
             })}
 
             {/* Rights Callout Box */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-800 text-white shadow-xl relative overflow-hidden">
-              <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-orange-500/20 text-orange-300 border border-orange-400/30 mb-4">
-                  <UserCheck className="w-4 h-4 text-orange-400" />
-                  <span>{ui.rightsCalloutTitle}</span>
-                </div>
-                <h3 className="text-xl sm:text-2xl font-bold tracking-tight mb-3">
-                  {content.dpo_info.titulo}
-                </h3>
-                <p className="text-sm text-neutral-200 max-w-2xl leading-relaxed mb-6">
-                  {ui.rightsCalloutDesc} {content.dpo_info.descricao}
-                </p>
+            <FadeIn direction="up">
+              <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-800 text-white shadow-xl relative overflow-hidden">
+                <div className="relative z-10">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-orange-500/20 text-orange-300 border border-orange-400/30 mb-4">
+                    <UserCheck className="w-4 h-4 text-orange-400" />
+                    <span>{ui.rightsCalloutTitle}</span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight mb-3">
+                    {content.dpo_info.titulo}
+                  </h3>
+                  <p className="text-sm text-neutral-200 max-w-2xl leading-relaxed mb-6">
+                    {ui.rightsCalloutDesc} {content.dpo_info.descricao}
+                  </p>
 
-                <div className="flex flex-wrap items-center gap-3">
-                  <a
-                    href={`mailto:${content.dpo_info.email}?subject=Solicitacao%20de%20Privacidade%20-%20NFT%20Logistics`}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl bg-orange-600 hover:bg-orange-500 text-white shadow-md hover:shadow-lg transition-all"
-                  >
-                    <Mail className="w-4 h-4" />
-                    <span>{ui.contactDpoBtn}</span>
-                  </a>
-
-                  {contatosData?.whatsapp?.[0] && (
+                  <div className="flex flex-wrap items-center gap-3">
                     <a
-                      href={`https://wa.me/${contatosData.whatsapp[0].replace(
-                        /\D/g,
-                        ""
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/15 transition-all"
+                      href={`mailto:${content.dpo_info.email}?subject=Solicitacao%20de%20Privacidade%20-%20NFT%20Logistics`}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl bg-orange-600 hover:bg-orange-500 text-white shadow-md hover:shadow-lg transition-all"
                     >
-                      <span>WhatsApp: {contatosData.whatsapp[0]}</span>
+                      <Mail className="w-4 h-4" />
+                      <span>{ui.contactDpoBtn}</span>
                     </a>
-                  )}
-                </div>
 
-                <div className="mt-6 pt-6 border-t border-neutral-700 flex flex-wrap items-center justify-between text-xs text-neutral-300 gap-2">
-                  <span className="flex items-center gap-1.5">
-                    <Building2 className="w-3.5 h-3.5 text-orange-400" />
-                    NFT Logistics - {content.dpo_info.endereco}
-                  </span>
-                  <span>{content.dpo_info.tempo_resposta}</span>
+                    {contatosData?.whatsapp?.[0] && (
+                      <a
+                        href={`https://wa.me/${contatosData.whatsapp[0].replace(
+                          /\D/g,
+                          ""
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/15 transition-all"
+                      >
+                        <span>WhatsApp: {contatosData.whatsapp[0]}</span>
+                      </a>
+                    )}
+                  </div>
+
+                  <div className="mt-6 pt-6 border-t border-neutral-700 flex flex-wrap items-center justify-between text-xs text-neutral-300 gap-2">
+                    <span className="flex items-center gap-1.5">
+                      <Building2 className="w-3.5 h-3.5 text-orange-400" />
+                      NFT Logistics - {content.dpo_info.endereco}
+                    </span>
+                    <span>{content.dpo_info.tempo_resposta}</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </FadeIn>
           </main>
         </div>
       </div>

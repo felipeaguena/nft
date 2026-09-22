@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { FadeIn } from "@/src/components/animations";
 
 export type LanguageCode = "pt" | "en" | "cn";
 
@@ -167,7 +170,9 @@ export default function Texto2Colunas({
         } ${containerClassName}`}
       >
         {/* Coluna Esquerda: 40% de largura - Tag, Título e Subtítulo */}
-        <div
+        <FadeIn
+          direction={reverse ? "right" : "left"}
+          duration={0.6}
           className={`w-full md:w-[40%] flex flex-col space-y-4 ${leftClassName}`}
         >
           {contentTag && (
@@ -198,10 +203,13 @@ export default function Texto2Colunas({
               {contentSubtitulo}
             </div>
           )}
-        </div>
+        </FadeIn>
 
         {/* Coluna Direita: 60% de largura - Texto comum */}
-        <div
+        <FadeIn
+          direction={reverse ? "left" : "right"}
+          duration={0.6}
+          delay={0.1}
           className={`w-full md:w-[60%] flex flex-col space-y-4 ${rightClassName}`}
         >
           {typeof contentText === "string" ? (
@@ -231,7 +239,7 @@ export default function Texto2Colunas({
           )}
 
           {actions && <div className="pt-2">{actions}</div>}
-        </div>
+        </FadeIn>
       </div>
     </Component>
   );
