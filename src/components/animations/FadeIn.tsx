@@ -11,19 +11,23 @@ export interface FadeInProps extends HTMLMotionProps<"div"> {
   duration?: number;
   delay?: number;
   distance?: number;
+  scale?: number;
   once?: boolean;
   amount?: number | "some" | "all";
+  margin?: string;
   className?: string;
 }
 
 export function FadeIn({
   children,
   direction = "up",
-  duration = 0.6,
+  duration = 0.55,
   delay = 0,
-  distance = 24,
-  once = true,
-  amount = 0.2,
+  distance = 20,
+  scale = 1,
+  once = false,
+  amount = 0.12,
+  margin,
   className = "",
   ...props
 }: FadeInProps) {
@@ -50,11 +54,17 @@ export function FadeIn({
       opacity: 0,
       x,
       y,
+      scale: scale !== 1 ? scale : 1,
+      transition: {
+        duration: 0.25,
+        ease: "easeInOut",
+      },
     },
     visible: {
       opacity: 1,
       x: 0,
       y: 0,
+      scale: 1,
       transition: {
         duration,
         delay,
@@ -68,7 +78,7 @@ export function FadeIn({
       variants={variants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, amount }}
+      viewport={{ once, amount, margin }}
       className={className}
       {...props}
     >

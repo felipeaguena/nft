@@ -10,20 +10,28 @@ export interface FadeInStaggerProps extends HTMLMotionProps<"div"> {
   delayChildren?: number;
   once?: boolean;
   amount?: number | "some" | "all";
+  margin?: string;
   className?: string;
 }
 
 export function FadeInStagger({
   children,
-  staggerDelay = 0.1,
+  staggerDelay = 0.08,
   delayChildren = 0,
-  once = true,
-  amount = 0.15,
+  once = false,
+  amount = 0.1,
+  margin,
   className = "",
   ...props
 }: FadeInStaggerProps) {
   const containerVariants: Variants = {
-    hidden: { opacity: 0 },
+    hidden: {
+      opacity: 0,
+      transition: {
+        staggerChildren: 0.04,
+        staggerDirection: -1,
+      },
+    },
     visible: {
       opacity: 1,
       transition: {
@@ -38,7 +46,7 @@ export function FadeInStagger({
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, amount }}
+      viewport={{ once, amount, margin }}
       className={className}
       {...props}
     >
@@ -52,14 +60,16 @@ export interface FadeInStaggerItemProps extends HTMLMotionProps<"div"> {
   direction?: FadeDirection;
   distance?: number;
   duration?: number;
+  scale?: number;
   className?: string;
 }
 
 export function FadeInStaggerItem({
   children,
   direction = "up",
-  distance = 24,
-  duration = 0.55,
+  distance = 20,
+  duration = 0.5,
+  scale = 1,
   className = "",
   ...props
 }: FadeInStaggerItemProps) {
@@ -86,11 +96,17 @@ export function FadeInStaggerItem({
       opacity: 0,
       x,
       y,
+      scale: scale !== 1 ? scale : 1,
+      transition: {
+        duration: 0.2,
+        ease: "easeInOut",
+      },
     },
     visible: {
       opacity: 1,
       x: 0,
       y: 0,
+      scale: 1,
       transition: {
         duration,
         ease: [0.21, 0.47, 0.32, 0.98],
