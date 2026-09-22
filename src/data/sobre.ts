@@ -206,7 +206,7 @@ import { LanguageCode } from '@/src/types';
             icon: Palette,
             title: "Obras de Arte & Peças de Museu",
             desc: "Embalagens climatizadas especiais, escolta armada quando necessária e manuseio cirúrgico para mostras e bienais.",
-            link: "/pt/solucoes/logisca-obras-arte",
+            link: "/pt/solucoes/logistica-obras-arte",
             image: "/imagens/nft-art-2.webp",
             category: "Acervos & Mostras",
           },

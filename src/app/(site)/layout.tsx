@@ -2,6 +2,7 @@ import Nav from "@/src/components/Nav";
 import Footer from "@/src/components/Footer";
 import CookieConsent from "@/src/components/CookieConsent";
 import WhatsAppButton from "@/src/components/WhatsAppButton";
+import BottomBlurGradient from "@/src/components/BottomBlurGradient";
 
 export default function SiteLayout({
   children,
@@ -14,6 +15,7 @@ export default function SiteLayout({
       <div className="flex-1">{children}</div>
       <Footer />
       <CookieConsent />
+      <BottomBlurGradient />
       <WhatsAppButton />
     </>
   );
