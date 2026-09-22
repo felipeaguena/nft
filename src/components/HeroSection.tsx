@@ -384,7 +384,7 @@ export default function HeroSection({
         )}
 
         {/* Título Principal */}
-        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white max-w-4xl leading-tight sm:leading-[1.15] drop-shadow-lg">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white max-w-5xl leading-tight sm:leading-[1.15] drop-shadow-lg">
           {content.title}
         </h1>
 

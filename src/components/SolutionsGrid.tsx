@@ -1,200 +1,184 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ShieldCheck, TrendingUp, Cpu, Globe2, LayoutTemplate, ArrowRight } from "lucide-react";
-import { solutions as solutionsRaw } from "@/src/data/db";
-import HealthCTA from "./HealthCTA";
-import CTA from "./CTA";
-
-export type LanguageCode = "pt" | "en" | "cn";
-
-interface SolutionSectionItem {
-  title: string;
-  description: string;
-  texto: string;
-  link: string;
-}
-
-interface SolutionGroup {
-  title: string;
-  description: string;
-  sections: Record<string, SolutionSectionItem>;
-}
-
-type SolutionsData = {
-  pt: {
-    solucoes: SolutionGroup;
-  };
-  en: {
-    solutions: SolutionGroup;
-  };
-  cn: {
-    solutions: SolutionGroup;
-  };
-};
-
-const solutionsData = solutionsRaw as unknown as SolutionsData;
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { CONTENT } from "@/src/data/solucoes";
+import { LanguageCode } from "@/src/types";
 
 export interface SolutionsGridProps {
   /**
-   * Idioma das soluções a exibir.
-   * Se não for informado, detecta automaticamente pela rota atual (/pt, /en, /cn)
-   * com fallback padrão para "pt".
+   * Idioma das soluções a exibir ('pt' | 'en' | 'cn').
+   * Se omitido, tenta resolver pela URL ou fallback para 'pt'.
    */
   lang?: LanguageCode;
-  /** Texto do botão interno de cada card (opcional) */
-  cardButtonText?: string;
-  /** Quantidade de colunas no desktop (opcional, padrão: 2) */
-  columns?: 2 | 3 | 4;
-  /** Classes adicionais para o container externo */
+  /**
+   * Variante de apresentação do cabeçalho:
+   * - 'solutions': usa os textos da página de soluções ("Nossas Principais Soluções")
+   * - 'home': usa os textos da página inicial ("Inteligência Logística de Ponta a Ponta")
+   * Padrão: 'solutions'
+   */
+  variant?: "solutions" | "home";
+  /** Sobrescreve a tag/badge do cabeçalho */
+  tag?: string;
+  /** Sobrescreve o título principal do cabeçalho */
+  title?: string;
+  /** Sobrescreve a descrição do cabeçalho */
+  description?: string;
+  /** Sobrescreve o rótulo do botão dos cards */
+  buttonLabel?: string;
+  /** ID para âncoras na página (padrão: 'solucoes-grid') */
+  id?: string;
+  /** Classes CSS adicionais para a tag <section> */
   className?: string;
-  /** Classes adicionais para a tag grid interna */
-  gridClassName?: string;
-  /** Classes adicionais para o container centralizado max-w-7xl (opcional) */
-  containerClassName?: string;
-  /** Se deve envolver em uma tag <section> com espaçamento padrão (padrão: true) */
-  asSection?: boolean;
-  /** Se deve envolver no container centralizado max-w-7xl (padrão: true) */
-  withContainer?: boolean;
 }
 
-const DEFAULT_CONFIG: Record<
+const HOME_HEADER_TEXTS: Record<
   LanguageCode,
-  {
-    cardButtonText: string;
-  }
+  { tag: string; title: string; description: string }
 > = {
   pt: {
-    cardButtonText: "Saiba mais",
+    tag: "Soluções Estratégicas",
+    title: "Inteligência Logística de Ponta a Ponta",
+    description:
+      "Soluções completas com gestão aduaneira e logística multimodal integrada para desarmar a burocracia brasileira.",
   },
   en: {
-    cardButtonText: "Learn more",
+    tag: "Strategic Solutions",
+    title: "End-to-End Logistics Intelligence",
+    description:
+      "End-to-end solutions combining customs management and multimodal logistics to eliminate Brazilian trade bureaucracy.",
   },
   cn: {
-    cardButtonText: "了解更多",
+    tag: "专业解决方案",
+    title: "端到端国际物流与关务智慧",
+    description:
+      "提供全流程物流运输、关务申报与特殊制度支持，化繁为简，消除巴西复杂官僚风险。",
   },
 };
 
-/**
- * Normaliza as rotas para garantir compatibilidade com as rotas reais do Next.js
- */
-function normalizeRoute(link: string, lang: LanguageCode): string {
-  if (link.startsWith("/pt") || link.startsWith("/en") || link.startsWith("/cn")) {
-    return link;
-  }
-
-  if (lang === "pt" && link.startsWith("/solucoes")) {
-    if (link === "/solucoes/feiras-eventos") {
-      return "/pt/solucoes/feiras-e-eventos";
-    }
-    return `/pt${link}`;
-  }
-
-  return link;
-}
-
 export default function SolutionsGrid({
   lang,
-  cardButtonText,
-  columns = 2,
+  variant = "solutions",
+  tag,
+  title,
+  description,
+  buttonLabel,
+  id = "solucoes-grid",
   className = "",
-  gridClassName = "",
-  containerClassName = "",
-  asSection = true,
-  withContainer = true,
 }: SolutionsGridProps) {
   const pathname = usePathname();
 
-  // Detecção automática de idioma caso não seja passado explicitamente via prop
   const resolvedLang: LanguageCode = React.useMemo(() => {
-    if (lang) return lang;
+    if (lang && (lang === "pt" || lang === "en" || lang === "cn")) {
+      return lang;
+    }
     if (pathname?.startsWith("/pt")) return "pt";
     if (pathname?.startsWith("/cn")) return "cn";
     if (pathname?.startsWith("/en")) return "en";
     return "pt";
   }, [lang, pathname]);
 
-  const config = DEFAULT_CONFIG[resolvedLang];
+  const content = CONTENT[resolvedLang] || CONTENT.pt;
+  const solutionsGridData = content.solutionsGrid;
 
-  // Obtenção dos dados do arquivo solutions.json para o idioma resolvido
-  const currentLangData = solutionsData[resolvedLang];
-  const groupData: SolutionGroup =
-    resolvedLang === "pt"
-      ? (currentLangData as { solucoes: SolutionGroup }).solucoes
-      : (currentLangData as { solutions: SolutionGroup }).solutions;
+  const homeHeader = HOME_HEADER_TEXTS[resolvedLang] || HOME_HEADER_TEXTS.pt;
 
-  const sectionItems: SolutionSectionItem[] = Object.values(groupData?.sections || {});
-  const itemButtonLabel = cardButtonText || config.cardButtonText;
-
-  const columnClasses: Record<2 | 3 | 4, string> = {
-    2: "grid-cols-1 sm:grid-cols-2",
-    3: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
-    4: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
-  };
-
-  const gridContent = (
-    <div
-      className={`grid ${columnClasses[columns]} gap-5 sm:gap-6 ${gridClassName}`}
-    >
-      {sectionItems.map((item, index) => {
-        const targetHref = normalizeRoute(item.link, resolvedLang);
-
-        return (
-          <Link
-            key={`${resolvedLang}-${index}-${item.title}`}
-            href={targetHref}
-            className="group relative flex flex-col justify-between p-6 sm:p-7 min-h-[300px] sm:min-h-[340px] rounded-2xl transition-all duration-300 ease-out border shadow-xs hover:shadow-xl hover:shadow-orange-600/15 hover:-translate-y-1.5 bg-neutral-100 dark:bg-neutral-900/90 text-neutral-900 dark:text-neutral-100 border-neutral-200 dark:border-neutral-800 hover:bg-orange-600 dark:hover:bg-orange-600 hover:border-orange-600 dark:hover:border-orange-600"
-          >
-            {/* Topo do card: Título e Descrição/Texto */}
-            <div>
-              {/* Título do Serviço */}
-              <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-white group-hover:text-white transition-colors duration-200 leading-snug">
-                {item.title}
-              </h3>
-
-              {/* Texto / Descrição detalhada */}
-              <p className="mt-3 sm:mt-4 text-sm sm:text-base text-neutral-600 dark:text-neutral-300 group-hover:text-orange-50/95 transition-colors duration-200 leading-relaxed line-clamp-5">
-                {item.texto || item.description}
-              </p>
-            </div>
-
-            {/* Rodapé do card: Texto parecido com um botão */}
-            <div className="mt-6 pt-4 border-t border-neutral-200/80 dark:border-neutral-800/80 group-hover:border-orange-500/50 transition-colors duration-200">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 bg-neutral-200/80 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200 border border-neutral-300/80 dark:border-neutral-700/80 group-hover:bg-white group-hover:text-orange-600 group-hover:border-white shadow-xs">
-                <span>{itemButtonLabel}</span>
-                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
-              </span>
-            </div>
-          </Link>
-        );
-      })}
-    </div>
-  );
-
-  const containerContent = withContainer ? (
-    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${containerClassName}`}>
-      {gridContent}
-    </div>
-  ) : (
-    gridContent
-  );
-
-  if (!asSection) {
-    return containerContent;
-  }
+  const currentTag =
+    tag ?? (variant === "home" ? homeHeader.tag : solutionsGridData.tag);
+  const currentTitle =
+    title ?? (variant === "home" ? homeHeader.title : solutionsGridData.title);
+  const currentDescription =
+    description ??
+    (variant === "home" ? homeHeader.description : solutionsGridData.description);
+  const currentButtonLabel = buttonLabel ?? solutionsGridData.buttonLabel;
 
   return (
-    <section className={`w-full py-12 sm:py-16 lg:py-20 bg-transparent ${className}`}>
-      {containerContent}
-      <div>
-        <div className="max-w-7xl mx-auto">
-          <HealthCTA className="lg:-my-6 md:-my-4 sm:-my-3 -my-2"/>
+    <section
+      id={id}
+      className={`relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200 ${className}`}
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Cabeçalho */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
+            {currentTag}
+          </span>
+          <h2 className="mt-4 text-4xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
+            {currentTitle}
+          </h2>
+          <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-base sm:text-base leading-relaxed">
+            {currentDescription}
+          </p>
+        </div>
+
+        {/* Grid de 4 cards (2x2 em telas médias/grandes) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {solutionsGridData.items.map((item) => {
+            return (
+              <div
+                key={item.id}
+                className="group relative rounded-3xl overflow-hidden bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/90 shadow-md dark:shadow-xl transition-all duration-300 hover:border-orange-500/60 hover:shadow-2xl hover:shadow-orange-600/10 dark:hover:shadow-orange-600/20 flex flex-col justify-between"
+              >
+                <div>
+                  {/* Imagem de Destaque da Solução com Zoom Suave */}
+                  <div className="relative w-full aspect-[16/9] overflow-hidden bg-neutral-200 dark:bg-neutral-800">
+                    <Image
+                      src={item.image}
+                      alt={item.imageAlt || item.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent pointer-events-none" />
+                  </div>
+
+                  {/* Conteúdo textual do Card */}
+                  <div className="p-7 sm:p-10">
+                    {/* Título */}
+                    <h3 className="text-[1.75rem] sm:text-3xl font-bold text-neutral-900 dark:text-white mb-3 tracking-tight leading-tight">
+                      {item.title}
+                    </h3>
+
+                    {/* Descrição */}
+                    <p className="text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed mb-6">
+                      {item.description}
+                    </p>
+
+                    {/* Bullets de diferenciais */}
+                    <ul className="space-y-2.5 border-t border-neutral-200/80 dark:border-neutral-800/80 pt-6">
+                      {item.bullets.map((b, bIdx: number) => (
+                        <li
+                          key={bIdx}
+                          className="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700 dark:text-neutral-200"
+                        >
+                          <CheckCircle2 className="w-4 h-4 text-orange-600 dark:text-orange-400 shrink-0 mt-0.5" />
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Botão de ação */}
+                <div className="px-8 pb-8 sm:px-10 sm:pb-10 pt-0">
+                  <Link
+                    href={item.href}
+                    className="inline-flex items-center justify-between w-full px-5 py-3.5 rounded-xl bg-neutral-200/70 hover:bg-orange-600 hover:text-white dark:bg-white/5 dark:hover:bg-orange-600 border border-neutral-300/80 hover:border-orange-600 dark:border-white/10 text-neutral-800 dark:text-white text-sm font-semibold transition-all duration-200 group-hover:shadow-md cursor-pointer"
+                  >
+                    <span>{currentButtonLabel}</span>
+                    <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
 
-export { SolutionsGrid, SolutionsGrid as SolutionsCards };
+export { SolutionsGrid };

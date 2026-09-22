@@ -65,14 +65,14 @@ export default function Hero({
       >
         {/* Caso seja passado prop title ou subtitle diretamente */}
         {title && (
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-tight mb-6 drop-shadow-md">
+          <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight mb-6 drop-shadow-md leading-tight sm:leading-[1.15]">
             {title}
           </h1>
         )}
 
         {/* Children para títulos ou estruturas personalizadas por página */}
         {typeof children === "string" ? (
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-tight max-w-5xl leading-tight drop-shadow-md mb-6">
+          <h1 className="text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight max-w-5xl leading-tight sm:leading-[1.15] drop-shadow-md mb-6">
             {children}
           </h1>
         ) : (

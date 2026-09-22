@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 import Button from "../Button";
 import HealthCTA from "../HealthCTA";
-import SolutionsShowcase from "../SolutionsShowcase";
+import SolutionsGrid from "../SolutionsGrid";
 
 import { LanguageCode } from "@/src/types";
 import { HOME_CONTENT } from "@/src/data/home";
@@ -112,7 +112,7 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
       </section>
 
       {/* 3. VITRINE DE SOLUÇÕES ESTRATÉGICAS */}
-      <SolutionsShowcase lang={lang} />
+      <SolutionsGrid lang={lang} variant="home" />
 
       {/* 4. FLUXO OPERACIONAL EM 4 ETAPAS (COMO FUNCIONA) */}
       <section className="py-16 sm:py-24 bg-transparent">

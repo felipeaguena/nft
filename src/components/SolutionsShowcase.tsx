@@ -121,7 +121,7 @@ export default function SolutionsShowcase({
         {/* Cabeçalho da Seção */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
+            <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
               {currentTitle}
             </h2>
             <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
@@ -163,7 +163,7 @@ export default function SolutionsShowcase({
                       </div>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-white mb-3 transition-colors">
+                    <h3 className="text-2xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-white mb-3 transition-colors leading-tight">
                       {item.title}
                     </h3>
                     <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-200 leading-relaxed mb-6">
