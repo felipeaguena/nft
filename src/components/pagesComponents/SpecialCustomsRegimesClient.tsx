@@ -91,19 +91,22 @@ export default function SpecialCustomsRegimesClient({
 
             {/* Coluna da Direita: Texto */}
             <div className="lg:col-span-6 space-y-6">
-              <FadeIn direction="left" delay={0.2} duration={0.7} className="space-y-6">
+              <FadeIn direction="left" delay={0.05}>
                 <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
                   {content.block2.tag}
                 </span>
+              </FadeIn>
 
+              <FadeIn direction="left" delay={0.15}>
                 <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
                   {content.block2.title}
                 </h2>
+              </FadeIn>
 
-                <div className="space-y-4 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
-                  {content.block2.paragraphs.map((p, idx) => (
+              <div className="space-y-4 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
+                {content.block2.paragraphs.map((p, idx) => (
+                  <FadeIn key={idx} direction="left" delay={0.25 + idx * 0.1}>
                     <p
-                      key={idx}
                       className={
                         idx === content.block2.paragraphs.length - 1
                           ? "text-neutral-700 dark:text-neutral-300 text-sm"
@@ -112,9 +115,9 @@ export default function SpecialCustomsRegimesClient({
                     >
                       {p}
                     </p>
-                  ))}
-                </div>
-              </FadeIn>
+                  </FadeIn>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -125,23 +128,27 @@ export default function SpecialCustomsRegimesClient({
       {/* ========================================================================= */}
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <FadeIn direction="up">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <FadeIn direction="up" delay={0.05}>
               <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
                 {content.regimes.tag}
               </span>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15}>
               <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
                 {content.regimes.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.25}>
               <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
                 {content.regimes.description}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {/* Card 1: Admissão Temporária */}
-            <FadeInStaggerItem>
+            <FadeInStaggerItem index={0}>
               <div className="group relative rounded-2xl p-8 bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-xl transition-all duration-300 hover:bg-orange-600 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-600/20 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between h-full">
                 <div>
                   <div className="w-14 h-14 rounded-2xl bg-orange-100/80 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-800/50 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-orange-600 group-hover:border-transparent transition-all duration-300">
@@ -166,7 +173,7 @@ export default function SpecialCustomsRegimesClient({
             </FadeInStaggerItem>
 
             {/* Card 2: Drawback */}
-            <FadeInStaggerItem>
+            <FadeInStaggerItem index={1}>
               <div className="group relative rounded-2xl p-8 bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-xl transition-all duration-300 hover:bg-orange-600 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-600/20 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between h-full">
                 <div>
                   <div className="w-14 h-14 rounded-2xl bg-orange-100/80 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-800/50 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-orange-600 group-hover:border-transparent transition-all duration-300">
@@ -191,7 +198,7 @@ export default function SpecialCustomsRegimesClient({
             </FadeInStaggerItem>
 
             {/* Card 3: Entreposto Aduaneiro & RECOF */}
-            <FadeInStaggerItem>
+            <FadeInStaggerItem index={2}>
               <div className="group relative rounded-2xl p-8 bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-xl transition-all duration-300 hover:bg-orange-600 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-600/20 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between h-full">
                 <div>
                   <div className="w-14 h-14 rounded-2xl bg-orange-100/80 dark:bg-orange-950/80 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-800/50 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-orange-600 group-hover:border-transparent transition-all duration-300">
@@ -226,18 +233,21 @@ export default function SpecialCustomsRegimesClient({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Coluna da Esquerda: Título, Textos, Botão e Card Visual */}
             <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-              <FadeIn direction="right" duration={0.7} className="space-y-6">
+              <FadeIn direction="right" delay={0.05}>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/60 text-orange-600 dark:text-orange-400 text-xs font-semibold uppercase tracking-wider">
                   <span>{content.whyChoose.tag}</span>
                 </div>
+              </FadeIn>
 
+              <FadeIn direction="right" delay={0.15}>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
                   {content.whyChoose.title}
                 </h2>
+              </FadeIn>
 
-                {content.whyChoose.paragraphs.map((p, idx) => (
+              {content.whyChoose.paragraphs.map((p, idx) => (
+                <FadeIn key={idx} direction="right" delay={0.25 + idx * 0.1}>
                   <p
-                    key={idx}
                     className={
                       idx === 0
                         ? "text-neutral-700 dark:text-neutral-200 text-base sm:text-lg leading-relaxed"
@@ -246,19 +256,19 @@ export default function SpecialCustomsRegimesClient({
                   >
                     {p}
                   </p>
-                ))}
+                </FadeIn>
+              ))}
 
-                <div className="pt-4">
-                  <a
-                    href={whatsappHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-semibold text-sm sm:text-base transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-orange-600/25 cursor-pointer"
-                  >
-                    <span>{content.whyChoose.ctaTalk}</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
+              <FadeIn direction="right" delay={0.45} className="pt-4">
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-semibold text-sm sm:text-base transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-orange-600/25 cursor-pointer"
+                >
+                  <span>{content.whyChoose.ctaTalk}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </FadeIn>
             </div>
 
@@ -266,7 +276,7 @@ export default function SpecialCustomsRegimesClient({
             <div className="lg:col-span-7">
               <FadeInStagger className="flex flex-col gap-5">
                 {/* Card 1 */}
-                <FadeInStaggerItem>
+                <FadeInStaggerItem index={0}>
                   <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg">
                     <div className="flex items-start gap-5">
                       <div className="w-12 h-12 rounded-xl bg-orange-100/80 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
@@ -285,7 +295,7 @@ export default function SpecialCustomsRegimesClient({
                 </FadeInStaggerItem>
 
                 {/* Card 2 */}
-                <FadeInStaggerItem>
+                <FadeInStaggerItem index={1}>
                   <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg">
                     <div className="flex items-start gap-5">
                       <div className="w-12 h-12 rounded-xl bg-orange-100/80 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
@@ -304,7 +314,7 @@ export default function SpecialCustomsRegimesClient({
                 </FadeInStaggerItem>
 
                 {/* Card 3 */}
-                <FadeInStaggerItem>
+                <FadeInStaggerItem index={2}>
                   <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg">
                     <div className="flex items-start gap-5">
                       <div className="w-12 h-12 rounded-xl bg-orange-100/80 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
@@ -323,7 +333,7 @@ export default function SpecialCustomsRegimesClient({
                 </FadeInStaggerItem>
 
                 {/* Card 4 */}
-                <FadeInStaggerItem>
+                <FadeInStaggerItem index={3}>
                   <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg">
                     <div className="flex items-start gap-5">
                       <div className="w-12 h-12 rounded-xl bg-orange-100/80 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
@@ -356,23 +366,27 @@ export default function SpecialCustomsRegimesClient({
       {/* ========================================================================= */}
       <section className="relative w-full py-20 px-4 sm:px-6 lg:px-8 bg-neutral-100/70 dark:bg-neutral-900/60 border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <FadeIn direction="up">
-            <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <FadeIn direction="up" delay={0.05}>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/60 text-orange-600 dark:text-orange-400 text-xs font-semibold uppercase tracking-wider mb-4">
                 <span>{content.gallery.tag}</span>
               </div>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15}>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white mb-4">
                 {content.gallery.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.25}>
               <p className="text-neutral-600 dark:text-neutral-400 text-sm sm:text-base">
                 {content.gallery.description}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {content.gallery.items.map((item, idx) => (
-              <FadeInStaggerItem key={idx}>
+              <FadeInStaggerItem key={idx} index={idx}>
                 <div className="group relative rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-neutral-200/90 dark:border-neutral-800/90 shadow-md hover:shadow-2xl hover:border-orange-500/50 transition-all duration-300 flex flex-col h-full">
                   <div className="relative aspect-[4/3] w-full overflow-hidden">
                     <Image

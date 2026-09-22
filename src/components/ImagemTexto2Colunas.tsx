@@ -308,51 +308,66 @@ export default function ImagemTexto2Colunas({
         </FadeIn>
 
         {/* =========================================================================
-            COLUNA DE CONTEÚDO (TÍTULO, PARÁGRAFO E BOTÃO)
+            COLUNA DE CONTEÚDO (TÍTULO, PARÁGRAFO E BOTÃO) - ELEMENTOS INDIVIDUAIS
         ========================================================================= */}
-        <FadeIn
-          direction={isReversed ? "left" : "right"}
-          duration={0.6}
-          delay={0.1}
-          className={`w-full flex flex-col justify-center space-y-6 ${textOrderClasses} ${textColumnClassName}`}
-        >
+        <div className={`w-full flex flex-col justify-center space-y-6 ${textOrderClasses} ${textColumnClassName}`}>
           {/* Badge / Tag Opcional */}
           {contentTag && (
-            <div>
-              {typeof contentTag === "string" ? (
-                <span
-                  className={`inline-flex items-center px-3.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-orange-50 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-800/60 ${tagClassName}`}
-                >
-                  {contentTag}
-                </span>
-              ) : (
-                contentTag
-              )}
-            </div>
+            <FadeIn
+              direction={isReversed ? "left" : "right"}
+              delay={0.08}
+              duration={0.5}
+            >
+              <div>
+                {typeof contentTag === "string" ? (
+                  <span
+                    className={`inline-flex items-center px-3.5 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-orange-50 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-800/60 ${tagClassName}`}
+                  >
+                    {contentTag}
+                  </span>
+                ) : (
+                  contentTag
+                )}
+              </div>
+            </FadeIn>
           )}
 
           {/* Bloco de Título e Subtítulo */}
           {(contentTitle || contentSubtitle) && (
             <div className="space-y-3">
-              {contentTitle &&
-                (typeof contentTitle === "string" ? (
-                  <TitleTag
-                    className={`text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight ${titleClassName}`}
-                  >
-                    {contentTitle}
-                  </TitleTag>
-                ) : (
-                  contentTitle
-                ))}
+              {contentTitle && (
+                <FadeIn
+                  direction={isReversed ? "left" : "right"}
+                  delay={0.16}
+                  duration={0.6}
+                >
+                  {typeof contentTitle === "string" ? (
+                    <TitleTag
+                      className={`text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight ${titleClassName}`}
+                    >
+                      {contentTitle}
+                    </TitleTag>
+                  ) : (
+                    contentTitle
+                  )}
+                </FadeIn>
+              )}
 
-              {contentSubtitle &&
-                (typeof contentSubtitle === "string" ? (
-                  <p className="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 font-medium">
-                    {contentSubtitle}
-                  </p>
-                ) : (
-                  contentSubtitle
-                ))}
+              {contentSubtitle && (
+                <FadeIn
+                  direction={isReversed ? "left" : "right"}
+                  delay={0.24}
+                  duration={0.6}
+                >
+                  {typeof contentSubtitle === "string" ? (
+                    <p className="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 font-medium">
+                      {contentSubtitle}
+                    </p>
+                  ) : (
+                    contentSubtitle
+                  )}
+                </FadeIn>
+              )}
             </div>
           )}
 
@@ -366,47 +381,69 @@ export default function ImagemTexto2Colunas({
                       .split(/(?:<br\s*\/?>|\n\n)/gi)
                       .filter((p) => p.trim().length > 0)
                       .map((paragraph, index) => (
-                        <p
+                        <FadeIn
                           key={index}
-                          className="text-base sm:text-lg leading-relaxed text-neutral-700 dark:text-neutral-200 font-normal"
+                          direction={isReversed ? "left" : "right"}
+                          delay={0.28 + Math.min(index, 3) * 0.08}
+                          duration={0.55}
                         >
-                          {paragraph.trim()}
-                        </p>
+                          <p className="text-base sm:text-lg leading-relaxed text-neutral-700 dark:text-neutral-200 font-normal">
+                            {paragraph.trim()}
+                          </p>
+                        </FadeIn>
                       ))}
                   </div>
                 ) : (
-                  <p
-                    className={`text-base sm:text-lg leading-relaxed text-neutral-700 dark:text-neutral-200 font-normal whitespace-pre-line ${textClassName}`}
+                  <FadeIn
+                    direction={isReversed ? "left" : "right"}
+                    delay={0.28}
+                    duration={0.55}
                   >
-                    {contentText}
-                  </p>
+                    <p
+                      className={`text-base sm:text-lg leading-relaxed text-neutral-700 dark:text-neutral-200 font-normal whitespace-pre-line ${textClassName}`}
+                    >
+                      {contentText}
+                    </p>
+                  </FadeIn>
                 )
               ) : (
-                contentText
+                <FadeIn
+                  direction={isReversed ? "left" : "right"}
+                  delay={0.28}
+                  duration={0.55}
+                >
+                  {contentText}
+                </FadeIn>
               )}
             </div>
           )}
 
           {/* Botão de Ação / Custom Actions */}
           {(btnLabel || actions) && (
-            <div className="pt-2 flex flex-wrap items-center gap-4">
-              {btnLabel && (
-                <Button
-                  href={btnLink}
-                  variant={buttonVariant}
-                  size={buttonSize}
-                  rightIcon={renderDefaultButtonIcon()}
-                  target={buttonTarget}
-                  onClick={buttonOnClick}
-                  className={`group ${buttonClassName}`}
-                >
-                  {btnLabel}
-                </Button>
-              )}
-              {actions}
-            </div>
+            <FadeIn
+              direction={isReversed ? "left" : "right"}
+              delay={0.38}
+              duration={0.55}
+            >
+              <div className="pt-2 flex flex-wrap items-center gap-4">
+                {btnLabel && (
+                  <Button
+                    href={btnLink}
+                    variant={buttonVariant}
+                    size={buttonSize}
+                    rightIcon={renderDefaultButtonIcon()}
+                    target={buttonTarget}
+                    onClick={buttonOnClick}
+                    className={`group ${buttonClassName}`}
+                  >
+                    {btnLabel}
+                  </Button>
+                )}
+                {actions}
+              </div>
+            </FadeIn>
           )}
-        </FadeIn>
+        </div>
       </div>
     </Component>
   );

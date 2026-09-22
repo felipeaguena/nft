@@ -200,7 +200,7 @@ export default function Footer({ lang: propLang, className = "" }: FooterProps) 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-12">
         <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* ================= COLUNA 1: LOGO & EMPRESA ================= */}
-          <FadeInStaggerItem direction="up" distance={20} className="flex flex-col items-start space-y-4">
+          <FadeInStaggerItem index={0} direction="up" distance={20} className="flex flex-col items-start space-y-4">
             <Link
               href={homeLink}
               className="inline-flex items-center transition-opacity hover:opacity-90"
@@ -233,7 +233,7 @@ export default function Footer({ lang: propLang, className = "" }: FooterProps) 
           </FadeInStaggerItem>
 
           {/* ================= COLUNA 2: NAVEGAÇÃO ================= */}
-          <FadeInStaggerItem direction="up" distance={20}>
+          <FadeInStaggerItem index={1} direction="up" distance={20}>
             <h3 className="text-xs font-bold uppercase tracking-wider text-white mb-4 pb-1.5 border-b border-neutral-800 inline-block">
               {titles.navigation}
             </h3>
@@ -252,7 +252,7 @@ export default function Footer({ lang: propLang, className = "" }: FooterProps) 
           </FadeInStaggerItem>
 
           {/* ================= COLUNA 3: SOLUÇÕES ================= */}
-          <FadeInStaggerItem direction="up" distance={20}>
+          <FadeInStaggerItem index={2} direction="up" distance={20}>
             <h3 className="text-xs font-bold uppercase tracking-wider text-white mb-4 pb-1.5 border-b border-neutral-800 inline-block">
               {titles.solutions}
             </h3>
@@ -271,7 +271,7 @@ export default function Footer({ lang: propLang, className = "" }: FooterProps) 
           </FadeInStaggerItem>
 
           {/* ================= COLUNA 4: CONTATOS ================= */}
-          <FadeInStaggerItem direction="up" distance={20}>
+          <FadeInStaggerItem index={3} direction="up" distance={20}>
             <h3 className="text-xs font-bold uppercase tracking-wider text-white mb-4 pb-1.5 border-b border-neutral-800 inline-block">
               {titles.contact}
             </h3>

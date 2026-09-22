@@ -169,49 +169,59 @@ export default function Texto2Colunas({
           reverse ? "md:flex-row-reverse" : ""
         } ${containerClassName}`}
       >
-        {/* Coluna Esquerda: 40% de largura - Tag, Título e Subtítulo */}
-        <FadeIn
-          direction={reverse ? "right" : "left"}
-          duration={0.6}
-          className={`w-full md:w-[40%] flex flex-col space-y-4 ${leftClassName}`}
-        >
+        {/* Coluna Esquerda: 40% de largura - Tag, Título e Subtítulo individuais */}
+        <div className={`w-full md:w-[40%] flex flex-col space-y-4 ${leftClassName}`}>
           {contentTag && (
-            <div>
-              {typeof contentTag === "string" ? (
-                <span className="inline-flex items-center px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 border border-neutral-200 dark:border-neutral-700">
-                  {contentTag}
-                </span>
-              ) : (
-                contentTag
-              )}
-            </div>
+            <FadeIn
+              direction={reverse ? "right" : "left"}
+              delay={0.05}
+              duration={0.5}
+            >
+              <div>
+                {typeof contentTag === "string" ? (
+                  <span className="inline-flex items-center px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 border border-neutral-200 dark:border-neutral-700">
+                    {contentTag}
+                  </span>
+                ) : (
+                  contentTag
+                )}
+              </div>
+            </FadeIn>
           )}
 
-          {contentTitle &&
-            (typeof contentTitle === "string" ? (
-              <TitleComponent
-                className={`text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-neutral-900 dark:text-white leading-snug sm:leading-snug ${titleClassName}`}
-              >
-                {contentTitle}
-              </TitleComponent>
-            ) : (
-              contentTitle
-            ))}
+          {contentTitle && (
+            <FadeIn
+              direction={reverse ? "right" : "left"}
+              delay={0.15}
+              duration={0.6}
+            >
+              {typeof contentTitle === "string" ? (
+                <TitleComponent
+                  className={`text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-neutral-900 dark:text-white leading-snug sm:leading-snug ${titleClassName}`}
+                >
+                  {contentTitle}
+                </TitleComponent>
+              ) : (
+                contentTitle
+              )}
+            </FadeIn>
+          )}
 
           {contentSubtitulo && (
-            <div className="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 font-normal leading-relaxed">
-              {contentSubtitulo}
-            </div>
+            <FadeIn
+              direction={reverse ? "right" : "left"}
+              delay={0.25}
+              duration={0.6}
+            >
+              <div className="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 font-normal leading-relaxed">
+                {contentSubtitulo}
+              </div>
+            </FadeIn>
           )}
-        </FadeIn>
+        </div>
 
-        {/* Coluna Direita: 60% de largura - Texto comum */}
-        <FadeIn
-          direction={reverse ? "left" : "right"}
-          duration={0.6}
-          delay={0.1}
-          className={`w-full md:w-[60%] flex flex-col space-y-4 ${rightClassName}`}
-        >
+        {/* Coluna Direita: 60% de largura - Texto e ações individuais */}
+        <div className={`w-full md:w-[60%] flex flex-col space-y-4 ${rightClassName}`}>
           {typeof contentText === "string" ? (
             contentText.includes("<br") || contentText.includes("\n\n") ? (
               <div className={`space-y-4 ${textClassName}`}>
@@ -219,27 +229,51 @@ export default function Texto2Colunas({
                   .split(/(?:<br\s*\/?>|\n\n)/gi)
                   .filter((p) => p.trim().length > 0)
                   .map((paragraph, index) => (
-                    <p
+                    <FadeIn
                       key={index}
-                      className="text-base sm:text-lg leading-relaxed text-neutral-700 dark:text-neutral-200 font-normal"
+                      direction={reverse ? "left" : "right"}
+                      delay={0.15 + Math.min(index, 3) * 0.08}
+                      duration={0.55}
                     >
-                      {paragraph.trim()}
-                    </p>
+                      <p className="text-base sm:text-lg leading-relaxed text-neutral-700 dark:text-neutral-200 font-normal">
+                        {paragraph.trim()}
+                      </p>
+                    </FadeIn>
                   ))}
               </div>
             ) : (
-              <p
-                className={`text-base sm:text-lg leading-relaxed text-neutral-700 dark:text-neutral-200 font-normal whitespace-pre-line ${textClassName}`}
+              <FadeIn
+                direction={reverse ? "left" : "right"}
+                delay={0.15}
+                duration={0.55}
               >
-                {contentText}
-              </p>
+                <p
+                  className={`text-base sm:text-lg leading-relaxed text-neutral-700 dark:text-neutral-200 font-normal whitespace-pre-line ${textClassName}`}
+                >
+                  {contentText}
+                </p>
+              </FadeIn>
             )
           ) : (
-            contentText
+            <FadeIn
+              direction={reverse ? "left" : "right"}
+              delay={0.15}
+              duration={0.55}
+            >
+              {contentText}
+            </FadeIn>
           )}
 
-          {actions && <div className="pt-2">{actions}</div>}
-        </FadeIn>
+          {actions && (
+            <FadeIn
+              direction={reverse ? "left" : "right"}
+              delay={0.3}
+              duration={0.55}
+            >
+              <div className="pt-2">{actions}</div>
+            </FadeIn>
+          )}
+        </div>
       </div>
     </Component>
   );

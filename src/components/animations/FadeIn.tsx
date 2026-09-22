@@ -26,8 +26,8 @@ export function FadeIn({
   distance = 20,
   scale = 1,
   once = false,
-  amount = 0.12,
-  margin,
+  amount = 0.1,
+  margin = "0px 0px -40px 0px",
   className = "",
   ...props
 }: FadeInProps) {

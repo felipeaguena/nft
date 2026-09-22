@@ -67,24 +67,28 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
       <section className="relative w-full py-20 px-4 sm:px-6 lg:px-8 bg-[#040912] border-t border-sky-950/50">
         <div className="max-w-7xl mx-auto">
           {/* Cabeçalho da seção */}
-          <FadeIn direction="up">
-            <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <FadeIn direction="up" delay={0.05}>
               <span className="text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-950/60 border border-sky-800/50 px-3.5 py-1 rounded-full">
                 {t.challenge.tag}
               </span>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15}>
               <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-white">
                 {t.challenge.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.25}>
               <p className="mt-3 text-neutral-200 text-sm sm:text-base leading-relaxed">
                 {t.challenge.description}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           {/* Grid com 3 cards escuros com hover suave para fundo azul e letras brancas */}
           <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {t.challenge.cards.map((card, idx: number) => (
-              <FadeInStaggerItem key={idx}>
+              <FadeInStaggerItem key={idx} index={idx}>
                 <div className="group relative rounded-2xl p-8 bg-[#09111e] shadow-xl transition-all duration-300 hover:bg-sky-600 hover:shadow-2xl hover:shadow-sky-600/30 hover:-translate-y-1 cursor-pointer flex flex-col justify-between h-full">
                   <div>
                     <div className="w-12 h-12 rounded-full bg-sky-950/80 text-sky-400 flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-sky-600 group-hover:border-transparent transition-all duration-300">
@@ -112,34 +116,40 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Coluna da Esquerda: Título e Texto */}
             <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-              <FadeIn direction="right" duration={0.7} className="space-y-6">
+              <FadeIn direction="right" delay={0.05}>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-950/80 border border-sky-800/60 text-sky-400 text-xs font-semibold uppercase tracking-wider">
                   <span>{t.stepsSection.tag}</span>
                 </div>
+              </FadeIn>
 
+              <FadeIn direction="right" delay={0.15}>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
                   {t.stepsSection.title}
                 </h2>
+              </FadeIn>
 
+              <FadeIn direction="right" delay={0.25}>
                 <p className="text-neutral-300 text-base sm:text-lg leading-relaxed">
                   {t.stepsSection.p1}
                 </p>
+              </FadeIn>
 
+              <FadeIn direction="right" delay={0.35}>
                 <p className="text-neutral-200 text-sm sm:text-base leading-relaxed">
                   {t.stepsSection.p2}
                 </p>
+              </FadeIn>
 
-                <div className="pt-4">
-                  <a
-                    href={whatsappHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-sky-600/25"
-                  >
-                    <span>{t.stepsSection.ctaButton}</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
+              <FadeIn direction="right" delay={0.45} className="pt-4">
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-sky-600/25"
+                >
+                  <span>{t.stepsSection.ctaButton}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </FadeIn>
             </div>
 
@@ -147,7 +157,7 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
             <div className="lg:col-span-7">
               <FadeInStagger className="flex flex-col gap-4 sm:gap-5">
                 {t.stepsSection.steps.map((step, idx: number) => (
-                  <FadeInStaggerItem key={idx}>
+                  <FadeInStaggerItem key={idx} index={idx}>
                     <div className="p-6 sm:p-12 rounded-2xl bg-[#0a1424] hover:bg-orange-600 hover:border-sky-600/50 transition-all duration-200 shadow-md">
                       <div className="flex items-start gap-4">
                         <div>
@@ -174,24 +184,28 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-[#040812] border-t border-sky-950/50">
         <div className="max-w-7xl mx-auto">
           {/* Cabeçalho */}
-          <FadeIn direction="up">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <FadeIn direction="up" delay={0.05}>
               <span className="text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-950/60 border border-sky-800/50 px-3.5 py-1 rounded-full">
                 {t.experience.tag}
               </span>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15}>
               <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-white">
                 {t.experience.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.25}>
               <p className="mt-3 text-neutral-200 text-sm sm:text-base leading-relaxed">
                 {t.experience.description}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           {/* 4 Cards Grid */}
           <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {t.experience.items.map((item, idx: number) => (
-              <FadeInStaggerItem key={idx}>
+              <FadeInStaggerItem key={idx} index={idx}>
                 <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] sm:aspect-[16/10] bg-[#09111e] shadow-2xl flex items-end p-6 sm:p-8 cursor-pointer">
                   {/* Imagem de fundo: escurece no hover sem encolher */}
                   <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -231,32 +245,36 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Coluna da Esquerda: Título e Texto */}
             <div className="lg:col-span-5 space-y-5">
-              <FadeIn direction="right" duration={0.7} className="space-y-5">
+              <FadeIn direction="right" delay={0.05}>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-950/80 border border-sky-800/60 text-sky-400 text-xs font-semibold uppercase tracking-wider">
                   <span>{t.faq.tag}</span>
                 </span>
+              </FadeIn>
 
+              <FadeIn direction="right" delay={0.15}>
                 <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
                   {t.faq.title}
                 </h2>
+              </FadeIn>
 
+              <FadeIn direction="right" delay={0.25}>
                 <p className="text-neutral-300 text-base leading-relaxed">
                   {t.faq.description}
                 </p>
+              </FadeIn>
 
-                <div className="pt-2 text-sm text-neutral-300">
-                  {t.faq.bottomPrompt}{" "}
-                  <br />
-                  <a
-                    href={whatsappHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sky-400 hover:text-sky-300 underline font-medium"
-                  >
-                    {t.faq.bottomLinkText}
-                  </a>
-                  .
-                </div>
+              <FadeIn direction="right" delay={0.35} className="pt-2 text-sm text-neutral-300">
+                {t.faq.bottomPrompt}{" "}
+                <br />
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sky-400 hover:text-sky-300 underline font-medium"
+                >
+                  {t.faq.bottomLinkText}
+                </a>
+                .
               </FadeIn>
             </div>
 
@@ -264,7 +282,7 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
             <div className="lg:col-span-7">
               <FadeInStagger className="space-y-4">
                 {t.faq.items.map((item, idx: number) => (
-                  <FadeInStaggerItem key={idx}>
+                  <FadeInStaggerItem key={idx} index={idx}>
                     <div className="rounded-2xl bg-[#091220] border border-sky-950/70 overflow-hidden transition-colors">
                       <button
                         type="button"
@@ -297,6 +315,7 @@ export default function HealthClient({ lang = "pt" }: HealthClientProps) {
           </div>
         </div>
       </section>
+
 
       {/* ========================================================================= */}
       {/* BLOCO 6: HERO COMO CTA                                                    */}

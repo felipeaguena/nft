@@ -102,27 +102,32 @@ export default function SolutionsGrid({
       className={`relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200 ${className}`}
     >
       <div className="max-w-7xl mx-auto">
-        {/* Cabeçalho */}
-        <FadeIn direction="up" duration={0.6}>
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
+        {/* Cabeçalho com animação individual dos elementos */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <FadeIn direction="up" delay={0.05} duration={0.5}>
+            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
               {currentTag}
             </span>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.15} duration={0.6}>
             <h2 className="mt-4 text-4xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
               {currentTitle}
             </h2>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.25} duration={0.6}>
             <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-base sm:text-base leading-relaxed">
               {currentDescription}
             </p>
-          </div>
-        </FadeIn>
+          </FadeIn>
+        </div>
 
-        {/* Grid de 4 cards (2x2 em telas médias/grandes) com Stagger */}
+        {/* Grid de 4 cards com entrada individual por viewport no mobile e stagger no desktop */}
         <FadeInStagger staggerDelay={0.12} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {solutionsGridData.items.map((item) => {
+          {solutionsGridData.items.map((item, idx: number) => {
             return (
               <FadeInStaggerItem
                 key={item.id}
+                index={idx}
                 className="group relative rounded-3xl overflow-hidden bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/90 shadow-md dark:shadow-xl transition-all duration-300 hover:border-orange-500/60 hover:shadow-2xl hover:shadow-orange-600/10 dark:hover:shadow-orange-600/20 flex flex-col justify-between"
               >
                 <div>

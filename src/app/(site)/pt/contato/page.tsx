@@ -37,21 +37,27 @@ export default function ContatoPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Coluna de informações à esquerda (5 colunas) */}
           <div className="lg:col-span-5 space-y-8 pt-2 max-w-lg mx-6">
-            <FadeIn direction="left" duration={0.6}>
-              <span className="inline-flex items-center px-3 py-1 text-xs font-semibold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/60 rounded-full border border-orange-200 dark:border-orange-900/60">
-                Atendimento Especializado
-              </span>
-              <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-tight">
-                Vamos conversar sobre o seu próximo projeto?
-              </h1>
-              <p className="mt-4 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
-                Nossa equipe está pronta para entender seus desafios operacionais e oferecer soluções sob medida em logística internacional e desembaraço aduaneiro.
-              </p>
-            </FadeIn>
+            <div className="space-y-4">
+              <FadeIn direction="left" delay={0.05}>
+                <span className="inline-flex items-center px-3 py-1 text-xs font-semibold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/60 rounded-full border border-orange-200 dark:border-orange-900/60">
+                  Atendimento Especializado
+                </span>
+              </FadeIn>
+              <FadeIn direction="left" delay={0.15}>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-tight">
+                  Vamos conversar sobre o seu próximo projeto?
+                </h1>
+              </FadeIn>
+              <FadeIn direction="left" delay={0.25}>
+                <p className="text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
+                  Nossa equipe está pronta para entender seus desafios operacionais e oferecer soluções sob medida em logística internacional e desembaraço aduaneiro.
+                </p>
+              </FadeIn>
+            </div>
 
             {/* Cartões de informações de contato */}
             <FadeInStagger className="space-y-4">
-              <FadeInStaggerItem direction="up" distance={16} className="flex items-start gap-4 p-4 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm">
+              <FadeInStaggerItem index={0} direction="up" distance={16} className="flex items-start gap-4 p-4 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm">
                 <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
@@ -66,7 +72,7 @@ export default function ContatoPage() {
                 </div>
               </FadeInStaggerItem>
 
-              <FadeInStaggerItem direction="up" distance={16} className="flex items-start gap-4 p-4 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm">
+              <FadeInStaggerItem index={1} direction="up" distance={16} className="flex items-start gap-4 p-4 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm">
                 <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
@@ -78,7 +84,7 @@ export default function ContatoPage() {
                 </div>
               </FadeInStaggerItem>
 
-              <FadeInStaggerItem direction="up" distance={16} className="flex items-start gap-4 p-4 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm">
+              <FadeInStaggerItem index={2} direction="up" distance={16} className="flex items-start gap-4 p-4 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm">
                 <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
                   <Clock className="w-5 h-5" />
                 </div>

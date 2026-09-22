@@ -47,6 +47,7 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
             {t.stats.map((stat, idx: number) => (
               <FadeInStaggerItem
                 key={idx}
+                index={idx}
                 className={`group relative rounded-2xl p-6 sm:p-7 bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50 hover:bg-orange-600 dark:hover:bg-orange-600 transition-all duration-300 ${
                   idx > 0 ? "p-6 sm:p-6 lg:p-8" : ""
                 }`}
@@ -71,18 +72,20 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
       {/* 2. HUBS LOGÍSTICOS ESTRATÉGICOS NO BRASIL */}
       <section className="py-12 sm:py-16 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn direction="up" duration={0.6}>
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-              <div>
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+              <FadeIn direction="up" delay={0.05} duration={0.6}>
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">
                   {t.hubsTitle}
                 </h2>
-                <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-200 max-w-md">
+              </FadeIn>
+              <FadeIn direction="up" delay={0.15} duration={0.6}>
+                <p className="mt-1 text-sm sm:text-base text-neutral-700 dark:text-neutral-200 max-w-md">
                   {t.hubsSubtitle}
-                </p>  
-              </div>
+                </p>
+              </FadeIn>
             </div>
-          </FadeIn>
+          </div>
 
           <FadeInStagger staggerDelay={0.08} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4">
             {t.hubs.map((hub, idx: number) => {
@@ -90,6 +93,7 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
               return (
                 <FadeInStaggerItem
                   key={idx}
+                  index={idx}
                   className="group relative p-4 rounded border border-neutral-200 dark:border-neutral-800 bg-neutral-50/60 dark:bg-neutral-900/60 hover:bg-white dark:hover:bg-neutral-900 transition-all duration-200 hover:shadow-md hover:border-neutral-700 dark:hover:border-neutral-400  flex flex-col justify-between min-h-[140px]"
                 >
                   <div className="flex items-center justify-between mb-2.5">
@@ -119,16 +123,18 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
       {/* 4. FLUXO OPERACIONAL EM 4 ETAPAS (COMO FUNCIONA) */}
       <section className="py-16 sm:py-24 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn direction="up" duration={0.6}>
-            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <FadeIn direction="up" delay={0.05} duration={0.6}>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
                 {t.process.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15} duration={0.6}>
               <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
                 {t.process.subtitle}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           <FadeInStagger staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.process.steps.map((step, idx: number) => {
@@ -136,6 +142,7 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
               return (
                 <FadeInStaggerItem
                   key={idx}
+                  index={idx}
                   className="relative p-6 sm:p-7 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm flex flex-col justify-between"
                 >
                   <div>
@@ -161,22 +168,24 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
       {/* 5. VITRINE DE SETORES ATENDIDOS (CARDS FOTOGRÁFICOS) */}
       <section className="py-16 sm:py-20 bg-neutral-100/40 dark:bg-neutral-900/30 border-t border-neutral-200/80 dark:border-neutral-800/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn direction="up" duration={0.6}>
-            <div className="max-w-2xl mb-12 sm:mb-16">
+          <div className="max-w-2xl mb-12 sm:mb-16">
+            <FadeIn direction="up" delay={0.05} duration={0.6}>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
                 {t.sectors.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15} duration={0.6}>
               <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
                 {t.sectors.subtitle}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           <FadeInStagger staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {t.sectors.cards.map((card, idx: number) => {
               const CardIcon = card.icon;
               return (
-                <FadeInStaggerItem key={idx}>
+                <FadeInStaggerItem key={idx} index={idx}>
                   <Link
                     href={card.href}
                     className="group relative overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
@@ -218,16 +227,18 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
       {/* 6. DIFERENCIAIS COMPETITIVOS EM 4 PILARES VISUAIS */}
       <section className="py-16 sm:py-24 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn direction="up" duration={0.6}>
-            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <FadeIn direction="up" delay={0.05} duration={0.6}>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
                 {t.differentials.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15} duration={0.6}>
               <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
                 {t.differentials.subtitle}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           <FadeInStagger staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.differentials.cards.map((diff, idx: number) => {
@@ -235,6 +246,7 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
               return (
                 <FadeInStaggerItem
                   key={idx}
+                  index={idx}
                   className="group relative rounded-2xl p-6 sm:p-7 bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50 hover:bg-orange-600 dark:hover:bg-orange-600 transition-all duration-300"
                 >
                   <div>
@@ -263,37 +275,43 @@ export default function HomeClient({ lang = "pt" }: HomeClientProps) {
         {/* Glow de fundo */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-orange-600/20 blur-[120px] pointer-events-none rounded-full" />
 
-        <FadeIn direction="up" duration={0.65} className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6">
-            {t.cta.title}
-          </h2>
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <FadeIn direction="up" delay={0.08} duration={0.65}>
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6">
+              {t.cta.title}
+            </h2>
+          </FadeIn>
 
-          <p className="text-base sm:text-lg text-neutral-200 max-w-2xl mx-auto leading-relaxed mb-10">
-            {t.cta.subtitle}
-          </p>
+          <FadeIn direction="up" delay={0.2} duration={0.65}>
+            <p className="text-base sm:text-lg text-neutral-200 max-w-2xl mx-auto leading-relaxed mb-10">
+              {t.cta.subtitle}
+            </p>
+          </FadeIn>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Button
-              variant="primary"
-              size="lg"
-              href={t.cta.btnPrimaryHref}
-              rightIcon={<ArrowRight className="w-5 h-5" />}
-              className="shadow-lg shadow-orange-600/30"
-            >
-              {t.cta.btnPrimary}
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              href={t.cta.btnSecondaryHref}
-              target="_blank"
-              leftIcon={<MessageSquareDot className="w-5 h-5 text-emerald-400" />}
-              className="!border-white/30 !text-white hover:!bg-white/10"
-            >
-              {t.cta.btnSecondary}
-            </Button>
-          </div>
-        </FadeIn>
+          <FadeIn direction="up" delay={0.32} duration={0.55}>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Button
+                variant="primary"
+                size="lg"
+                href={t.cta.btnPrimaryHref}
+                rightIcon={<ArrowRight className="w-5 h-5" />}
+                className="shadow-lg shadow-orange-600/30"
+              >
+                {t.cta.btnPrimary}
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                href={t.cta.btnSecondaryHref}
+                target="_blank"
+                leftIcon={<MessageSquareDot className="w-5 h-5 text-emerald-400" />}
+                className="!border-white/30 !text-white hover:!bg-white/10"
+              >
+                {t.cta.btnSecondary}
+              </Button>
+            </div>
+          </FadeIn>
+        </div>
       </section>
     </div>
   );

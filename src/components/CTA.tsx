@@ -222,7 +222,7 @@ export default function CTA({
 
   return (
     <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-      <FadeIn direction="up" duration={0.65} distance={24}>
+      <FadeIn direction="up" duration={0.6} distance={15}>
         <div
           className={`relative w-full max-w-7xl mx-auto overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl border border-neutral-200/20 dark:border-neutral-800/80 flex items-center p-6 sm:p-10 lg:p-14 ${minHeightClassName} ${className}`}
         >
@@ -241,26 +241,34 @@ export default function CTA({
             aria-hidden="true"
           />
 
-          {/* Conteúdo: Se forem passadas as props diretas, renderiza a estrutura otimizada */}
+          {/* Conteúdo: Animação individual e sequencial de título, descrição e botão */}
           {hasPropsContent ? (
             <CTAContent position={contentPosition} className={contentClassName}>
-              {title && <CTATitle>{title}</CTATitle>}
-              {description && <CTADescription>{description}</CTADescription>}
-              {buttonText && buttonHref && (
-                <CTAButton
-                  href={buttonHref}
-                  target={buttonTarget}
-                  variant={buttonVariant}
-                  icon={buttonIcon}
-                >
-                  {buttonText}
-                </CTAButton>
+              {title && (
+                <FadeIn direction="up" delay={0.1} duration={0.55}>
+                  <CTATitle>{title}</CTATitle>
+                </FadeIn>
               )}
-              {/* Permite adicionar nós adicionais dentro do bloco de 40% se desejado */}
+              {description && (
+                <FadeIn direction="up" delay={0.2} duration={0.55}>
+                  <CTADescription>{description}</CTADescription>
+                </FadeIn>
+              )}
+              {buttonText && buttonHref && (
+                <FadeIn direction="up" delay={0.3} duration={0.55}>
+                  <CTAButton
+                    href={buttonHref}
+                    target={buttonTarget}
+                    variant={buttonVariant}
+                    icon={buttonIcon}
+                  >
+                    {buttonText}
+                  </CTAButton>
+                </FadeIn>
+              )}
               {children}
             </CTAContent>
           ) : (
-            /* Se o usuário preferir compor tudo livremente via children */
             children
           )}
         </div>

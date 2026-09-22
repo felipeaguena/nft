@@ -98,22 +98,28 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
               </div>
             </FadeIn>
 
-            {/* Coluna da Direita (6 colunas): Texto */}
-            <FadeIn direction="left" duration={0.65} className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
-                {t.col2.tag}
-              </span>
+            {/* Coluna da Direita (6 colunas): Texto com animação individual */}
+            <div className="lg:col-span-6 space-y-6">
+              <FadeIn direction="left" delay={0.05} duration={0.5}>
+                <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
+                  {t.col2.tag}
+                </span>
+              </FadeIn>
 
-              <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
-                {t.col2.title}
-              </h2>
+              <FadeIn direction="left" delay={0.15} duration={0.6}>
+                <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
+                  {t.col2.title}
+                </h2>
+              </FadeIn>
 
-              <div className="space-y-4 text-neutral-600 dark:text-neutral-300 text-sm sm:text-base leading-relaxed">
-                {t.col2.paragraphs.map((p, idx: number) => (
-                  <p key={idx}>{p}</p>
-                ))}
-              </div>
-            </FadeIn>
+              <FadeIn direction="left" delay={0.25} duration={0.6}>
+                <div className="space-y-4 text-neutral-600 dark:text-neutral-300 text-sm sm:text-base leading-relaxed">
+                  {t.col2.paragraphs.map((p, idx: number) => (
+                    <p key={idx}>{p}</p>
+                  ))}
+                </div>
+              </FadeIn>
+            </div>
           </div>
         </div>
       </section>
@@ -131,36 +137,46 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[#0e0e0e] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            {/* Coluna da Esquerda (5 colunas): Sticky */}
-            <FadeIn direction="up" duration={0.65} className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/60 text-orange-600 dark:text-orange-400 text-xs font-semibold uppercase tracking-wider">
-                <span>{t.whyUs.tag}</span>
-              </span>
+            {/* Coluna da Esquerda (5 colunas): Sticky com elementos individuais */}
+            <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
+              <FadeIn direction="up" delay={0.05} duration={0.5}>
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/60 text-orange-600 dark:text-orange-400 text-xs font-semibold uppercase tracking-wider">
+                  <span>{t.whyUs.tag}</span>
+                </span>
+              </FadeIn>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
-                {t.whyUs.title}
-              </h2>
+              <FadeIn direction="up" delay={0.15} duration={0.6}>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
+                  {t.whyUs.title}
+                </h2>
+              </FadeIn>
 
-              <p className="text-neutral-700 dark:text-neutral-200 text-base sm:text-lg leading-relaxed">
-                {t.whyUs.description}
-              </p>
+              <FadeIn direction="up" delay={0.25} duration={0.6}>
+                <p className="text-neutral-700 dark:text-neutral-200 text-base sm:text-lg leading-relaxed">
+                  {t.whyUs.description}
+                </p>
+              </FadeIn>
 
-              <p className="text-neutral-700 dark:text-neutral-300 text-sm sm:text-base leading-relaxed">
-                {t.whyUs.secondaryText}
-              </p>
+              <FadeIn direction="up" delay={0.32} duration={0.6}>
+                <p className="text-neutral-700 dark:text-neutral-300 text-sm sm:text-base leading-relaxed">
+                  {t.whyUs.secondaryText}
+                </p>
+              </FadeIn>
 
-              <div className="pt-4">
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-semibold text-sm sm:text-base transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-orange-600/25 cursor-pointer"
-                >
-                  <span>{t.whyUs.ctaButton}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </FadeIn>
+              <FadeIn direction="up" delay={0.4} duration={0.55}>
+                <div className="pt-4">
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white font-semibold text-sm sm:text-base transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-orange-600/25 cursor-pointer"
+                  >
+                    <span>{t.whyUs.ctaButton}</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </FadeIn>
+            </div>
 
             {/* Coluna da Direita (7 colunas): 4 Cards */}
             <FadeInStagger staggerDelay={0.1} className="lg:col-span-7 flex flex-col gap-5">
@@ -169,6 +185,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
                 return (
                   <FadeInStaggerItem
                     key={cIdx}
+                    index={cIdx}
                     className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-md dark:shadow-lg group"
                   >
                     <div className="flex items-start gap-5">
@@ -198,26 +215,31 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
       {/* ========================================================================= */}
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          {/* Cabeçalho */}
-          <FadeIn direction="up" duration={0.6}>
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
+          {/* Cabeçalho da Galeria */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <FadeIn direction="up" delay={0.05} duration={0.5}>
+              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
                 {t.gallery.tag}
               </span>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15} duration={0.6}>
               <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white">
                 {t.gallery.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.25} duration={0.6}>
               <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
                 {t.gallery.description}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           {/* Grid de 4 fotos em 2 colunas / 4 colunas */}
           <FadeInStagger staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.gallery.items.map((item, gIdx: number) => (
               <FadeInStaggerItem
                 key={gIdx}
+                index={gIdx}
                 className="group relative rounded-3xl overflow-hidden border border-neutral-200/90 dark:border-neutral-800/90 bg-neutral-100 dark:bg-neutral-900 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-600/10"
               >
                 <div className="relative aspect-[4/3] w-full overflow-hidden">
@@ -256,19 +278,23 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
           {/* Cabeçalho */}
-          <FadeIn direction="up" duration={0.6}>
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <FadeIn direction="up" delay={0.05} duration={0.5}>
+              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
                 {t.methodology.tag}
               </span>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15} duration={0.6}>
               <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
                 {t.methodology.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.25} duration={0.6}>
               <p className="mt-3 text-neutral-600 dark:text-neutral-300 text-sm sm:text-base leading-relaxed">
                 {t.methodology.description}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           {/* Grid das 5 Etapas */}
           <FadeInStagger staggerDelay={0.08} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -277,6 +303,7 @@ export default function SolucoesClient({ lang = "pt" }: SolucoesClientProps) {
               return (
                 <FadeInStaggerItem
                   key={step.number}
+                  index={index}
                   className="relative rounded-2xl p-6 sm:p-7 bg-neutral-50/80 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50  transition-all duration-300"
                 >
                   <div>

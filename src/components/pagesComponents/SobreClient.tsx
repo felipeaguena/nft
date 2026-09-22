@@ -67,7 +67,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
         <div className="max-w-7xl mx-auto">
           <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.stats.map((stat, idx: number) => (
-              <FadeInStaggerItem key={idx}>
+              <FadeInStaggerItem key={idx} index={idx}>
                 <div className="relative p-6 rounded-2xl bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800 shadow-sm hover:shadow-md transition-all duration-300 group h-full">
                   <div className="text-3xl sm:text-4xl font-extrabold text-orange-600 dark:text-orange-500 tracking-tight">
                     {stat.value}
@@ -127,13 +127,15 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
               </FadeIn>
             </div>
 
-            {/* Coluna Texto (6 colunas) */}
+            {/* Coluna Texto (6 colunas) - Elementos individuais */}
             <div className="lg:col-span-6 space-y-6">
-              <FadeIn direction="left" delay={0.2} duration={0.7} className="space-y-6">
+              <FadeIn direction="left" delay={0.1} duration={0.6}>
                 <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
                   {t.story.title}
                 </h2>
+              </FadeIn>
 
+              <FadeIn direction="left" delay={0.2} duration={0.6}>
                 <div className="space-y-4 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
                   <p>{t.story.p1}</p>
                   <p>{t.story.p2}</p>
@@ -141,7 +143,9 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
                     {t.story.p3}
                   </p>
                 </div>
+              </FadeIn>
 
+              <FadeIn direction="left" delay={0.32} duration={0.55}>
                 <div className="pt-2">
                   <a
                     href={whatsappHref}
@@ -164,22 +168,24 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       {/* ========================================================================= */}
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[#0e0e0e] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <FadeIn direction="up">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <FadeIn direction="up" delay={0.05} duration={0.6}>
               <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
                 {t.triad.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15} duration={0.6}>
               <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
                 {t.triad.subtitle}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {t.triad.cards.map((card, idx: number) => {
               const IconComp = card.icon;
               return (
-                <FadeInStaggerItem key={idx}>
+                <FadeInStaggerItem key={idx} index={idx}>
                   <div className="group relative rounded-3xl overflow-hidden bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-xl transition-all duration-300 hover:shadow-2xl hover:border-orange-500/50 hover:-translate-y-1.5 flex flex-col justify-between h-full">
                     {/* Foto de Capa do Card */}
                     <div className="relative aspect-[16/10] w-full overflow-hidden">
@@ -229,22 +235,24 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       {/* ========================================================================= */}
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <FadeIn direction="up">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <FadeIn direction="up" delay={0.05} duration={0.6}>
               <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
                 {t.pillars.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15} duration={0.6}>
               <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
                 {t.pillars.subtitle}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {t.pillars.items.map((pillar, idx: number) => {
               const IconComp = pillar.icon;
               return (
-                <FadeInStaggerItem key={idx}>
+                <FadeInStaggerItem key={idx} index={idx}>
                   <div className="p-8 rounded-2xl bg-neutral-50/90 dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col sm:flex-row gap-5 items-start h-full">
                     <div className="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-400/30 flex items-center justify-center shrink-0">
                       <IconComp className="w-6 h-6" />
@@ -270,21 +278,23 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       {/* ========================================================================= */}
       <section className="relative w-full py-20 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[#0e0e0e] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <FadeIn direction="up">
-            <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <FadeIn direction="up" delay={0.05} duration={0.6}>
               <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
                 {t.infrastructure.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15} duration={0.6}>
               <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
                 {t.infrastructure.subtitle}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {t.infrastructure.items.map((infra, idx: number) => {
               return (
-                <FadeInStaggerItem key={idx}>
+                <FadeInStaggerItem key={idx} index={idx}>
                   <div className="group relative rounded-3xl overflow-hidden border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
                     <div className="relative aspect-[16/10] w-full overflow-hidden">
                       <Image
@@ -320,20 +330,22 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       {/* ========================================================================= */}
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <FadeIn direction="up">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <FadeIn direction="up" delay={0.05} duration={0.6}>
               <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
                 {t.method.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15} duration={0.6}>
               <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
                 {t.method.subtitle}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.method.steps.map((step, idx: number) => (
-              <FadeInStaggerItem key={idx}>
+              <FadeInStaggerItem key={idx} index={idx}>
                 <div className="relative p-7 rounded-2xl bg-neutral-50/90 dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800 shadow-sm flex flex-col justify-between h-full">
                   <div>
                     <div className="flex items-center justify-between mb-4">
@@ -361,22 +373,24 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
       {/* ========================================================================= */}
       <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-[#0e0e0e] border-t border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200">
         <div className="max-w-7xl mx-auto">
-          <FadeIn direction="up">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <FadeIn direction="up" delay={0.05} duration={0.6}>
               <h2 className="mt-4 text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
                 {t.sectors.title}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15} duration={0.6}>
               <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
                 {t.sectors.subtitle}
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {t.sectors.items.map((sector, idx: number) => {
               const IconComp = sector.icon;
               return (
-                <FadeInStaggerItem key={idx}>
+                <FadeInStaggerItem key={idx} index={idx}>
                   <Link
                     href={sector.link}
                     className="group relative rounded overflow-hidden bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 hover:border-orange-500/60 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between cursor-pointer hover:-translate-y-1.5 h-full"
@@ -441,15 +455,19 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-              <FadeIn direction="right" duration={0.7} className="space-y-6">
+              <FadeIn direction="right" delay={0.05} duration={0.5}>
                 <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
                   {t.differentials.tag}
                 </span>
+              </FadeIn>
 
+              <FadeIn direction="right" delay={0.15} duration={0.6}>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
                   {t.differentials.title}
                 </h2>
+              </FadeIn>
 
+              <FadeIn direction="right" delay={0.25} duration={0.6}>
                 <p className="text-neutral-700 dark:text-neutral-200 text-base sm:text-lg leading-relaxed">
                   {resolvedLang === "pt"
                     ? "Entrar ou operar no Brasil sem uma assessoria especializada é assumir riscos tributários e operacionais imensos. Nós transformamos incertezas em solidez."
@@ -457,7 +475,9 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
                     ? "Operating in Brazil without specialized customs intelligence invites tremendous tax and operational risk. We transform uncertainty into solid results."
                     : "在缺乏专业关务智慧的情况下进入巴西市场将面临巨大的税务与清关风险。我们将不确定性转化为坚实的商业成果。"}
                 </p>
+              </FadeIn>
 
+              <FadeIn direction="right" delay={0.35} duration={0.55}>
                 <div>
                   <a
                     href={whatsappHref}
@@ -475,7 +495,7 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
             <div className="lg:col-span-7">
               <FadeInStagger className="flex flex-col gap-5">
                 {t.differentials.cards.map((item, idx: number) => (
-                  <FadeInStaggerItem key={idx}>
+                  <FadeInStaggerItem key={idx} index={idx}>
                     <div className="p-6 sm:p-8 rounded-2xl bg-neutral-50/90 dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800/80 hover:border-orange-500/50 transition-all duration-300 shadow-sm">
                       <div className="flex items-start gap-4">
                         <div className="w-8 h-8 rounded-lg bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0 mt-0.5">
@@ -516,16 +536,20 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
           <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-orange-600/15 blur-[120px] rounded-full" />
         </div>
 
-        <FadeIn direction="up">
-          <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
+        <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
+          <FadeIn direction="up" delay={0.08} duration={0.6}>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight leading-tight max-w-4xl drop-shadow-md">
               {t.ctaSection.title}
             </h2>
+          </FadeIn>
 
+          <FadeIn direction="up" delay={0.18} duration={0.6}>
             <p className="mt-6 text-neutral-300 text-base sm:text-lg max-w-2xl leading-relaxed drop-shadow-sm">
               {t.ctaSection.desc}
             </p>
+          </FadeIn>
 
+          <FadeIn direction="up" delay={0.28} duration={0.55}>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
               <a
                 href={whatsappHref}
@@ -550,8 +574,8 @@ export default function SobreClient({ lang = "pt" }: SobreClientProps) {
                 <span>{t.ctaSection.btnContact}</span>
               </Link>
             </div>
-          </div>
-        </FadeIn>
+          </FadeIn>
+        </div>
       </section>
     </div>
   );

@@ -119,19 +119,23 @@ export default function SolutionsShowcase({
       className={`py-16 sm:py-20 bg-neutral-100/50 dark:bg-neutral-900/30 border-y border-neutral-200/80 dark:border-neutral-800/80 transition-colors duration-200 ${className}`}
     >
       <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${containerClassName}`}>
-        {/* Cabeçalho da Seção */}
-        <FadeIn direction="up">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 sm:mb-16 gap-6">
-            <div className="max-w-2xl">
+        {/* Cabeçalho da Seção com animação individual */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 sm:mb-16 gap-6">
+          <div className="max-w-2xl">
+            <FadeIn direction="up" delay={0.05} duration={0.6}>
               <h2 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
                 {currentTitle}
               </h2>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.15} duration={0.6}>
               <p className="mt-3 text-base sm:text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
                 {currentSubtitle}
               </p>
-            </div>
+            </FadeIn>
+          </div>
 
-            {showAllButton && currentAllHref && (
+          {showAllButton && currentAllHref && (
+            <FadeIn direction="up" delay={0.25} duration={0.55}>
               <div>
                 <Button
                   variant="outline"
@@ -143,9 +147,9 @@ export default function SolutionsShowcase({
                   {currentBtnAll}
                 </Button>
               </div>
-            )}
-          </div>
-        </FadeIn>
+            </FadeIn>
+          )}
+        </div>
 
         {/* Grid com os 4 Cards Padronizados */}
         <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
@@ -153,7 +157,7 @@ export default function SolutionsShowcase({
             const Icon = ICON_MAP[item.icon] || Sparkles;
 
             return (
-              <FadeInStaggerItem key={item.id || idx}>
+              <FadeInStaggerItem key={item.id || idx} index={idx}>
                 <Link
                   href={item.href}
                   className="block h-full"

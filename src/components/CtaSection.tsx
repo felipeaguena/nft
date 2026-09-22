@@ -146,50 +146,60 @@ export default function CtaSection({
         />
       </div>
 
-      <FadeIn direction="up" duration={0.65} className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-        <span
-          className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full ${
-            isSky
-              ? "bg-sky-500/10 border border-sky-400/30 text-sky-400"
-              : "bg-orange-500/10 border border-orange-400/30 text-orange-400"
-          } text-xs sm:text-sm font-semibold uppercase tracking-wider mb-6`}
-        >
-          <IconComp
-            className={`w-4 h-4 ${isSky ? "text-sky-400" : "text-orange-400"}`}
-          />
-          <span>{content.badge}</span>
-        </span>
-
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight drop-shadow-md">
-          {content.title}
-        </h2>
-
-        <p className="mt-6 text-base sm:text-xl text-neutral-300 max-w-2xl leading-relaxed">
-          {content.description}
-        </p>
-
-        <div className="mt-10">
-          <a
-            href={resolvedWhatsappHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] active:bg-[#1da850] text-white font-bold text-base sm:text-lg shadow-2xl shadow-emerald-600/40 hover:shadow-emerald-600/60 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 cursor-pointer"
+      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+        <FadeIn direction="up" delay={0.05} duration={0.5}>
+          <span
+            className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full ${
+              isSky
+                ? "bg-sky-500/10 border border-sky-400/30 text-sky-400"
+                : "bg-orange-500/10 border border-orange-400/30 text-orange-400"
+            } text-xs sm:text-sm font-semibold uppercase tracking-wider mb-6`}
           >
-            <svg
-              className="w-6 h-6 fill-current shrink-0"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path d="M17.472 14.382c-.301-.15-1.782-.879-2.057-.98-.276-.1-.477-.15-.678.15s-.779.98-.955 1.181c-.176.2-.352.226-.653.075s-1.272-.469-2.423-1.496c-.896-.799-1.501-1.786-1.677-2.088-.176-.301-.019-.464.132-.614.136-.135.301-.352.452-.527.15-.176.201-.301.301-.502.1-.201.05-.377-.025-.527s-.678-1.633-.929-2.235c-.244-.587-.493-.507-.678-.517l-.578-.01c-.201 0-.527.075-.803.377s-1.054 1.03-1.054 2.512c0 1.482 1.079 2.912 1.23 3.113.15.201 2.124 3.243 5.145 4.548.719.311 1.281.497 1.719.636.722.23 1.378.197 1.898.12.579-.087 1.782-.728 2.033-1.431.251-.703.251-1.306.176-1.431-.075-.125-.276-.201-.577-.351zM12.04 21.657h-.002a9.63 9.63 0 0 1-4.912-1.341l-.352-.209-3.652.958.975-3.56-.229-.365a9.638 9.638 0 0 1-1.478-5.1c0-5.32 4.329-9.648 9.655-9.648 2.578 0 5.003 1.004 6.827 2.828a9.587 9.587 0 0 1 2.826 6.822c0 5.322-4.329 9.65-9.653 9.65zm8.172-17.825A11.536 11.536 0 0 0 12.04 0C5.642 0 .438 5.204.438 11.602c0 2.043.534 4.04 1.549 5.8l-1.646 6.012 6.155-1.614a11.577 11.577 0 0 0 5.544 1.411h.005c6.398 0 11.602-5.204 11.602-11.603a11.53 11.53 0 0 0-3.39-8.176z" />
-            </svg>
-            <span>{content.btnWhatsapp}</span>
-          </a>
-        </div>
+            <IconComp
+              className={`w-4 h-4 ${isSky ? "text-sky-400" : "text-orange-400"}`}
+            />
+            <span>{content.badge}</span>
+          </span>
+        </FadeIn>
 
-        <p className="mt-4 text-xs text-neutral-300">
-          {content.disclaimer}
-        </p>
-      </FadeIn>
+        <FadeIn direction="up" delay={0.15} duration={0.6}>
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight drop-shadow-md">
+            {content.title}
+          </h2>
+        </FadeIn>
+
+        <FadeIn direction="up" delay={0.25} duration={0.6}>
+          <p className="mt-6 text-base sm:text-xl text-neutral-300 max-w-2xl leading-relaxed">
+            {content.description}
+          </p>
+        </FadeIn>
+
+        <FadeIn direction="up" delay={0.35} duration={0.55}>
+          <div className="mt-10">
+            <a
+              href={resolvedWhatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] active:bg-[#1da850] text-white font-bold text-base sm:text-lg shadow-2xl shadow-emerald-600/40 hover:shadow-emerald-600/60 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 cursor-pointer"
+            >
+              <svg
+                className="w-6 h-6 fill-current shrink-0"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M17.472 14.382c-.301-.15-1.782-.879-2.057-.98-.276-.1-.477-.15-.678.15s-.779.98-.955 1.181c-.176.2-.352.226-.653.075s-1.272-.469-2.423-1.496c-.896-.799-1.501-1.786-1.677-2.088-.176-.301-.019-.464.132-.614.136-.135.301-.352.452-.527.15-.176.201-.301.301-.502.1-.201.05-.377-.025-.527s-.678-1.633-.929-2.235c-.244-.587-.493-.507-.678-.517l-.578-.01c-.201 0-.527.075-.803.377s-1.054 1.03-1.054 2.512c0 1.482 1.079 2.912 1.23 3.113.15.201 2.124 3.243 5.145 4.548.719.311 1.281.497 1.719.636.722.23 1.378.197 1.898.12.579-.087 1.782-.728 2.033-1.431.251-.703.251-1.306.176-1.431-.075-.125-.276-.201-.577-.351zM12.04 21.657h-.002a9.63 9.63 0 0 1-4.912-1.341l-.352-.209-3.652.958.975-3.56-.229-.365a9.638 9.638 0 0 1-1.478-5.1c0-5.32 4.329-9.648 9.655-9.648 2.578 0 5.003 1.004 6.827 2.828a9.587 9.587 0 0 1 2.826 6.822c0 5.322-4.329 9.65-9.653 9.65zm8.172-17.825A11.536 11.536 0 0 0 12.04 0C5.642 0 .438 5.204.438 11.602c0 2.043.534 4.04 1.549 5.8l-1.646 6.012 6.155-1.614a11.577 11.577 0 0 0 5.544 1.411h.005c6.398 0 11.602-5.204 11.602-11.603a11.53 11.53 0 0 0-3.39-8.176z" />
+              </svg>
+              <span>{content.btnWhatsapp}</span>
+            </a>
+          </div>
+        </FadeIn>
+
+        <FadeIn direction="up" delay={0.42} duration={0.5}>
+          <p className="mt-4 text-xs text-neutral-300">
+            {content.disclaimer}
+          </p>
+        </FadeIn>
+      </div>
     </section>
   );
 }

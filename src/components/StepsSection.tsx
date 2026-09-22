@@ -110,19 +110,23 @@ export default function StepsSection({
       <div id="steps" className="sr-only" />
 
       <div className="max-w-7xl mx-auto">
-        <FadeIn direction="up">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <FadeIn direction="up" delay={0.05} duration={0.5}>
+            <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/50 px-3.5 py-1 rounded-full inline-block">
               {content.tag}
             </span>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.15} duration={0.6}>
             <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
               {content.title}
             </h2>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.25} duration={0.6}>
             <p className="mt-3 text-neutral-700 dark:text-neutral-200 text-sm sm:text-base leading-relaxed">
               {content.description}
             </p>
-          </div>
-        </FadeIn>
+          </FadeIn>
+        </div>
 
         <FadeInStagger className={`grid ${GRID_COLS_MAP[effectiveCols]} gap-6`}>
           {content.steps.map((step, idx) => {
@@ -130,7 +134,7 @@ export default function StepsSection({
               (step.icon && ICON_MAP[step.icon]) || FileText;
 
             return (
-              <FadeInStaggerItem key={step.num || idx}>
+              <FadeInStaggerItem key={step.num || idx} index={idx}>
                 <div className="group relative rounded-2xl p-6 sm:p-7 bg-white dark:bg-neutral-900/90 border border-neutral-200/90 dark:border-neutral-800/80 shadow-md dark:shadow-lg flex flex-col justify-between hover:border-orange-500/50 hover:bg-orange-600 dark:hover:bg-orange-600 transition-all duration-300 h-full">
                   <div>
                     <div className="flex items-center justify-between mb-4">
