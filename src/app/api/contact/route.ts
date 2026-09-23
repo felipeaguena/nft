@@ -15,6 +15,25 @@ interface ContactRequestBody {
   lang?: "pt" | "en" | "cn";
 }
 
+/**
+ * Escapa caracteres HTML para prevenir HTML Injection e Cross-Site Scripting (XSS) em clientes de e-mail.
+ */
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+/**
+ * Remove quebras de linha e caracteres de controle para prevenir CRLF e Header Injection em cabeçalhos de e-mail.
+ */
+function sanitizeHeader(str: string): string {
+  return str.replace(/[\r\n\x00-\x1F\x7F]+/g, " ").trim();
+}
+
 export async function POST(req: NextRequest) {
   try {
     // 0. Rate Limiting por IP
@@ -110,6 +129,16 @@ export async function POST(req: NextRequest) {
     const cleanName = name.trim();
     const cleanEmail = email.trim();
     const cleanMessage = message.trim();
+
+    // Sanitização para cabeçalhos SMTP (Prevenção de CRLF / Header Injection)
+    const headerSafeName = sanitizeHeader(cleanName);
+    const headerSafeEmail = sanitizeHeader(cleanEmail);
+
+    // Sanitização para templates HTML (Prevenção de HTML Injection / XSS em clientes de e-mail)
+    const htmlSafeName = escapeHtml(cleanName);
+    const htmlSafeEmail = escapeHtml(cleanEmail);
+    const htmlSafeMessage = escapeHtml(cleanMessage);
+
     const dateFormatted = new Date().toLocaleString("pt-BR", {
       timeZone: "America/Sao_Paulo",
       dateStyle: "full",
@@ -160,7 +189,7 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    // 5. Template HTML para o Administrador
+    // 5. Template HTML para o Administrador (Sanitizado)
     const adminMailHtml = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; color: #1f2937;">
         <div style="border-bottom: 2px solid #ea580c; padding-bottom: 16px; margin-bottom: 20px;">
@@ -171,30 +200,30 @@ export async function POST(req: NextRequest) {
         <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
           <tr>
             <td style="padding: 8px 0; font-weight: 600; width: 90px; color: #4b5563;">Nome:</td>
-            <td style="padding: 8px 0; color: #111827;">${cleanName}</td>
+            <td style="padding: 8px 0; color: #111827;">${htmlSafeName}</td>
           </tr>
           <tr>
             <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">E-mail:</td>
-            <td style="padding: 8px 0;"><a href="mailto:${cleanEmail}" style="color: #ea580c; text-decoration: none;">${cleanEmail}</a></td>
+            <td style="padding: 8px 0;"><a href="mailto:${encodeURIComponent(cleanEmail)}" style="color: #ea580c; text-decoration: none;">${htmlSafeEmail}</a></td>
           </tr>
         </table>
 
         <div style="background-color: #f9fafb; border-left: 4px solid #ea580c; padding: 16px; border-radius: 6px; margin-bottom: 24px;">
           <h3 style="margin: 0 0 8px 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280;">Mensagem:</h3>
-          <p style="margin: 0; white-space: pre-wrap; font-size: 15px; line-height: 1.6; color: #1f2937;">${cleanMessage.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
+          <p style="margin: 0; white-space: pre-wrap; font-size: 15px; line-height: 1.6; color: #1f2937;">${htmlSafeMessage}</p>
         </div>
 
         <p style="font-size: 12px; color: #9ca3af; margin: 0; text-align: center; border-top: 1px solid #f3f4f6; padding-top: 16px;">
-          Você pode responder diretamente a este e-mail para contatar ${cleanName}.
+          Você pode responder diretamente a este e-mail para contatar ${htmlSafeName}.
         </p>
       </div>
     `;
 
-    // 6. Template HTML de confirmação para o Usuário (Multilíngue)
+    // 6. Template HTML de confirmação para o Usuário (Multilíngue, Sanitizado)
     const emailTemplates = {
       pt: {
         subject: "Recebemos sua mensagem! | NFT Logistics",
-        greeting: `Olá, ${cleanName}!`,
+        greeting: `Olá, ${htmlSafeName}!`,
         status: "Recebemos sua mensagem com sucesso.",
         body: "Agradecemos o seu contato! Nossa equipe já foi notificada e retornará o mais breve possível.",
         copyTitle: "Cópia da sua mensagem:",
@@ -204,7 +233,7 @@ export async function POST(req: NextRequest) {
       },
       en: {
         subject: "We have received your message! | NFT Logistics",
-        greeting: `Hello, ${cleanName}!`,
+        greeting: `Hello, ${htmlSafeName}!`,
         status: "We received your message successfully.",
         body: "Thank you for reaching out! Our team has been notified and will get back to you as soon as possible.",
         copyTitle: "Copy of your message:",
@@ -214,7 +243,7 @@ export async function POST(req: NextRequest) {
       },
       cn: {
         subject: "我们已收到您的留言！| NFT Logistics",
-        greeting: `您好，${cleanName}！`,
+        greeting: `您好，${htmlSafeName}！`,
         status: "我们已成功收到您的留言。",
         body: "感谢您的联系！我们的团队已收到通知，将尽快给您回复。",
         copyTitle: "您的留言副本：",
@@ -239,7 +268,7 @@ export async function POST(req: NextRequest) {
 
         <div style="background-color: #f9fafb; border-radius: 8px; padding: 16px; margin-bottom: 24px;">
           <h4 style="margin: 0 0 8px 0; font-size: 13px; text-transform: uppercase; color: #6b7280; letter-spacing: 0.05em;">${currentT.copyTitle}</h4>
-          <p style="margin: 0; font-size: 14px; color: #4b5563; white-space: pre-wrap; line-height: 1.5;">${cleanMessage.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
+          <p style="margin: 0; font-size: 14px; color: #4b5563; white-space: pre-wrap; line-height: 1.5;">${htmlSafeMessage}</p>
         </div>
 
         <p style="font-size: 13px; color: #9ca3af; text-align: center; margin: 0; border-top: 1px solid #f3f4f6; padding-top: 16px;">
@@ -250,20 +279,20 @@ export async function POST(req: NextRequest) {
 
     // Enviar os dois e-mails em paralelo
     await Promise.all([
-      // 1. Para o Administrador
+      // 1. Para o Administrador (cabeçalhos higienizados)
       transporter.sendMail({
-        from: `"${cleanName} via Site" <${smtpFrom}>`,
+        from: `"${headerSafeName} via Site" <${smtpFrom}>`,
         to: adminEmail,
-        replyTo: cleanEmail,
-        subject: `[Novo Contato (${lang.toUpperCase()})] ${cleanName}`,
+        replyTo: headerSafeEmail,
+        subject: `[Novo Contato (${lang.toUpperCase()})] ${headerSafeName}`,
         text: `Nome: ${cleanName}\nE-mail: ${cleanEmail}\nIdioma: ${lang}\nData: ${dateFormatted}\n\nMensagem:\n${cleanMessage}`,
         html: adminMailHtml,
       }),
 
-      // 2. Para o Usuário
+      // 2. Para o Usuário (cabeçalhos higienizados)
       transporter.sendMail({
         from: `"NFT Logistics" <${smtpFrom}>`,
-        to: cleanEmail,
+        to: headerSafeEmail,
         subject: currentT.subject,
         text: currentT.text,
         html: userMailHtml,

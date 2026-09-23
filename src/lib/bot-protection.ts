@@ -84,7 +84,10 @@ export function verifyChallenge(token: string, userAnswer: string | number): { i
     const payload = `${answerStr}:${timestampStr}`;
     const expectedHmac = crypto.createHmac("sha256", getSecretKey()).update(payload).digest("hex");
 
-    if (hmac !== expectedHmac) {
+    const hmacBuf = Buffer.from(hmac, "hex");
+    const expectedBuf = Buffer.from(expectedHmac, "hex");
+
+    if (hmacBuf.length !== expectedBuf.length || !crypto.timingSafeEqual(hmacBuf, expectedBuf)) {
       return { isValid: false, error: "Token de segurança inválido." };
     }
 

@@ -27,14 +27,15 @@ interface RateLimitResult {
 
 // Armazena timestamps de requisições por chave (IP)
 const requestLog = new Map<string, number[]>();
+const MAX_TRACKED_ENTRIES = 5000;
 
 // Limpeza periódica para evitar vazamento de memória
-const CLEANUP_INTERVAL_MS = 5 * 60 * 1000; // 5 minutos
+const CLEANUP_INTERVAL_MS = 3 * 60 * 1000; // 3 minutos
 let lastCleanup = Date.now();
 
-function cleanupExpiredEntries(windowMs: number): void {
+function cleanupExpiredEntries(windowMs: number, force: boolean = false): void {
   const now = Date.now();
-  if (now - lastCleanup < CLEANUP_INTERVAL_MS) return;
+  if (!force && now - lastCleanup < CLEANUP_INTERVAL_MS && requestLog.size < MAX_TRACKED_ENTRIES) return;
 
   lastCleanup = now;
   const cutoff = now - windowMs;
@@ -45,6 +46,15 @@ function cleanupExpiredEntries(windowMs: number): void {
       requestLog.delete(key);
     } else {
       requestLog.set(key, valid);
+    }
+  }
+
+  // Se ainda estiver acima do limite máximo (ataque de spoofing massivo), remove as entradas mais antigas
+  if (requestLog.size > MAX_TRACKED_ENTRIES) {
+    const excess = requestLog.size - MAX_TRACKED_ENTRIES;
+    const keysToDelete = Array.from(requestLog.keys()).slice(0, excess);
+    for (const key of keysToDelete) {
+      requestLog.delete(key);
     }
   }
 }
@@ -111,15 +121,30 @@ export const CHALLENGE_RATE_LIMIT: RateLimitConfig = {
 
 /**
  * Extrai o IP do cliente a partir de um Request do Next.js.
- * Prioriza `x-forwarded-for` (quando atrás de proxy/load balancer como Vercel).
+ * Prioriza headers confiáveis (Cloudflare, Vercel/Nginx) antes do X-Forwarded-For.
  */
 export function getClientIp(request: Request): string {
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) {
-    // x-forwarded-for pode conter múltiplos IPs separados por vírgula
-    return forwarded.split(",")[0].trim();
+  const cfIp = request.headers.get("cf-connecting-ip");
+  if (cfIp && isValidIp(cfIp.trim())) {
+    return cfIp.trim();
   }
 
-  // Fallback para conexões diretas
-  return "unknown";
+  const realIp = request.headers.get("x-real-ip");
+  if (realIp && isValidIp(realIp.trim())) {
+    return realIp.trim();
+  }
+
+  const forwarded = request.headers.get("x-forwarded-for");
+  if (forwarded) {
+    const firstIp = forwarded.split(",")[0].trim();
+    if (isValidIp(firstIp)) {
+      return firstIp;
+    }
+  }
+
+  return "direct-client";
+}
+
+function isValidIp(ip: string): boolean {
+  return /^([0-9a-fA-F:.]+)$/.test(ip) && ip.length <= 45;
 }

@@ -21,10 +21,18 @@ const securityHeaders = [
     key: "Permissions-Policy",
     value: "camera=(), microphone=(), geolocation=()",
   },
+  {
+    key: "Cross-Origin-Opener-Policy",
+    value: "same-origin",
+  },
+  {
+    key: "Cross-Origin-Resource-Policy",
+    value: "same-origin",
+  },
 ];
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ["localhost", "192.168.15.9"],
+  allowedDevOrigins: ["localhost", "192.168.15.9", "192.168.0.8"],
   images: {
     formats: ["image/webp", "image/avif"],
   },
